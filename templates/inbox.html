@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+
+		<title> Outlook </title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+			
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- Basic Styles -->
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+
+		<!-- SmartAdmin Styles : Caution! DO NOT change the order -->
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/smartadmin-production-plugins.min.css') }}">
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/smartadmin-production.min.css') }}">
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/smartadmin-skins.min.css') }}">
+
+		<!-- SmartAdmin RTL Support  -->
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/smartadmin-rtl.min.css') }}">
+
+		<!-- We recommend you use "your_style.css" to override SmartAdmin
+		     specific styles this will also ensure you retrain your customization with each SmartAdmin update.
+		<link rel="stylesheet" type="text/css" media="screen" href="css/your_style.css"> -->
+
+		<!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/demo.min.css') }}">
+
+		<!-- FAVICONS -->
+		<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon/favicon.ico') }}" type="image/x-icon">
+		<link rel="icon" href="{{ url_for('static', filename='img/favicon/favicon.ico') }}" type="image/x-icon">
+
+		<!-- GOOGLE FONT -->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+
+		<!-- Specifying a Webpage Icon for Web Clip 
+			 Ref: https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html -->
+		<link rel="apple-touch-icon" href="{{ url_for('static', filename='img/splash/sptouch-icon-iphone.png') }}">
+		<link rel="apple-touch-icon" sizes="76x76" href="{{ url_for('static', filename='img/splash/touch-icon-ipad.png') }}">
+		<link rel="apple-touch-icon" sizes="120x120" href="{{ url_for('static', filename='img/splash/touch-icon-iphone-retina.png') }}">
+		<link rel="apple-touch-icon" sizes="152x152" href="{{ url_for('static', filename='img/splash/touch-icon-ipad-retina.png') }}">
+		
+		<!-- iOS web-app metas : hides Safari UI Components and Changes Status Bar Appearance -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		
+		<!-- Startup image for web apps -->
+		<link rel="apple-touch-startup-image" href="{{ url_for('static', filename='img/splash/ipad-landscape.png') }}" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
+		<link rel="apple-touch-startup-image" href="{{ url_for('static', filename='img/splash/ipad-portrait.png') }}" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
+		<link rel="apple-touch-startup-image" href="{{ url_for('static', filename='img/splash/iphone.png') }}" media="screen and (max-device-width: 320px)">
+
+	</head>
+	
+	<!--
+
+	TABLE OF CONTENTS.
+	
+	Use search to find needed section.
+	
+	===================================================================
+	
+	|  01. #CSS Links                |  all CSS links and file paths  |
+	|  02. #FAVICONS                 |  Favicon links and file paths  |
+	|  03. #GOOGLE FONT              |  Google font link              |
+	|  04. #APP SCREEN / ICONS       |  app icons, screen backdrops   |
+	|  05. #BODY                     |  body tag                      |
+	|  06. #HEADER                   |  header tag                    |
+	|  07. #PROJECTS                 |  project lists                 |
+	|  08. #TOGGLE LAYOUT BUTTONS    |  layout buttons and actions    |
+	|  09. #MOBILE                   |  mobile view dropdown          |
+	|  10. #SEARCH                   |  search field                  |
+	|  11. #NAVIGATION               |  left panel & navigation       |
+	|  12. #RIGHT PANEL              |  right panel userlist          |
+	|  13. #MAIN PANEL               |  main panel                    |
+	|  14. #MAIN CONTENT             |  content holder                |
+	|  15. #PAGE FOOTER              |  page footer                   |
+	|  16. #SHORTCUT AREA            |  dropdown shortcuts area       |
+	|  17. #PLUGINS                  |  all scripts and plugins       |
+	
+	===================================================================
+	
+	-->
+	
+	<!-- #BODY -->
+	<!-- Possible Classes
+
+		* 'smart-style-{SKIN#}'
+		* 'smart-rtl'         - Switch theme mode to RTL
+		* 'menu-on-top'       - Switch to top navigation (no DOM change required)
+		* 'no-menu'			  - Hides the menu completely
+		* 'hidden-menu'       - Hides the main menu but still accessable by hovering over left edge
+		* 'fixed-header'      - Fixes the header
+		* 'fixed-navigation'  - Fixes the main menu
+		* 'fixed-ribbon'      - Fixes breadcrumb
+		* 'fixed-page-footer' - Fixes footer
+		* 'container'         - boxed layout mode (non-responsive: will not work with fixed-navigation & fixed-ribbon)
+	-->
+	<body class="">
+
+		<!-- HEADER -->
+		{% include "inc/header.html" ignore missing %}
+		<!-- END HEADER -->
+
+		<!-- Left panel : Navigation area -->
+		<!-- Note: This width of the aside area can be adjusted through LESS variables -->
+		{% include "inc/leftpanel.html" ignore missing %}
+		<!-- END NAVIGATION -->
+
+		<!-- MAIN PANEL -->
+		<div id="main" role="main">
+
+			<!-- RIBBON -->
+			<div id="ribbon">
+
+				<span class="ribbon-button-alignment"> 
+					<span id="refresh" class="btn btn-ribbon" data-action="resetWidgets" data-title="refresh"  rel="tooltip" data-placement="bottom" data-original-title="<i class='text-warning fa fa-warning'></i> Warning! This will reset all your widget settings." data-html="true">
+						<i class="fa fa-refresh"></i>
+					</span> 
+				</span>
+
+				<!-- breadcrumb -->
+				<ol class="breadcrumb">
+					<li>Home</li><li>Inbox</li>
+				</ol>
+				<!-- end breadcrumb -->
+
+				<!-- You can also add more buttons to the
+				ribbon for further usability
+
+				Example below:
+
+				<span class="ribbon-button-alignment pull-right">
+				<span id="search" class="btn btn-ribbon hidden-xs" data-title="search"><i class="fa-grid"></i> Change Grid</span>
+				<span id="add" class="btn btn-ribbon hidden-xs" data-title="add"><i class="fa-plus"></i> Add</span>
+				<span id="search" class="btn btn-ribbon" data-title="search"><i class="fa-search"></i> <span class="hidden-mobile">Search</span></span>
+				</span> -->
+
+			</div>
+			<!-- END RIBBON -->
+
+			<!-- MAIN CONTENT -->
+			<div id="content">
+
+				<div class="inbox-nav-bar no-content-padding">
+				
+					<h1 class="page-title txt-color-blueDark hidden-tablet"><i class="fa fa-fw fa-inbox"></i> Inbox &nbsp;
+						<span class="btn-group">
+							<a href="#" data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle"><span class="caret single"></span></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">Action</a>
+								</li>
+								<li>
+									<a href="#">Another action</a>
+								</li>
+								<li>
+									<a href="#">Something else here</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="#">Separated link</a>
+								</li>
+							</ul>
+						</span>
+					</h1>
+				
+					<div class="btn-group hidden-desktop visible-tablet">
+						<button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+							Inbox <i class="fa fa-caret-down"></i>
+						</button>
+						<ul class="dropdown-menu pull-left">
+							<li>
+								<a href="javascript:void(0);" class="inbox-load">Inbox <i class="fa fa-check"></i></a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">Sent</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">Trash</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="javascript:void(0);">Spam</a>
+							</li>
+						</ul>
+				
+					</div>
+				
+					<div class="inbox-checkbox-triggered">
+				
+						<div class="btn-group">
+							<a href="javascript:void(0);" rel="tooltip" title="" data-placement="bottom" data-original-title="Mark Important" class="btn btn-default"><strong><i class="fa fa-exclamation fa-lg text-danger"></i></strong></a>
+							<a href="javascript:void(0);" rel="tooltip" title="" data-placement="bottom" data-original-title="Move to folder" class="btn btn-default"><strong><i class="fa fa-folder-open fa-lg"></i></strong></a>
+							<a href="javascript:void(0);" rel="tooltip" title="" data-placement="bottom" data-original-title="Delete" class="deletebutton btn btn-default"><strong><i class="fa fa-trash-o fa-lg"></i></strong></a>
+						</div>
+				
+					</div>
+				
+					<a href="javascript:void(0);" id="compose-mail-mini" class="btn btn-primary pull-right hidden-desktop visible-tablet"> <strong><i class="fa fa-file fa-lg"></i></strong> </a>
+				
+					<div class="btn-group pull-right inbox-paging">
+						<a href="javascript:void(0);" class="btn btn-default btn-sm"><strong><i class="fa fa-chevron-left"></i></strong></a>
+						<a href="javascript:void(0);" class="btn btn-default btn-sm"><strong><i class="fa fa-chevron-right"></i></strong></a>
+					</div>
+					<span class="pull-right"><strong>1-30</strong> of <strong>3,452</strong></span>
+				
+				</div>
+				
+				<div id="inbox-content" class="inbox-body no-content-padding">
+				
+					<div class="inbox-side-bar">
+				
+						<a href="javascript:void(0);" id="compose-mail" class="btn btn-primary btn-block"> <strong>Compose</strong> </a>
+				
+						<h6> Folder <a href="javascript:void(0);" rel="tooltip" title="" data-placement="right" data-original-title="Refresh" class="pull-right txt-color-darken"><i class="fa fa-refresh"></i></a></h6>
+				
+						<ul class="inbox-menu-lg">
+							<li class="active">
+								<a class="inbox-load" href="javascript:void(0);"> Inbox (14) </a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">Sent</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">Draft</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">Trash</a>
+							</li>
+						</ul>
+				
+						<h6> Quick Access <a href="javascript:void(0);" rel="tooltip" title="" data-placement="right" data-original-title="Add Another" class="pull-right txt-color-darken"><i class="fa fa-plus"></i></a></h6>
+				
+						<ul class="inbox-menu-sm">
+							<li>
+								<a href="javascript:void(0);"> Images (476)</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">Documents (4)</a>
+							</li>
+						</ul>
+				
+						<div class="air air-bottom inbox-space">
+				
+							3.5GB of <strong>10GB</strong><a href="javascript:void(0);" rel="tooltip" title="" data-placement="top" data-original-title="Empty Spam" class="pull-right txt-color-darken"><i class="fa fa-trash-o fa-lg"></i></a>
+				
+							<div class="progress progress-micro">
+								<div class="progress-bar progress-primary" style="width: 34%;"></div>
+							</div>
+						</div>
+				
+					</div>
+				
+					<div class="table-wrap custom-scroll animated fast fadeInRight">
+						<!-- ajax will fill this area -->
+						LOADING...
+				
+					</div>
+				
+					<div class="inbox-footer">
+				
+						<div class="row">
+				
+							<div class="col-xs-6 col-sm-1">
+				
+								<div class="txt-color-white hidden-desktop visible-mobile">
+									3.5GB of <strong>10GB</strong>
+				
+									<div class="progress progress-micro">
+										<div class="progress-bar progress-primary" style="width: 34%;"></div>
+									</div>
+								</div>
+							</div>
+				
+							<div class="col-xs-6 col-sm-11 text-right">
+								<div class="txt-color-white inline-block">
+									<i class="txt-color-blueLight hidden-mobile">Last account activity <i class="fa fa-clock-o"></i> 52 mins ago |</i> Displaying <strong>44 of 259</strong>
+								</div>
+							</div>
+				
+						</div>
+				
+					</div>
+				
+				</div>
+
+
+			</div>
+			<!-- END MAIN CONTENT -->
+
+		</div>
+		<!-- END MAIN PANEL -->
+
+		<!-- PAGE FOOTER -->
+		{% include "inc/footer.html" ignore missing %}
+		<!-- END PAGE FOOTER -->
+
+		<!-- SHORTCUT AREA : With large tiles (activated via clicking user name tag)
+		Note: These tiles are completely responsive,
+		you can add as many as you like
+		-->
+		{% include "inc/shortcutarea.html" ignore missing %}
+		<!-- END SHORTCUT AREA -->
+
+		<!--================================================== -->
+
+		<!-- PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)-->
+		<script data-pace-options='{ "restartOnRequestAfter": true }' src="js/plugin/pace/pace.min.js"></script>
+
+		<!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script>
+			if (!window.jQuery) {
+				document.write("<script src='{{ url_for('static', filename='js/libs/jquery-2.1.1.min.js') }}'><\/script>");
+			}
+		</script>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+		<script>
+			if (!window.jQuery.ui) {
+				document.write("<script src='{{ url_for('static', filename='js/libs/jquery-ui-1.10.3.min.js') }}'><\/script>");
+			}
+		</script>
+
+		<!-- IMPORTANT: APP CONFIG -->
+		<!-- IMPORTANT: APP CONFIG -->
+		<script src="{{ url_for('static', filename='js/app.config.js') }}"></script>
+
+		<!-- JS TOUCH : include this plugin for mobile drag / drop touch events-->
+		<script src="{{ url_for('static', filename='js/plugin/jquery-touch/jquery.ui.touch-punch.min.js') }}"></script> 
+
+		<!-- BOOTSTRAP JS -->
+		<script src="{{ url_for('static', filename='js/bootstrap/bootstrap.min.js') }}"></script>
+
+		<!-- CUSTOM NOTIFICATION -->
+		<script src="{{ url_for('static', filename='js/notification/SmartNotification.min.js') }}"></script>
+
+		<!-- JARVIS WIDGETS -->
+		<script src="{{ url_for('static', filename='js/smartwidgets/jarvis.widget.min.js') }}"></script>
+
+		<!-- EASY PIE CHARTS -->
+		<script src="{{ url_for('static', filename='js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js') }}"></script>
+
+		<!-- SPARKLINES -->
+		<script src="{{ url_for('static', filename='js/plugin/sparkline/jquery.sparkline.min.js') }}"></script>
+
+		<!-- JQUERY VALIDATE -->
+		<script src="{{ url_for('static', filename='js/plugin/jquery-validate/jquery.validate.min.js') }}"></script>
+
+		<!-- JQUERY MASKED INPUT -->
+		<script src="{{ url_for('static', filename='js/plugin/masked-input/jquery.maskedinput.min.js') }}"></script>
+
+		<!-- JQUERY SELECT2 INPUT -->
+		<script src="{{ url_for('static', filename='js/plugin/select2/select2.min.js') }}"></script>
+
+		<!-- JQUERY UI + Bootstrap Slider -->
+		<script src="{{ url_for('static', filename='js/plugin/bootstrap-slider/bootstrap-slider.min.js') }}"></script>
+
+		<!-- browser msie issue fix -->
+		<script src="{{ url_for('static', filename='js/plugin/msie-fix/jquery.mb.browser.min.js') }}"></script>
+
+		<!-- FastClick: For mobile devices -->
+		<script src="{{ url_for('static', filename='js/plugin/fastclick/fastclick.min.js') }}"></script>
+
+		<!--[if IE 8]>
+
+		<h1>Your browser is out of date, please update your browser by going to www.microsoft.com/download</h1>
+
+		<![endif]-->
+
+		<!-- Demo purpose only -->
+		<script src="{{ url_for('static', filename='js/demo.min.js') }}"></script>
+
+		<!-- MAIN APP JS FILE -->
+		<script src="js/app.min.js"></script>
+
+		<!-- ENHANCEMENT PLUGINS : NOT A REQUIREMENT -->
+		<!-- Voice command : plugin -->
+		<script src="{{ url_for('static', filename='js/speech/voicecommand.min.js') }}"></script>
+
+		<!-- SmartChat UI : plugin -->
+		<script src="{{ url_for('static', filename='js/smart-chat-ui/smart.chat.ui.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/smart-chat-ui/smart.chat.manager.min.js') }}"></script>
+		
+		<!-- PAGE RELATED PLUGIN(S) -->
+		
+		<script src="{{ url_for('static', filename='js/plugin/delete-table-row/delete-table-row.min.js') }}"></script>
+		
+		<script src="{{ url_for('static', filename='js/plugin/summernote/summernote.min.js') }}"></script>
+		
+		<script src="{{ url_for('static', filename='js/plugin/select2/select2.min.js') }}"></script>
+		
+		<script type="text/javascript">
+		
+		$(document).ready(function() {
+		
+			// DO NOT REMOVE : GLOBAL FUNCTIONS!
+			pageSetUp();
+		
+			// PAGE RELATED SCRIPTS
+		
+			/*
+			 * Fixed table height
+			 */
+			
+			//tableHeightSize()
+			
+			//$(window).resize(function() {
+			//	tableHeightSize()
+			//})
+			
+			function tableHeightSize() {
+	
+				if ($('body').hasClass('menu-on-top')) {
+					var menuHeight = 68;
+					// nav height
+	
+					var tableHeight = ($(window).height() - 224) - menuHeight;
+					if (tableHeight < (320 - menuHeight)) {
+						$('.table-wrap').css('height', (320 - menuHeight) + 'px');
+					} else {
+						$('.table-wrap').css('height', tableHeight + 'px');
+					}
+	
+				} else {
+					var tableHeight = $(window).height() - 224;
+					if (tableHeight < 320) {
+						$('.table-wrap').css('height', 320 + 'px');
+					} else {
+						$('.table-wrap').css('height', tableHeight + 'px');
+					}
+	
+				}
+	
+			}
+			
+			/*
+			 * LOAD INBOX MESSAGES
+			 */
+			loadInbox();
+			function loadInbox() {
+				loadURL("/static/ajax/email/email-list.html", $('#inbox-content > .table-wrap'))
+			}
+		
+			/*
+			 * Buttons (compose mail and inbox load)
+			 */
+			$(".inbox-load").click(function() {
+				loadInbox();
+			});
+		
+			// compose email
+			$("#compose-mail").click(function() {
+				loadURL("/static/ajax/email-compose.html", $('#inbox-content > .table-wrap'));
+			})
+		
+		});	
+			
+		
+		</script>
+
+
+		<!-- Your GOOGLE ANALYTICS CODE Below -->
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script');
+				ga.type = 'text/javascript';
+				ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(ga, s);
+			})();
+
+		</script>
+
+	</body>
+
+</html>

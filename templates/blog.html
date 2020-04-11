@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<title> {{document_title}} </title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+			
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- Basic Styles -->
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+
+		<!-- SmartAdmin Styles : Caution! DO NOT change the order -->
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/smartadmin-production-plugins.min.css') }}">
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/smartadmin-production.min.css') }}">
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/smartadmin-skins.min.css') }}">
+
+		<!-- SmartAdmin RTL Support  -->
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/smartadmin-rtl.min.css') }}">
+
+		<!-- We recommend you use "your_style.css" to override SmartAdmin
+		     specific styles this will also ensure you retrain your customization with each SmartAdmin update.
+		<link rel="stylesheet" type="text/css" media="screen" href="css/your_style.css"> -->
+
+		<!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/demo.min.css') }}">
+
+		<!-- FAVICONS -->
+		<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon/favicon.ico') }}" type="image/x-icon">
+		<link rel="icon" href="{{ url_for('static', filename='img/favicon/favicon.ico') }}" type="image/x-icon">
+
+		<!-- GOOGLE FONT -->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+
+		<!-- Specifying a Webpage Icon for Web Clip 
+			 Ref: https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html -->
+		<link rel="apple-touch-icon" href="{{ url_for('static', filename='img/splash/sptouch-icon-iphone.png') }}">
+		<link rel="apple-touch-icon" sizes="76x76" href="{{ url_for('static', filename='img/splash/touch-icon-ipad.png') }}">
+		<link rel="apple-touch-icon" sizes="120x120" href="{{ url_for('static', filename='img/splash/touch-icon-iphone-retina.png') }}">
+		<link rel="apple-touch-icon" sizes="152x152" href="{{ url_for('static', filename='img/splash/touch-icon-ipad-retina.png') }}">
+		
+		<!-- iOS web-app metas : hides Safari UI Components and Changes Status Bar Appearance -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		
+		<!-- Startup image for web apps -->
+		<link rel="apple-touch-startup-image" href="{{ url_for('static', filename='img/splash/ipad-landscape.png') }}" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
+		<link rel="apple-touch-startup-image" href="{{ url_for('static', filename='img/splash/ipad-portrait.png') }}" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
+		<link rel="apple-touch-startup-image" href="{{ url_for('static', filename='img/splash/iphone.png') }}" media="screen and (max-device-width: 320px)">
+
+	</head>
+
+	<!--
+
+	TABLE OF CONTENTS.
+	
+	Use search to find needed section.
+	
+	===================================================================
+	
+	|  01. #CSS Links                |  all CSS links and file paths  |
+	|  02. #FAVICONS                 |  Favicon links and file paths  |
+	|  03. #GOOGLE FONT              |  Google font link              |
+	|  04. #APP SCREEN / ICONS       |  app icons, screen backdrops   |
+	|  05. #BODY                     |  body tag                      |
+	|  06. #HEADER                   |  header tag                    |
+	|  07. #PROJECTS                 |  project lists                 |
+	|  08. #TOGGLE LAYOUT BUTTONS    |  layout buttons and actions    |
+	|  09. #MOBILE                   |  mobile view dropdown          |
+	|  10. #SEARCH                   |  search field                  |
+	|  11. #NAVIGATION               |  left panel & navigation       |
+	|  12. #MAIN PANEL               |  main panel                    |
+	|  13. #MAIN CONTENT             |  content holder                |
+	|  14. #PAGE FOOTER              |  page footer                   |
+	|  15. #SHORTCUT AREA            |  dropdown shortcuts area       |
+	|  16. #PLUGINS                  |  all scripts and plugins       |
+	
+	===================================================================
+	
+	-->
+	
+	<!-- #BODY -->
+	<!-- Possible Classes
+
+		* 'smart-style-{SKIN#}'
+		* 'smart-rtl'         - Switch theme mode to RTL
+		* 'menu-on-top'       - Switch to top navigation (no DOM change required)
+		* 'no-menu'			  - Hides the menu completely
+		* 'hidden-menu'       - Hides the main menu but still accessable by hovering over left edge
+		* 'fixed-header'      - Fixes the header
+		* 'fixed-navigation'  - Fixes the main menu
+		* 'fixed-ribbon'      - Fixes breadcrumb
+		* 'fixed-page-footer' - Fixes footer
+		* 'container'         - boxed layout mode (non-responsive: will not work with fixed-navigation & fixed-ribbon)
+	-->
+	<body class="">
+
+		<!-- #HEADER -->
+		{% include "inc/header.html" ignore missing %}
+		<!-- END HEADER -->
+
+		<!-- #NAVIGATION -->
+		<!-- Left panel : Navigation area -->
+		<!-- Note: This width of the aside area can be adjusted through LESS variables -->
+		{% include "inc/leftpanel.html" ignore missing %}
+		<!-- END NAVIGATION -->
+
+		<!-- MAIN PANEL -->
+		<div id="main" role="main">
+
+			<!-- RIBBON -->
+			<div id="ribbon">
+
+				<span class="ribbon-button-alignment"> 
+					<span id="refresh" class="btn btn-ribbon" data-action="resetWidgets" data-title="refresh"  rel="tooltip" data-placement="bottom" data-original-title="<i class='text-warning fa fa-warning'></i> Warning! This will reset all your widget settings." data-html="true">
+						<i class="fa fa-refresh"></i>
+					</span> 
+				</span>
+
+				<!-- breadcrumb -->
+				<ol class="breadcrumb">
+					<li>Home</li><li>App Views</li><li>Blog</li>
+				</ol>
+				<!-- end breadcrumb -->
+
+				<!-- You can also add more buttons to the
+				ribbon for further usability
+
+				Example below:
+
+				<span class="ribbon-button-alignment pull-right">
+				<span id="search" class="btn btn-ribbon hidden-xs" data-title="search"><i class="fa-grid"></i> Change Grid</span>
+				<span id="add" class="btn btn-ribbon hidden-xs" data-title="add"><i class="fa-plus"></i> Add</span>
+				<span id="search" class="btn btn-ribbon" data-title="search"><i class="fa-search"></i> <span class="hidden-mobile">Search</span></span>
+				</span> -->
+
+			</div>
+			<!-- END RIBBON -->
+			
+			
+
+			<!-- MAIN CONTENT -->
+			<div id="content">
+
+				<!-- row -->
+				<div class="row">
+
+					<!-- col -->
+					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+						<h1 class="page-title txt-color-blueDark">
+							<!-- PAGE HEADER -->
+							<i class="fa-fw fa fa-home"></i> App Views <span>>
+								Blog </span>
+						</h1>
+					</div>
+					<!-- end col -->
+
+					<!-- right side of the page with the sparkline graphs -->
+					<!-- col -->
+					<div class="col-xs-12 col-sm-5 col-md-5 col-lg-8">
+						<!-- sparks -->
+						<ul id="sparks">
+							<li class="sparks-info">
+								<h5> My Income <span class="txt-color-blue">$47,171</span></h5>
+								<div class="sparkline txt-color-blue hidden-mobile hidden-md hidden-sm">
+									1300, 1877, 2500, 2577, 2000, 2100, 3000, 2700, 3631, 2471, 2700, 3631, 2471
+								</div>
+							</li>
+							<li class="sparks-info">
+								<h5> Site Traffic <span class="txt-color-purple"><i class="fa fa-arrow-circle-up" data-rel="bootstrap-tooltip" title="Increased"></i>&nbsp;45%</span></h5>
+								<div class="sparkline txt-color-purple hidden-mobile hidden-md hidden-sm">
+									110,150,300,130,400,240,220,310,220,300, 270, 210
+								</div>
+							</li>
+							<li class="sparks-info">
+								<h5> Site Orders <span class="txt-color-greenDark"><i class="fa fa-shopping-cart"></i>&nbsp;2447</span></h5>
+								<div class="sparkline txt-color-greenDark hidden-mobile hidden-md hidden-sm">
+									110,150,300,130,400,240,220,310,220,300, 270, 210
+								</div>
+							</li>
+						</ul>
+						<!-- end sparks -->
+					</div>
+					<!-- end col -->
+
+				</div>
+				<!-- end row -->
+				
+				<div class="row">
+
+					<div class="col-sm-9">
+
+						<div class="well padding-10">
+
+							<div class="row">
+								<div class="col-md-4">
+									<img src="{{ url_for('static', filename='img/superbox/superbox-full-15.jpg') }}" class="img-responsive" alt="img">
+									<ul class="list-inline padding-10">
+										<li>
+											<i class="fa fa-calendar"></i>
+											<a href="javascript:void(0);"> March 12, 2015 </a>
+										</li>
+										<li>
+											<i class="fa fa-comments"></i>
+											<a href="javascript:void(0);"> 38 Comments </a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-md-8 padding-left-0">
+									<h3 class="margin-top-0"><a href="javascript:void(0);"> Why Should You Make A Separate Mobile Website for your Business? </a><br><small class="font-xs"><i>Published by <a href="javascript:void(0);">John Doe</a></i></small></h3>
+									<p>
+										At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. 
+
+										<br><br>Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat.
+										<br><br>
+									</p>
+									<a class="btn btn-primary" href="javascript:void(0);"> Read more </a>
+									<a class="btn btn-warning" href="javascript:void(0);"> Edit </a>
+									<a class="btn btn-success" href="javascript:void(0);"> Publish </a>
+								</div>
+							</div>
+							<hr>
+
+							<div class="row">
+								<div class="col-md-4">
+									<img src="{{ url_for('static', filename='img/superbox/superbox-full-19.jpg') }}" class="img-responsive" alt="img">
+									<ul class="list-inline padding-10">
+										<li>
+											<i class="fa fa-calendar"></i>
+											<a href="javascript:void(0);"> March 12, 2015 </a>
+										</li>
+										<li>
+											<i class="fa fa-comments"></i>
+											<a href="javascript:void(0);"> 38 Comments </a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-md-8 padding-left-0">
+									<h3 class="margin-top-0"><a href="javascript:void(0);"> Mums favorite shopping malls in USA </a><br><small class="font-xs"><i>Published by <a href="javascript:void(0);">John Doe</a></i></small></h3>
+									<p>
+										At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. 
+
+										<br><br>Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat.
+										<br><br>
+									</p>
+									<a class="btn btn-primary" href="javascript:void(0);"> Read more </a>
+								</div>
+							</div>
+							<hr>
+
+							<div class="row">
+								<div class="col-md-4">
+									<img src="{{ url_for('static', filename='img/superbox/superbox-full-24.jpg') }}" class="img-responsive" alt="img">
+									<ul class="list-inline padding-10">
+										<li>
+											<i class="fa fa-calendar"></i>
+											<a href="javascript:void(0);"> March 12, 2015 </a>
+										</li>
+										<li>
+											<i class="fa fa-comments"></i>
+											<a href="javascript:void(0);"> 38 Comments </a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-md-8 padding-left-0">
+									<h3 class="margin-top-0"><a href="javascript:void(0);"> Best (and Basic) Practices of Mobile Web Design </a><br><small class="font-xs"><i>Published by <a href="javascript:void(0);">John Doe</a></i></small></h3>
+									<p>
+										With the plethora of smartphones, mobile phones, and tablets available on the market today, research suggests that mobile devices will soon overtake PCs and laptops in a year. More and more,different platforms are made available for all types of consumers to access the web, even including TVs and gaming consoles. 
+
+										<br><br>
+
+										And all this in rapid-fire turnover—new models and technologies quickly coming and going like fashion trends. So much so that any website that is not mobile friendly cannot claim to be user-friendly anymore. Increasingly, web developers and designers utilize fluid layouts allowing users to browse across different platforms.
+
+										<br><br>
+									</p>
+									<a class="btn btn-primary" href="javascript:void(0);"> Read more </a>
+								</div>
+							</div>
+
+							<hr>
+
+							<div class="row">
+								<div class="col-md-4">
+									<img src="{{ url_for('static', filename='img/superbox/superbox-full-7.jpg') }}" class="img-responsive" alt="img">
+									<ul class="list-inline padding-10">
+										<li>
+											<i class="fa fa-calendar"></i>
+											<a href="javascript:void(0);"> March 12, 2015 </a>
+										</li>
+										<li>
+											<i class="fa fa-comments"></i>
+											<a href="javascript:void(0);"> 38 Comments </a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-md-8 padding-left-0">
+									<h3 class="margin-top-0"><a href="javascript:void(0);"> Responsive Design: Best Practices for Designing a Website </a><br><small class="font-xs"><i>Published by <a href="javascript:void(0);">John Doe</a></i></small></h3>
+									<p>
+										The term Responsive design means developing a website in a way that adapts all the computer screen resolutions. Particularly this concept allows a 4 column layout that is 1292px wide, on 1025px wide screen that is divided into 2 columns automatically. It is adaptable for android phones and tablet screens. This designing method is known as “responsive web design”
+
+										<br><br>
+										
+										Responsive designing is a different concept from traditional web designing, so the question arises how you should build a good responsive website. Here is a general practices that can help you to build a responsive website design.
+
+										<br><br>
+									</p>
+									<a class="btn btn-primary" href="javascript:void(0);"> Read more </a>
+								</div>
+							</div>	
+
+						</div>
+
+					</div>
+
+					<div class="col-sm-3">
+						<div class="well padding-10">
+							<h5 class="margin-top-0"><i class="fa fa-search"></i> Blog Search...</h5>
+							<div class="input-group">
+								<input type="text" class="form-control">
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="button">
+										<i class="fa fa-search"></i>
+									</button> </span>
+							</div>
+							<!-- /input-group -->
+						</div>
+						<!-- /well -->
+						<div class="well padding-10">
+							<h5 class="margin-top-0"><i class="fa fa-tags"></i> Popular Tags:</h5>
+							<div class="row">
+								<div class="col-lg-6">
+									<ul class="list-unstyled">
+										<li>
+											<a href=""><span class="badge badge-info">Windows 8</span></a>
+										</li>
+										<li>
+											<a href=""><span class="badge badge-info">C#</span></a>
+										</li>
+										<li>
+											<a href=""><span class="badge badge-info">Windows Forms</span></a>
+										</li>
+										<li>
+											<a href=""><span class="badge badge-info">WPF</span></a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-lg-6">
+									<ul class="list-unstyled">
+										<li>
+											<a href=""><span class="badge badge-info">Bootstrap</span></a>
+										</li>
+										<li>
+											<a href=""><span class="badge badge-info">Joomla!</span></a>
+										</li>
+										<li>
+											<a href=""><span class="badge badge-info">CMS</span></a>
+										</li>
+										<li>
+											<a href=""><span class="badge badge-info">Java</span></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- /well -->
+						<div class="well padding-10">
+							<h5 class="margin-top-0"><i class="fa fa-thumbs-o-up"></i> Follow Us!</h5>
+							<ul class="no-padding no-margin">
+								<p class="no-margin">
+									<a title="Facebook" href=""><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x"></i></span></a>
+									<a title="Twitter" href=""><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x"></i></span></a>
+									<a title="Google+" href=""><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-google-plus fa-stack-1x"></i></span></a>
+									<a title="Linkedin" href=""><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-linkedin fa-stack-1x"></i></span></a>
+									<a title="GitHub" href=""><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-github fa-stack-1x"></i></span></a>
+									<a title="Bitbucket" href=""><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-bitbucket fa-stack-1x"></i></span></a>
+								</p>
+							</ul>
+						</div>
+						<!-- /well -->
+						<!-- /well -->
+						<div class="well padding-10">
+							<h5 class="margin-top-0"><i class="fa fa-fire"></i> Popular Posts:</h5>
+							<ul class="no-padding list-unstyled">
+								<li>
+									<a href="javascript:void(0);" class="margin-top-0">WPF vs. Windows Forms-Which is better?</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="padding-top-5 display-block">How to create responsive website with Bootstrap?</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="margin-top-5">The best Joomla! templates 2014</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="margin-top-5">ASP .NET cms list</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="margin-top-5">C# Hello, World! program</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="margin-top-5">Java random generator</a>
+								</li>
+							</ul>
+						</div>
+						<!-- /well -->
+
+						<!-- /well -->
+						<div class="well padding-10">
+							<h5 class="margin-top-0"><i class="fa fa-video-camera"></i> Featured Videos:</h5>
+							<div class="row">
+
+								<div class="col-lg-12">
+
+									<ul class="list-group no-margin">
+										<li class="list-group-item">
+											<a href=""> <span class="badge pull-right">15</span> Photograph </a>
+										</li>
+										<li class="list-group-item">
+											<a href=""> <span class="badge pull-right">30</span> Life style </a>
+										</li>
+										<li class="list-group-item">
+											<a href=""> <span class="badge pull-right">9</span> Food </a>
+										</li>
+										<li class="list-group-item">
+											<a href=""> <span class="badge pull-right">4</span> Travel world </a>
+										</li>
+									</ul>
+
+								</div>
+
+								<div class="col-lg-12">
+									<div class="margin-top-10">
+										<iframe allowfullscreen="" frameborder="0" height="210" mozallowfullscreen="" src="http://player.vimeo.com/video/87025094" webkitallowfullscreen="" width="100%"></iframe>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<!-- /well -->
+
+					</div>
+
+				</div>
+
+			</div>
+			<!-- END MAIN CONTENT -->
+
+		</div>
+		<!-- END MAIN PANEL -->
+
+		<!-- PAGE FOOTER -->
+		{% include "inc/footer.html" ignore missing %}
+		<!-- END PAGE FOOTER -->
+
+		<!-- SHORTCUT AREA : With large tiles (activated via clicking user name tag)
+		Note: These tiles are completely responsive,
+		you can add as many as you like
+		-->
+		{% include "inc/shortcutarea.html" ignore missing %}
+		<!-- END SHORTCUT AREA -->
+
+		<!--================================================== -->
+
+		<!-- PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)-->
+		<script data-pace-options='{ "restartOnRequestAfter": true }' src="/static/js/plugin/pace/pace.min.js"></script>
+
+		<!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script>
+			if (!window.jQuery) {
+				document.write('<script src="/static/js/libs/jquery-2.1.1.min.js"><\/script>');
+			}
+		</script>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+		<script>
+			if (!window.jQuery.ui) {
+				document.write('<script src="/static/js/libs/jquery-ui-1.10.3.min.js"><\/script>');
+			}
+		</script>
+
+		<!-- IMPORTANT: APP CONFIG -->
+		<script src="/static/js/app.config.js"></script>
+
+		<!-- JS TOUCH : include this plugin for mobile drag / drop touch events-->
+		<script src="/static/js/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script> 
+
+		<!-- BOOTSTRAP JS -->
+		<script src="/static/js/bootstrap/bootstrap.min.js"></script>
+
+		<!-- CUSTOM NOTIFICATION -->
+		<script src="/static/js/notification/SmartNotification.min.js"></script>
+
+		<!-- JARVIS WIDGETS -->
+		<script src="/static/js/smartwidgets/jarvis.widget.min.js"></script>
+
+		<!-- EASY PIE CHARTS -->
+		<script src="/static/js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+
+		<!-- SPARKLINES -->
+		<script src="/static/js/plugin/sparkline/jquery.sparkline.min.js"></script>
+
+		<!-- JQUERY VALIDATE -->
+		<script src="/static/js/plugin/jquery-validate/jquery.validate.min.js"></script>
+
+		<!-- JQUERY MASKED INPUT -->
+		<script src="/static/js/plugin/masked-input/jquery.maskedinput.min.js"></script>
+
+		<!-- JQUERY SELECT2 INPUT -->
+		<script src="/static/js/plugin/select2/select2.min.js"></script>
+
+		<!-- JQUERY UI + Bootstrap Slider -->
+		<script src="/static/js/plugin/bootstrap-slider/bootstrap-slider.min.js"></script>
+
+		<!-- browser msie issue fix -->
+		<script src="/static/js/plugin/msie-fix/jquery.mb.browser.min.js"></script>
+
+		<!-- FastClick: For mobile devices -->
+		<script src="/static/js/plugin/fastclick/fastclick.min.js"></script>
+
+		<!--[if IE 8]>
+
+		<h1>Your browser is out of date, please update your browser by going to www.microsoft.com/download</h1>
+
+		<![endif]-->
+
+		<!-- Demo purpose only -->
+		<script src="/static/js/demo.min.js"></script>
+
+		<!-- MAIN APP JS FILE -->
+		<script src="/static/js/app.min.js"></script>
+
+		<!-- ENHANCEMENT PLUGINS : NOT A REQUIREMENT -->
+		<!-- Voice command : plugin -->
+		<script src="/static/js/speech/voicecommand.min.js"></script>
+
+		<!-- SmartChat UI : plugin -->
+		<script src="/static/js/smart-chat-ui/smart.chat.ui.min.js"></script>
+		<script src="/static/js/smart-chat-ui/smart.chat.manager.min.js"></script>
+
+		<!-- PAGE RELATED PLUGIN(S) 
+		<script src="..."></script>-->
+
+		<script type="text/javascript">
+
+			$(document).ready(function() {
+			 	
+				/* DO NOT REMOVE : GLOBAL FUNCTIONS!
+				 *
+				 * pageSetUp(); WILL CALL THE FOLLOWING FUNCTIONS
+				 *
+				 * // activate tooltips
+				 * $("[rel=tooltip]").tooltip();
+				 *
+				 * // activate popovers
+				 * $("[rel=popover]").popover();
+				 *
+				 * // activate popovers with hover states
+				 * $("[rel=popover-hover]").popover({ trigger: "hover" });
+				 *
+				 * // activate inline charts
+				 * runAllCharts();
+				 *
+				 * // setup widgets
+				 * setup_widgets_desktop();
+				 *
+				 * // run form elements
+				 * runAllForms();
+				 *
+				 ********************************
+				 *
+				 * pageSetUp() is needed whenever you load a page.
+				 * It initializes and checks for all basic elements of the page
+				 * and makes rendering easier.
+				 *
+				 */
+				
+				 pageSetUp();
+				 
+				/*
+				 * ALL PAGE RELATED SCRIPTS CAN GO BELOW HERE
+				 * eg alert("my home function");
+				 * 
+				 * var pagefunction = function() {
+				 *   ...
+				 * }
+				 * loadScript("js/plugin/_PLUGIN_NAME_.js", pagefunction);
+				 * 
+				 * TO LOAD A SCRIPT:
+				 * var pagefunction = function (){ 
+				 *  loadScript(".../plugin.js", run_after_loaded);	
+				 * }
+				 * 
+				 * OR
+				 * 
+				 * loadScript(".../plugin.js", run_after_loaded);
+				 */
+				
+			})
+		
+		</script>
+
+		<!-- Your GOOGLE ANALYTICS CODE Below -->
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+				_gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
+				_gaq.push(['_trackPageview']);
+			
+			(function() {
+				var ga = document.createElement('script');
+				ga.type = 'text/javascript';
+				ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(ga, s);
+			})();
+
+		</script>
+
+	</body>
+
+</html>

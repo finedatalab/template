@@ -1,0 +1,677 @@
+/* -----------------------------------------------------------------------*/
+/* ----------------- "Main" IBSheet style definition ---------------------*/
+/* -----------------------------------------------------------------------*/
+
+/* Base tags */
+.LGYImage {padding-bottom:256px;}
+.LGYNone {display:none;}
+.LGYSection,.LGYSectionFF3 {table-layout:fixed; width:0;}
+.LGYSectionFF3 {border-collapse:collapse; }
+
+/* Sections */
+.LGYMainTable {border:1px solid #cbcbcb; border-collapse:separate; text-align:left; background:#ffffff; font:12px Dotum,Helvetica,AppleGothic,Sans-serif;}
+.LGYFootLeft,.LGYFootMid {border-top:1px solid #979a9d;}
+.LGYHeadLeft,.LGYBodyLeft,.LGYFootLeft,.LGYHScrollLeft {border-right:0px solid #979a9d;}	
+.LGYVScroll {padding-top:1px; padding-bottom:1px;}
+.LGYHScrollLeft,.LGYHScrollMid,.LGYHScrollLeftResizeTouch,.LGYHScrollRightResizeTouch {padding-left:1px; padding-right:1px; cursor:default;}
+.LGYHScrollLeftResizeTouch {border-right:2px solid #000000; padding-right:18px; background:#F4F4F4;}
+.LGYHScrollRightResizeTouch {border-left:2px solid #000000; padding-left:18px; background:#F4F4F4;}
+.LGYHScrollMidLeftResizeTouch {border-left:1px solid #000000; padding-left:19px; background:#F4F4F4;}
+.LGYHScrollMidRightResizeTouch {border-right:0px solid #000000; padding-right:19px; background:#F4F4F4;}
+.LGYHScrollWide {padding-right:1px;}
+.LGYHScrollHidden {overflow:visible !important; background:#F4F4F4; cursor:default; }
+.LGYXScroll {background:#F4F4F4;}
+.LGYPage {border-top:0px solid #E0E0E0;}
+
+/* Rows */
+.LGYSpaceRowHeight{height:21px; }
+.LGYRowHeight 	 {height:18px; }
+.LGYRowHeightTouch{height:22px; }
+.LGYSpaceMargin   {margin:0; }
+.LGYSpaceMarginTouch{margin:5px; }
+.LGYSpaceRow {background:#ffffff; white-space:nowrap; overflow:hidden; padding-top:2px; padding-bottom:2px; border-bottom:1px solid #e0e0ff;}
+.LGYGroupRow,.LGYSearchRow,.LGYPagerRow 
+{background-color:#D9D9D9; white-space:nowrap; padding-top:5px; padding-bottom:5px; overflow:hidden; border-bottom:1px solid #CBCBCB;} 
+.LGYGroupRow,.LGYPagerRow {background-position:0 -1801px; }
+.LGYFillRow {background:#ffffff; }
+.LGYRowAbove,.LGYRowBelow {border-left:1px solid #9cb6c8; border-right:0px solid #9cb6c8;}
+.LGYRowAbove { margin-top:3px; overflow:hidden;}
+.LGYRowBelow {margin-bottom:3px; overflow:hidden;}
+.LGYNoDataRow {border-top:1px solid #000000;padding-left:5px; padding-top:5px; padding-bottom:5px;color:gray; font-style:italic;} 
+.LGYCountRowTop {color:#535353; background-color:#D9D9D9; white-space:nowrap;padding-top:5px; padding-bottom:5px; overflow:hidden; border-bottom:1px solid #CBCBCB;}
+.LGYCountRowBottom {color:#535353; background-color:#D9D9D9; white-space:nowrap; padding-top:5px; padding-bottom:5px; overflow:hidden; border-top:1px solid #CBCBCB;}
+
+/* Cell */
+.LGYCell,.LGYCellPanel,.LGYCellFilter,.LGYHeaderDrag,.LGYHeaderGroup 
+ {color:#444444; border-bottom:1px solid #F3F3F3; border-right:0px solid #C6C9CC; border-left:0; border-top:0;vertical-align:top; overflow:hidden; height:auto; font-size:/*IBFS*/12px; font-family:/*IBFN*/"Dotum", "Helvetica", "AppleGothic", sans-serif;}
+
+.LGYCellHeader,.LGYCellHeaderEmpty
+ {vertical-align:middle; overflow:hidden;height:auto; background-color:#D9D9D9; padding-top:1px; border-right:0px solid #CBCBCB; border-bottom:1px solid #CBCBCB;} 
+.LGYCellBorderFF3 {border-left:0;border-top:0;} 
+.LGYCellSpace {vertical-align:top; padding-top:5px !important; }
+.LGYCellSpacePanel,.LGYCellSpaceBool {vertical-align:top; }
+.LGYCellSpaceRadio { padding-top:3px !important;}
+.LGYCellSpaceEditButton { vertical-align:top; padding-top:4px !important; border:1px solid #000000 !important; background-color:#ffffff !important; }
+.LGYCellSpaceButtonButton { vertical-align:top; }
+.LGYCellSpaceButton { vertical-align:top; padding-top:5px !important; white-space:nowrap; }
+.LGYCellSpaceAbove { border-top:1px solid #9cb6c8; }
+.LGYCellSpaceBelow { border-bottom:1px solid #9cb6c8; }
+.LGYCellPanel,.LGYCellHeaderPanel{ white-space:nowrap; } 
+.LGYCellHidden { background:transparent!important; border-top:none!important; border-bottom:none!important; }
+.LGYHeaderButton { padding:0; }
+.LGYHeaderGroup {background: #BEBEBE; color:#ffffff; padding-left:3px; }
+.LGYHeaderGroupFocus {background-color: #C0C0A0; }
+.LGYHeaderGroupDelete {background-color: #F0F0E0; color: #F0F0E0; }
+.LGYHeaderGroupCustom {color:#BBB; padding-left:5px; cursor:default; white-space:nowrap;}
+.LGYHeaderDrag {background: #9FB9E9; cursor:default; overflow:hidden; }
+.LGYHeaderFocus {background: #9FB9E9;}
+.LGYPanel {padding-left:80px;}
+.LGYNoTreeLines1 {text-align:right;}
+.LGYNoTreeLines2 {text-align:right; vertical-align:middle; padding-top:0;}
+.LGYTree {padding-top:0; white-space:nowrap;}
+.LGYSpannedTree {vertical-align:top;}
+.LGYCellClassInner {padding-top:0; padding-bottom:0;}
+
+/* Inside cell */
+.LGYStatus,.LGYSeq,.LGYPopup,.LGYPopupEdit,.LGYHtml,.LGYText,.LGYLines,.LGYPass,.LGYInt,.LGYFloat,.LGYDate,
+.LGYLink,.LGYImg,.LGYRadio,.LGYRadioText,.LGYList,.LGYEnum,.LGYDropCols,.LGYAbs,.LGYPagerEdit,.LGYUser 
+ {white-space:nowrap;vertical-align: middle;padding:2px 3px;} 
+.LGYInt,.LGYFloat { text-align:right; }
+.LGYLines,.LGYRadio,.LGYHtml,.LGYList { white-space:normal; }	
+.LGYImg,.LGYHtml {padding:0; } 
+.LGYPass { padding:0 0 0 3px; }
+.LGYRadio,.LGYRadioText { padding:0; font-weight:normal !important; }
+.LGYBool { text-align:center; }
+.LGYIcon { background-repeat:no-repeat; }
+.LGYHiddenSpace { display:none; }
+.LGYDropCols { padding-top:2px !important; }
+
+.LGYHeaderText {color:#535353; vertical-align:middle; font-size:/*IBFS*/12px; font-family:/*IBFN*/"Dotum", "Helvetica", "AppleGothic", sans-serif;}
+.LGYAbs { padding:0; }
+.LGYUser { padding:0; }
+.LGYPagerEdit { text-align:center; padding-top:3px; }
+.LGYMergedCellH {padding:0 0 5px 0}
+.LGYMergedCellV {padding:0 0 1px 0}
+
+.LGYWrap0 { white-space:nowrap; }
+.LGYWrap1 { white-space:normal; }
+.LGYEllipsis { white-space:nowrap; text-overflow:ellipsis;}
+
+.LGYAlignLeft { text-align:left; }
+.LGYAlignCenter { text-align:center; }
+.LGYAlignJustify { text-align:center; }
+.LGYAlignRight { text-align:right;}
+
+/* Tree Img with lines */
+.LGY000,.LGY010,.LGY001,.LGY011,.LGY100,.LGY110,.LGY101,.LGY111, 
+.LGY000T,.LGY010T,.LGY001T,.LGY011T,.LGY100T,.LGY110T,.LGY101T,.LGY111T,
+.LGY00,.LGY01,.LGY10,.LGY11,.LGY00T,.LGY01T,.LGY10T,.LGY11T,
+.LGY0T,.LGY1T,.LGY0TL,.LGY1TL,.LGY0C,.LGY1C,.LGY0CL,.LGY1CL,.LGY0E,.LGY1E,.LGY0EL,.LGY1EL,
+.LGY0,.LGY1,.LGYT,.LGYTL,.LGYC,.LGYCL,.LGYE,.LGYEL,.LGYD0,.LGYD1,.LGYD2,.LGYD3,.LGYD4,.LGYD0L,.LGYD1L,.LGYD2L,.LGYD3L,.LGYD4L 
+{background-image:url(Tree.gif); vertical-align:top;}
+
+u.LGY000,u.LGY010,u.LGY001,u.LGY011,u.LGY100,u.LGY110,u.LGY101,u.LGY111 { padding-left:63px; }
+u.LGY000T,u.LGY010T,u.LGY001T,u.LGY011T,u.LGY100T,u.LGY110T,u.LGY101T,u.LGY111T { padding-left:89px; }
+u.LGY00,u.LGY01,u.LGY10,u.LGY11 { padding-left:42px; }   
+u.LGY00T,u.LGY01T,u.LGY10T,u.LGY11T { padding-left:68px; }   
+u.LGY0T,u.LGY1T,u.LGY0TL,u.LGY1TL,u.LGY0C,u.LGY1C,u.LGY0CL,u.LGY1CL,u.LGY0E,u.LGY1E,u.LGY0EL,u.LGY1EL { padding-left:47px; }   
+u.LGY0,u.LGY1 { padding-left:21px; }
+u.LGYT,u.LGYTL,u.LGYC,u.LGYCL,u.LGYE,u.LGYEL,u.LGYD0,u.LGYD1,u.LGYD2,u.LGYD3,u.LGYD4,u.LGYD0L,u.LGYD1L,u.LGYD2L,u.LGYD3L,u.LGYD4L { padding-left:26px; }   
+
+.LGY000,.LGY000T{ background-position:0px 0px; }
+.LGY010,.LGY010T{ background-position:-128px 0; }
+.LGY001,.LGY001T{ background-position:-256px 0; }
+.LGY011,.LGY011T{ background-position:-384px 0; }
+.LGY100,.LGY100T{ background-position:-512px 0; }
+.LGY110,.LGY110T{ background-position:-640px 0; }
+.LGY101,.LGY101T{ background-position:-768px 0; }
+.LGY111,.LGY111T{ background-position:-896px 0; }
+.LGY00,.LGY00T  { background-position:-21px 0;  }
+.LGY10,.LGY10T  { background-position:-149px 0; }
+.LGY01,.LGY01T  { background-position:-277px 0; }
+.LGY11,.LGY11T  { background-position:-405px 0; }
+.LGY0,.LGY0T 	  { background-position:-42px 0;  }
+.LGY1,.LGY1T 	  { background-position:-298px 0; }
+.LGYT 		  { background-position:-63px 0;  }
+.LGY0TL 		  { background-position:-1024px 0; }
+.LGY1TL 		  { background-position:-1088px 0; }
+.LGY0C 	      { background-position:-1152px 0; }
+.LGY1C 		  { background-position:-1216px 0; }
+.LGY0CL 		  { background-position:-1280px 0; }
+.LGY1CL 		  { background-position:-1344px 0; }
+.LGY0E 		  { background-position:-1408px 0; }
+.LGY1E 		  { background-position:-1472px 0; }
+.LGY0EL 		  { background-position:-1536px 0; }
+.LGY1EL 		  { background-position:-1600px 0; }
+.LGYTL 		  { background-position:-1045px 0; }
+.LGYC 		  { background-position:-1173px 0; }
+.LGYCL 		  { background-position:-1301px 0; }
+.LGYE 		  { background-position:-1429px 0; }
+.LGYEL 		  { background-position:-1557px 0; }
+.LGYD0 		  { background-position:-1664px 0; }
+.LGYD1 		  { background-position:-1696px 0; }
+.LGYD2 		  { background-position:-1728px 0; }
+.LGYD3 		  { background-position:-1760px 0; }
+.LGYD0L 		  { background-position:-1792px 0; }
+.LGYD1L 		  { background-position:-1824px 0; }
+.LGYD2L 		  { background-position:-1856px 0; }
+.LGYD3L 		  { background-position:-1888px 0; }
+.LGYD4 		  { background-position:-1920px 0; }
+.LGYD4L 		  { background-position:-1952px 0; }
+
+/* Tree Img without lines  */
+.LGYND0,.LGYND1,.LGYND2,.LGYND3,.LGYND4,.LGYNC,.LGYNE,.LGYNCR,.LGYNER {background-image:url(TreeN.gif); background-repeat:no-repeat; vertical-align:top; }
+u.LGYND0,u.LGYND1,u.LGYND2,u.LGYND3,u.LGYND4,u.LGYNC,u.LGYNE,u.LGYNCR,u.LGYNER { padding-left:20px; }
+.LGYND0 { background-position: -6px 0; }
+.LGYND1 { background-position: -56px 0; }
+.LGYND2 { background-position: -106px 0; }
+.LGYND3 { background-position: -156px 0; }
+.LGYND4 { background-position: -206px 0; }
+.LGYNC { background-position:right -50px;}
+.LGYNE { background-position:right -2000px;}
+.LGYNCR { background-position:-255px -50px;}
+.LGYNER { background-position:-255px -2000px;}
+u.LGYNL { padding-left:21px; }
+
+/* Cell images */
+.LGYIconLink { text-decoration:none; width:1000px; display:inline-block; }
+.LGYIconLeft,.LGYIconRight,.LGYIconCenter {  background-repeat:no-repeat; }
+.LGYIconLeft { background-position:left 0; padding-left:20px !important; }
+.LGYIconRight { background-position:right 0; padding-right:20px !important; }
+.LGYIconCenter { background-position:center 0; }
+.LGYPopupRight { background:url(popup.gif) no-repeat 5px center; }
+.LGYExpandLeft,.LGYCollapseLeft,.LGYExpandHeaderLeft,.LGYCollapseHeaderLeft { padding-left:20px!important; }
+.LGYDateRight{ padding-right:20px!important;}
+u.LGYDateRight,.LGYPopupRight { padding-right:0!important; padding-left:17px; }
+.LGYDateRight {background:url(calendar.gif) no-repeat 2px center}
+.LGYEnumRight { background:url(combo.gif) no-repeat right center; }
+u.LGYEnumRight {padding-right:0; padding-left:17px}
+.LGYExpandLeft { background:url(ic_plus.gif) no-repeat 3px center; padding:2px 0 0  18px; _padding:0 0 0 18px }
+.LGYCollapseLeft { background:url(ic_minus.gif) no-repeat 3px center ; padding:2px 0 0  18px; _padding:0 0 0 18px }
+.LGYRadio0Right,.LGYRadio1Right,.LGYRadio2Right,.LGYRadio3Right {line-height:17px; padding-right:17px; padding-left:3px; }
+u.LGYFilter0,u.LGYFilter1 { padding-left:16px; }
+.LGYBool0,.LGYBool0RO,.LGYBool1,.LGYBool1RO,.LGYBool2,.LGYBool2RO,.LGYBool3,.LGYBool3RO {background-position:center center; background-repeat:no-repeat;}
+
+.LGYBool0   { background-image:url(chk0.gif);  }
+.LGYBool0RO { background-image:url(chk0R.gif); }
+
+.LGYBool1   { background-image:url(chk1.gif);  }
+.LGYBool1RO { background-image:url(chk1R.gif); }
+
+.LGYBool2   { background-image:url(chk2.gif);  }
+.LGYBool2RO { background-image:url(chk2R.gif); }
+
+.LGYBool3   { background-image:url(chk3.gif);  }
+.LGYBool3RO { background-image:url(chk3R.gif); }
+
+/* Filter images  */
+.LGYFilter0Left,.LGYFilter1Left,.LGYFilter2Left,.LGYFilter3Left,.LGYFilter4Left,.LGYFilter5Left,.LGYFilter6Left,.LGYFilter7Left,
+.LGYFilter8Left,.LGYFilter9Left,.LGYFilter10Left,.LGYFilter11Left,.LGYFilter12Left {padding-left:18px;}
+
+.LGYFilter0Left,.LGYFilter0Menu 	{ width:18px; height:18px; background:url(filter0.gif) no-repeat left center; }   
+.LGYFilter1Left,.LGYFilter1Menu 	{ width:18px; height:18px; background:url(filter1.gif) no-repeat left center; }
+.LGYFilter2Left,.LGYFilter2Menu 	{ width:18px; height:18px; background:url(filter2.gif) no-repeat left center; }
+.LGYFilter3Left,.LGYFilter3Menu 	{ width:18px; height:18px; background:url(filter3.gif) no-repeat left center; }
+.LGYFilter4Left,.LGYFilter4Menu 	{ width:18px; height:18px; background:url(filter4.gif) no-repeat left center; }
+.LGYFilter5Left,.LGYFilter5Menu 	{ width:18px; height:18px; background:url(filter5.gif) no-repeat left center; }   
+.LGYFilter6Left,.LGYFilter6Menu 	{ width:18px; height:18px; background:url(filter6.gif) no-repeat left center; }
+.LGYFilter7Left,.LGYFilter7Menu 	{ width:18px; height:18px; background:url(filter7.gif) no-repeat left center; }
+.LGYFilter8Left,.LGYFilter8Menu 	{ width:18px; height:18px; background:url(filter8.gif) no-repeat left center; }
+.LGYFilter9Left,.LGYFilter9Menu 	{ width:18px; height:18px; background:url(filter9.gif) no-repeat left center; }
+.LGYFilter10Left,.LGYFilter10Menu { width:18px; height:18px; background:url(filter10.gif) no-repeat left center; }
+.LGYFilter11Left,.LGYFilter11Menu { width:18px; height:18px; background:url(filter11.gif) no-repeat left center; }
+.LGYFilter12Left,.LGYFilter12Menu { width:18px; height:18px; background:url(filter12.gif) no-repeat left center; }
+
+.LGYFilter0Menu,.LGYFilter1Menu,.LGYFilter2Menu,.LGYFilter3Menu,.LGYFilter4Menu,.LGYFilter5Menu,.LGYFilter6Menu,.LGYFilter7Menu,.LGYFilter8Menu,.LGYFilter9Menu,
+.LGYFilter10Menu,.LGYFilter11Menu,.LGYFilter12Menu {overflow:hidden; margin: -2px 0 0 -1px;}
+.LGYFilterMenuHeader { padding-left:2px; border-bottom:0 !important; } 
+
+/*  Keyfield Image */
+.LGYKeyfield {background-image:url(keyfield.gif); display:inline-block; vertical-align:middle; background-repeat: no-repeat; background-position:center 1px; padding: 0 2px 0 4px; }
+
+/* GMKeyfield : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .LGYKeyfield{  background-position: center 3px;padding: 0 2px 0 4px; }}
+
+/* CheckBox Header Image */
+.LGYCheckHeader0 {background-image:url(chk0.gif); display:inline-block; vertical-align:middle; background-repeat:no-repeat; background-position:5px 1px; padding:2px 7px 0 6px; margin:0 2px 0 0;}
+
+/* GMCheckHeader0 : hack CR,SF*/
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{.LGYCheckHeader0{ background-position:6px 1px ; padding: 2px 8px 0 6px; }}
+
+/* GMCheckHeader0 : hack FF*/
+.LGYCheckHeader0, x:-moz-any-link, x:default { background-position:6px 1px ; padding: 2px 8px 0 6px; }
+
+/* GMCheckHeader0 : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .LGYCheckHeader0{ background-position:7px center ; padding:1px  17px 0 0; }}
+
+.LGYCheckHeader1 {background-image:url(chk1.gif); display:inline-block; vertical-align:middle; background-repeat:no-repeat; background-position:4px 1px ; padding:2px 6px 0 6px; margin:0 2px 0 0}
+
+/* GMCheckHeader1 : hack CR,SF*/
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{.LGYCheckHeader1{ background-position:6px 1px ; padding: 2px 8px 0 6px; }}
+
+/* GMCheckHeader1 : hack FF*/
+.LGYCheckHeader1, x:-moz-any-link, x:default { background-position:6px 1px ; padding: 2px 8px 0 6px; }
+
+/* GMCheckHeader1 : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .LGYCheckHeader1 { background-position:7px center ; padding:1px  17px 0 0;  }}
+
+/* Sort images */
+.LGYSort {display:block; float:right; margin:2px 2px 0;width:7px}
+
+/* State classes */
+/* The colors must be set by numbers not by names */
+.LGYColorDefault  { background-color:#FFFFFF;}
+.LGYColorNoFocus  { background-color:#E8F4FF;}
+.LGYColorReadOnly { background-color:#F3F3F3;}
+.LGYColorPreview  { background-color:#FFFFFF;}
+.LGYColorAlternate{ background-color:#F3F3F3;}
+.LGYColorSelected { background-color:/*#FFFF80*/#aadbff; }
+
+.LGYColorFilter {background-color:#FFFFFF;}
+
+/*//.LGYClassSelected { }*/
+.LGYColorError   { background-color:#FF6969; }
+.LGYColorDeleted { background-color:#FFCDCD; }
+.LGYClassDeleted { font-style:italic; }
+.LGYColorAdded   { background-color:#CDFFCD; }
+.LGYClassAdded   { font-weight:bold; }
+.LGYColorMoved1  { background-color:#FFFFFF; }
+.LGYColorMoved2  { background-color:#D7EBEB; }
+.LGYColorChanged { background-color:#EBEBFF; }
+.LGYColorChangedCell { background-color:#E1E1FF; }
+.LGYClassChangedCell { font-weight:bold; }
+.LGYColorMaxChildren { background-color:#FFFFF0; }
+.LGYColorDetail { background-color:#FFF0FF; }
+.LGYColorDetailSelected { background-color:#FFF0E0; }
+.LGYColorDragged{ background-color:#E0E0C0; }
+.LGYColorFound1 { background-color:#FF87FF; }
+.LGYColorFound2 { background-color:#FFC387; }
+.LGYColorFound3 { background-color:#87FF87; }
+.LGYColorHovered 			{ background-color:#F0F0FF; }
+.LGYColorHoveredCell 		{ background-color:#C0C0FF; }
+.LGYColorHoveredCellReadOnly { background-color:#F0F0F0; }
+.LGYColorHoveredCellNoFocus 	{ background-color:#F8F8F8; }
+
+.LGYClassHoveredCellHeader 	{ background-position:0px -250px; }
+.LGYClassHoveredCellPanel 	{ background-position:0px -1801px; background-repeat:repeat-x; }
+
+.LGYColorHoveredCellSpace 	{ background-color:#FFFFFF; }
+.LGYColorHoveredCellSpaceEdit{ background-color:#C0C0FF; }
+.LGYColorHoveredCellSpaceBool{ background-color:#FFFFFF; }
+.LGYColorHoveredCellButton 	{ background-color:#FFFFFE; }
+.LGYClassHoveredCellButton 	{ color:green; }
+.LGYColorHoveredCellButton1 	{ background-color:#FFFFFE; }
+.LGYClassHoveredCellButton1 	{ color:red; }
+.LGYColorHoveredCellTab 		{ background-color:#FFFFFE; }
+.LGYClassHoveredCellTab 		{ background-position:0px -1801px; color:green; }
+.LGYColorHoveredCellTab1 	{ background-color:#99bbcc; }
+.LGYClassHoveredCellTab1 	{ background-image:none; }
+
+.LGYColorFocused 			{ background-color:#E6E6E6; }
+.LGYColorFocusedCell 		{ background-color:#FFFFFE; }
+.LGYColorFocusedCellSafari 	{ background-color:#A0A0FF; }
+.LGYColorFocusedCellSpace 	{ background-color:#E6E6E6; }
+.LGYColorFocusedCellButton 	{ background-color:#BCD; }
+.LGYColorFocusedCellHeader 	{ background-color:#FFFFFE; }
+.LGYColorFocusedCellPanel 	{ background-color:#FFFFFE; }
+.LGYColorEditedCell 			{ background-color:#FFFFFF; }
+.LGYColorViewedCell 			{ background-color:#FFFFFF; }
+
+/* Hover, focus, edit cursors */
+.LGYHoverRowBackground 	{ opacity:0.1; filter:alpha(opacity=10); background:#00F; }
+.LGYHoverRowBorder 		{ z-index:0; border-top:1px solid #BBF; border-bottom:1px solid #BBF; cursor:default; }
+.LGYHoverCellBorder 		{ z-index:0; padding:1px; border:1px solid #A0A0F0; background:white; }
+.LGYFocusRowBackground 	{ opacity:0.1; filter:alpha(opacity=50); background:/*IBSB*/#F1FF8F; } /* <-- Sheet : Selected Row Background */
+.LGYFocusRowBorder 		{ z-index:0; border:1px solid /*IBSB*/#8493AA; } /* <-- Sheet : Selected Row Border */
+.LGYFocusCellBorder		{ z-index:0; border:2px solid /*IBSB*/#8493AA; } /* <-- Sheet : Selected Cell Border */
+.LGYFocusCellSpaceBorder,.LGYEditCellSpaceBorder { z-index:4; }
+.LGYEditCellBorder 		{ z-index:0; border:2px solid #FF6666;}    /*<-- Sheet : CellEdit Border */
+.LGYEditCellInput 		{ position:relative; border:0 solid #39aefb; overflow:hidden; z-index:2; } 
+
+.LGYCursorBackground, .LGYCursorBorderLeft ,.LGYCursorBorderRight,.LGYCursorBorderTop,.LGYCursorBorderBottom 
+ {position:relative;overflow:hidden;}
+
+.LGYCursorBackground  {border:none; padding:0;}
+.LGYCursorBorderLeft  {padding-right:0; padding-top:0; padding-bottom:0; border-right:none; border-top:none; border-bottom:none;  width:0; height:0;}
+.LGYCursorBorderRight {padding-left:0; padding-top:0; padding-bottom:0; border-left:none; border-top:none; border-bottom:none;  width:0; height:0;}
+.LGYCursorBorderTop 	 {padding-bottom:0; padding-left:0; padding-right:0; border-bottom:none; border-left:none; border-right:none;  width:0; height:0;}
+.LGYCursorBorderBottom{padding-top:0; padding-left:0; padding-right:0; border-top:none; border-left:none; border-right:none; width:0; height:0;}
+
+/* Cell edges */
+.LGYNoLeft { border-left:0; }
+.LGYNoRight { border-right:0; }
+
+/* Dragging */
+.LGYMouseObject { opacity:0.5; filter:alpha(opacity=50); z-index:300; overflow:hidden;}
+.LGYDragObject {z-index:300; margin-left:10px; margin-top:10px; padding-left:3px; padding-right:3px;background:#E4E5F0 ; border:1px solid #777;}
+.LGYDragColInsideTop,.LGYDragColInsideBottom,.LGYDragColOutsideTop,.LGYDragColOutsideBottom{position:absolute;width:10px; height:11px; overflow:hidden; z-index:258;}
+.LGYDragColInsideTop 	{background:url(in_top.gif) no-repeat;} 	
+.LGYDragColInsideBottom  {background:url(in_bottom.gif) no-repeat;}	
+.LGYDragColOutsideTop  	{background:url(out_top.gif) no-repeat;}	
+.LGYDragColOutsideBottom {background:url(out_bottom.gif) no-repeat;}	 
+
+/* Messages */
+.LGYDisabled{position:absolute; z-index:264; background:#ffffff; opacity:0.5; filter:alpha(opacity=50); } 
+.LGYProcess {position: absolute; left:0; top:0; background:#E2F0FF; border:1px solid #777; white-space:nowrap; text-align:center; visibility:hidden; z-index:266;}
+.LGYMessage {background:#E2F0FF; border:1px solid #000000; padding:10px; white-space:nowrap; text-align:center;
+			 position: absolute; left:0; top:0; visibility:hidden; z-index:266;}
+.LGYMessageShadow 
+{position:absolute; margin-left:3px; margin-top:3px; z-index:265;background:#888; opacity:0.5; filter:alpha(opacity=50); left:0; top:0; visibility:hidden;}
+      
+/* Other */
+/* !!! No .LGY style prefix here !!! */
+.GridTmpTag { position:absolute; left:5px; top:5px; visibility:hidden; }
+
+/* Popup menus, TGLib */
+.LGYMenuMain  {position:absolute;left:0;top:0; z-index:258;}
+.LGYMenuOuter {overflow:hidden; border:1px solid #000000; background:#fff; padding:1px; margin:1px;}
+.LGYMenuHeader{overflow:hidden; position:absolute; z-index:258;border:1px solid #b0b0c0; background:#fff; cursor:pointer; _cursor:hand;}
+.LGYMenuHead {background:#183873; color:white; cursor:default;text-align:center; padding-top:5px; padding-bottom:4px;}
+.LGYMenuClose {float:right; width:14px; cursor:pointer; _cursor:hand; display:none;}
+.LGYMenuBody {cursor:default; background-color:#fff; padding-top:1px; padding-bottom:1px;}
+.LGYMenuShadow {position:absolute;margin:3px 0 0 3px;z-index:257;background-color:#888; opacity:0.5; filter:alpha(opacity=50);}
+.LGYMenuCheckedIconRight {padding-right:17px; background:url(chk1.gif) no-repeat 96% center; }
+.LGYMenuUncheckedIconRight { padding-right:17px;background:url(chk0.gif) no-repeat 96% center ; }
+
+.LGYMenuCursorIcon {background-image:url(d_gray_right.gif); background-repeat:no-repeat; background-position: 3px center;_background-color:#fff}
+.LGYMenuHoverIcon {background-image:url(d_right.gif); background-repeat:no-repeat; background-position: 3px center; _background-color:#ffeeaa }   
+
+.LGYMenuNextIcon { padding-right:10px; }
+.LGYMenuNextIconRtl { padding-left:10px; }
+
+.LGYMenuItemText,.LGYMenuItemIcon,.LGYMenuEnum,.LGYMenuEnumHeader,.LGYMenuEdit 
+{white-space:nowrap; overflow:hidden; vertical-align: middle; padding:1px 0 0 0}
+.LGYMenuItemDisabled {opacity:0.50; filter:alpha(opacity=30); overflow:hidden; }
+.LGYMenuLevel {color:blue;text-align:center; }  
+.LGYMenuEnumParent,.LGYMenuEditParent {padding-left:5px; padding-right:2px}
+.LGYMenuItemIcon {background-repeat:no-repeat;}
+.LGYMenuEnum {border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; padding-left:15px; overflow:hidden;}
+.LGYMenuEnumHeader  {padding:1px 0 2px 16px; cursor:default; } 
+.LGYMenuEdit{border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; background:white; overflow:hidden;white-space:nowrap;
+  padding-left:2px; padding-right:2px;}
+.LGYMenuEditInput,.LGYMenuEditTextarea {margin:0;padding:0;border:0; background:#FDD;_margin:-1px; _padding-right:1px; _padding_left:1px; }   
+.LGYMenuEditTextarea { line-height:13px;  }   
+.LGYMenuEditInt,.LGYMenuEditFloat,.LGYMenuEditDate { text-align:right; } 
+.LGYMenuEditMulti { white-space:normal; }
+.LGYMenuItem {background-color:#ffffff;padding:2px;}  
+.LGYMenuItemHover {background-color:#E8E8E8; border:1px solid #727478;margin:0 1px; padding:1px 0;}
+.LGYMenuFocusHover {margin:1px; background-color:#F0F1F1; border:1px solid #000000;}
+.LGYMenuFocus 	  {margin:1px; background-color:#F0F1F1; border:1px solid #CFCFCF;}
+.LGYMenuSeparator {margin:1px 3px 0 3px; height:1px; border-top:1px solid #aaaadd; overflow:hidden;}
+.LGYMenuCaption {padding:2px; background:#ffffff; color:blue; text-align:center;}
+.LGYMenuVSeparator { border-right:0px solid #DDD; }
+.LGYMenuFoot { border-top:none; text-align:center; white-space:nowrap; }
+.LGYMenuButton {font-size:11px;background:#DFDFDF; text-align:center; border:1px solid #727478;margin:5px 2px 4px 2px;padding:0;white-space:nowrap;width:48px;} 
+.LGYMenuButtonHover { background:#E8E8E8; border:1px solid #727478; }
+
+/* Grid configuration menus */
+.LGYCfgMenuOuter,.LGYColumnsMenuOuter { border:1px solid #000000; }
+.LGYCfgMenuHead,.LGYColumnsMenuHead { padding-left:3px; }
+.LGYCfgMenuBody,.LGYColumnsMenuBody { padding-left:4px; padding-right:4px;}
+.LGYCfgMenuFoot,.LGYColumnsMenuFoot { padding-right:3px; padding-left:3px;}
+.LGYCfgMenuButton { width:70px; } 
+.LGYCfgMenuItemText,.LGYColumnsMenuItemText { padding-left:3px; }
+.LGYColumnsMenuItemText { white-space:nowrap; }
+.LGYCfgMenuItem,.LGYColumnsMenuItem { padding-top:3px; padding-bottom:3px;}
+.LGYCfgMenuItemHover,.LGYCfgMenuFocus,.LGYCfgMenuFocusHover,
+.LGYColumnsMenuItemHover,.LGYColumnsMenuFocus,.LGYColumnsMenuFocusHover { padding-top:2px; padding-bottom:2px;}
+
+/* Popup grid dialog */
+.LGYPopupGridOuter { border:0; overflow:visible; }
+.LGYPopupGridHead { padding:0; }
+.LGYPopupGridBody { padding:0; }
+.LGYPopupGridFoot { padding:0; }
+.LGYPopupGridButton { width:50px;margin-top:-2px; margin-bottom:3px;} 
+
+/* Calendar, TGLib */
+.LGYPickMain  {position:absolute; left:0; top:0; z-index:258; }
+.LGYPickOuter {overflow:hidden; background:white; padding:1px; border:1px solid #707275; }
+.LGYPickHeader{overflow:hidden; position:absolute; z-index:258; border:1px solid black; background:#ffffff; cursor:pointer; _cursor:hand;}
+.LGYPickHeaderBottom{border-bottom:0; padding-bottom:1px;}
+.LGYPickHeaderTop{border-top:0; padding-bottom:1px; }
+.LGYPickHead {background:#5c8397; font:10px Dotum,Verdana,Arial; color:white; cursor:default; padding-left:5px; padding-top:1px; padding-bottom:1px;border-bottom:1px solid white;}
+.LGYPickClose{float:right; width:14px; cursor:pointer; _cursor:hand; display:none;}
+.LGYPickBody {cursor:default; padding:0; }
+.LGYPickShadow{position:absolute; background:#888; z-index:257; margin:3px 0 0 3px;opacity:0.5; filter:alpha(opacity=50);} 
+.LGYPickFooter,.LGYPick2Footer{text-align:center; padding:2px; cursor:default; background:#EFF0F1; border-top:1px solid #E3E4E6}
+ 
+.LGYPickMY{background-color:#DFDFDF;border-bottom:1px solid #C6C9CC;color:#434343; cursor:default;text-align:center;padding:2px 0 4px 0;}/* <-- Calender : Header Background */
+   
+.LGYPickMYDown{padding-right:13px; background:url(d_down.gif) no-repeat right; cursor:pointer; _cursor:hand;}
+.LGYPickMYUp {padding-right:13px; background:url(d_up.gif) no-repeat right center; cursor:pointer; _cursor:hand;}
+
+.LGYPickMYRtl{padding-right:0; padding-left:13px; }
+.LGYPickBL,.LGYPickBR{padding-top:3px; cursor:pointer; _cursor:hand; width:16px; height:14px; overflow:hidden;}
+
+.LGYPickBL {float:left; background:url(d_left.gif) no-repeat 50%; }
+.LGYPickBR {float:right; background:url(d_right.gif) no-repeat 50%; }
+
+.LGYPickTable{}
+.LGYPickRow  {background:#ffffff;}
+.LGYPickRowW {background:#E8E8E8;}
+.LGYPickCell {width:22px;}
+.LGYPickWDN {background:transparent; color:#333333;text-align:center; cursor:default; margin:2px 3px;padding:1px;}
+  
+.LGYPickHover,.LGYPickSelHover,.LGYPickWD,.LGYPickSa,.LGYPickSu,.LGYPickSel,.LGYPickNow,.LGYPickWDNE,.LGYPickSaNE,.LGYPickSuNE,
+.LGYPickSelNE,.LGYPickNowNE,.LGYPickOM,.LGYPickOMNE {text-align:center; border:1px solid #ffffff; cursor:pointer; _cursor:hand;margin:2px 3px;}
+.LGYPickWN,.LGYPickWNE {text-align:center; cursor:pointer; _cursor:hand;padding:3px 4px; border-right:0px solid #C6C9CC; background:#EFF0F1;}
+   
+.LGYPickWDNE,.LGYPickSaNE,.LGYPickSuNE,.LGYPickSelNE,.LGYPickNowNE,.LGYPickWNE {cursor:default;}
+.LGYPickWD{background-color:#ffffff;}
+.LGYPickSa{background-color:#ffffff;}
+.LGYPickSu{background-color:#ffffff;}
+.LGYPickSel{background-color:#CCFF00; border:1px solid #cccccc;}
+.LGYPickSelNE{background-color:#fbea54; border:1px solid #dad1d1;}
+.LGYPickNow {background-color:#c0f3ff; border:1px solid #dad1d1;}
+.LGYPickNowNE{background-color:#c0f3ff; border:1px solid #dad1d1;}
+.LGYPickHover{background-color:#ddd; border:1px solid #ddd;}
+.LGYPickSelHover{background-color:#dddddd; border:1px solid #dddddd;}
+.LGYPickOM{background-color:white; color:#aaaaaa;}
+.LGYPickOMNE{color:#aaaaaa;}
+
+.LGYPickEmpty{background:url(d_blank.gif) no-repeat 50%; cursor:pointer; _cursor:hand;padding:3px 0; }
+
+.LGYPickTimeCell 
+{text-align:right; padding-bottom:4px; padding-top:6px; padding-right:5px; border-top:1px solid #C6C9CC; background:#EFF0F1;}
+
+.LGYPickTime 
+{border:0px none; white-space:nowrap; text-align:right; background:#EFF0F1;}
+
+.LGYPickButton{background:#DFDFDF; text-align:center; border:1px solid #727478; width:45px; height:16px}
+    
+.LGYPickButtonHover{background:#E8E8E8; border:1px solid #727478; }
+.LGYPick2Table{width:auto; vertical-align:middle}
+.LGYPick2CellM{height:20px; width:55px; }
+.LGYPick2CellY{height:20px; width:35px; vertical-align:middle }
+.LGYPick2CellSep{height:20px; width:5px; }
+.LGYPick2Cell{vertical-align:middle}
+.LGYPick2M,.LGYPick2Y,.LGYPick2MSel,.LGYPick2YSel,.LGYPick2MHover,.LGYPick2YHover,.LGYPick2MSelHover,.LGYPick2YSelHover
+{cursor:pointer; _cursor:hand; text-align:center; margin-left:1px; margin-right:1px; padding-left:4px; padding-right:4px; overflow:hidden; }
+   
+.LGYPick2MSel,.LGYPick2YSel {background:#CCFF00; border:1px solid #cccccc; margin-left:0; margin-right:0;}
+.LGYPick2MHover,.LGYPick2YHover {background:#DDD; border:1px solid #ffffff; margin-left:0; margin-right:0;}
+.LGYPick2MSelHover,.LGYPick2YSelHover {background:#DDFF53; border:1px solid #ffffff;margin-left:0; margin-right:0;}   
+.LGYPick2SepH {width:1px; height:1px; overflow:hidden; }
+.LGYPick2Sep {width:1px; background:#E3E4E6; overflow:hidden; margin-left:2px; margin-right:2px; height:20px;}
+.LGYPick2BL,.LGYPick2BR {width:35px; cursor:pointer; _cursor:hand; }
+
+
+.LGYPick2BL {background:url(d_left2.gif) no-repeat center center}
+.LGYPick2BR {background:url(d_right2.gif) no-repeat center center}
+
+
+/* Edit controls, TGLib */
+.LGYEdit,.LGYEditInline {padding:2px 4px;border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666;background:#ffffff; white-space:nowrap; overflow:hidden;}
+  
+.LGYEditInline { display:inline-block; vertical-align:bottom; }
+.LGYEditInput,.LGYEditTextarea {border:0 solid transparent; margin:0; padding:0;vertical-align: middle} 
+
+.LGYEditTextarea { line-height:13px; }
+.LGYEditSpaceInput { vertical-align:middle; }
+.LGYEditNormalInput,.LGYEditNormalTextarea,.LGYEditSpaceTextarea { background-color:#FFFFFF; /*#FFDCFF;*/; }
+.LGYEditInt,.LGYEditFloat { text-align:right; }
+
+.LGYEditMulti { white-space:normal; }
+.LGYEditReadOnly { background-color:#FFEEFF; }   
+.LGYEditParent { position:absolute; z-index:258; overflow:hidden; }
+
+.LGYEnumHeaderLeft,.LGYEnumHeaderRight,.LGYEnumHeaderNone 
+{background:white; cursor:pointer; _cursor:hand; vertical-align:middle; text-align:left; padding:2px 0 2px 2px;}
+
+.LGYEnumHeaderRight {background: url(combo.gif) no-repeat right center;margin:1px 1px 0 0;}
+ @media screen and (-webkit-min-device-pixel-ratio:0) {.LGYEnumHeaderRight{margin:1px 0 0 0;}}/* hack:CR,SF */
+.LGYEnumHeaderRight, x:-moz-any-link, x:default {margin:1px 0 0 0;} /* hack:FF */
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {.LGYEnumHeaderRight{ margin:1px 0 0 0;}}/* hack:OP */
+
+.LGYEnumMenuHeader { background:#ffffff; }
+
+.LGYEnumControl,.LGYEnumInline {
+   cursor:pointer; _cursor:hand; padding-left:15px; padding-right:4px; padding-top:2px; padding-bottom:2px;
+   border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; overflow:hidden;}
+   
+.LGYEnumInline { display:inline-block; vertical-align:bottom; }
+.LGYEnumHeader { cursor:pointer; _cursor:hand;padding-left:15px; padding-right:4px; padding-top:2px; padding-bottom:2px;} 
+
+/*  Custom scrollbars  */
+.LGYCustScroll1RightHidden { background:url(VScroll.gif) left -108px; height:18px; overflow:hidden; }
+.LGYCustScroll1Right { padding-right:18px; background:url(VScroll.gif) right 0; }
+.LGYCustScroll1RightHover { padding-right:18px; background:url(VScroll.gif) right -18px; }
+.LGYCustScroll1Left { padding-left:18px;  background:url(VScroll.gif) left 0; }
+.LGYCustScroll1LeftHover { padding-left:18px;  background:url(VScroll.gif) left -18px; }
+.LGYCustScroll1SliderRight { padding-right:3px; background:url(VScroll.gif) right -36px; }
+.LGYCustScroll1SliderLeft { padding-left:3px; background:url(VScroll.gif) left -36px; }
+.LGYCustScroll1SliderHIn { height:18px; overflow:hidden; background:url(VScroll.gif) center -54px; }
+.LGYCustScroll1SliderRightHover { padding-right:3px; background:url(VScroll.gif) right -72px; }
+.LGYCustScroll1SliderLeftHover { padding-left:3px; background:url(VScroll.gif) left -72px; }
+.LGYCustScroll1SliderHInHover { height:18px; overflow:hidden; background:url(VScroll.gif) center -90px; }
+.LGYCustScroll2RightHidden { background:url(VScroll.gif) left -108px; height:18px; overflow:hidden; }
+.LGYCustScroll2Right { padding-right:18px; background:url(VScroll.gif) right 0; }
+.LGYCustScroll2RightHover { padding-right:18px; background:url(VScroll.gif) right -18px; }
+.LGYCustScroll2Left { padding-left:18px;  background:url(VScroll.gif) left 0; }
+.LGYCustScroll2LeftHover { padding-left:18px;  background:url(VScroll.gif) left -18px; }
+.LGYCustScroll2SliderRight { padding-right:3px; background:url(VScroll.gif) right -36px; }
+.LGYCustScroll2SliderLeft { padding-left:3px; background:url(VScroll.gif) left -36px; }
+.LGYCustScroll2SliderHIn { height:18px; overflow:hidden; background:url(VScroll.gif) center -54px; }
+.LGYCustScroll2SliderRightHover { padding-right:3px; background:url(VScroll.gif) right -72px; }
+.LGYCustScroll2SliderLeftHover { padding-left:3px; background:url(VScroll.gif) left -72px; }
+.LGYCustScroll2SliderHInHover { height:18px; overflow:hidden; background:url(VScroll.gif) center -90px; }
+
+.LGYCustScroll3Right,.LGYCustScroll3RightHidden { background:white; height:9px; overflow:hidden; }
+.LGYCustScroll3SliderRight,.LGYCustScroll3SliderRightHover { padding-right:3px; height:9px; background:url(VScroll.gif) right -126px; }
+.LGYCustScroll3SliderLeft,.LGYCustScroll3SliderLeftHover { height:9px; background:url(VScroll.gif) left -126px; }
+.LGYCustScroll3SliderRightHover { background-position:right -135px; }
+.LGYCustScroll3SliderLeftHover { background-position:left -135px; }
+.LGYCustScroll4Right,.LGYCustScroll4RightHidden,.LGYCustScroll4SliderRight,.LGYCustScroll4SliderRightHover { height:1px; overflow:hidden; }
+
+.LGYCustScroll1DownHidden { background:url(HScroll.png) -108px top; width:18px; overflow:hidden; }
+.LGYCustScroll1Down { padding-bottom:18px; background:url(HScroll.png) 0px bottom; cursor:default; width:18px; overflow:hidden; }
+.LGYCustScroll1DownHover { padding-bottom:18px; background:url(HScroll.png) -18px bottom; width:18px; overflow:hidden; }
+.LGYCustScroll1Up { padding-top:18px; background:url(HScroll.png) 0px top; width:18px; overflow:hidden; }
+.LGYCustScroll1UpHover { padding-top:18px;  background:url(HScroll.png) -18px top; width:18px; overflow:hidden; }
+.LGYCustScroll1SliderDown { padding-bottom:3px; background:url(HScroll.png) -36px bottom; width:18px; overflow:hidden; }
+.LGYCustScroll1SliderUp { padding-top:3px; background:url(HScroll.png) -36px top; width:18px; overflow:hidden; }
+.LGYCustScroll1SliderVIn { background:url(HScroll.png) -54px center; width:18px; overflow:hidden; }
+.LGYCustScroll1SliderDownHover { padding-bottom:3px; background:url(HScroll.png) -72px bottom; width:18px; overflow:hidden; }
+.LGYCustScroll1SliderUpHover { padding-top:3px; background:url(HScroll.png) -72px top; width:18px; overflow:hidden; }
+.LGYCustScroll1SliderVInHover { background:url(HScroll.png) -90px center; width:18px; overflow:hidden; }
+
+.LGYCustScroll2DownHidden { background:url(HScroll.png) -108px top; width:18px; overflow:hidden; }
+.LGYCustScroll2Down { padding-bottom:18px; background:url(HScroll.png) 0px bottom; cursor:default; width:18px; overflow:hidden; }
+.LGYCustScroll2DownHover { padding-bottom:18px; background:url(HScroll.png) -18px bottom; width:18px; overflow:hidden; }
+.LGYCustScroll2Up { padding-top:18px; background:url(HScroll.png) 0px top; width:18px; overflow:hidden; }
+.LGYCustScroll2UpHover { padding-top:18px;  background:url(HScroll.png) -18px top; width:18px; overflow:hidden; }
+.LGYCustScroll2SliderDown { padding-bottom:3px; background:url(HScroll.png) -36px bottom; width:18px; overflow:hidden; }
+.LGYCustScroll2SliderUp { padding-top:3px; background:url(HScroll.png) -36px top; width:18px; overflow:hidden; }
+.LGYCustScroll2SliderVIn { background:url(HScroll.png) -54px center; width:18px; overflow:hidden; }
+.LGYCustScroll2SliderDownHover { padding-bottom:3px; background:url(HScroll.png) -72px bottom; width:18px; overflow:hidden; }
+.LGYCustScroll2SliderUpHover { padding-top:3px; background:url(HScroll.png) -72px top; width:18px; overflow:hidden; }
+.LGYCustScroll2SliderVInHover { background:url(HScroll.png) -90px center; width:18px; overflow:hidden; }
+
+.LGYCustScroll3Down,.LGYCustScroll3DownHidden { background:white; width:9px; overflow:hidden; cursor:default; }
+.LGYCustScroll3SliderDown,.LGYCustScroll3SliderDownHover { padding-bottom:3px; width:9px; background:url(HScroll.png) -126px bottom; }
+.LGYCustScroll3SliderUp,.LGYCustScroll3SliderUpHover { width:9px; background:url(HScroll.png) -126px top; cursor:default; }
+.LGYCustScroll3SliderDownHover { background-position:-135px bottom; }
+.LGYCustScroll3SliderUpHover { background-position:-135px top; cursor:default; }
+
+.LGYCustScroll4Down,.LGYCustScroll4DownHidden,.LGYCustScroll4SliderDown,.LGYCustScroll4SliderDownHover { width:1px; overflow:hidden; }
+
+/* Other messages, TGLib */
+.LGYHintMain {position:absolute; margin-left:-1px; margin-top:-1px; left:0px; top:0px; z-index:260; background:#ffffff; cursor:default; }
+.LGYHintOuter {overflow:hidden; border:1px solid #000000; background:#ffffff !important; color:black; text-align:left; }
+.LGYHintHeaderOuter {background-color:#39aefb !important; color:#ffffff; border: 1px solid #ffffff; }
+.LGYHintShadow {position:absolute; z-index:259;background:#888; opacity:0.3; filter:alpha(opacity=30);margin-left:2px; margin-top:2px;}
+.LGYTipMain {position:absolute; left:0px; top:0px; z-index:262; visibility:hidden; }
+.LGYTipOuter  {overflow:hidden; cursor:default; font:12px Arial;padding-left:3px; padding-right:3px; background:#E4E5F0; border:1px solid #777;}
+.LGYTipBody {background:#E4E5F0; white-space:nowrap; }
+.LGYTipShadow {position:absolute;z-index:261;background:#888; opacity:0.3; filter:alpha(opacity=30);visibility:hidden; margin-left:3px; margin-top:3px}
+.LGYMouseOrig { background:yellow !important; opacity:0.5; filter:alpha(opacity=50); }
+.LGYMouseDragObject { position:absolute; z-index:260; background:#888; opacity:0.5; filter:alpha(opacity=50); }
+.LGYFocus { border:1px solid #AAF; border-top:1px solid #00F; border-left:1px solid #00F; background-color:#EEE; } 
+.GridDisabled { position:absolute; z-index:256; background:white; opacity:0.5; filter:alpha(opacity=50); } 
+
+/* Do not change, marks the style loaded */
+.LGYLoaded { border:1px solid #000000 !important;}
+
+/*sum*/
+.LGYSumCell{background:#fafafa; color:#FF060C;}/*//text-align: right;font-weight:bold;*/
+.LGYSubSumCell{background: #FCF0E7; border-top:1px solid #F7BBA1; border-bottom:1px solid #F7BBA1; color:#DA5615}
+.LGYCumulateCell{background: #FCF0E7; border-bottom:1px solid #F7BBA1; color:#BE3600}
+
+/* FindDialog */
+.LGYH1Pop,.LGYPPop{margin:0; padding:0}
+.LGYPaddingl10{padding-left:10px}
+.LGYPaddingT10{padding-top:10px}
+.LGYPPop{ padding:0 0 10px 0; text-align:center }
+.LGYPop{width:410px; overflow:hidden; border:1px solid #B9B9B9; padding:0; font-size:12px;background:#F9F9F9; font-family:dotum, Arial, Helvetica, sans-serif}
+.LGYPopTitle{width:100%;color:#535353;border-bottom:1px solid #B9B9B9; font-size:12px; font-weight:bold; display:block; line-height:28px;
+background: #e8e8e8; /* Old browsers */
+background: -moz-linear-gradient(top,  #e8e8e8 0%, #dcdcdc 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e8e8e8), color-stop(100%,#dcdcdc)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #e8e8e8 0%,#dcdcdc 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #e8e8e8 0%,#dcdcdc 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #e8e8e8 0%,#dcdcdc 100%); /* IE10+ */
+background: linear-gradient(top,  #e8e8e8 0%,#dcdcdc 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', endColorstr='#dcdcdc',GradientType=0 ); /* IE6-9 */
+}
+.LGYPopSearch{margin:10px; overflow:hidden; }
+.LGYPopContent{border:1px solid #D0DBE8; background-color:#fff}
+.LGYPopUl{list-style:none; margin:0; padding:10px;}
+.LGYPopDiv{overflow:hidden; width:100%}
+.LGYPopDiv2{overflow:hidden; width:100%}
+.LGYPopLeft,.LGYPopLeft2{width:220px; float:left; }
+.LGYPopRight,.LGYPopRight2{width:166px; float:right}
+.LGYPopUl input {margin:-2px 2px 0px 0px;padding:0 ; width:13px; height:13px; vertical-align:middle;}
+.LGYPopUl li{ padding-top:4px;padding-bottom:3px ; padding-left:5px}
+.LGYBtn{margin-top:10px; text-align:center }
+.LGYPopLeft, .LGYPopRight{ height:120px}
+.LGYPopLeft2, .LGYPopRight2{ height:80px}
+.LGYPopLabel{line-height:12px; margin:0 0 0 2px}
+.LGYPopSubtitle{font-weight:bold; color:#000; border-bottom:1px solid  #E0E0E0; background-color:#E7E7E7;padding-left:4px;}
+.LGYPopBtn {text-align: center;text-decoration: none;color:#fff;position: relative;border:1px solid #316290;
+		  font-size:12px;width:50px !important;height:22px !important; cursor:pointer;}
+.LGYPopBtn:hover {color:#fff;}
+.LGYPopBtnBlue {text-align: center;text-decoration: none;color:#535353;position: relative;border:1px solid #ACACAC; font-size:12px;width:50px !important;height:22px !important;
+background: #e8e8e8; /* Old browsers */
+background: -moz-linear-gradient(top,  #e8e8e8 0%, #dcdcdc 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e8e8e8), color-stop(100%,#dcdcdc)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #e8e8e8 0%,#dcdcdc 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #e8e8e8 0%,#dcdcdc 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #e8e8e8 0%,#dcdcdc 100%); /* IE10+ */
+background: linear-gradient(top,  #e8e8e8 0%,#dcdcdc 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', endColorstr='#dcdcdc',GradientType=0 ); /* IE6-9 */
+}
+.LGYPopBtnBlue:hover {
+background: #dcdcdc; /* Old browsers */
+background: -moz-linear-gradient(top,  #dcdcdc 0%, #e8e8e8 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dcdcdc), color-stop(100%,#e8e8e8)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #dcdcdc 0%,#e8e8e8 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #dcdcdc 0%,#e8e8e8 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #dcdcdc 0%,#e8e8e8 100%); /* IE10+ */
+background: linear-gradient(top,  #dcdcdc 0%,#e8e8e8 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dcdcdc', endColorstr='#e8e8e8',GradientType=0 ); /* IE6-9 */
+}		

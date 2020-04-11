@@ -1,0 +1,22 @@
+﻿<?xml version='1.0'?>
+<IB>
+	<CHART>
+		<KO>
+			<TR>
+				<TD NAME='SYS_ERROR'> <![CDATA[알 수 없는 오류입니다.]]> </TD>
+				<TD NAME='SYS_LICENSE_ERROR'>[IB Sheet 7] License is not valid.</TD>
+				<TD NAME='SYS_LICENSE_EXPIRED'>[IB Sheet 7] License has expired.</TD>
+				<TD NAME='UI_MSG_PRINT'>인쇄</TD>
+				<TD NAME='UI_MONTHS'>1월|2월|3월|4월|5월|6월|7월|8월|9월|10월|11월|12월</TD>
+				<TD NAME='UI_WEEKDAYS'>일요일|월요일|화요일|수요일|목요일|금요일</TD>
+				<TD NAME='UI_RESETZOOM'>원래대로 가기</TD>
+			</TR>
+		</KO>
+		<EN>
+			<TR>
+				<TD NAME='SYS_ERROR'>Unknown Error!</TD>
+				<TD NAME='UI_MSG_PRINT'>Print the chart</TD>
+			</TR>
+		</EN>
+	</CHART>
+</IB>

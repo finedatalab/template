@@ -1,0 +1,705 @@
+/* -----------------------------------------------------------------------*/
+/* ----------------- "Main" IBSheet style definition ---------------------*/
+/* -----------------------------------------------------------------------*/
+
+/* Base tags */
+.YLImage {padding-bottom:256px;}
+.YLNone {display:none;}
+.YLSection,.YLSectionFF3 {table-layout:fixed; width:0;}
+.YLSectionFF3 {border-collapse:collapse; }
+
+/* Sections */
+.YLMainTable {border:1px solid #dddddd; border-collapse:separate; text-align:left; background:#ffffff; font:12px Dotum,Helvetica,AppleGothic,Sans-serif;}
+.YLFootLeft,.YLFootMid {border-top:1px solid #dcab37;}
+.YLHeadLeft,.YLBodyLeft,.YLFootLeft,.YLHScrollLeft {border-right:1px solid #dcab37;}	
+.YLVScroll {padding-top:1px; padding-bottom:1px;}
+.YLHScrollLeft,.YLHScrollMid,.YLHScrollLeftResizeTouch,.YLHScrollRightResizeTouch {padding-left:1px; padding-right:1px; cursor:default;}
+.YLHScrollLeftResizeTouch {border-right:2px solid #000000; padding-right:18px; background:#F4F4F4;}
+.YLHScrollRightResizeTouch {border-left:2px solid #000000; padding-left:18px; background:#F4F4F4;}
+.YLHScrollMidLeftResizeTouch {border-left:1px solid #000000; padding-left:19px; background:#F4F4F4;}
+.YLHScrollMidRightResizeTouch {border-right:1px solid #000000; padding-right:19px; background:#F4F4F4;}
+.YLHScrollWide {padding-right:1px;}
+.YLHScrollHidden {overflow:visible !important; background:#F4F4F4; cursor:default; }
+.YLXScroll {background:#F4F4F4;}
+.YLPage {border-top:0px solid #E0E0E0;}
+
+/* Rows */
+.YLSpaceRowHeight{height:21px; }
+.YLRowHeight 	 {height:18px; }
+.YLRowHeightTouch{height:22px; }
+.YLSpaceMargin   {margin:0; }
+.YLSpaceMarginTouch{margin:5px; }
+.YLSpaceRow {background:#ffffff; white-space:nowrap; overflow:hidden; padding-top:2px; padding-bottom:2px; border-bottom:1px solid #e0e0ff;}
+
+.YLGroupRow,.YLSearchRow,.YLPagerRow 
+{background-color:#FFC742; white-space:nowrap; padding-top:5px; padding-bottom:5px; overflow:hidden; border-bottom:1px solid #E8B130;} 
+
+.YLGroupRow,.YLPagerRow {background-position:0 -1801px; }
+.YLFillRow {background:#ffffff; }
+.YLRowAbove,.YLRowBelow {border-left:1px solid #9cb6c8; border-right:1px solid #9cb6c8;}
+.YLRowAbove { margin-top:3px; overflow:hidden;}
+.YLRowBelow {margin-bottom:3px; overflow:hidden;}
+.YLNoDataRow {border-top:1px solid #000000;padding-left:5px; padding-top:5px; padding-bottom:5px;color:gray; font-style:italic;} 
+
+.YLCountRowTop {color:#424242; background-color:#FFC742; white-space:nowrap;padding-top:5px; padding-bottom:5px; overflow:hidden; border-bottom:1px solid #E8B130;}
+.YLCountRowBottom {color:#424242; background-color:#FFC742; white-space:nowrap; padding-top:5px; padding-bottom:5px; overflow:hidden; border-top:1px solid #E8B130;}
+
+/* Cell */
+.YLCell,.YLCellPanel,.YLCellFilter,.YLHeaderDrag,.YLHeaderGroup 
+ {color:#000000; border-bottom:1px solid #D9D9D9; border-right:1px solid #C6C9CC; border-left:0; border-top:0;vertical-align:top; overflow:hidden; height:auto; font-size:/*IBFS*/12px; font-family:/*IBFN*/"Dotum", "Helvetica", "AppleGothic", sans-serif;}
+
+.YLCellHeader,.YLCellHeaderEmpty
+ {vertical-align:middle; overflow:hidden;height:auto; background-color:#FFC742; padding-top:1px; border-right:1px solid #E8B130; border-bottom:1px solid #E8B130;} 
+
+.YLCellBorderFF3 {border-left:0;border-top:0;} 
+.YLCellSpace {vertical-align:top; padding-top:5px !important; }
+.YLCellSpacePanel,.YLCellSpaceBool {vertical-align:top; }
+.YLCellSpaceRadio { padding-top:3px !important;}
+.YLCellSpaceEditButton { vertical-align:top; padding-top:4px !important; border:1px solid #000000 !important; background-color:#ffffff !important; }
+.YLCellSpaceButtonButton { vertical-align:top; }
+.YLCellSpaceButton { vertical-align:top; padding-top:5px !important; white-space:nowrap; }
+.YLCellSpaceAbove { border-top:1px solid #9cb6c8; }
+.YLCellSpaceBelow { border-bottom:1px solid #9cb6c8; }
+.YLCellPanel,.YLCellHeaderPanel{ white-space:nowrap; } 
+.YLCellHidden { background:transparent!important; border-top:none!important; border-bottom:none!important; }
+.YLHeaderButton { padding:0; }
+.YLHeaderGroup {background: #ECAF1D; color:#ffffff; padding-left:3px; }
+.YLHeaderGroupFocus {background-color: #C0C0A0; }
+.YLHeaderGroupDelete {background-color: #F0F0E0; color: #F0F0E0; }
+.YLHeaderGroupCustom {color:#BBB; padding-left:5px; cursor:default; white-space:nowrap;}
+.YLHeaderDrag {background: #9FB9E9; cursor:default; overflow:hidden; }
+.YLHeaderFocus {background: #9FB9E9;}
+.YLPanel {padding-left:80px;}
+.YLNoTreeLines1 {text-align:right;}
+.YLNoTreeLines2 {text-align:right; vertical-align:middle; padding-top:0;}
+.YLTree {padding-top:0; white-space:nowrap;}
+.YLSpannedTree {vertical-align:top;}
+.YLCellClassInner {padding-top:0; padding-bottom:0;}
+
+/* Inside cell */
+.YLStatus,.YLSeq,.YLPopup,.YLPopupEdit,.YLHtml,.YLText,.YLLines,.YLPass,.YLInt,.YLFloat,.YLDate,
+.YLLink,.YLImg,.YLRadio,.YLRadioText,.YLList,.YLEnum,.YLDropCols,.YLAbs,.YLPagerEdit,.YLUser 
+ {white-space:nowrap;vertical-align: middle;padding:2px 3px;} 
+.YLInt,.YLFloat { text-align:right; }
+.YLLines,.YLRadio,.YLHtml,.YLList { white-space:normal; }	
+.YLImg,.YLHtml {padding:0; } 
+.YLPass { padding:0 0 0 3px; }
+.YLRadio,.YLRadioText { padding:0; font-weight:normal !important; }
+.YLBool { text-align:center; }
+.YLIcon { background-repeat:no-repeat; }
+.YLHiddenSpace { display:none; }
+.YLDropCols { padding-top:2px !important; }
+
+.YLHeaderText {color:#424242; vertical-align:middle; font-size:/*IBFS*/12px; font-family:/*IBFN*/"Dotum", "Helvetica", "AppleGothic", sans-serif;}
+.YLAbs { padding:0; }
+.YLUser { padding:0; }
+.YLPagerEdit { text-align:center; padding-top:3px; }
+.YLMergedCellH {padding:0 0 5px 0}
+.YLMergedCellV {padding:0 0 1px 0}
+
+.YLWrap0 { white-space:nowrap; }
+.YLWrap1 { white-space:normal; }
+.YLEllipsis { white-space:nowrap; text-overflow:ellipsis;}
+
+.YLAlignLeft { text-align:left; }
+.YLAlignCenter { text-align:center; }
+.YLAlignJustify { text-align:center; }
+.YLAlignRight { text-align:right;}
+
+/* Tree Img with lines */
+.YL000,.YL010,.YL001,.YL011,.YL100,.YL110,.YL101,.YL111, 
+.YL000T,.YL010T,.YL001T,.YL011T,.YL100T,.YL110T,.YL101T,.YL111T,
+.YL00,.YL01,.YL10,.YL11,.YL00T,.YL01T,.YL10T,.YL11T,
+.YL0T,.YL1T,.YL0TL,.YL1TL,.YL0C,.YL1C,.YL0CL,.YL1CL,.YL0E,.YL1E,.YL0EL,.YL1EL,
+.YL0,.YL1,.YLT,.YLTL,.YLC,.YLCL,.YLE,.YLEL,.YLD0,.YLD1,.YLD2,.YLD3,.YLD4,.YLD0L,.YLD1L,.YLD2L,.YLD3L,.YLD4L 
+{background-image:url(Tree.gif); vertical-align:top;}
+
+u.YL000,u.YL010,u.YL001,u.YL011,u.YL100,u.YL110,u.YL101,u.YL111 { padding-left:63px; }
+u.YL000T,u.YL010T,u.YL001T,u.YL011T,u.YL100T,u.YL110T,u.YL101T,u.YL111T { padding-left:89px; }
+u.YL00,u.YL01,u.YL10,u.YL11 { padding-left:42px; }   
+u.YL00T,u.YL01T,u.YL10T,u.YL11T { padding-left:68px; }   
+u.YL0T,u.YL1T,u.YL0TL,u.YL1TL,u.YL0C,u.YL1C,u.YL0CL,u.YL1CL,u.YL0E,u.YL1E,u.YL0EL,u.YL1EL { padding-left:47px; }   
+u.YL0,u.YL1 { padding-left:21px; }
+u.YLT,u.YLTL,u.YLC,u.YLCL,u.YLE,u.YLEL,u.YLD0,u.YLD1,u.YLD2,u.YLD3,u.YLD4,u.YLD0L,u.YLD1L,u.YLD2L,u.YLD3L,u.YLD4L { padding-left:26px; }   
+
+.YL000,.YL000T{ background-position:0px 0px; }
+.YL010,.YL010T{ background-position:-128px 0; }
+.YL001,.YL001T{ background-position:-256px 0; }
+.YL011,.YL011T{ background-position:-384px 0; }
+.YL100,.YL100T{ background-position:-512px 0; }
+.YL110,.YL110T{ background-position:-640px 0; }
+.YL101,.YL101T{ background-position:-768px 0; }
+.YL111,.YL111T{ background-position:-896px 0; }
+.YL00,.YL00T  { background-position:-21px 0;  }
+.YL10,.YL10T  { background-position:-149px 0; }
+.YL01,.YL01T  { background-position:-277px 0; }
+.YL11,.YL11T  { background-position:-405px 0; }
+.YL0,.YL0T 	  { background-position:-42px 0;  }
+.YL1,.YL1T 	  { background-position:-298px 0; }
+.YLT 		  { background-position:-63px 0;  }
+.YL0TL 		  { background-position:-1024px 0; }
+.YL1TL 		  { background-position:-1088px 0; }
+.YL0C 	      { background-position:-1152px 0; }
+.YL1C 		  { background-position:-1216px 0; }
+.YL0CL 		  { background-position:-1280px 0; }
+.YL1CL 		  { background-position:-1344px 0; }
+.YL0E 		  { background-position:-1408px 0; }
+.YL1E 		  { background-position:-1472px 0; }
+.YL0EL 		  { background-position:-1536px 0; }
+.YL1EL 		  { background-position:-1600px 0; }
+.YLTL 		  { background-position:-1045px 0; }
+.YLC 		  { background-position:-1173px 0; }
+.YLCL 		  { background-position:-1301px 0; }
+.YLE 		  { background-position:-1429px 0; }
+.YLEL 		  { background-position:-1557px 0; }
+.YLD0 		  { background-position:-1664px 0; }
+.YLD1 		  { background-position:-1696px 0; }
+.YLD2 		  { background-position:-1728px 0; }
+.YLD3 		  { background-position:-1760px 0; }
+.YLD0L 		  { background-position:-1792px 0; }
+.YLD1L 		  { background-position:-1824px 0; }
+.YLD2L 		  { background-position:-1856px 0; }
+.YLD3L 		  { background-position:-1888px 0; }
+.YLD4 		  { background-position:-1920px 0; }
+.YLD4L 		  { background-position:-1952px 0; }
+
+/* Tree Img without lines  */
+.YLND0,.YLND1,.YLND2,.YLND3,.YLND4,.YLNC,.YLNE,.YLNCR,.YLNER {background-image:url(TreeN.gif); background-repeat:no-repeat; vertical-align:top; }
+u.YLND0,u.YLND1,u.YLND2,u.YLND3,u.YLND4,u.YLNC,u.YLNE,u.YLNCR,u.YLNER { padding-left:20px; }
+.YLND0 { background-position: -6px 0; }
+.YLND1 { background-position: -56px 0; }
+.YLND2 { background-position: -106px 0; }
+.YLND3 { background-position: -156px 0; }
+.YLND4 { background-position: -206px 0; }
+.YLNC { background-position:right -50px;}
+.YLNE { background-position:right -2000px;}
+.YLNCR { background-position:-255px -50px;}
+.YLNER { background-position:-255px -2000px;}
+u.YLNL { padding-left:21px; }
+
+/* Cell images */
+.YLIconLink { text-decoration:none; width:1000px; display:inline-block; }
+.YLIconLeft,.YLIconRight,.YLIconCenter {  background-repeat:no-repeat; }
+.YLIconLeft { background-position:left 0; padding-left:20px !important; }
+.YLIconRight { background-position:right 0; padding-right:20px !important; }
+.YLIconCenter { background-position:center 0; }
+.YLPopupRight { background:url(popup.gif) no-repeat 5px center; }
+.YLExpandLeft,.YLCollapseLeft,.YLExpandHeaderLeft,.YLCollapseHeaderLeft { padding-left:20px!important; }
+.YLDateRight{ padding-right:20px!important;}
+u.YLDateRight,.YLPopupRight { padding-right:0!important; padding-left:17px; }
+.YLDateRight {background:url(calendar.gif) no-repeat 2px center}
+.YLEnumRight { background:url(combo.gif) no-repeat right center; }
+u.YLEnumRight {padding-right:0; padding-left:17px}
+.YLExpandLeft { background:url(ic_plus.gif) no-repeat 3px center; padding:2px 0 0  18px; _padding:0 0 0 18px }
+.YLCollapseLeft { background:url(ic_minus.gif) no-repeat 3px center ; padding:2px 0 0  18px; _padding:0 0 0 18px }
+.YLRadio0Right,.YLRadio1Right,.YLRadio2Right,.YLRadio3Right {line-height:17px; padding-right:17px; padding-left:3px; }
+u.YLFilter0,u.YLFilter1 { padding-left:16px; }
+.YLBool0,.YLBool0RO,.YLBool1,.YLBool1RO,.YLBool2,.YLBool2RO,.YLBool3,.YLBool3RO {background-position:center center; background-repeat:no-repeat;}
+
+.YLBool0   { background-image:url(chk0.gif);  }
+.YLBool0RO { background-image:url(chk0R.gif); }
+
+.YLBool1   { background-image:url(chk1.gif);  }
+.YLBool1RO { background-image:url(chk1R.gif); }
+
+.YLBool2   { background-image:url(chk2.gif);  }
+.YLBool2RO { background-image:url(chk2R.gif); }
+
+.YLBool3   { background-image:url(chk3.gif);  }
+.YLBool3RO { background-image:url(chk3R.gif); }
+
+/* Filter images  */
+.YLFilter0Left,.YLFilter1Left,.YLFilter2Left,.YLFilter3Left,.YLFilter4Left,.YLFilter5Left,.YLFilter6Left,.YLFilter7Left,
+.YLFilter8Left,.YLFilter9Left,.YLFilter10Left,.YLFilter11Left,.YLFilter12Left {padding-left:18px;}
+
+.YLFilter0Left,.YLFilter0Menu 	{ width:18px; height:18px; background:url(filter0.gif) no-repeat left center; }   
+.YLFilter1Left,.YLFilter1Menu 	{ width:18px; height:18px; background:url(filter1.gif) no-repeat left center; }
+.YLFilter2Left,.YLFilter2Menu 	{ width:18px; height:18px; background:url(filter2.gif) no-repeat left center; }
+.YLFilter3Left,.YLFilter3Menu 	{ width:18px; height:18px; background:url(filter3.gif) no-repeat left center; }
+.YLFilter4Left,.YLFilter4Menu 	{ width:18px; height:18px; background:url(filter4.gif) no-repeat left center; }
+.YLFilter5Left,.YLFilter5Menu 	{ width:18px; height:18px; background:url(filter5.gif) no-repeat left center; }   
+.YLFilter6Left,.YLFilter6Menu 	{ width:18px; height:18px; background:url(filter6.gif) no-repeat left center; }
+.YLFilter7Left,.YLFilter7Menu 	{ width:18px; height:18px; background:url(filter7.gif) no-repeat left center; }
+.YLFilter8Left,.YLFilter8Menu 	{ width:18px; height:18px; background:url(filter8.gif) no-repeat left center; }
+.YLFilter9Left,.YLFilter9Menu 	{ width:18px; height:18px; background:url(filter9.gif) no-repeat left center; }
+.YLFilter10Left,.YLFilter10Menu { width:18px; height:18px; background:url(filter10.gif) no-repeat left center; }
+.YLFilter11Left,.YLFilter11Menu { width:18px; height:18px; background:url(filter11.gif) no-repeat left center; }
+.YLFilter12Left,.YLFilter12Menu { width:18px; height:18px; background:url(filter12.gif) no-repeat left center; }
+
+.YLFilter0Menu,.YLFilter1Menu,.YLFilter2Menu,.YLFilter3Menu,.YLFilter4Menu,.YLFilter5Menu,.YLFilter6Menu,.YLFilter7Menu,.YLFilter8Menu,.YLFilter9Menu,
+.YLFilter10Menu,.YLFilter11Menu,.YLFilter12Menu {overflow:hidden; margin: -2px 0 0 -1px;}
+.YLFilterMenuHeader { padding-left:2px; border-bottom:0 !important; } 
+
+/*  Keyfield Image */
+.YLKeyfield {background-image:url(keyfield.gif); display:inline-block; vertical-align:middle; background-repeat: no-repeat; background-position:center 1px; padding: 0 2px 0 4px; }
+
+/* GMKeyfield : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .YLKeyfield{  background-position: center 3px;padding: 0 2px 0 4px; }}
+
+/* CheckBox Header Image */
+.YLCheckHeader0 {background-image:url(chk0.gif); display:inline-block; vertical-align:middle; background-repeat:no-repeat; background-position:5px 1px; padding:2px 7px 0 6px; margin:0 2px 0 0;}
+
+/* GMCheckHeader0 : hack CR,SF*/
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{.YLCheckHeader0{ background-position:6px 1px ; padding: 2px 8px 0 6px; }}
+
+/* GMCheckHeader0 : hack FF*/
+.YLCheckHeader0, x:-moz-any-link, x:default { background-position:6px 1px ; padding: 2px 8px 0 6px; }
+
+/* GMCheckHeader0 : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .YLCheckHeader0{ background-position:7px center ; padding:1px  17px 0 0; }}
+
+.YLCheckHeader1 {background-image:url(chk1.gif); display:inline-block; vertical-align:middle; background-repeat:no-repeat; background-position:4px 1px ; padding:2px 6px 0 6px; margin:0 2px 0 0}
+
+/* GMCheckHeader1 : hack CR,SF*/
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{.YLCheckHeader1{ background-position:6px 1px ; padding: 2px 8px 0 6px; }}
+
+/* GMCheckHeader1 : hack FF*/
+.YLCheckHeader1, x:-moz-any-link, x:default { background-position:6px 1px ; padding: 2px 8px 0 6px; }
+
+/* GMCheckHeader1 : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .YLCheckHeader1 { background-position:7px center ; padding:1px  17px 0 0;  }}
+
+/* Sort images */
+.YLSort {display:block; float:right; margin:2px 2px 0;width:7px}
+
+/* State classes */
+/* The colors must be set by numbers not by names */
+.YLColorDefault  { background-color:#FFFFFF;}
+
+.YLColorNoFocus  { background-color:#E8F4FF;}
+.YLColorReadOnly { background-color:#FFF3D5;}
+.YLColorPreview  { background-color:#FFFFFF;}
+
+.YLColorAlternate{ background-color:#F3F3F3;}
+
+.YLColorSelected { background-color:/*#FFFF80*/#aadbff; }
+
+.YLColorFilter {background-color:#FFFFFF;}
+
+/*//.YLClassSelected { }*/
+.YLColorError   { background-color:#FF6969; }
+.YLColorDeleted { background-color:#FFCDCD; }
+.YLClassDeleted { font-style:italic; }
+.YLColorAdded   { background-color:#CDFFCD; }
+.YLClassAdded   { font-weight:bold; }
+.YLColorMoved1  { background-color:#FFFFFF; }
+.YLColorMoved2  { background-color:#D7EBEB; }
+.YLColorChanged { background-color:#EBEBFF; }
+.YLColorChangedCell { background-color:#E1E1FF; }
+.YLClassChangedCell { font-weight:bold; }
+.YLColorMaxChildren { background-color:#FFFFF0; }
+.YLColorDetail { background-color:#FFF0FF; }
+.YLColorDetailSelected { background-color:#FFF0E0; }
+.YLColorDragged{ background-color:#E0E0C0; }
+.YLColorFound1 { background-color:#FF87FF; }
+.YLColorFound2 { background-color:#FFC387; }
+.YLColorFound3 { background-color:#87FF87; }
+.YLColorHovered 			{ background-color:#F0F0FF; }
+.YLColorHoveredCell 		{ background-color:#C0C0FF; }
+.YLColorHoveredCellReadOnly { background-color:#F0F0F0; }
+.YLColorHoveredCellNoFocus 	{ background-color:#F8F8F8; }
+
+.YLClassHoveredCellHeader 	{ background-position:0px -250px; }
+.YLClassHoveredCellPanel 	{ background-position:0px -1801px; background-repeat:repeat-x; }
+
+.YLColorHoveredCellSpace 	{ background-color:#FFFFFF; }
+.YLColorHoveredCellSpaceEdit{ background-color:#C0C0FF; }
+.YLColorHoveredCellSpaceBool{ background-color:#FFFFFF; }
+.YLColorHoveredCellButton 	{ background-color:#FFFFFE; }
+.YLClassHoveredCellButton 	{ color:green; }
+.YLColorHoveredCellButton1 	{ background-color:#FFFFFE; }
+.YLClassHoveredCellButton1 	{ color:red; }
+.YLColorHoveredCellTab 		{ background-color:#FFFFFE; }
+.YLClassHoveredCellTab 		{ background-position:0px -1801px; color:green; }
+.YLColorHoveredCellTab1 	{ background-color:#99bbcc; }
+.YLClassHoveredCellTab1 	{ background-image:none; }
+
+.YLColorFocused 			{ background-color:#E6E6E6; }
+.YLColorFocusedCell 		{ background-color:#FFFFFE; }
+.YLColorFocusedCellSafari 	{ background-color:#A0A0FF; }
+.YLColorFocusedCellSpace 	{ background-color:#E6E6E6; }
+.YLColorFocusedCellButton 	{ background-color:#BCD; }
+.YLColorFocusedCellHeader 	{ background-color:#FFFFFE; }
+.YLColorFocusedCellPanel 	{ background-color:#FFFFFE; }
+.YLColorEditedCell 			{ background-color:#FFFFFF; }
+.YLColorViewedCell 			{ background-color:#FFFFFF; }
+
+/* Hover, focus, edit cursors */
+.YLHoverRowBackground 	{ opacity:0.1; filter:alpha(opacity=10); background:#00F; }
+.YLHoverRowBorder 		{ z-index:0; border-top:1px solid #BBF; border-bottom:1px solid #BBF; cursor:default; }
+.YLHoverCellBorder 		{ z-index:0; padding:1px; border:1px solid #A0A0F0; background:white; }
+
+.YLFocusRowBackground 	{ opacity:0.1; filter:alpha(opacity=50); background:/*IBSB*/#FFFF9F; } /* <-- Sheet : Selected Row Background */
+
+.YLFocusRowBorder 		{ z-index:0; border:1px solid /*IBSB*/#F9D903; } /* <-- Sheet : Selected Row Border */
+.YLFocusCellBorder		{ z-index:0; border:2px solid /*IBSB*/#F9D903; } /* <-- Sheet : Selected Cell Border */
+
+.YLFocusCellSpaceBorder,.YLEditCellSpaceBorder { z-index:4; }
+.YLEditCellBorder 		{ z-index:0; border:2px solid #FF6666;}    /*<-- Sheet : CellEdit Border */
+.YLEditCellInput 		{ position:relative; border:0 solid #39aefb; overflow:hidden; z-index:2; } 
+
+.YLCursorBackground, .YLCursorBorderLeft ,.YLCursorBorderRight,.YLCursorBorderTop,.YLCursorBorderBottom 
+ {position:relative;overflow:hidden;}
+
+.YLCursorBackground  {border:none; padding:0;}
+.YLCursorBorderLeft  {padding-right:0; padding-top:0; padding-bottom:0; border-right:none; border-top:none; border-bottom:none;  width:0; height:0;}
+.YLCursorBorderRight {padding-left:0; padding-top:0; padding-bottom:0; border-left:none; border-top:none; border-bottom:none;  width:0; height:0;}
+.YLCursorBorderTop 	 {padding-bottom:0; padding-left:0; padding-right:0; border-bottom:none; border-left:none; border-right:none;  width:0; height:0;}
+.YLCursorBorderBottom{padding-top:0; padding-left:0; padding-right:0; border-top:none; border-left:none; border-right:none; width:0; height:0;}
+
+/* Cell edges */
+.YLNoLeft { border-left:0; }
+.YLNoRight { border-right:0; }
+
+/* Dragging */
+.YLMouseObject { opacity:0.5; filter:alpha(opacity=50); z-index:300; overflow:hidden;}
+.YLDragObject {z-index:300; margin-left:10px; margin-top:10px; padding-left:3px; padding-right:3px;background:#E4E5F0 ; border:1px solid #777;}
+.YLDragColInsideTop,.YLDragColInsideBottom,.YLDragColOutsideTop,.YLDragColOutsideBottom{position:absolute;width:10px; height:11px; overflow:hidden; z-index:258;}
+.YLDragColInsideTop 	{background:url(in_top.gif) no-repeat;} 	
+.YLDragColInsideBottom  {background:url(in_bottom.gif) no-repeat;}	
+.YLDragColOutsideTop  	{background:url(out_top.gif) no-repeat;}	
+.YLDragColOutsideBottom {background:url(out_bottom.gif) no-repeat;}	 
+
+/* Messages */
+.YLDisabled{position:absolute; z-index:264; background:#ffffff; opacity:0.5; filter:alpha(opacity=50); } 
+.YLProcess {position: absolute; left:0; top:0; background:#E2F0FF; border:1px solid #777; white-space:nowrap; text-align:center; visibility:hidden; z-index:266;}
+.YLMessage {background:#E2F0FF; border:1px solid #000000; padding:10px; white-space:nowrap; text-align:center;
+			 position: absolute; left:0; top:0; visibility:hidden; z-index:266;}
+.YLMessageShadow 
+{position:absolute; margin-left:3px; margin-top:3px; z-index:265;background:#888; opacity:0.5; filter:alpha(opacity=50); left:0; top:0; visibility:hidden;}
+      
+/* Other */
+/* !!! No .YL style prefix here !!! */
+.GridTmpTag { position:absolute; left:5px; top:5px; visibility:hidden; }
+
+/* Popup menus, TGLib */
+.YLMenuMain  {position:absolute;left:0;top:0; z-index:258;}
+.YLMenuOuter {overflow:hidden; border:1px solid #000000; background:#fff; padding:1px; margin:1px;}
+.YLMenuHeader{overflow:hidden; position:absolute; z-index:258;border:1px solid #b0b0c0; background:#fff; cursor:pointer; _cursor:hand;}
+.YLMenuHead {background:#183873; color:white; cursor:default;text-align:center; padding-top:5px; padding-bottom:4px;}
+.YLMenuClose {float:right; width:14px; cursor:pointer; _cursor:hand; display:none;}
+.YLMenuBody {cursor:default; background-color:#fff; padding-top:1px; padding-bottom:1px;}
+.YLMenuShadow {position:absolute;margin:3px 0 0 3px;z-index:257;background-color:#888; opacity:0.5; filter:alpha(opacity=50);}
+.YLMenuCheckedIconRight {padding-right:17px; background:url(chk1.gif) no-repeat 96% center; }
+.YLMenuUncheckedIconRight { padding-right:17px;background:url(chk0.gif) no-repeat 96% center ; }
+
+.YLMenuCursorIcon {background-image:url(d_gray_right.gif); background-repeat:no-repeat; background-position: 3px center;_background-color:#fff}
+.YLMenuHoverIcon {background-image:url(d_right.gif); background-repeat:no-repeat; background-position: 3px center; _background-color:#ffeeaa }   
+
+.YLMenuNextIcon { padding-right:10px; }
+.YLMenuNextIconRtl { padding-left:10px; }
+
+.YLMenuItemText,.YLMenuItemIcon,.YLMenuEnum,.YLMenuEnumHeader,.YLMenuEdit 
+{white-space:nowrap; overflow:hidden; vertical-align: middle; padding:1px 0 0 0}
+.YLMenuItemDisabled {opacity:0.50; filter:alpha(opacity=30); overflow:hidden; }
+.YLMenuLevel {color:blue;text-align:center; }  
+.YLMenuEnumParent,.YLMenuEditParent {padding-left:5px; padding-right:2px}
+.YLMenuItemIcon {background-repeat:no-repeat;}
+.YLMenuEnum {border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; padding-left:15px; overflow:hidden;}
+.YLMenuEnumHeader  {padding:1px 0 2px 16px; cursor:default; } 
+.YLMenuEdit{border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; background:white; overflow:hidden;white-space:nowrap;
+  padding-left:2px; padding-right:2px;}
+.YLMenuEditInput,.YLMenuEditTextarea {margin:0;padding:0;border:0; background:#FDD;_margin:-1px; _padding-right:1px; _padding_left:1px; }   
+.YLMenuEditTextarea { line-height:13px;  }   
+.YLMenuEditInt,.YLMenuEditFloat,.YLMenuEditDate { text-align:right; } 
+.YLMenuEditMulti { white-space:normal; }
+.YLMenuItem {background-color:#ffffff;padding:2px;}  
+
+
+.YLMenuItemHover {background-color:#FFEDBB; border:1px solid #D89803;margin:0 1px; padding:1px 0;}
+
+.YLMenuFocusHover {margin:1px; background-color:#FAFCDD; border:1px solid #000000;}
+
+.YLMenuFocus 	  {margin:1px; background-color:#FAFCDD; border:1px solid #F3D283;}
+
+.YLMenuSeparator {margin:1px 3px 0 3px; height:1px; border-top:1px solid #aaaadd; overflow:hidden;}
+.YLMenuCaption {padding:2px; background:#ffffff; color:blue; text-align:center;}
+.YLMenuVSeparator { border-right:1px solid #DDD; }
+.YLMenuFoot { border-top:none; text-align:center; white-space:nowrap; }
+
+.YLMenuButton {font-size:11px;background:#FFF6DD; text-align:center; border:1px solid #DABB84;margin:5px 2px 4px 2px;padding:0;white-space:nowrap;width:48px;} 
+
+.YLMenuButtonHover { background:#FFEDBB; border:1px solid #D89803; }
+
+/* Grid configuration menus */
+.YLCfgMenuOuter,.YLColumnsMenuOuter { border:1px solid #000000; }
+.YLCfgMenuHead,.YLColumnsMenuHead { padding-left:3px; }
+.YLCfgMenuBody,.YLColumnsMenuBody { padding-left:4px; padding-right:4px;}
+.YLCfgMenuFoot,.YLColumnsMenuFoot { padding-right:3px; padding-left:3px;}
+.YLCfgMenuButton { width:70px; } 
+.YLCfgMenuItemText,.YLColumnsMenuItemText { padding-left:3px; }
+.YLColumnsMenuItemText { white-space:nowrap; }
+.YLCfgMenuItem,.YLColumnsMenuItem { padding-top:3px; padding-bottom:3px;}
+.YLCfgMenuItemHover,.YLCfgMenuFocus,.YLCfgMenuFocusHover,
+.YLColumnsMenuItemHover,.YLColumnsMenuFocus,.YLColumnsMenuFocusHover { padding-top:2px; padding-bottom:2px;}
+
+/* Popup grid dialog */
+.YLPopupGridOuter { border:0; overflow:visible; }
+.YLPopupGridHead { padding:0; }
+.YLPopupGridBody { padding:0; }
+.YLPopupGridFoot { padding:0; }
+.YLPopupGridButton { width:50px;margin-top:-2px; margin-bottom:3px;} 
+
+/* Calendar, TGLib */
+.YLPickMain  {position:absolute; left:0; top:0; z-index:258; }
+
+.YLPickOuter {overflow:hidden; background:white; padding:1px; border:1px solid #DABB84; }
+
+.YLPickHeader{overflow:hidden; position:absolute; z-index:258; border:1px solid black; background:#ffffff; cursor:pointer; _cursor:hand;}
+.YLPickHeaderBottom{border-bottom:0; padding-bottom:1px;}
+.YLPickHeaderTop{border-top:0; padding-bottom:1px; }
+.YLPickHead {background:#5c8397; font:10px Dotum,Verdana,Arial; color:white; cursor:default; padding-left:5px; padding-top:1px; padding-bottom:1px;border-bottom:1px solid white;}
+.YLPickClose{float:right; width:14px; cursor:pointer; _cursor:hand; display:none;}
+.YLPickBody {cursor:default; padding:0; }
+.YLPickShadow{position:absolute; background:#888; z-index:257; margin:3px 0 0 3px;opacity:0.5; filter:alpha(opacity=50);} 
+.YLPickFooter,.YLPick2Footer{text-align:center; padding:2px; cursor:default; background:#EFF0F1; border-top:1px solid #E3E4E6}
+ 
+.YLPickMY{background-color:#FFEDBB;border-bottom:1px solid #DABB84;color:#434343; cursor:default;text-align:center;padding:2px 0 4px 0;}/* <-- Calender : Header Background */
+   
+.YLPickMYDown{padding-right:13px; background:url(d_down.gif) no-repeat right; cursor:pointer; _cursor:hand;}
+.YLPickMYUp {padding-right:13px; background:url(d_up.gif) no-repeat right center; cursor:pointer; _cursor:hand;}
+
+.YLPickMYRtl{padding-right:0; padding-left:13px; }
+.YLPickBL,.YLPickBR{padding-top:3px; cursor:pointer; _cursor:hand; width:16px; height:14px; overflow:hidden;}
+
+.YLPickBL {float:left; background:url(d_left.gif) no-repeat 50%; }
+.YLPickBR {float:right; background:url(d_right.gif) no-repeat 50%; }
+
+.YLPickTable{}
+.YLPickRow  {background:#ffffff;}
+
+.YLPickRowW {background:#FFF1E3;}
+
+.YLPickCell {width:22px;}
+.YLPickWDN {background:transparent; color:#333333;text-align:center; cursor:default; margin:2px 3px;padding:1px;}
+  
+.YLPickHover,.YLPickSelHover,.YLPickWD,.YLPickSa,.YLPickSu,.YLPickSel,.YLPickNow,.YLPickWDNE,.YLPickSaNE,.YLPickSuNE,
+.YLPickSelNE,.YLPickNowNE,.YLPickOM,.YLPickOMNE {text-align:center; border:1px solid #ffffff; cursor:pointer; _cursor:hand;margin:2px 3px;}
+
+.YLPickWN,.YLPickWNE {text-align:center; cursor:pointer; _cursor:hand;padding:3px 4px; border-right:1px solid #DABB84; background:#EFF0F1;}
+   
+.YLPickWDNE,.YLPickSaNE,.YLPickSuNE,.YLPickSelNE,.YLPickNowNE,.YLPickWNE {cursor:default;}
+.YLPickWD{background-color:#ffffff;}
+.YLPickSa{background-color:#ffffff;}
+.YLPickSu{background-color:#ffffff;}
+
+.YLPickSel{background-color:#FAFF9A; border:1px solid #cccccc;}
+
+.YLPickSelNE{background-color:#fbea54; border:1px solid #dad1d1;}
+.YLPickNow {background-color:#c0f3ff; border:1px solid #dad1d1;}
+.YLPickNowNE{background-color:#c0f3ff; border:1px solid #dad1d1;}
+.YLPickHover{background-color:#ddd; border:1px solid #ddd;}
+
+.YLPickSelHover{background-color:#dddddd; border:1px solid #dddddd;}
+
+.YLPickOM{background-color:white; color:#aaaaaa;}
+.YLPickOMNE{color:#aaaaaa;}
+
+.YLPickEmpty{background:url(d_blank.gif) no-repeat 50%; cursor:pointer; _cursor:hand;padding:3px 0; }
+
+.YLPickTimeCell 
+{text-align:right; padding-bottom:4px; padding-top:6px; padding-right:5px; border-top:1px solid #DABB84; background:#EFF0F1;}
+
+.YLPickTime 
+{border:0px none; white-space:nowrap; text-align:right; background:#EFF0F1;}
+
+.YLPickButton{background:#FFF6DD; text-align:center; border:1px solid #DABB84; width:45px; height:16px}
+    
+.YLPickButtonHover{background:#FFEDBB; border:1px solid #D89803; }
+
+.YLPick2Table{width:auto; vertical-align:middle}
+.YLPick2CellM{height:20px; width:55px; }
+.YLPick2CellY{height:20px; width:35px; vertical-align:middle }
+.YLPick2CellSep{height:20px; width:5px; }
+.YLPick2Cell{vertical-align:middle}
+.YLPick2M,.YLPick2Y,.YLPick2MSel,.YLPick2YSel,.YLPick2MHover,.YLPick2YHover,.YLPick2MSelHover,.YLPick2YSelHover
+{cursor:pointer; _cursor:hand; text-align:center; margin-left:1px; margin-right:1px; padding-left:4px; padding-right:4px; overflow:hidden; }
+   
+
+.YLPick2MSel,.YLPick2YSel {background:#FAFF9A; border:1px solid #cccccc; margin-left:0; margin-right:0;}
+
+.YLPick2MHover,.YLPick2YHover {background:#DDD; border:1px solid #ffffff; margin-left:0; margin-right:0;}
+
+.YLPick2MSelHover,.YLPick2YSelHover {background:#F8FF5F; border:1px solid #FFFFFF; margin-left:0; margin-right:0;}   
+
+.YLPick2SepH {width:1px; height:1px; overflow:hidden; }
+.YLPick2Sep {width:1px; background:#E3E4E6; overflow:hidden; margin-left:2px; margin-right:2px; height:20px;}
+.YLPick2BL,.YLPick2BR {width:35px; cursor:pointer; _cursor:hand; }
+
+
+.YLPick2BL {background:url(d_left2.gif) no-repeat center center}
+.YLPick2BR {background:url(d_right2.gif) no-repeat center center}
+
+
+/* Edit controls, TGLib */
+.YLEdit,.YLEditInline {padding:2px 4px;border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666;background:#ffffff; white-space:nowrap; overflow:hidden;}
+  
+.YLEditInline { display:inline-block; vertical-align:bottom; }
+.YLEditInput,.YLEditTextarea {border:0 solid transparent; margin:0; padding:0;vertical-align: middle} 
+
+.YLEditTextarea { line-height:13px; }
+.YLEditSpaceInput { vertical-align:middle; }
+.YLEditNormalInput,.YLEditNormalTextarea,.YLEditSpaceTextarea { background-color:#FFFFFF; /*#FFDCFF;*/; }
+.YLEditInt,.YLEditFloat { text-align:right; }
+
+.YLEditMulti { white-space:normal; }
+.YLEditReadOnly { background-color:#FFEEFF; }   
+.YLEditParent { position:absolute; z-index:258; overflow:hidden; }
+
+.YLEnumHeaderLeft,.YLEnumHeaderRight,.YLEnumHeaderNone 
+{background:white; cursor:pointer; _cursor:hand; vertical-align:middle; text-align:left; padding:2px 0 2px 2px;}
+
+.YLEnumHeaderRight {background: url(combo.gif) no-repeat right center;margin:1px 1px 0 0;}
+ @media screen and (-webkit-min-device-pixel-ratio:0) {.YLEnumHeaderRight{margin:1px 0 0 0;}}/* hack:CR,SF */
+.YLEnumHeaderRight, x:-moz-any-link, x:default {margin:1px 0 0 0;} /* hack:FF */
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {.YLEnumHeaderRight{ margin:1px 0 0 0;}}/* hack:OP */
+
+.YLEnumMenuHeader { background:#ffffff; }
+
+.YLEnumControl,.YLEnumInline {
+   cursor:pointer; _cursor:hand; padding-left:15px; padding-right:4px; padding-top:2px; padding-bottom:2px;
+   border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; overflow:hidden;}
+   
+.YLEnumInline { display:inline-block; vertical-align:bottom; }
+.YLEnumHeader { cursor:pointer; _cursor:hand;padding-left:15px; padding-right:4px; padding-top:2px; padding-bottom:2px;} 
+
+/*  Custom scrollbars  */
+.YLCustScroll1RightHidden { background:url(VScroll.gif) left -108px; height:18px; overflow:hidden; }
+.YLCustScroll1Right { padding-right:18px; background:url(VScroll.gif) right 0; }
+.YLCustScroll1RightHover { padding-right:18px; background:url(VScroll.gif) right -18px; }
+.YLCustScroll1Left { padding-left:18px;  background:url(VScroll.gif) left 0; }
+.YLCustScroll1LeftHover { padding-left:18px;  background:url(VScroll.gif) left -18px; }
+.YLCustScroll1SliderRight { padding-right:3px; background:url(VScroll.gif) right -36px; }
+.YLCustScroll1SliderLeft { padding-left:3px; background:url(VScroll.gif) left -36px; }
+.YLCustScroll1SliderHIn { height:18px; overflow:hidden; background:url(VScroll.gif) center -54px; }
+.YLCustScroll1SliderRightHover { padding-right:3px; background:url(VScroll.gif) right -72px; }
+.YLCustScroll1SliderLeftHover { padding-left:3px; background:url(VScroll.gif) left -72px; }
+.YLCustScroll1SliderHInHover { height:18px; overflow:hidden; background:url(VScroll.gif) center -90px; }
+.YLCustScroll2RightHidden { background:url(VScroll.gif) left -108px; height:18px; overflow:hidden; }
+.YLCustScroll2Right { padding-right:18px; background:url(VScroll.gif) right 0; }
+.YLCustScroll2RightHover { padding-right:18px; background:url(VScroll.gif) right -18px; }
+.YLCustScroll2Left { padding-left:18px;  background:url(VScroll.gif) left 0; }
+.YLCustScroll2LeftHover { padding-left:18px;  background:url(VScroll.gif) left -18px; }
+.YLCustScroll2SliderRight { padding-right:3px; background:url(VScroll.gif) right -36px; }
+.YLCustScroll2SliderLeft { padding-left:3px; background:url(VScroll.gif) left -36px; }
+.YLCustScroll2SliderHIn { height:18px; overflow:hidden; background:url(VScroll.gif) center -54px; }
+.YLCustScroll2SliderRightHover { padding-right:3px; background:url(VScroll.gif) right -72px; }
+.YLCustScroll2SliderLeftHover { padding-left:3px; background:url(VScroll.gif) left -72px; }
+.YLCustScroll2SliderHInHover { height:18px; overflow:hidden; background:url(VScroll.gif) center -90px; }
+
+.YLCustScroll3Right,.YLCustScroll3RightHidden { background:white; height:9px; overflow:hidden; }
+.YLCustScroll3SliderRight,.YLCustScroll3SliderRightHover { padding-right:3px; height:9px; background:url(VScroll.gif) right -126px; }
+.YLCustScroll3SliderLeft,.YLCustScroll3SliderLeftHover { height:9px; background:url(VScroll.gif) left -126px; }
+.YLCustScroll3SliderRightHover { background-position:right -135px; }
+.YLCustScroll3SliderLeftHover { background-position:left -135px; }
+.YLCustScroll4Right,.YLCustScroll4RightHidden,.YLCustScroll4SliderRight,.YLCustScroll4SliderRightHover { height:1px; overflow:hidden; }
+
+.YLCustScroll1DownHidden { background:url(HScroll.png) -108px top; width:18px; overflow:hidden; }
+.YLCustScroll1Down { padding-bottom:18px; background:url(HScroll.png) 0px bottom; cursor:default; width:18px; overflow:hidden; }
+.YLCustScroll1DownHover { padding-bottom:18px; background:url(HScroll.png) -18px bottom; width:18px; overflow:hidden; }
+.YLCustScroll1Up { padding-top:18px; background:url(HScroll.png) 0px top; width:18px; overflow:hidden; }
+.YLCustScroll1UpHover { padding-top:18px;  background:url(HScroll.png) -18px top; width:18px; overflow:hidden; }
+.YLCustScroll1SliderDown { padding-bottom:3px; background:url(HScroll.png) -36px bottom; width:18px; overflow:hidden; }
+.YLCustScroll1SliderUp { padding-top:3px; background:url(HScroll.png) -36px top; width:18px; overflow:hidden; }
+.YLCustScroll1SliderVIn { background:url(HScroll.png) -54px center; width:18px; overflow:hidden; }
+.YLCustScroll1SliderDownHover { padding-bottom:3px; background:url(HScroll.png) -72px bottom; width:18px; overflow:hidden; }
+.YLCustScroll1SliderUpHover { padding-top:3px; background:url(HScroll.png) -72px top; width:18px; overflow:hidden; }
+.YLCustScroll1SliderVInHover { background:url(HScroll.png) -90px center; width:18px; overflow:hidden; }
+
+.YLCustScroll2DownHidden { background:url(HScroll.png) -108px top; width:18px; overflow:hidden; }
+.YLCustScroll2Down { padding-bottom:18px; background:url(HScroll.png) 0px bottom; cursor:default; width:18px; overflow:hidden; }
+.YLCustScroll2DownHover { padding-bottom:18px; background:url(HScroll.png) -18px bottom; width:18px; overflow:hidden; }
+.YLCustScroll2Up { padding-top:18px; background:url(HScroll.png) 0px top; width:18px; overflow:hidden; }
+.YLCustScroll2UpHover { padding-top:18px;  background:url(HScroll.png) -18px top; width:18px; overflow:hidden; }
+.YLCustScroll2SliderDown { padding-bottom:3px; background:url(HScroll.png) -36px bottom; width:18px; overflow:hidden; }
+.YLCustScroll2SliderUp { padding-top:3px; background:url(HScroll.png) -36px top; width:18px; overflow:hidden; }
+.YLCustScroll2SliderVIn { background:url(HScroll.png) -54px center; width:18px; overflow:hidden; }
+.YLCustScroll2SliderDownHover { padding-bottom:3px; background:url(HScroll.png) -72px bottom; width:18px; overflow:hidden; }
+.YLCustScroll2SliderUpHover { padding-top:3px; background:url(HScroll.png) -72px top; width:18px; overflow:hidden; }
+.YLCustScroll2SliderVInHover { background:url(HScroll.png) -90px center; width:18px; overflow:hidden; }
+
+.YLCustScroll3Down,.YLCustScroll3DownHidden { background:white; width:9px; overflow:hidden; cursor:default; }
+.YLCustScroll3SliderDown,.YLCustScroll3SliderDownHover { padding-bottom:3px; width:9px; background:url(HScroll.png) -126px bottom; }
+.YLCustScroll3SliderUp,.YLCustScroll3SliderUpHover { width:9px; background:url(HScroll.png) -126px top; cursor:default; }
+.YLCustScroll3SliderDownHover { background-position:-135px bottom; }
+.YLCustScroll3SliderUpHover { background-position:-135px top; cursor:default; }
+
+.YLCustScroll4Down,.YLCustScroll4DownHidden,.YLCustScroll4SliderDown,.YLCustScroll4SliderDownHover { width:1px; overflow:hidden; }
+
+/* Other messages, TGLib */
+.YLHintMain {position:absolute; margin-left:-1px; margin-top:-1px; left:0px; top:0px; z-index:260; background:#ffffff; cursor:default; }
+.YLHintOuter {overflow:hidden; border:1px solid #000000; background:#ffffff !important; color:black; text-align:left; }
+.YLHintHeaderOuter {background-color:#39aefb !important; color:#ffffff; border: 1px solid #ffffff; }
+.YLHintShadow {position:absolute; z-index:259;background:#888; opacity:0.3; filter:alpha(opacity=30);margin-left:2px; margin-top:2px;}
+.YLTipMain {position:absolute; left:0px; top:0px; z-index:262; visibility:hidden; }
+.YLTipOuter  {overflow:hidden; cursor:default; font:12px Arial;padding-left:3px; padding-right:3px; background:#E4E5F0; border:1px solid #777;}
+.YLTipBody {background:#E4E5F0; white-space:nowrap; }
+.YLTipShadow {position:absolute;z-index:261;background:#888; opacity:0.3; filter:alpha(opacity=30);visibility:hidden; margin-left:3px; margin-top:3px}
+.YLMouseOrig { background:yellow !important; opacity:0.5; filter:alpha(opacity=50); }
+.YLMouseDragObject { position:absolute; z-index:260; background:#888; opacity:0.5; filter:alpha(opacity=50); }
+.YLFocus { border:1px solid #AAF; border-top:1px solid #00F; border-left:1px solid #00F; background-color:#EEE; } 
+.GridDisabled { position:absolute; z-index:256; background:white; opacity:0.5; filter:alpha(opacity=50); } 
+
+/* Do not change, marks the style loaded */
+.YLLoaded { border:1px solid #000000 !important;}
+
+/*sum*/
+.YLSumCell{background:#fffeef; color:#FF060C;}/*//text-align: right;font-weight:bold;*/
+.YLSubSumCell{background: #FCF0E7; border-top:1px solid #F7BBA1; border-bottom:1px solid #F7BBA1; color:#DA5615}
+.YLCumulateCell{background: #FCF0E7; border-bottom:1px solid #F7BBA1; color:#BE3600}
+
+/* FindDialog */
+.YLH1Pop,.YLPPop{margin:0; padding:0}
+.YLPaddingl10{padding-left:10px}
+.YLPaddingT10{padding-top:10px}
+.YLPPop{ padding:0 0 10px 0; text-align:center }
+.YLPop{width:410px; overflow:hidden; border:1px solid #B78309; padding:0; font-size:12px;background:#F7F7F7; font-family:dotum, Arial, Helvetica, sans-serif}
+.YLPopTitle{width:100%; border-bottom:1px solid #B78309; font-size:12px; font-weight:bold; display:block; line-height:28px; color:#535353;
+background: #ffd163; /* Old browsers */
+background: -moz-linear-gradient(top,  #ffd163 0%, #ffc742 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffd163), color-stop(100%,#ffc742)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ffd163 0%,#ffc742 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ffd163 0%,#ffc742 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ffd163 0%,#ffc742 100%); /* IE10+ */
+background: linear-gradient(top,  #ffd163 0%,#ffc742 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd163', endColorstr='#ffc742',GradientType=0 ); /* IE6-9 */
+}
+.YLPopSearch{margin:10px; overflow:hidden; }
+.YLPopContent{border:1px solid #DBDCDD; background-color:#fff}
+.YLPopUl{list-style:none; margin:0; padding:10px;}
+.YLPopDiv{overflow:hidden; width:100%}
+.YLPopDiv2{overflow:hidden; width:100%}
+.YLPopLeft,.YLPopLeft2{width:220px; float:left; }
+.YLPopRight,.YLPopRight2{width:166px; float:right}
+.YLPopUl input {margin:-2px 2px 0px 0px;padding:0 ; width:13px; height:13px; vertical-align:middle;}
+.YLPopUl li{ padding-top:4px;padding-bottom:3px ; padding-left:5px}
+.YLBtn{margin-top:10px; text-align:center }
+.YLPopLeft, .YLPopRight{ height:120px}
+.YLPopLeft2, .YLPopRight2{ height:80px}
+.YLPopLabel{line-height:12px; margin:0 0 0 2px}
+.YLPopSubtitle{font-weight:bold; color:#000; border-bottom:1px solid  #E0E0E0; background-color:#E7E7E7;padding-left:4px;}
+.YLPopBtnBlue {text-align: center;text-decoration: none;color:#535353;position: relative;border:1px solid #B78309; font-size:12px;width:50px !important;height:22px !important;
+background: #ffd163; /* Old browsers */
+background: -moz-linear-gradient(top,  #ffd163 0%, #ffc742 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffd163), color-stop(100%,#ffc742)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ffd163 0%,#ffc742 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ffd163 0%,#ffc742 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ffd163 0%,#ffc742 100%); /* IE10+ */
+background: linear-gradient(top,  #ffd163 0%,#ffc742 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd163', endColorstr='#ffc742',GradientType=0 ); /* IE6-9 */
+}
+.YLPopBtnBlue:hover {
+background: #ffc742; /* Old browsers */
+background: -moz-linear-gradient(top,  #ffc742 0%, #ffd163 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffc742), color-stop(100%,#ffd163)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ffc742 0%,#ffd163 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ffc742 0%,#ffd163 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ffc742 0%,#ffd163 100%); /* IE10+ */
+background: linear-gradient(top,  #ffc742 0%,#ffd163 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc742', endColorstr='#ffd163',GradientType=0 ); /* IE6-9 */
+}

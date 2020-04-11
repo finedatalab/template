@@ -1,0 +1,674 @@
+/* -----------------------------------------------------------------------*/
+/* ----------------- "Main" IBSheet style definition ---------------------*/
+/* -----------------------------------------------------------------------*/
+
+/* Base tags */
+.LGNImage {padding-bottom:256px;}
+.LGNNone {display:none;}
+.LGNSection,.LGNSectionFF3 {table-layout:fixed; width:0;}
+.LGNSectionFF3 {border-collapse:collapse; }
+
+/* Sections */
+.LGNMainTable {border:1px solid #cbcbcb; border-collapse:separate; text-align:left; background:#ffffff; font:12px Dotum,Helvetica,AppleGothic,Sans-serif;}
+.LGNFootLeft,.LGNFootMid {border-top:1px solid #afd6cd;}
+.LGNHeadLeft,.LGNBodyLeft,.LGNFootLeft,.LGNHScrollLeft {border-right:1px solid #afd6cd;}	
+.LGNVScroll {padding-top:1px; padding-bottom:1px;}
+.LGNHScrollLeft,.LGNHScrollMid,.LGNHScrollLeftResizeTouch,.LGNHScrollRightResizeTouch {padding-left:1px; padding-right:1px; cursor:default;}
+.LGNHScrollLeftResizeTouch {border-right:2px solid #000000; padding-right:18px; background:#F4F4F4;}
+.LGNHScrollRightResizeTouch {border-left:2px solid #000000; padding-left:18px; background:#F4F4F4;}
+.LGNHScrollMidLeftResizeTouch {border-left:1px solid #000000; padding-left:19px; background:#F4F4F4;}
+.LGNHScrollMidRightResizeTouch {border-right:1px solid #000000; padding-right:19px; background:#F4F4F4;}
+.LGNHScrollWide {padding-right:1px;}
+.LGNHScrollHidden {overflow:visible !important; background:#F4F4F4; cursor:default; }
+.LGNXScroll {background:#F4F4F4;}
+.LGNPage {border-top:0px solid #E0E0E0;}
+
+/* Rows */
+.LGNSpaceRowHeight{height:21px; }
+.LGNRowHeight 	 {height:18px; }
+.LGNRowHeightTouch{height:22px; }
+.LGNSpaceMargin   {margin:0; }
+.LGNSpaceMarginTouch{margin:5px; }
+.LGNSpaceRow {background:#ffffff; white-space:nowrap; overflow:hidden; padding-top:2px; padding-bottom:2px; border-bottom:1px solid #e0e0ff;}
+.LGNGroupRow,.LGNSearchRow,.LGNPagerRow 
+{background-color:#C9F1E8; white-space:nowrap; padding-top:5px; padding-bottom:5px; overflow:hidden; border-bottom:1px solid #AFD6CD;} 
+.LGNGroupRow,.LGNPagerRow {background-position:0 -1801px; }
+.LGNFillRow {background:#ffffff; }
+.LGNRowAbove,.LGNRowBelow {border-left:1px solid #9cb6c8; border-right:1px solid #9cb6c8;}
+.LGNRowAbove { margin-top:3px; overflow:hidden;}
+.LGNRowBelow {margin-bottom:3px; overflow:hidden;}
+.LGNNoDataRow {border-top:1px solid #000000;padding-left:5px; padding-top:5px; padding-bottom:5px;color:gray; font-style:italic;} 
+.LGNCountRowTop {color:#535353; background-color:#C9F1E8; white-space:nowrap;padding-top:5px; padding-bottom:5px; overflow:hidden; border-bottom:1px solid #AFD6CD;}
+.LGNCountRowBottom {color:#535353; background-color:#C9F1E8; white-space:nowrap; padding-top:5px; padding-bottom:5px; overflow:hidden; border-top:1px solid #AFD6CD;}
+
+/* Cell */
+.LGNCell,.LGNCellPanel,.LGNCellFilter,.LGNHeaderDrag,.LGNHeaderGroup 
+ {color:#444444; border-bottom:1px solid #F2FBF9; border-right:1px solid #cbcbcb; border-left:0; border-top:0;vertical-align:top; overflow:hidden; height:auto; font-size:/*IBFS*/12px; font-family:/*IBFN*/"Dotum", "Helvetica", "AppleGothic", sans-serif;}
+
+.LGNCellHeader,.LGNCellHeaderEmpty
+ {vertical-align:middle; overflow:hidden;height:auto; background-color:#C9F1E8; padding-top:1px; border-right:1px solid #AFD6CD; border-bottom:1px solid #AFD6CD;} 
+.LGNCellBorderFF3 {border-left:0;border-top:0;} 
+.LGNCellSpace {vertical-align:top; padding-top:5px !important; }
+.LGNCellSpacePanel,.LGNCellSpaceBool {vertical-align:top; }
+.LGNCellSpaceRadio { padding-top:3px !important;}
+.LGNCellSpaceEditButton { vertical-align:top; padding-top:4px !important; border:1px solid #000000 !important; background-color:#ffffff !important; }
+.LGNCellSpaceButtonButton { vertical-align:top; }
+.LGNCellSpaceButton { vertical-align:top; padding-top:5px !important; white-space:nowrap; }
+.LGNCellSpaceAbove { border-top:1px solid #9cb6c8; }
+.LGNCellSpaceBelow { border-bottom:1px solid #9cb6c8; }
+.LGNCellPanel,.LGNCellHeaderPanel{ white-space:nowrap; } 
+.LGNCellHidden { background:transparent!important; border-top:none!important; border-bottom:none!important; }
+.LGNHeaderButton { padding:0; }
+.LGNHeaderGroup {background: #95dccc; color:#ffffff; padding-left:3px; }
+.LGNHeaderGroupFocus {background-color: #C0C0A0; }
+.LGNHeaderGroupDelete {background-color: #F0F0E0; color: #F0F0E0; }
+.LGNHeaderGroupCustom {color:#BBB; padding-left:5px; cursor:default; white-space:nowrap;}
+.LGNHeaderDrag {background: #9FB9E9; cursor:default; overflow:hidden; }
+.LGNHeaderFocus {background: #9FB9E9;}
+.LGNPanel {padding-left:80px;}
+.LGNNoTreeLines1 {text-align:right;}
+.LGNNoTreeLines2 {text-align:right; vertical-align:middle; padding-top:0;}
+.LGNTree {padding-top:0; white-space:nowrap;}
+.LGNSpannedTree {vertical-align:top;}
+.LGNCellClassInner {padding-top:0; padding-bottom:0;}
+
+/* Inside cell */
+.LGNStatus,.LGNSeq,.LGNPopup,.LGNPopupEdit,.LGNHtml,.LGNText,.LGNLines,.LGNPass,.LGNInt,.LGNFloat,.LGNDate,
+.LGNLink,.LGNImg,.LGNRadio,.LGNRadioText,.LGNList,.LGNEnum,.LGNDropCols,.LGNAbs,.LGNPagerEdit,.LGNUser 
+ {white-space:nowrap;vertical-align: middle;padding:2px 3px;} 
+.LGNInt,.LGNFloat { text-align:right; }
+.LGNLines,.LGNRadio,.LGNHtml,.LGNList { white-space:normal; }	
+.LGNImg,.LGNHtml {padding:0; } 
+.LGNPass { padding:0 0 0 3px; }
+.LGNRadio,.LGNRadioText { padding:0; font-weight:normal !important; }
+.LGNBool { text-align:center; }
+.LGNIcon { background-repeat:no-repeat; }
+.LGNHiddenSpace { display:none; }
+.LGNDropCols { padding-top:2px !important; }
+
+.LGNHeaderText {color:#535353; vertical-align:middle; font-size:/*IBFS*/12px; font-family:/*IBFN*/"Dotum", "Helvetica", "AppleGothic", sans-serif;}
+.LGNAbs { padding:0; }
+.LGNUser { padding:0; }
+.LGNPagerEdit { text-align:center; padding-top:3px; }
+.LGNMergedCellH {padding:0 0 5px 0}
+.LGNMergedCellV {padding:0 0 1px 0}
+
+.LGNWrap0 { white-space:nowrap; }
+.LGNWrap1 { white-space:normal; }
+.LGNEllipsis { white-space:nowrap; text-overflow:ellipsis;}
+
+.LGNAlignLeft { text-align:left; }
+.LGNAlignCenter { text-align:center; }
+.LGNAlignJustify { text-align:center; }
+.LGNAlignRight { text-align:right;}
+
+/* Tree Img with lines */
+.LGN000,.LGN010,.LGN001,.LGN011,.LGN100,.LGN110,.LGN101,.LGN111, 
+.LGN000T,.LGN010T,.LGN001T,.LGN011T,.LGN100T,.LGN110T,.LGN101T,.LGN111T,
+.LGN00,.LGN01,.LGN10,.LGN11,.LGN00T,.LGN01T,.LGN10T,.LGN11T,
+.LGN0T,.LGN1T,.LGN0TL,.LGN1TL,.LGN0C,.LGN1C,.LGN0CL,.LGN1CL,.LGN0E,.LGN1E,.LGN0EL,.LGN1EL,
+.LGN0,.LGN1,.LGNT,.LGNTL,.LGNC,.LGNCL,.LGNE,.LGNEL,.LGND0,.LGND1,.LGND2,.LGND3,.LGND4,.LGND0L,.LGND1L,.LGND2L,.LGND3L,.LGND4L 
+{background-image:url(Tree.gif); vertical-align:top;}
+
+u.LGN000,u.LGN010,u.LGN001,u.LGN011,u.LGN100,u.LGN110,u.LGN101,u.LGN111 { padding-left:63px; }
+u.LGN000T,u.LGN010T,u.LGN001T,u.LGN011T,u.LGN100T,u.LGN110T,u.LGN101T,u.LGN111T { padding-left:89px; }
+u.LGN00,u.LGN01,u.LGN10,u.LGN11 { padding-left:42px; }   
+u.LGN00T,u.LGN01T,u.LGN10T,u.LGN11T { padding-left:68px; }   
+u.LGN0T,u.LGN1T,u.LGN0TL,u.LGN1TL,u.LGN0C,u.LGN1C,u.LGN0CL,u.LGN1CL,u.LGN0E,u.LGN1E,u.LGN0EL,u.LGN1EL { padding-left:47px; }   
+u.LGN0,u.LGN1 { padding-left:21px; }
+u.LGNT,u.LGNTL,u.LGNC,u.LGNCL,u.LGNE,u.LGNEL,u.LGND0,u.LGND1,u.LGND2,u.LGND3,u.LGND4,u.LGND0L,u.LGND1L,u.LGND2L,u.LGND3L,u.LGND4L { padding-left:26px; }   
+
+.LGN000,.LGN000T{ background-position:0px 0px; }
+.LGN010,.LGN010T{ background-position:-128px 0; }
+.LGN001,.LGN001T{ background-position:-256px 0; }
+.LGN011,.LGN011T{ background-position:-384px 0; }
+.LGN100,.LGN100T{ background-position:-512px 0; }
+.LGN110,.LGN110T{ background-position:-640px 0; }
+.LGN101,.LGN101T{ background-position:-768px 0; }
+.LGN111,.LGN111T{ background-position:-896px 0; }
+.LGN00,.LGN00T  { background-position:-21px 0;  }
+.LGN10,.LGN10T  { background-position:-149px 0; }
+.LGN01,.LGN01T  { background-position:-277px 0; }
+.LGN11,.LGN11T  { background-position:-405px 0; }
+.LGN0,.LGN0T 	  { background-position:-42px 0;  }
+.LGN1,.LGN1T 	  { background-position:-298px 0; }
+.LGNT 		  { background-position:-63px 0;  }
+.LGN0TL 		  { background-position:-1024px 0; }
+.LGN1TL 		  { background-position:-1088px 0; }
+.LGN0C 	      { background-position:-1152px 0; }
+.LGN1C 		  { background-position:-1216px 0; }
+.LGN0CL 		  { background-position:-1280px 0; }
+.LGN1CL 		  { background-position:-1344px 0; }
+.LGN0E 		  { background-position:-1408px 0; }
+.LGN1E 		  { background-position:-1472px 0; }
+.LGN0EL 		  { background-position:-1536px 0; }
+.LGN1EL 		  { background-position:-1600px 0; }
+.LGNTL 		  { background-position:-1045px 0; }
+.LGNC 		  { background-position:-1173px 0; }
+.LGNCL 		  { background-position:-1301px 0; }
+.LGNE 		  { background-position:-1429px 0; }
+.LGNEL 		  { background-position:-1557px 0; }
+.LGND0 		  { background-position:-1664px 0; }
+.LGND1 		  { background-position:-1696px 0; }
+.LGND2 		  { background-position:-1728px 0; }
+.LGND3 		  { background-position:-1760px 0; }
+.LGND0L 		  { background-position:-1792px 0; }
+.LGND1L 		  { background-position:-1824px 0; }
+.LGND2L 		  { background-position:-1856px 0; }
+.LGND3L 		  { background-position:-1888px 0; }
+.LGND4 		  { background-position:-1920px 0; }
+.LGND4L 		  { background-position:-1952px 0; }
+
+/* Tree Img without lines  */
+.LGNND0,.LGNND1,.LGNND2,.LGNND3,.LGNND4,.LGNNC,.LGNNE,.LGNNCR,.LGNNER {background-image:url(TreeN.gif); background-repeat:no-repeat; vertical-align:top; }
+u.LGNND0,u.LGNND1,u.LGNND2,u.LGNND3,u.LGNND4,u.LGNNC,u.LGNNE,u.LGNNCR,u.LGNNER { padding-left:20px; }
+.LGNND0 { background-position: -6px 0; }
+.LGNND1 { background-position: -56px 0; }
+.LGNND2 { background-position: -106px 0; }
+.LGNND3 { background-position: -156px 0; }
+.LGNND4 { background-position: -206px 0; }
+.LGNNC { background-position:right -50px;}
+.LGNNE { background-position:right -2000px;}
+.LGNNCR { background-position:-255px -50px;}
+.LGNNER { background-position:-255px -2000px;}
+u.LGNNL { padding-left:21px; }
+
+/* Cell images */
+.LGNIconLink { text-decoration:none; width:1000px; display:inline-block; }
+.LGNIconLeft,.LGNIconRight,.LGNIconCenter {  background-repeat:no-repeat; }
+.LGNIconLeft { background-position:left 0; padding-left:20px !important; }
+.LGNIconRight { background-position:right 0; padding-right:20px !important; }
+.LGNIconCenter { background-position:center 0; }
+.LGNPopupRight { background:url(popup.gif) no-repeat 5px center; }
+.LGNExpandLeft,.LGNCollapseLeft,.LGNExpandHeaderLeft,.LGNCollapseHeaderLeft { padding-left:20px!important; }
+.LGNDateRight{ padding-right:20px!important;}
+u.LGNDateRight,.LGNPopupRight { padding-right:0!important; padding-left:17px; }
+.LGNDateRight {background:url(calendar.gif) no-repeat 2px center}
+.LGNEnumRight { background:url(combo.gif) no-repeat right center; }
+u.LGNEnumRight {padding-right:0; padding-left:17px}
+.LGNExpandLeft { background:url(ic_plus.gif) no-repeat 3px center; padding:2px 0 0  18px; _padding:0 0 0 18px }
+.LGNCollapseLeft { background:url(ic_minus.gif) no-repeat 3px center ; padding:2px 0 0  18px; _padding:0 0 0 18px }
+.LGNRadio0Right,.LGNRadio1Right,.LGNRadio2Right,.LGNRadio3Right {line-height:17px; padding-right:17px; padding-left:3px; }
+u.LGNFilter0,u.LGNFilter1 { padding-left:16px; }
+.LGNBool0,.LGNBool0RO,.LGNBool1,.LGNBool1RO,.LGNBool2,.LGNBool2RO,.LGNBool3,.LGNBool3RO {background-position:center center; background-repeat:no-repeat;}
+
+.LGNBool0   { background-image:url(chk0.gif);  }
+.LGNBool0RO { background-image:url(chk0R.gif); }
+
+.LGNBool1   { background-image:url(chk1.gif);  }
+.LGNBool1RO { background-image:url(chk1R.gif); }
+
+.LGNBool2   { background-image:url(chk2.gif);  }
+.LGNBool2RO { background-image:url(chk2R.gif); }
+
+.LGNBool3   { background-image:url(chk3.gif);  }
+.LGNBool3RO { background-image:url(chk3R.gif); }
+
+/* Filter images  */
+.LGNFilter0Left,.LGNFilter1Left,.LGNFilter2Left,.LGNFilter3Left,.LGNFilter4Left,.LGNFilter5Left,.LGNFilter6Left,.LGNFilter7Left,
+.LGNFilter8Left,.LGNFilter9Left,.LGNFilter10Left,.LGNFilter11Left,.LGNFilter12Left {padding-left:18px;}
+
+.LGNFilter0Left,.LGNFilter0Menu 	{ width:18px; height:18px; background:url(filter0.gif) no-repeat left center; }   
+.LGNFilter1Left,.LGNFilter1Menu 	{ width:18px; height:18px; background:url(filter1.gif) no-repeat left center; }
+.LGNFilter2Left,.LGNFilter2Menu 	{ width:18px; height:18px; background:url(filter2.gif) no-repeat left center; }
+.LGNFilter3Left,.LGNFilter3Menu 	{ width:18px; height:18px; background:url(filter3.gif) no-repeat left center; }
+.LGNFilter4Left,.LGNFilter4Menu 	{ width:18px; height:18px; background:url(filter4.gif) no-repeat left center; }
+.LGNFilter5Left,.LGNFilter5Menu 	{ width:18px; height:18px; background:url(filter5.gif) no-repeat left center; }   
+.LGNFilter6Left,.LGNFilter6Menu 	{ width:18px; height:18px; background:url(filter6.gif) no-repeat left center; }
+.LGNFilter7Left,.LGNFilter7Menu 	{ width:18px; height:18px; background:url(filter7.gif) no-repeat left center; }
+.LGNFilter8Left,.LGNFilter8Menu 	{ width:18px; height:18px; background:url(filter8.gif) no-repeat left center; }
+.LGNFilter9Left,.LGNFilter9Menu 	{ width:18px; height:18px; background:url(filter9.gif) no-repeat left center; }
+.LGNFilter10Left,.LGNFilter10Menu { width:18px; height:18px; background:url(filter10.gif) no-repeat left center; }
+.LGNFilter11Left,.LGNFilter11Menu { width:18px; height:18px; background:url(filter11.gif) no-repeat left center; }
+.LGNFilter12Left,.LGNFilter12Menu { width:18px; height:18px; background:url(filter12.gif) no-repeat left center; }
+
+.LGNFilter0Menu,.LGNFilter1Menu,.LGNFilter2Menu,.LGNFilter3Menu,.LGNFilter4Menu,.LGNFilter5Menu,.LGNFilter6Menu,.LGNFilter7Menu,.LGNFilter8Menu,.LGNFilter9Menu,
+.LGNFilter10Menu,.LGNFilter11Menu,.LGNFilter12Menu {overflow:hidden; margin: -2px 0 0 -1px;}
+.LGNFilterMenuHeader { padding-left:2px; border-bottom:0 !important; } 
+
+/*  Keyfield Image */
+.LGNKeyfield {background-image:url(keyfield.gif); display:inline-block; vertical-align:middle; background-repeat: no-repeat; background-position:center 1px; padding: 0 2px 0 4px; }
+
+/* GMKeyfield : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .LGNKeyfield{  background-position: center 3px;padding: 0 2px 0 4px; }}
+
+/* CheckBox Header Image */
+.LGNCheckHeader0 {background-image:url(chk0.gif); display:inline-block; vertical-align:middle; background-repeat:no-repeat; background-position:5px 1px; padding:2px 7px 0 6px; margin:0 2px 0 0;}
+
+/* GMCheckHeader0 : hack CR,SF*/
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{.LGNCheckHeader0{ background-position:6px 1px ; padding: 2px 8px 0 6px; }}
+
+/* GMCheckHeader0 : hack FF*/
+.LGNCheckHeader0, x:-moz-any-link, x:default { background-position:6px 1px ; padding: 2px 8px 0 6px; }
+
+/* GMCheckHeader0 : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .LGNCheckHeader0{ background-position:7px center ; padding:1px  17px 0 0; }}
+
+.LGNCheckHeader1 {background-image:url(chk1.gif); display:inline-block; vertical-align:middle; background-repeat:no-repeat; background-position:4px 1px ; padding:2px 6px 0 6px; margin:0 2px 0 0}
+
+/* GMCheckHeader1 : hack CR,SF*/
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{.LGNCheckHeader1{ background-position:6px 1px ; padding: 2px 8px 0 6px; }}
+
+/* GMCheckHeader1 : hack FF*/
+.LGNCheckHeader1, x:-moz-any-link, x:default { background-position:6px 1px ; padding: 2px 8px 0 6px; }
+
+/* GMCheckHeader1 : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .LGNCheckHeader1 { background-position:7px center ; padding:1px  17px 0 0;  }}
+
+/* Sort images */
+.LGNSort {display:block; float:right; margin:2px 2px 0;width:7px}
+
+/* State classes */
+/* The colors must be set by numbers not by names */
+.LGNColorDefault  { background-color:#FFFFFF;}
+.LGNColorNoFocus  { background-color:#E8F4FF;}
+.LGNColorReadOnly { background-color:#E4F8F4;}
+.LGNColorPreview  { background-color:#FFFFFF;}
+.LGNColorAlternate{ background-color:#f2fbf9;}
+.LGNColorSelected { background-color:/*#FFFF80*/#aadbff; }
+
+.LGNColorFilter {background-color:#FFFFFF;}
+
+/*//.LGNClassSelected { }*/
+.LGNColorError   { background-color:#FF6969; }
+.LGNColorDeleted { background-color:#FFCDCD; }
+.LGNClassDeleted { font-style:italic; }
+.LGNColorAdded   { background-color:#CDFFCD; }
+.LGNClassAdded   { font-weight:bold; }
+.LGNColorMoved1  { background-color:#FFFFFF; }
+.LGNColorMoved2  { background-color:#D7EBEB; }
+.LGNColorChanged { background-color:#EBEBFF; }
+.LGNColorChangedCell { background-color:#E1E1FF; }
+.LGNClassChangedCell { font-weight:bold; }
+.LGNColorMaxChildren { background-color:#FFFFF0; }
+.LGNColorDetail { background-color:#FFF0FF; }
+.LGNColorDetailSelected { background-color:#FFF0E0; }
+.LGNColorDragged{ background-color:#E0E0C0; }
+.LGNColorFound1 { background-color:#FF87FF; }
+.LGNColorFound2 { background-color:#FFC387; }
+.LGNColorFound3 { background-color:#87FF87; }
+.LGNColorHovered 			{ background-color:#F0F0FF; }
+.LGNColorHoveredCell 		{ background-color:#C0C0FF; }
+.LGNColorHoveredCellReadOnly { background-color:#F0F0F0; }
+.LGNColorHoveredCellNoFocus 	{ background-color:#F8F8F8; }
+
+.LGNClassHoveredCellHeader 	{ background-position:0px -250px; }
+.LGNClassHoveredCellPanel 	{ background-position:0px -1801px; background-repeat:repeat-x; }
+
+.LGNColorHoveredCellSpace 	{ background-color:#FFFFFF; }
+.LGNColorHoveredCellSpaceEdit{ background-color:#C0C0FF; }
+.LGNColorHoveredCellSpaceBool{ background-color:#FFFFFF; }
+.LGNColorHoveredCellButton 	{ background-color:#FFFFFE; }
+.LGNClassHoveredCellButton 	{ color:green; }
+.LGNColorHoveredCellButton1 	{ background-color:#FFFFFE; }
+.LGNClassHoveredCellButton1 	{ color:red; }
+.LGNColorHoveredCellTab 		{ background-color:#FFFFFE; }
+.LGNClassHoveredCellTab 		{ background-position:0px -1801px; color:green; }
+.LGNColorHoveredCellTab1 	{ background-color:#99bbcc; }
+.LGNClassHoveredCellTab1 	{ background-image:none; }
+
+.LGNColorFocused 			{ background-color:#E6E6E6; }
+.LGNColorFocusedCell 		{ background-color:#FFFFFE; }
+.LGNColorFocusedCellSafari 	{ background-color:#A0A0FF; }
+.LGNColorFocusedCellSpace 	{ background-color:#E6E6E6; }
+.LGNColorFocusedCellButton 	{ background-color:#BCD; }
+.LGNColorFocusedCellHeader 	{ background-color:#FFFFFE; }
+.LGNColorFocusedCellPanel 	{ background-color:#FFFFFE; }
+.LGNColorEditedCell 			{ background-color:#FFFFFF; }
+.LGNColorViewedCell 			{ background-color:#FFFFFF; }
+
+/* Hover, focus, edit cursors */
+.LGNHoverRowBackground 	{ opacity:0.1; filter:alpha(opacity=10); background:#00F; }
+.LGNHoverRowBorder 		{ z-index:0; border-top:1px solid #BBF; border-bottom:1px solid #BBF; cursor:default; }
+.LGNHoverCellBorder 		{ z-index:0; padding:1px; border:1px solid #A0A0F0; background:white; }
+.LGNFocusRowBackground 	{ opacity:0.1; filter:alpha(opacity=50); background:/*IBSB*/#FFFF9F; } /* <-- Sheet : Selected Row Background */
+.LGNFocusRowBorder 		{ z-index:0; border:1px solid /*IBSB*/#FAC800; } /* <-- Sheet : Selected Row Border */
+.LGNFocusCellBorder		{ z-index:0; border:2px solid /*IBSB*/#FAC800; } /* <-- Sheet : Selected Cell Border */
+.LGNFocusCellSpaceBorder,.LGNEditCellSpaceBorder { z-index:4; }
+.LGNEditCellBorder 		{ z-index:0; border:2px solid #FF6666;}    /*<-- Sheet : CellEdit Border */
+.LGNEditCellInput 		{ position:relative; border:0 solid #39aefb; overflow:hidden; z-index:2; } 
+
+.LGNCursorBackground, .LGNCursorBorderLeft ,.LGNCursorBorderRight,.LGNCursorBorderTop,.LGNCursorBorderBottom 
+ {position:relative;overflow:hidden;}
+
+.LGNCursorBackground  {border:none; padding:0;}
+.LGNCursorBorderLeft  {padding-right:0; padding-top:0; padding-bottom:0; border-right:none; border-top:none; border-bottom:none;  width:0; height:0;}
+.LGNCursorBorderRight {padding-left:0; padding-top:0; padding-bottom:0; border-left:none; border-top:none; border-bottom:none;  width:0; height:0;}
+.LGNCursorBorderTop 	 {padding-bottom:0; padding-left:0; padding-right:0; border-bottom:none; border-left:none; border-right:none;  width:0; height:0;}
+.LGNCursorBorderBottom{padding-top:0; padding-left:0; padding-right:0; border-top:none; border-left:none; border-right:none; width:0; height:0;}
+
+/* Cell edges */
+.LGNNoLeft { border-left:0; }
+.LGNNoRight { border-right:0; }
+
+/* Dragging */
+.LGNMouseObject { opacity:0.5; filter:alpha(opacity=50); z-index:300; overflow:hidden;}
+.LGNDragObject {z-index:300; margin-left:10px; margin-top:10px; padding-left:3px; padding-right:3px;background:#E4E5F0 ; border:1px solid #777;}
+.LGNDragColInsideTop,.LGNDragColInsideBottom,.LGNDragColOutsideTop,.LGNDragColOutsideBottom{position:absolute;width:10px; height:11px; overflow:hidden; z-index:258;}
+.LGNDragColInsideTop 	{background:url(in_top.gif) no-repeat;} 	
+.LGNDragColInsideBottom  {background:url(in_bottom.gif) no-repeat;}	
+.LGNDragColOutsideTop  	{background:url(out_top.gif) no-repeat;}	
+.LGNDragColOutsideBottom {background:url(out_bottom.gif) no-repeat;}	 
+
+/* Messages */
+.LGNDisabled{position:absolute; z-index:264; background:#ffffff; opacity:0.5; filter:alpha(opacity=50); } 
+.LGNProcess {position: absolute; left:0; top:0; background:#E2F0FF; border:1px solid #777; white-space:nowrap; text-align:center; visibility:hidden; z-index:266;}
+.LGNMessage {background:#E2F0FF; border:1px solid #000000; padding:10px; white-space:nowrap; text-align:center;
+			 position: absolute; left:0; top:0; visibility:hidden; z-index:266;}
+.LGNMessageShadow 
+{position:absolute; margin-left:3px; margin-top:3px; z-index:265;background:#888; opacity:0.5; filter:alpha(opacity=50); left:0; top:0; visibility:hidden;}
+      
+/* Other */
+/* !!! No .LGN style prefix here !!! */
+.GridTmpTag { position:absolute; left:5px; top:5px; visibility:hidden; }
+
+/* Popup menus, TGLib */
+.LGNMenuMain  {position:absolute;left:0;top:0; z-index:258;}
+.LGNMenuOuter {overflow:hidden; border:1px solid #000000; background:#fff; padding:1px; margin:1px;}
+.LGNMenuHeader{overflow:hidden; position:absolute; z-index:258;border:1px solid #b0b0c0; background:#fff; cursor:pointer; _cursor:hand;}
+.LGNMenuHead {background:#183873; color:white; cursor:default;text-align:center; padding-top:5px; padding-bottom:4px;}
+.LGNMenuClose {float:right; width:14px; cursor:pointer; _cursor:hand; display:none;}
+.LGNMenuBody {cursor:default; background-color:#fff; padding-top:1px; padding-bottom:1px;}
+.LGNMenuShadow {position:absolute;margin:3px 0 0 3px;z-index:257;background-color:#888; opacity:0.5; filter:alpha(opacity=50);}
+.LGNMenuCheckedIconRight {padding-right:17px; background:url(chk1.gif) no-repeat 96% center; }
+.LGNMenuUncheckedIconRight { padding-right:17px;background:url(chk0.gif) no-repeat 96% center ; }
+
+.LGNMenuCursorIcon {background-image:url(d_gray_right.gif); background-repeat:no-repeat; background-position: 3px center;_background-color:#fff}
+.LGNMenuHoverIcon {background-image:url(d_right.gif); background-repeat:no-repeat; background-position: 3px center; _background-color:#ffeeaa }   
+
+.LGNMenuNextIcon { padding-right:10px; }
+.LGNMenuNextIconRtl { padding-left:10px; }
+
+.LGNMenuItemText,.LGNMenuItemIcon,.LGNMenuEnum,.LGNMenuEnumHeader,.LGNMenuEdit 
+{white-space:nowrap; overflow:hidden; vertical-align: middle; padding:1px 0 0 0}
+.LGNMenuItemDisabled {opacity:0.50; filter:alpha(opacity=30); overflow:hidden; }
+.LGNMenuLevel {color:blue;text-align:center; }  
+.LGNMenuEnumParent,.LGNMenuEditParent {padding-left:5px; padding-right:2px}
+.LGNMenuItemIcon {background-repeat:no-repeat;}
+.LGNMenuEnum {border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; padding-left:15px; overflow:hidden;}
+.LGNMenuEnumHeader  {padding:1px 0 2px 16px; cursor:default; } 
+.LGNMenuEdit{border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; background:white; overflow:hidden;white-space:nowrap;
+  padding-left:2px; padding-right:2px;}
+.LGNMenuEditInput,.LGNMenuEditTextarea {margin:0;padding:0;border:0; background:#FDD;_margin:-1px; _padding-right:1px; _padding_left:1px; }   
+.LGNMenuEditTextarea { line-height:13px;  }   
+.LGNMenuEditInt,.LGNMenuEditFloat,.LGNMenuEditDate { text-align:right; } 
+.LGNMenuEditMulti { white-space:normal; }
+.LGNMenuItem {background-color:#ffffff;padding:2px;}  
+.LGNMenuItemHover {background-color:#A4F4E1; border:1px solid #4A9A87;margin:0 1px; padding:1px 0;}
+.LGNMenuFocusHover {margin:1px; background-color:#DDF6F1; border:1px solid #000000;}
+.LGNMenuFocus 	  {margin:1px; background-color:#DDF6F1; border:1px solid #B1DCD2;}
+.LGNMenuSeparator {margin:1px 3px 0 3px; height:1px; border-top:1px solid #aaaadd; overflow:hidden;}
+.LGNMenuCaption {padding:2px; background:#ffffff; color:blue; text-align:center;}
+.LGNMenuVSeparator { border-right:1px solid #DDD; }
+.LGNMenuFoot { border-top:none; text-align:center; white-space:nowrap; }
+.LGNMenuButton {font-size:11px;background:#CCF2E9; text-align:center; border:1px solid #87C5B6;margin:5px 2px 4px 2px;padding:0;white-space:nowrap;width:48px;} 
+.LGNMenuButtonHover { background:#A4F4E1; border:1px solid #4A9A87; }
+
+/* Grid configuration menus */
+.LGNCfgMenuOuter,.LGNColumnsMenuOuter { border:1px solid #000000; }
+.LGNCfgMenuHead,.LGNColumnsMenuHead { padding-left:3px; }
+.LGNCfgMenuBody,.LGNColumnsMenuBody { padding-left:4px; padding-right:4px;}
+.LGNCfgMenuFoot,.LGNColumnsMenuFoot { padding-right:3px; padding-left:3px;}
+.LGNCfgMenuButton { width:70px; } 
+.LGNCfgMenuItemText,.LGNColumnsMenuItemText { padding-left:3px; }
+.LGNColumnsMenuItemText { white-space:nowrap; }
+.LGNCfgMenuItem,.LGNColumnsMenuItem { padding-top:3px; padding-bottom:3px;}
+.LGNCfgMenuItemHover,.LGNCfgMenuFocus,.LGNCfgMenuFocusHover,
+.LGNColumnsMenuItemHover,.LGNColumnsMenuFocus,.LGNColumnsMenuFocusHover { padding-top:2px; padding-bottom:2px;}
+
+/* Popup grid dialog */
+.LGNPopupGridOuter { border:0; overflow:visible; }
+.LGNPopupGridHead { padding:0; }
+.LGNPopupGridBody { padding:0; }
+.LGNPopupGridFoot { padding:0; }
+.LGNPopupGridButton { width:50px;margin-top:-2px; margin-bottom:3px;} 
+
+/* Calendar, TGLib */
+.LGNPickMain  {position:absolute; left:0; top:0; z-index:258; }
+.LGNPickOuter {overflow:hidden; background:white; padding:1px; border:1px solid #4A9A87; }
+.LGNPickHeader{overflow:hidden; position:absolute; z-index:258; border:1px solid black; background:#ffffff; cursor:pointer; _cursor:hand;}
+.LGNPickHeaderBottom{border-bottom:0; padding-bottom:1px;}
+.LGNPickHeaderTop{border-top:0; padding-bottom:1px; }
+.LGNPickHead {background:#5c8397; font:10px Dotum,Verdana,Arial; color:white; cursor:default; padding-left:5px; padding-top:1px; padding-bottom:1px;border-bottom:1px solid white;}
+.LGNPickClose{float:right; width:14px; cursor:pointer; _cursor:hand; display:none;}
+.LGNPickBody {cursor:default; padding:0; }
+.LGNPickShadow{position:absolute; background:#888; z-index:257; margin:3px 0 0 3px;opacity:0.5; filter:alpha(opacity=50);} 
+.LGNPickFooter,.LGNPick2Footer{text-align:center; padding:2px; cursor:default; background:#EFF0F1; border-top:1px solid #E3E4E6}
+ 
+.LGNPickMY{background-color:#CCF2E9;border-bottom:1px solid #AFD6CD;color:#026951; cursor:default;text-align:center;padding:2px 0 4px 0;}/* <-- Calender : Header Background */
+   
+.LGNPickMYDown{padding-right:13px; background:url(d_down.gif) no-repeat right; cursor:pointer; _cursor:hand;}
+.LGNPickMYUp {padding-right:13px; background:url(d_up.gif) no-repeat right center; cursor:pointer; _cursor:hand;}
+
+.LGNPickMYRtl{padding-right:0; padding-left:13px; }
+.LGNPickBL,.LGNPickBR{padding-top:3px; cursor:pointer; _cursor:hand; width:16px; height:14px; overflow:hidden;}
+
+.LGNPickBL {float:left; background:url(d_left.gif) no-repeat 50%; }
+.LGNPickBR {float:right; background:url(d_right.gif) no-repeat 50%; }
+
+.LGNPickTable{}
+.LGNPickRow  {background:#ffffff;}
+.LGNPickRowW {background:#E4F8F4;}
+.LGNPickCell {width:22px;}
+.LGNPickWDN {background:transparent; color:#333333;text-align:center; cursor:default; margin:2px 3px;padding:1px;}
+  
+.LGNPickHover,.LGNPickSelHover,.LGNPickWD,.LGNPickSa,.LGNPickSu,.LGNPickSel,.LGNPickNow,.LGNPickWDNE,.LGNPickSaNE,.LGNPickSuNE,
+.LGNPickSelNE,.LGNPickNowNE,.LGNPickOM,.LGNPickOMNE {text-align:center; border:1px solid #ffffff; cursor:pointer; _cursor:hand;margin:2px 3px;}
+.LGNPickWN,.LGNPickWNE {text-align:center; cursor:pointer; _cursor:hand;padding:3px 4px; border-right:1px solid #E4F8F4; background:#EFF0F1;}
+   
+.LGNPickWDNE,.LGNPickSaNE,.LGNPickSuNE,.LGNPickSelNE,.LGNPickNowNE,.LGNPickWNE {cursor:default;}
+.LGNPickWD{background-color:#ffffff;}
+.LGNPickSa{background-color:#ffffff;}
+.LGNPickSu{background-color:#ffffff;}
+.LGNPickSel{background-color:#EEFB54; border:1px solid #DAD1D1;}
+.LGNPickSelNE{background-color:#fbea54; border:1px solid #dad1d1;}
+.LGNPickNow {background-color:#c0f3ff; border:1px solid #dad1d1;}
+.LGNPickNowNE{background-color:#c0f3ff; border:1px solid #dad1d1;}
+.LGNPickHover{background-color:#ddd; border:1px solid #ddd;}
+.LGNPickSelHover{background-color:#dddddd; border:1px solid #dddddd;}
+.LGNPickOM{background-color:white; color:#aaaaaa;}
+.LGNPickOMNE{color:#aaaaaa;}
+
+.LGNPickEmpty{background:url(d_blank.gif) no-repeat 50%; cursor:pointer; _cursor:hand;padding:3px 0; }
+
+.LGNPickTimeCell 
+{text-align:right; padding-bottom:4px; padding-top:6px; padding-right:5px; border-top:1px solid #E4F8F4; background:#EFF0F1;}
+
+.LGNPickTime 
+{border:0px none; white-space:nowrap; text-align:right; background:#EFF0F1;}
+
+.LGNPickButton{background:#CCF2E9; text-align:center; border:1px solid #87C5B6; width:45px; height:16px}
+    
+.LGNPickButtonHover{background:#A4F4E1; border:1px solid #4A9A87; }
+.LGNPick2Table{width:auto; vertical-align:middle}
+.LGNPick2CellM{height:20px; width:55px; }
+.LGNPick2CellY{height:20px; width:35px; vertical-align:middle }
+.LGNPick2CellSep{height:20px; width:5px; }
+.LGNPick2Cell{vertical-align:middle}
+.LGNPick2M,.LGNPick2Y,.LGNPick2MSel,.LGNPick2YSel,.LGNPick2MHover,.LGNPick2YHover,.LGNPick2MSelHover,.LGNPick2YSelHover
+{cursor:pointer; _cursor:hand; text-align:center; margin-left:1px; margin-right:1px; padding-left:4px; padding-right:4px; overflow:hidden; }
+   
+.LGNPick2MSel,.LGNPick2YSel {background:#EEFB54; border:1px solid #cccccc; margin-left:0; margin-right:0;}
+.LGNPick2MHover,.LGNPick2YHover {background:#DDD; border:1px solid #ffffff; margin-left:0; margin-right:0;}
+.LGNPick2MSelHover,.LGNPick2YSelHover {background:#CCF2E9; border:1px solid #ffffff;margin-left:0; margin-right:0;}   
+.LGNPick2SepH {width:1px; height:1px; overflow:hidden; }
+.LGNPick2Sep {width:1px; background:#E3E4E6; overflow:hidden; margin-left:2px; margin-right:2px; height:20px;}
+.LGNPick2BL,.LGNPick2BR {width:35px; cursor:pointer; _cursor:hand; }
+
+
+.LGNPick2BL {background:url(d_left2.gif) no-repeat center center}
+.LGNPick2BR {background:url(d_right2.gif) no-repeat center center}
+
+
+/* Edit controls, TGLib */
+.LGNEdit,.LGNEditInline {padding:2px 4px;border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666;background:#ffffff; white-space:nowrap; overflow:hidden;}
+  
+.LGNEditInline { display:inline-block; vertical-align:bottom; }
+.LGNEditInput,.LGNEditTextarea {border:0 solid transparent; margin:0; padding:0;vertical-align: middle} 
+
+.LGNEditTextarea { line-height:13px; }
+.LGNEditSpaceInput { vertical-align:middle; }
+.LGNEditNormalInput,.LGNEditNormalTextarea,.LGNEditSpaceTextarea { background-color:#FFFFFF; /*#FFDCFF;*/; }
+.LGNEditInt,.LGNEditFloat { text-align:right; }
+
+.LGNEditMulti { white-space:normal; }
+.LGNEditReadOnly { background-color:#FFEEFF; }   
+.LGNEditParent { position:absolute; z-index:258; overflow:hidden; }
+
+.LGNEnumHeaderLeft,.LGNEnumHeaderRight,.LGNEnumHeaderNone 
+{background:white; cursor:pointer; _cursor:hand; vertical-align:middle; text-align:left; padding:2px 0 2px 2px;}
+
+.LGNEnumHeaderRight {background: url(combo.gif) no-repeat right center;margin:1px 1px 0 0;}
+ @media screen and (-webkit-min-device-pixel-ratio:0) {.LGNEnumHeaderRight{margin:1px 0 0 0;}}/* hack:CR,SF */
+.LGNEnumHeaderRight, x:-moz-any-link, x:default {margin:1px 0 0 0;} /* hack:FF */
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {.LGNEnumHeaderRight{ margin:1px 0 0 0;}}/* hack:OP */
+
+.LGNEnumMenuHeader { background:#ffffff; }
+
+.LGNEnumControl,.LGNEnumInline {
+   cursor:pointer; _cursor:hand; padding-left:15px; padding-right:4px; padding-top:2px; padding-bottom:2px;
+   border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; overflow:hidden;}
+   
+.LGNEnumInline { display:inline-block; vertical-align:bottom; }
+.LGNEnumHeader { cursor:pointer; _cursor:hand;padding-left:15px; padding-right:4px; padding-top:2px; padding-bottom:2px;} 
+
+/*  Custom scrollbars  */
+.LGNCustScroll1RightHidden { background:url(VScroll.gif) left -108px; height:18px; overflow:hidden; }
+.LGNCustScroll1Right { padding-right:18px; background:url(VScroll.gif) right 0; }
+.LGNCustScroll1RightHover { padding-right:18px; background:url(VScroll.gif) right -18px; }
+.LGNCustScroll1Left { padding-left:18px;  background:url(VScroll.gif) left 0; }
+.LGNCustScroll1LeftHover { padding-left:18px;  background:url(VScroll.gif) left -18px; }
+.LGNCustScroll1SliderRight { padding-right:3px; background:url(VScroll.gif) right -36px; }
+.LGNCustScroll1SliderLeft { padding-left:3px; background:url(VScroll.gif) left -36px; }
+.LGNCustScroll1SliderHIn { height:18px; overflow:hidden; background:url(VScroll.gif) center -54px; }
+.LGNCustScroll1SliderRightHover { padding-right:3px; background:url(VScroll.gif) right -72px; }
+.LGNCustScroll1SliderLeftHover { padding-left:3px; background:url(VScroll.gif) left -72px; }
+.LGNCustScroll1SliderHInHover { height:18px; overflow:hidden; background:url(VScroll.gif) center -90px; }
+.LGNCustScroll2RightHidden { background:url(VScroll.gif) left -108px; height:18px; overflow:hidden; }
+.LGNCustScroll2Right { padding-right:18px; background:url(VScroll.gif) right 0; }
+.LGNCustScroll2RightHover { padding-right:18px; background:url(VScroll.gif) right -18px; }
+.LGNCustScroll2Left { padding-left:18px;  background:url(VScroll.gif) left 0; }
+.LGNCustScroll2LeftHover { padding-left:18px;  background:url(VScroll.gif) left -18px; }
+.LGNCustScroll2SliderRight { padding-right:3px; background:url(VScroll.gif) right -36px; }
+.LGNCustScroll2SliderLeft { padding-left:3px; background:url(VScroll.gif) left -36px; }
+.LGNCustScroll2SliderHIn { height:18px; overflow:hidden; background:url(VScroll.gif) center -54px; }
+.LGNCustScroll2SliderRightHover { padding-right:3px; background:url(VScroll.gif) right -72px; }
+.LGNCustScroll2SliderLeftHover { padding-left:3px; background:url(VScroll.gif) left -72px; }
+.LGNCustScroll2SliderHInHover { height:18px; overflow:hidden; background:url(VScroll.gif) center -90px; }
+
+.LGNCustScroll3Right,.LGNCustScroll3RightHidden { background:white; height:9px; overflow:hidden; }
+.LGNCustScroll3SliderRight,.LGNCustScroll3SliderRightHover { padding-right:3px; height:9px; background:url(VScroll.gif) right -126px; }
+.LGNCustScroll3SliderLeft,.LGNCustScroll3SliderLeftHover { height:9px; background:url(VScroll.gif) left -126px; }
+.LGNCustScroll3SliderRightHover { background-position:right -135px; }
+.LGNCustScroll3SliderLeftHover { background-position:left -135px; }
+.LGNCustScroll4Right,.LGNCustScroll4RightHidden,.LGNCustScroll4SliderRight,.LGNCustScroll4SliderRightHover { height:1px; overflow:hidden; }
+
+.LGNCustScroll1DownHidden { background:url(HScroll.png) -108px top; width:18px; overflow:hidden; }
+.LGNCustScroll1Down { padding-bottom:18px; background:url(HScroll.png) 0px bottom; cursor:default; width:18px; overflow:hidden; }
+.LGNCustScroll1DownHover { padding-bottom:18px; background:url(HScroll.png) -18px bottom; width:18px; overflow:hidden; }
+.LGNCustScroll1Up { padding-top:18px; background:url(HScroll.png) 0px top; width:18px; overflow:hidden; }
+.LGNCustScroll1UpHover { padding-top:18px;  background:url(HScroll.png) -18px top; width:18px; overflow:hidden; }
+.LGNCustScroll1SliderDown { padding-bottom:3px; background:url(HScroll.png) -36px bottom; width:18px; overflow:hidden; }
+.LGNCustScroll1SliderUp { padding-top:3px; background:url(HScroll.png) -36px top; width:18px; overflow:hidden; }
+.LGNCustScroll1SliderVIn { background:url(HScroll.png) -54px center; width:18px; overflow:hidden; }
+.LGNCustScroll1SliderDownHover { padding-bottom:3px; background:url(HScroll.png) -72px bottom; width:18px; overflow:hidden; }
+.LGNCustScroll1SliderUpHover { padding-top:3px; background:url(HScroll.png) -72px top; width:18px; overflow:hidden; }
+.LGNCustScroll1SliderVInHover { background:url(HScroll.png) -90px center; width:18px; overflow:hidden; }
+
+.LGNCustScroll2DownHidden { background:url(HScroll.png) -108px top; width:18px; overflow:hidden; }
+.LGNCustScroll2Down { padding-bottom:18px; background:url(HScroll.png) 0px bottom; cursor:default; width:18px; overflow:hidden; }
+.LGNCustScroll2DownHover { padding-bottom:18px; background:url(HScroll.png) -18px bottom; width:18px; overflow:hidden; }
+.LGNCustScroll2Up { padding-top:18px; background:url(HScroll.png) 0px top; width:18px; overflow:hidden; }
+.LGNCustScroll2UpHover { padding-top:18px;  background:url(HScroll.png) -18px top; width:18px; overflow:hidden; }
+.LGNCustScroll2SliderDown { padding-bottom:3px; background:url(HScroll.png) -36px bottom; width:18px; overflow:hidden; }
+.LGNCustScroll2SliderUp { padding-top:3px; background:url(HScroll.png) -36px top; width:18px; overflow:hidden; }
+.LGNCustScroll2SliderVIn { background:url(HScroll.png) -54px center; width:18px; overflow:hidden; }
+.LGNCustScroll2SliderDownHover { padding-bottom:3px; background:url(HScroll.png) -72px bottom; width:18px; overflow:hidden; }
+.LGNCustScroll2SliderUpHover { padding-top:3px; background:url(HScroll.png) -72px top; width:18px; overflow:hidden; }
+.LGNCustScroll2SliderVInHover { background:url(HScroll.png) -90px center; width:18px; overflow:hidden; }
+
+.LGNCustScroll3Down,.LGNCustScroll3DownHidden { background:white; width:9px; overflow:hidden; cursor:default; }
+.LGNCustScroll3SliderDown,.LGNCustScroll3SliderDownHover { padding-bottom:3px; width:9px; background:url(HScroll.png) -126px bottom; }
+.LGNCustScroll3SliderUp,.LGNCustScroll3SliderUpHover { width:9px; background:url(HScroll.png) -126px top; cursor:default; }
+.LGNCustScroll3SliderDownHover { background-position:-135px bottom; }
+.LGNCustScroll3SliderUpHover { background-position:-135px top; cursor:default; }
+
+.LGNCustScroll4Down,.LGNCustScroll4DownHidden,.LGNCustScroll4SliderDown,.LGNCustScroll4SliderDownHover { width:1px; overflow:hidden; }
+
+/* Other messages, TGLib */
+.LGNHintMain {position:absolute; margin-left:-1px; margin-top:-1px; left:0px; top:0px; z-index:260; background:#ffffff; cursor:default; }
+.LGNHintOuter {overflow:hidden; border:1px solid #000000; background:#ffffff !important; color:black; text-align:left; }
+.LGNHintHeaderOuter {background-color:#39aefb !important; color:#ffffff; border: 1px solid #ffffff; }
+.LGNHintShadow {position:absolute; z-index:259;background:#888; opacity:0.3; filter:alpha(opacity=30);margin-left:2px; margin-top:2px;}
+.LGNTipMain {position:absolute; left:0px; top:0px; z-index:262; visibility:hidden; }
+.LGNTipOuter  {overflow:hidden; cursor:default; font:12px Arial;padding-left:3px; padding-right:3px; background:#E4E5F0; border:1px solid #777;}
+.LGNTipBody {background:#E4E5F0; white-space:nowrap; }
+.LGNTipShadow {position:absolute;z-index:261;background:#888; opacity:0.3; filter:alpha(opacity=30);visibility:hidden; margin-left:3px; margin-top:3px}
+.LGNMouseOrig { background:yellow !important; opacity:0.5; filter:alpha(opacity=50); }
+.LGNMouseDragObject { position:absolute; z-index:260; background:#888; opacity:0.5; filter:alpha(opacity=50); }
+.LGNFocus { border:1px solid #AAF; border-top:1px solid #00F; border-left:1px solid #00F; background-color:#EEE; } 
+.GridDisabled { position:absolute; z-index:256; background:white; opacity:0.5; filter:alpha(opacity=50); } 
+
+/* Do not change, marks the style loaded */
+.LGNLoaded { border:1px solid #000000 !important;}
+
+/*sum*/
+.LGNSumCell{background:#e5fcf7; color:#FF060C;}/*//text-align: right;font-weight:bold;*/
+.LGNSubSumCell{background: #FCF0E7; border-top:1px solid #F7BBA1; border-bottom:1px solid #F7BBA1; color:#DA5615}
+.LGNCumulateCell{background: #FCF0E7; border-bottom:1px solid #F7BBA1; color:#BE3600}
+
+/* FindDialog */
+.LGNH1Pop,.LGNPPop{margin:0; padding:0}
+.LGNPaddingl10{padding-left:10px}
+.LGNPaddingT10{padding-top:10px}
+.LGNPPop{ padding:0 0 10px 0; text-align:center }
+.LGNPop{width:410px; overflow:hidden; border:1px solid #73C49D; padding:0; font-size:12px;background:#F7FDFC; font-family:dotum, Arial, Helvetica, sans-serif}
+.LGNPopTitle{width:100%; border-bottom:1px solid #C0EFE4; font-size:12px; font-weight:bold; display:block; line-height:28px; color:#026951;
+background: #e4f8f4; /* Old browsers */
+background: -moz-linear-gradient(top,  #e4f8f4 0%, #cdf2ea 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e4f8f4), color-stop(100%,#cdf2ea)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #e4f8f4 0%,#cdf2ea 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #e4f8f4 0%,#cdf2ea 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #e4f8f4 0%,#cdf2ea 100%); /* IE10+ */
+background: linear-gradient(top,  #e4f8f4 0%,#cdf2ea 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4f8f4', endColorstr='#cdf2ea',GradientType=0 ); /* IE6-9 */
+}
+.LGNPopSearch{margin:10px; overflow:hidden; }
+.LGNPopContent{border:1px solid #DBDCDD; background-color:#fff}
+.LGNPopUl{list-style:none; margin:0; padding:10px;}
+.LGNPopDiv{overflow:hidden; width:100%}
+.LGNPopDiv2{overflow:hidden; width:100%}
+.LGNPopLeft,.LGNPopLeft2{width:220px; float:left; }
+.LGNPopRight,.LGNPopRight2{width:166px; float:right}
+.LGNPopUl input {margin:-2px 2px 0px 0px;padding:0 ; width:13px; height:13px; vertical-align:middle;}
+.LGNPopUl li{ padding-top:4px;padding-bottom:3px ; padding-left:5px}
+.LGNBtn{margin-top:10px; text-align:center }
+.LGNPopLeft, .LGNPopRight{ height:120px}
+.LGNPopLeft2, .LGNPopRight2{ height:80px}
+.LGNPopLabel{line-height:12px; margin:0 0 0 2px}
+.LGNPopSubtitle{font-weight:bold; color:#000; border-bottom:1px solid  #E0E0E0; background-color:#E7E7E7;padding-left:4px;}
+.LGNPopBtnBlue {text-align: center;text-decoration: none;color:#026951;position: relative;border:1px solid #73C49D; font-size:12px;width:50px !important;height:22px !important;
+background: #e4f8f4; /* Old browsers */
+background: -moz-linear-gradient(top,  #e4f8f4 0%, #cdf2ea 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e4f8f4), color-stop(100%,#cdf2ea)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #e4f8f4 0%,#cdf2ea 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #e4f8f4 0%,#cdf2ea 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #e4f8f4 0%,#cdf2ea 100%); /* IE10+ */
+background: linear-gradient(top,  #e4f8f4 0%,#cdf2ea 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4f8f4', endColorstr='#cdf2ea',GradientType=0 ); /* IE6-9 */
+}
+.LGNPopBtnBlue:hover {
+background: #cdf2ea; /* Old browsers */
+background: -moz-linear-gradient(top,  #cdf2ea 0%, #e4f8f4 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cdf2ea), color-stop(100%,#e4f8f4)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #cdf2ea 0%,#e4f8f4 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #cdf2ea 0%,#e4f8f4 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #cdf2ea 0%,#e4f8f4 100%); /* IE10+ */
+background: linear-gradient(top,  #cdf2ea 0%,#e4f8f4 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdf2ea', endColorstr='#e4f8f4',GradientType=0 ); /* IE6-9 */
+}		

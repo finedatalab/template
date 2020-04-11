@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+
+		<title> {{document_title}} </title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+			
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- Basic Styles -->
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+
+		<!-- SmartAdmin Styles : Caution! DO NOT change the order -->
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/smartadmin-production-plugins.min.css') }}">
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/smartadmin-production.min.css') }}">
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/smartadmin-skins.min.css') }}">
+
+		<!-- SmartAdmin RTL Support  -->
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/smartadmin-rtl.min.css') }}">
+
+		<!-- We recommend you use "your_style.css" to override SmartAdmin
+		     specific styles this will also ensure you retrain your customization with each SmartAdmin update.
+		<link rel="stylesheet" type="text/css" media="screen" href="css/your_style.css"> -->
+
+		<!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/demo.min.css') }}">
+
+		<!-- FAVICONS -->
+		<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon/favicon.ico') }}" type="image/x-icon">
+		<link rel="icon" href="{{ url_for('static', filename='img/favicon/favicon.ico') }}" type="image/x-icon">
+
+		<!-- GOOGLE FONT -->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+
+		<!-- Specifying a Webpage Icon for Web Clip 
+			 Ref: https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html -->
+		<link rel="apple-touch-icon" href="{{ url_for('static', filename='img/splash/sptouch-icon-iphone.png') }}">
+		<link rel="apple-touch-icon" sizes="76x76" href="{{ url_for('static', filename='img/splash/touch-icon-ipad.png') }}">
+		<link rel="apple-touch-icon" sizes="120x120" href="{{ url_for('static', filename='img/splash/touch-icon-iphone-retina.png') }}">
+		<link rel="apple-touch-icon" sizes="152x152" href="{{ url_for('static', filename='img/splash/touch-icon-ipad-retina.png') }}">
+		
+		<!-- iOS web-app metas : hides Safari UI Components and Changes Status Bar Appearance -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		
+		<!-- Startup image for web apps -->
+		<link rel="apple-touch-startup-image" href="{{ url_for('static', filename='img/splash/ipad-landscape.png') }}" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
+		<link rel="apple-touch-startup-image" href="{{ url_for('static', filename='img/splash/ipad-portrait.png') }}" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
+		<link rel="apple-touch-startup-image" href="{{ url_for('static', filename='img/splash/iphone.png') }}" media="screen and (max-device-width: 320px)">
+
+	</head>
+	
+	<!--
+
+	TABLE OF CONTENTS.
+	
+	Use search to find needed section.
+	
+	===================================================================
+	
+	|  01. #CSS Links                |  all CSS links and file paths  |
+	|  02. #FAVICONS                 |  Favicon links and file paths  |
+	|  03. #GOOGLE FONT              |  Google font link              |
+	|  04. #APP SCREEN / ICONS       |  app icons, screen backdrops   |
+	|  05. #BODY                     |  body tag                      |
+	|  06. #HEADER                   |  header tag                    |
+	|  07. #PROJECTS                 |  project lists                 |
+	|  08. #TOGGLE LAYOUT BUTTONS    |  layout buttons and actions    |
+	|  09. #MOBILE                   |  mobile view dropdown          |
+	|  10. #SEARCH                   |  search field                  |
+	|  11. #NAVIGATION               |  left panel & navigation       |
+	|  12. #RIGHT PANEL              |  right panel userlist          |
+	|  13. #MAIN PANEL               |  main panel                    |
+	|  14. #MAIN CONTENT             |  content holder                |
+	|  15. #PAGE FOOTER              |  page footer                   |
+	|  16. #SHORTCUT AREA            |  dropdown shortcuts area       |
+	|  17. #PLUGINS                  |  all scripts and plugins       |
+	
+	===================================================================
+	
+	-->
+	
+	<!-- #BODY -->
+	<!-- Possible Classes
+
+		* 'smart-style-{SKIN#}'
+		* 'smart-rtl'         - Switch theme mode to RTL
+		* 'menu-on-top'       - Switch to top navigation (no DOM change required)
+		* 'no-menu'			  - Hides the menu completely
+		* 'hidden-menu'       - Hides the main menu but still accessable by hovering over left edge
+		* 'fixed-header'      - Fixes the header
+		* 'fixed-navigation'  - Fixes the main menu
+		* 'fixed-ribbon'      - Fixes breadcrumb
+		* 'fixed-page-footer' - Fixes footer
+		* 'container'         - boxed layout mode (non-responsive: will not work with fixed-navigation & fixed-ribbon)
+	-->
+	<body class="">
+
+		<!-- HEADER -->
+		{% include "inc/header.html" ignore missing %}
+		<!-- END HEADER -->
+
+		<!-- Left panel : Navigation area -->
+		<!-- Note: This width of the aside area can be adjusted through LESS variables -->
+		{% include "inc/leftpanel.html" ignore missing %}
+		<!-- END NAVIGATION -->
+
+		<!-- MAIN PANEL -->
+		<div id="main" role="main">
+
+			<!-- RIBBON -->
+			<div id="ribbon">
+
+				<span class="ribbon-button-alignment"> 
+					<span id="refresh" class="btn btn-ribbon" data-action="resetWidgets" data-title="refresh"  rel="tooltip" data-placement="bottom" data-original-title="<i class='text-warning fa fa-warning'></i> Warning! This will reset all your widget settings." data-html="true">
+						<i class="fa fa-refresh"></i>
+					</span> 
+				</span>
+
+				<!-- breadcrumb -->
+				<ol class="breadcrumb">
+					<li>Home</li><li>Miscellaneous</li><li>Invoice</li>
+				</ol>
+				<!-- end breadcrumb -->
+
+				<!-- You can also add more buttons to the
+				ribbon for further usability
+
+				Example below:
+
+				<span class="ribbon-button-alignment pull-right">
+				<span id="search" class="btn btn-ribbon hidden-xs" data-title="search"><i class="fa-grid"></i> Change Grid</span>
+				<span id="add" class="btn btn-ribbon hidden-xs" data-title="add"><i class="fa-plus"></i> Add</span>
+				<span id="search" class="btn btn-ribbon" data-title="search"><i class="fa-search"></i> <span class="hidden-mobile">Search</span></span>
+				</span> -->
+
+			</div>
+			<!-- END RIBBON -->
+
+			<!-- MAIN CONTENT -->
+			<div id="content">
+
+				<!-- widget grid -->
+				<section id="widget-grid" class="">
+				
+					<!-- row -->
+					<div class="row">
+				
+						<!-- NEW WIDGET START -->
+						<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				
+							<!-- Widget ID (each widget will need unique ID)-->
+							<div class="jarviswidget well jarviswidget-color-darken" id="wid-id-0" data-widget-sortable="false" data-widget-deletebutton="false" data-widget-editbutton="false" data-widget-colorbutton="false">
+								<!-- widget options:
+								usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+				
+								data-widget-colorbutton="false"
+								data-widget-editbutton="false"
+								data-widget-togglebutton="false"
+								data-widget-deletebutton="false"
+								data-widget-fullscreenbutton="false"
+								data-widget-custombutton="false"
+								data-widget-collapsed="true"
+								data-widget-sortable="false"
+				
+								-->
+								<header>
+									<span class="widget-icon"> <i class="fa fa-barcode"></i> </span>
+									<h2>Item #44761 </h2>
+				
+								</header>
+				
+								<!-- widget div-->
+								<div>
+				
+									<!-- widget edit box -->
+									<div class="jarviswidget-editbox">
+										<!-- This area used as dropdown edit box -->
+				
+									</div>
+									<!-- end widget edit box -->
+				
+									<!-- widget content -->
+									<div class="widget-body no-padding">
+				
+										<div class="widget-body-toolbar">
+				
+											<div class="row">
+				
+												<div class="col-sm-4">
+				
+													<div class="input-group">
+														<input class="form-control" type="text" placeholder="Type invoice number or date...">
+														<div class="input-group-btn">
+															<button class="btn btn-default" type="button">
+																<i class="fa fa-search"></i> Search
+															</button>
+														</div>
+													</div>
+												</div>
+				
+												<div class="col-sm-8 text-align-right">
+				
+													<div class="btn-group">
+														<a href="javascript:void(0)" class="btn btn-sm btn-primary"> <i class="fa fa-edit"></i> Edit </a>
+													</div>
+				
+													<div class="btn-group">
+														<a href="javascript:void(0)" class="btn btn-sm btn-success"> <i class="fa fa-plus"></i> Create New </a>
+													</div>
+				
+												</div>
+				
+											</div>
+				
+										</div>
+				
+										<div class="padding-10">
+											<br>
+											<div class="pull-left">
+												<img src="{{ url_for('static', filename='img/logo-blacknwhite.png') }}" width="150" height="32" alt="invoice icon">
+				
+												<address>
+													<br>
+													<strong>SmartAdmin, Inc.</strong>
+													<br>
+													231 Ajax Rd,
+													<br>
+													Detroit MI - 48212, USA
+													<br>
+													<abbr title="Phone">P:</abbr> (123) 456-7890
+												</address>
+											</div>
+											<div class="pull-right">
+												<h1 class="font-400">invoice</h1>
+											</div>
+											<div class="clearfix"></div>
+											<br>
+											<br>
+											<div class="row">
+												<div class="col-sm-9">
+													<h4 class="semi-bold">Rogers, Inc.</h4>
+													<address>
+														<strong>Mr. Simon Hedger</strong>
+														<br>
+														342 Mirlington Road,
+														<br>
+														Calfornia, CA 431464
+														<br>
+														<abbr title="Phone">P:</abbr> (467) 143-4317
+													</address>
+												</div>
+												<div class="col-sm-3">
+													<div>
+														<div>
+															<strong>INVOICE NO :</strong>
+															<span class="pull-right"> #AA-454-4113-00 </span>
+														</div>
+				
+													</div>
+													<div>
+														<div class="font-md">
+															<strong>INVOICE DATE :</strong>
+															<span class="pull-right"> <i class="fa fa-calendar"></i> 15/02/13 </span>
+														</div>
+				
+													</div>
+													<br>
+													<div class="well well-sm  bg-color-darken txt-color-white no-border">
+														<div class="fa-lg">
+															Total Due :
+															<span class="pull-right"> 4,972 USD** </span>
+														</div>
+				
+													</div>
+													<br>
+													<br>
+												</div>
+											</div>
+											<table class="table table-hover">
+												<thead>
+													<tr>
+														<th class="text-center">QTY</th>
+														<th>ITEM</th>
+														<th>DESCRIPTION</th>
+														<th>PRICE</th>
+														<th>SUBTOTAL</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="text-center"><strong>1</strong></td>
+														<td><a href="javascript:void(0);">Print and Web Logo Design</a></td>
+														<td>Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam xplicabo.</td>
+														<td>$1,300.00</td>
+				
+														<td>$1,300.00</td>
+													</tr>
+													<tr>
+														<td class="text-center"><strong>1</strong></td>
+														<td><a href="javascript:void(0);">SEO Management</a></td>
+														<td>Sit voluptatem accusantium doloremque laudantium inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</td>
+														<td>$1,400.00</td>
+														<td>$1,400.00</td>
+													</tr>
+													<tr>
+														<td class="text-center"><strong>1</strong></td>
+														<td><a href="javascript:void(0);">Backend Support and Upgrade</a></td>
+														<td>Inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</td>
+														<td>$1,700.00</td>
+														<td>$1,700.00</td>
+													</tr>
+													<tr>
+														<td colspan="4">Total</td>
+														<td><strong>$4,400.00</strong></td>
+													</tr>
+													<tr>
+														<td colspan="4">HST/GST</td>
+														<td><strong>13%</strong></td>
+													</tr>
+												</tbody>
+											</table>
+				
+											<div class="invoice-footer">
+				
+												<div class="row">
+				
+													<div class="col-sm-7">
+														<div class="payment-methods">
+															<h5>Payment Methods</h5>
+															<img src="{{ url_for('static', filename='img/invoice/paypal.png') }}" width="64" height="64" alt="paypal">
+															<img src="{{ url_for('static', filename='img/invoice/americanexpress.png') }}" width="64" height="64" alt="american express">
+															<img src="{{ url_for('static', filename='img/invoice/mastercard.png') }}" width="64" height="64" alt="mastercard">
+															<img src="{{ url_for('static', filename='img/invoice/visa.png') }}" width="64" height="64" alt="visa">
+														</div>
+													</div>
+													<div class="col-sm-5">
+														<div class="invoice-sum-total pull-right">
+															<h3><strong>Total: <span class="text-success">$4,972 USD</span></strong></h3>
+														</div>
+													</div>
+				
+												</div>
+												
+												<div class="row">
+													<div class="col-sm-12">
+														<p class="note">**To avoid any excess penalty charges, please make payments within 30 days of the due date. There will be a 2% interest charge per month on all late invoices.</p>
+													</div>
+												</div>
+				
+											</div>
+										</div>
+				
+									</div>
+									<!-- end widget content -->
+				
+								</div>
+								<!-- end widget div -->
+				
+							</div>
+							<!-- end widget -->
+				
+						</article>
+						<!-- WIDGET END -->
+				
+					</div>
+				
+					<!-- end row -->
+				
+				</section>
+				<!-- end widget grid -->
+
+			</div>
+			<!-- END MAIN CONTENT -->
+
+		</div>
+		<!-- END MAIN PANEL -->
+
+		<!-- PAGE FOOTER -->
+		{% include "inc/footer.html" ignore missing %}
+		<!-- END PAGE FOOTER -->
+
+		<!-- SHORTCUT AREA : With large tiles (activated via clicking user name tag)
+		Note: These tiles are completely responsive,
+		you can add as many as you like
+		-->
+		{% include "inc/shortcutarea.html" ignore missing %}
+		<!-- END SHORTCUT AREA -->
+
+		<!--================================================== -->
+
+		<!-- PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)-->
+		<script data-pace-options='{ "restartOnRequestAfter": true }' src="/static/js/plugin/pace/pace.min.js"></script>
+
+		<!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script>
+			if (!window.jQuery) {
+				document.write('<script src="/static/js/libs/jquery-2.1.1.min.js"><\/script>');
+			}
+		</script>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+		<script>
+			if (!window.jQuery.ui) {
+				document.write('<script src="/static/js/libs/jquery-ui-1.10.3.min.js"><\/script>');
+			}
+		</script>
+
+		<!-- IMPORTANT: APP CONFIG -->
+		<script src="/static/js/app.config.js"></script>
+
+		<!-- JS TOUCH : include this plugin for mobile drag / drop touch events-->
+		<script src="/static/js/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script> 
+
+		<!-- BOOTSTRAP JS -->
+		<script src="/static/js/bootstrap/bootstrap.min.js"></script>
+
+		<!-- CUSTOM NOTIFICATION -->
+		<script src="/static/js/notification/SmartNotification.min.js"></script>
+
+		<!-- JARVIS WIDGETS -->
+		<script src="/static/js/smartwidgets/jarvis.widget.min.js"></script>
+
+		<!-- EASY PIE CHARTS -->
+		<script src="/static/js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+
+		<!-- SPARKLINES -->
+		<script src="/static/js/plugin/sparkline/jquery.sparkline.min.js"></script>
+
+		<!-- JQUERY VALIDATE -->
+		<script src="/static/js/plugin/jquery-validate/jquery.validate.min.js"></script>
+
+		<!-- JQUERY MASKED INPUT -->
+		<script src="/static/js/plugin/masked-input/jquery.maskedinput.min.js"></script>
+
+		<!-- JQUERY SELECT2 INPUT -->
+		<script src="/static/js/plugin/select2/select2.min.js"></script>
+
+		<!-- JQUERY UI + Bootstrap Slider -->
+		<script src="/static/js/plugin/bootstrap-slider/bootstrap-slider.min.js"></script>
+
+		<!-- browser msie issue fix -->
+		<script src="/static/js/plugin/msie-fix/jquery.mb.browser.min.js"></script>
+
+		<!-- FastClick: For mobile devices -->
+		<script src="/static/js/plugin/fastclick/fastclick.min.js"></script>
+
+		<!--[if IE 8]>
+
+		<h1>Your browser is out of date, please update your browser by going to www.microsoft.com/download</h1>
+
+		<![endif]-->
+
+		<!-- Demo purpose only -->
+		<script src="/static/js/demo.min.js"></script>
+
+		<!-- MAIN APP JS FILE -->
+		<script src="/static/js/app.min.js"></script>
+
+		<!-- ENHANCEMENT PLUGINS : NOT A REQUIREMENT -->
+		<!-- Voice command : plugin -->
+		<script src="/static/js/speech/voicecommand.min.js"></script>
+
+		<!-- SmartChat UI : plugin -->
+		<script src="/static/js/smart-chat-ui/smart.chat.ui.min.js"></script>
+		<script src="/static/js/smart-chat-ui/smart.chat.manager.min.js"></script>
+
+		<!-- PAGE RELATED PLUGIN(S) 
+		<script src="..."></script>-->
+
+		<script type="text/javascript">
+		
+		// DO NOT REMOVE : GLOBAL FUNCTIONS!
+		
+		$(document).ready(function() {
+			
+			pageSetUp();
+
+		})
+
+		</script>
+
+		<!-- Your GOOGLE ANALYTICS CODE Below -->
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+				_gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
+				_gaq.push(['_trackPageview']);
+			
+			(function() {
+				var ga = document.createElement('script');
+				ga.type = 'text/javascript';
+				ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(ga, s);
+			})();
+
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,692 @@
+/* -----------------------------------------------------------------------*/
+/* ----------------- "Main" IBSheet style definition ---------------------*/
+/* -----------------------------------------------------------------------*/
+
+/* Base tags */
+.BNImage {padding-bottom:256px;}
+.BNNone {display:none;}
+.BNSection,.BNSectionFF3 {table-layout:fixed; width:0;}
+.BNSectionFF3 {border-collapse:collapse; }
+
+/* Sections */
+.BNMainTable {border:1px solid #dddddd; border-collapse:separate; text-align:left; background:#ffffff; font:12px Dotum,Helvetica,AppleGothic,Sans-serif;}
+.BNFootLeft,.BNFootMid {border-top:1px solid #9D816B;}
+.BNHeadLeft,.BNBodyLeft,.BNFootLeft,.BNHScrollLeft {border-right:1px solid #9D816B;}	
+.BNVScroll {padding-top:1px; padding-bottom:1px;}
+.BNHScrollLeft,.BNHScrollMid,.BNHScrollLeftResizeTouch,.BNHScrollRightResizeTouch {padding-left:1px; padding-right:1px; cursor:default;}
+.BNHScrollLeftResizeTouch {border-right:2px solid #000000; padding-right:18px; background:#F4F4F4;}
+.BNHScrollRightResizeTouch {border-left:2px solid #000000; padding-left:18px; background:#F4F4F4;}
+.BNHScrollMidLeftResizeTouch {border-left:1px solid #000000; padding-left:19px; background:#F4F4F4;}
+.BNHScrollMidRightResizeTouch {border-right:1px solid #000000; padding-right:19px; background:#F4F4F4;}
+.BNHScrollWide {padding-right:1px;}
+.BNHScrollHidden {overflow:visible !important; background:#F4F4F4; cursor:default; }
+.BNXScroll {background:#F4F4F4;}
+.BNPage {border-top:0px solid #E0E0E0;}
+
+/* Rows */
+.BNSpaceRowHeight{height:21px; }
+.BNRowHeight 	 {height:18px; }
+.BNRowHeightTouch{height:22px; }
+.BNSpaceMargin   {margin:0; }
+.BNSpaceMarginTouch{margin:5px; }
+.BNSpaceRow {background:#ffffff; white-space:nowrap; overflow:hidden; padding-top:2px; padding-bottom:2px; border-bottom:1px solid #e0e0ff;}
+.BNGroupRow,.BNSearchRow,.BNPagerRow 
+{background-color:#846246; white-space:nowrap; padding-top:5px; padding-bottom:5px; overflow:hidden; border-bottom:1px solid #795A3F;} 
+.BNGroupRow,.BNPagerRow {background-position:0 -1801px; }
+.BNFillRow {background:#ffffff; }
+.BNRowAbove,.BNRowBelow {border-left:1px solid #9cb6c8; border-right:1px solid #9cb6c8;}
+.BNRowAbove { margin-top:3px; overflow:hidden;}
+.BNRowBelow {margin-bottom:3px; overflow:hidden;}
+.BNNoDataRow {border-top:1px solid #000000;padding-left:5px; padding-top:5px; padding-bottom:5px;color:gray; font-style:italic;} 
+.BNCountRowTop {color:#ffffff; background-color:#846246; white-space:nowrap;padding-top:5px; padding-bottom:5px; overflow:hidden; border-bottom:1px solid #795A3F;}
+.BNCountRowBottom {color:#ffffff; background-color:#846246; white-space:nowrap; padding-top:5px; padding-bottom:5px; overflow:hidden; border-top:1px solid #795A3F;}
+
+/* Cell */
+.BNCell,.BNCellPanel,.BNCellFilter,.BNHeaderDrag,.BNHeaderGroup 
+ {color:#000000; border-bottom:1px solid #F9F6F1; border-right:1px solid #C6C9CC; border-left:0; border-top:0;vertical-align:top; overflow:hidden; height:auto; font-size:/*IBFS*/12px; font-family:/*IBFN*/"Dotum", "Helvetica", "AppleGothic", sans-serif;}
+.BNCellHeader{
+background-image: linear-gradient(bottom, rgb(252,207,138) 0%, rgb(255,238,204) 11%, rgb(153,111,6) 91%);
+background-image: -o-linear-gradient(bottom, rgb(252,207,138) 0%, rgb(255,238,204) 11%, rgb(153,111,6) 91%);
+background-image: -moz-linear-gradient(bottom, rgb(252,207,138) 0%, rgb(255,238,204) 11%, rgb(153,111,6) 91%);
+background-image: -webkit-linear-gradient(bottom, rgb(252,207,138) 0%, rgb(255,238,204) 11%, rgb(153,111,6) 91%);
+background-image: -ms-linear-gradient(bottom, rgb(252,207,138) 0%, rgb(255,238,204) 11%, rgb(153,111,6) 91%);
+
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0, rgb(252,207,138)),
+	color-stop(0.11, rgb(255,238,204)),
+	color-stop(0.91, rgb(153,111,6))
+);
+);
+	
+	}
+.BNCellHeader,.BNCellHeaderEmpty
+ {vertical-align:middle; overflow:hidden;height:auto;background-color:#846246; padding-top:1px; border-right:1px solid #795A3F; border-bottom:1px solid #795A3F;} 
+.BNCellBorderFF3 {border-left:0;border-top:0;} 
+.BNCellSpace {vertical-align:top; padding-top:5px !important; }
+.BNCellSpacePanel,.BNCellSpaceBool {vertical-align:top; }
+.BNCellSpaceRadio { padding-top:3px !important;}
+.BNCellSpaceEditButton { vertical-align:top; padding-top:4px !important; border:1px solid #000000 !important; background-color:#ffffff !important; }
+.BNCellSpaceButtonButton { vertical-align:top; }
+.BNCellSpaceButton { vertical-align:top; padding-top:5px !important; whiSte-space:nowrap; }
+.BNCellSpaceAbove { border-top:1px solid #9cb6c8; }
+.BNCellSpaceBelow { border-bottom:1px solid #9cb6c8; }
+.BNCellPanel,.BNCellHeaderPanel{ white-space:nowrap; } 
+.BNCellHidden { background:transparent!important; border-top:none!important; border-bottom:none!important; }
+.BNHeaderButton { padding:0; }
+.BNHeaderGroup {background: #76573E; color:#ffffff; padding-left:3px; }
+.BNHeaderGroupFocus {background-color: #C0C0A0; }
+.BNHeaderGroupDelete {background-color: #F0F0E0; color: #F0F0E0; }
+.BNHeaderGroupCustom {color:#BBB; padding-left:5px; cursor:default; white-space:nowrap;}
+.BNHeaderDrag {background: #9FB9E9; cursor:default; overflow:hidden; }
+.BNHeaderFocus {background: #9FB9E9;}
+.BNPanel {padding-left:80px;}
+.BNNoTreeLines1 {text-align:right;}
+.BNNoTreeLines2 {text-align:right; vertical-align:middle; padding-top:0;}
+.BNTree {padding-top:0; white-space:nowrap;}
+.BNSpannedTree {vertical-align:top;}
+.BNCellClassInner {padding-top:0; padding-bottom:0;}
+
+/* Inside cell */
+.BNStatus,.BNSeq,.BNPopup,.BNPopupEdit,.BNHtml,.BNText,.BNLines,.BNPass,.BNInt,.BNFloat,.BNDate,
+.BNLink,.BNImg,.BNRadio,.BNRadioText,.BNList,.BNEnum,.BNDropCols,.BNAbs,.BNPagerEdit,.BNUser 
+ {white-space:nowrap;vertical-align: middle;padding:2px 3px;} 
+.BNInt,.BNFloat { text-align:right; }
+.BNLines,.BNRadio,.BNHtml,.BNList { white-space:normal; }	
+.BNImg,.BNHtml {padding:0; } 
+.BNPass { padding:0 0 0 3px; }
+.BNRadio,.BNRadioText { padding:0; font-weight:normal !important; }
+.BNBool { text-align:center; }
+.BNIcon { background-repeat:no-repeat; }
+.BNHiddenSpace { display:none; }
+.BNDropCols { padding-top:2px !important; }
+
+.BNHeaderText {color:#ffffff; vertical-align:middle; font-size:/*IBFS*/12px; font-family:/*IBFN*/"Dotum", "Helvetica", "AppleGothic", sans-serif;}
+.BNAbs { padding:0; }
+.BNUser { padding:0; }
+.BNPagerEdit { text-align:center; padding-top:3px; }
+.BNMergedCellH {padding:0 0 5px 0}
+.BNMergedCellV {padding:0 0 1px 0}
+
+.BNWrap0 { white-space:nowrap; }
+.BNWrap1 { white-space:normal; }
+.BNEllipsis { white-space:nowrap; text-overflow:ellipsis;}
+
+.BNAlignLeft { text-align:left; }
+.BNAlignCenter { text-align:center; }
+.BNAlignJustify { text-align:center; }
+.BNAlignRight { text-align:right;}
+
+/* Tree Img with lines */
+.BN000,.BN010,.BN001,.BN011,.BN100,.BN110,.BN101,.BN111, 
+.BN000T,.BN010T,.BN001T,.BN011T,.BN100T,.BN110T,.BN101T,.BN111T,
+.BN00,.BN01,.BN10,.BN11,.BN00T,.BN01T,.BN10T,.BN11T,
+.BN0T,.BN1T,.BN0TL,.BN1TL,.BN0C,.BN1C,.BN0CL,.BN1CL,.BN0E,.BN1E,.BN0EL,.BN1EL,
+.BN0,.BN1,.BNT,.BNTL,.BNC,.BNCL,.BNE,.BNEL,.BND0,.BND1,.BND2,.BND3,.BND4,.BND0L,.BND1L,.BND2L,.BND3L,.BND4L 
+{background-image:url(Tree.gif); vertical-align:top;}
+
+u.BN000,u.BN010,u.BN001,u.BN011,u.BN100,u.BN110,u.BN101,u.BN111 { padding-left:63px; }
+u.BN000T,u.BN010T,u.BN001T,u.BN011T,u.BN100T,u.BN110T,u.BN101T,u.BN111T { padding-left:89px; }
+u.BN00,u.BN01,u.BN10,u.BN11 { padding-left:42px; }   
+u.BN00T,u.BN01T,u.BN10T,u.BN11T { padding-left:68px; }   
+u.BN0T,u.BN1T,u.BN0TL,u.BN1TL,u.BN0C,u.BN1C,u.BN0CL,u.BN1CL,u.BN0E,u.BN1E,u.BN0EL,u.BN1EL { padding-left:47px; }   
+u.BN0,u.BN1 { padding-left:21px; }
+u.BNT,u.BNTL,u.BNC,u.BNCL,u.BNE,u.BNEL,u.BND0,u.BND1,u.BND2,u.BND3,u.BND4,u.BND0L,u.BND1L,u.BND2L,u.BND3L,u.BND4L { padding-left:26px; }   
+
+.BN000,.BN000T{ background-position:0px 0px; }
+.BN010,.BN010T{ background-position:-128px 0; }
+.BN001,.BN001T{ background-position:-256px 0; }
+.BN011,.BN011T{ background-position:-384px 0; }
+.BN100,.BN100T{ background-position:-512px 0; }
+.BN110,.BN110T{ background-position:-640px 0; }
+.BN101,.BN101T{ background-position:-768px 0; }
+.BN111,.BN111T{ background-position:-896px 0; }
+.BN00,.BN00T  { background-position:-21px 0;  }
+.BN10,.BN10T  { background-position:-149px 0; }
+.BN01,.BN01T  { background-position:-277px 0; }
+.BN11,.BN11T  { background-position:-405px 0; }
+.BN0,.BN0T 	  { background-position:-42px 0;  }
+.BN1,.BN1T 	  { background-position:-298px 0; }
+.BNT 		  { background-position:-63px 0;  }
+.BN0TL 		  { background-position:-1024px 0; }
+.BN1TL 		  { background-position:-1088px 0; }
+.BN0C 	      { background-position:-1152px 0; }
+.BN1C 		  { background-position:-1216px 0; }
+.BN0CL 		  { background-position:-1280px 0; }
+.BN1CL 		  { background-position:-1344px 0; }
+.BN0E 		  { background-position:-1408px 0; }
+.BN1E 		  { background-position:-1472px 0; }
+.BN0EL 		  { background-position:-1536px 0; }
+.BN1EL 		  { background-position:-1600px 0; }
+.BNTL 		  { background-position:-1045px 0; }
+.BNC 		  { background-position:-1173px 0; }
+.BNCL 		  { background-position:-1301px 0; }
+.BNE 		  { background-position:-1429px 0; }
+.BNEL 		  { background-position:-1557px 0; }
+.BND0 		  { background-position:-1664px 0; }
+.BND1 		  { background-position:-1696px 0; }
+.BND2 		  { background-position:-1728px 0; }
+.BND3 		  { background-position:-1760px 0; }
+.BND0L 		  { background-position:-1792px 0; }
+.BND1L 		  { background-position:-1824px 0; }
+.BND2L 		  { background-position:-1856px 0; }
+.BND3L 		  { background-position:-1888px 0; }
+.BND4 		  { background-position:-1920px 0; }
+.BND4L 		  { background-position:-1952px 0; }
+
+/* Tree Img without lines  */
+.BNND0,.BNND1,.BNND2,.BNND3,.BNND4,.BNNC,.BNNE,.BNNCR,.BNNER {background-image:url(TreeN.gif); background-repeat:no-repeat; vertical-align:top; }
+u.BNND0,u.BNND1,u.BNND2,u.BNND3,u.BNND4,u.BNNC,u.BNNE,u.BNNCR,u.BNNER { padding-left:20px; }
+.BNND0 { background-position: -6px 0; }
+.BNND1 { background-position: -56px 0; }
+.BNND2 { background-position: -106px 0; }
+.BNND3 { background-position: -156px 0; }
+.BNND4 { background-position: -206px 0; }
+.BNNC { background-position:right -50px;}
+.BNNE { background-position:right -2000px;}
+.BNNCR { background-position:-255px -50px;}
+.BNNER { background-position:-255px -2000px;}
+u.BNNL { padding-left:21px; }
+
+/* Cell images */
+.BNIconLink { text-decoration:none; width:1000px; display:inline-block; }
+.BNIconLeft,.BNIconRight,.BNIconCenter {  background-repeat:no-repeat; }
+.BNIconLeft { background-position:left 0; padding-left:20px !important; }
+.BNIconRight { background-position:right 0; padding-right:20px !important; }
+.BNIconCenter { background-position:center 0; }
+.BNPopupRight { background:url(popup.gif) no-repeat 5px center; }
+.BNExpandLeft,.BNCollapseLeft,.BNExpandHeaderLeft,.BNCollapseHeaderLeft { padding-left:20px!important; }
+.BNDateRight{ padding-right:20px!important;}
+u.BNDateRight,.BNPopupRight { padding-right:0!important; padding-left:17px; }
+.BNDateRight {background:url(calendar.gif) no-repeat 2px center}
+.BNEnumRight { background:url(combo.gif) no-repeat right center; }
+u.BNEnumRight {padding-right:0; padding-left:17px}
+.BNExpandLeft { background:url(ic_plus.gif) no-repeat 3px center; padding:2px 0 0  18px; _padding:0 0 0 18px }
+.BNCollapseLeft { background:url(ic_minus.gif) no-repeat 3px center ; padding:2px 0 0  18px; _padding:0 0 0 18px }
+.BNRadio0Right,.BNRadio1Right,.BNRadio2Right,.BNRadio3Right {line-height:17px; padding-right:17px; padding-left:3px; }
+u.BNFilter0,u.BNFilter1 { padding-left:16px; }
+.BNBool0,.BNBool0RO,.BNBool1,.BNBool1RO,.BNBool2,.BNBool2RO,.BNBool3,.BNBool3RO {background-position:center center; background-repeat:no-repeat;}
+
+.BNBool0   { background-image:url(chk0.gif);  }
+.BNBool0RO { background-image:url(chk0R.gif); }
+
+.BNBool1   { background-image:url(chk1.gif);  }
+.BNBool1RO { background-image:url(chk1R.gif); }
+
+.BNBool2   { background-image:url(chk2.gif);  }
+.BNBool2RO { background-image:url(chk2R.gif); }
+
+.BNBool3   { background-image:url(chk3.gif);  }
+.BNBool3RO { background-image:url(chk3R.gif); }
+
+/* Filter images  */
+.BNFilter0Left,.BNFilter1Left,.BNFilter2Left,.BNFilter3Left,.BNFilter4Left,.BNFilter5Left,.BNFilter6Left,.BNFilter7Left,
+.BNFilter8Left,.BNFilter9Left,.BNFilter10Left,.BNFilter11Left,.BNFilter12Left {padding-left:18px;}
+
+.BNFilter0Left,.BNFilter0Menu 	{ width:18px; height:18px; background:url(filter0.gif) no-repeat left center; }   
+.BNFilter1Left,.BNFilter1Menu 	{ width:18px; height:18px; background:url(filter1.gif) no-repeat left center; }
+.BNFilter2Left,.BNFilter2Menu 	{ width:18px; height:18px; background:url(filter2.gif) no-repeat left center; }
+.BNFilter3Left,.BNFilter3Menu 	{ width:18px; height:18px; background:url(filter3.gif) no-repeat left center; }
+.BNFilter4Left,.BNFilter4Menu 	{ width:18px; height:18px; background:url(filter4.gif) no-repeat left center; }
+.BNFilter5Left,.BNFilter5Menu 	{ width:18px; height:18px; background:url(filter5.gif) no-repeat left center; }   
+.BNFilter6Left,.BNFilter6Menu 	{ width:18px; height:18px; background:url(filter6.gif) no-repeat left center; }
+.BNFilter7Left,.BNFilter7Menu 	{ width:18px; height:18px; background:url(filter7.gif) no-repeat left center; }
+.BNFilter8Left,.BNFilter8Menu 	{ width:18px; height:18px; background:url(filter8.gif) no-repeat left center; }
+.BNFilter9Left,.BNFilter9Menu 	{ width:18px; height:18px; background:url(filter9.gif) no-repeat left center; }
+.BNFilter10Left,.BNFilter10Menu { width:18px; height:18px; background:url(filter10.gif) no-repeat left center; }
+.BNFilter11Left,.BNFilter11Menu { width:18px; height:18px; background:url(filter11.gif) no-repeat left center; }
+.BNFilter12Left,.BNFilter12Menu { width:18px; height:18px; background:url(filter12.gif) no-repeat left center; }
+
+.BNFilter0Menu,.BNFilter1Menu,.BNFilter2Menu,.BNFilter3Menu,.BNFilter4Menu,.BNFilter5Menu,.BNFilter6Menu,.BNFilter7Menu,.BNFilter8Menu,.BNFilter9Menu,
+.BNFilter10Menu,.BNFilter11Menu,.BNFilter12Menu {overflow:hidden; margin: -2px 0 0 -1px;}
+.BNFilterMenuHeader { padding-left:2px; border-bottom:0 !important; } 
+
+/*  Keyfield Image */
+.BNKeyfield {background-image:url(keyfield.gif); display:inline-block; vertical-align:middle; background-repeat: no-repeat; background-position:center 1px; padding: 0 2px 0 4px; }
+
+/* GMKeyfield : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .BNKeyfield{  background-position: center 3px;padding: 0 2px 0 4px; }}
+
+/* CheckBox Header Image */
+.BNCheckHeader0 {background-image:url(chk0.gif); display:inline-block; vertical-align:middle; background-repeat:no-repeat; background-position:5px 1px; padding:2px 7px 0 6px; margin:0 2px 0 0;}
+
+/* GMCheckHeader0 : hack CR,SF*/
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{.BNCheckHeader0{ background-position:6px 1px ; padding: 2px 8px 0 6px; }}
+
+/* GMCheckHeader0 : hack FF*/
+.BNCheckHeader0, x:-moz-any-link, x:default { background-position:6px 1px ; padding: 2px 8px 0 6px; }
+
+/* GMCheckHeader0 : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .BNCheckHeader0{ background-position:7px center ; padding:1px  17px 0 0; }}
+
+.BNCheckHeader1 {background-image:url(chk1.gif); display:inline-block; vertical-align:middle; background-repeat:no-repeat; background-position:4px 1px ; padding:2px 6px 0 6px; margin:0 2px 0 0}
+
+/* GMCheckHeader1 : hack CR,SF*/
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{.BNCheckHeader1{ background-position:6px 1px ; padding: 2px 8px 0 6px; }}
+
+/* GMCheckHeader1 : hack FF*/
+.BNCheckHeader1, x:-moz-any-link, x:default { background-position:6px 1px ; padding: 2px 8px 0 6px; }
+
+/* GMCheckHeader1 : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .BNCheckHeader1 { background-position:7px center ; padding:1px  17px 0 0;  }}
+
+/* Sort images */
+.BNSort {display:block; float:right; margin:2px 2px 0;width:7px}
+
+
+/* State classes */
+/* The colors must be set by numbers not by names */
+.BNColorDefault  { background-color:#FFFFFF;}
+.BNColorNoFocus  { background-color:#E8F4FF;}
+.BNColorReadOnly { background-color:#F2ECE1;}
+.BNColorPreview  { background-color:#FFFFFF;}
+.BNColorAlternate{ background-color:#F9F6F1;}
+.BNColorSelected { background-color:/*#FFFF80*/#aadbff; }
+
+.BNColorFilter {background-color:#FFFFFF;}
+
+/*//.BNClassSelected { }*/
+.BNColorError   { background-color:#FF6969; }
+.BNColorDeleted { background-color:#FFCDCD; }
+.BNClassDeleted { font-style:italic; }
+.BNColorAdded   { background-color:#CDFFCD; }
+.BNClassAdded   { font-weight:bold; }
+.BNColorMoved1  { background-color:#FFFFFF; }
+.BNColorMoved2  { background-color:#D7EBEB; }
+.BNColorChanged { background-color:#EBEBFF; }
+.BNColorChangedCell { background-color:#E1E1FF; }
+.BNClassChangedCell { font-weight:bold; }
+.BNColorMaxChildren { background-color:#FFFFF0; }
+.BNColorDetail { background-color:#FFF0FF; }
+.BNColorDetailSelected { background-color:#FFF0E0; }
+.BNColorDragged{ background-color:#E0E0C0; }
+.BNColorFound1 { background-color:#FF87FF; }
+.BNColorFound2 { background-color:#FFC387; }
+.BNColorFound3 { background-color:#87FF87; }
+.BNColorHovered 			{ background-color:#F0F0FF; }
+.BNColorHoveredCell 		{ background-color:#C0C0FF; }
+.BNColorHoveredCellReadOnly { background-color:#F0F0F0; }
+.BNColorHoveredCellNoFocus 	{ background-color:#F8F8F8; }
+
+.BNClassHoveredCellHeader 	{ background-position:0px -250px; }
+.BNClassHoveredCellPanel 	{ background-position:0px -1801px; background-repeat:repeat-x; }
+
+.BNColorHoveredCellSpace 	{ background-color:#FFFFFF; }
+.BNColorHoveredCellSpaceEdit{ background-color:#C0C0FF; }
+.BNColorHoveredCellSpaceBool{ background-color:#FFFFFF; }
+.BNColorHoveredCellButton 	{ background-color:#FFFFFE; }
+.BNClassHoveredCellButton 	{ color:green; }
+.BNColorHoveredCellButton1 	{ background-color:#FFFFFE; }
+.BNClassHoveredCellButton1 	{ color:red; }
+.BNColorHoveredCellTab 		{ background-color:#FFFFFE; }
+.BNClassHoveredCellTab 		{ background-position:0px -1801px; color:green; }
+.BNColorHoveredCellTab1 	{ background-color:#99bbcc; }
+.BNClassHoveredCellTab1 	{ background-image:none; }
+
+.BNColorFocused 			{ background-color:#E6E6E6; }
+.BNColorFocusedCell 		{ background-color:#FFFFFE; }
+.BNColorFocusedCellSafari 	{ background-color:#A0A0FF; }
+.BNColorFocusedCellSpace 	{ background-color:#E6E6E6; }
+.BNColorFocusedCellButton 	{ background-color:#BCD; }
+.BNColorFocusedCellHeader 	{ background-color:#FFFFFE; }
+.BNColorFocusedCellPanel 	{ background-color:#FFFFFE; }
+.BNColorEditedCell 			{ background-color:#FFFFFF; }
+.BNColorViewedCell 			{ background-color:#FFFFFF; }
+
+/* Hover, focus, edit cursors */
+.BNHoverRowBackground 	{ opacity:0.1; filter:alpha(opacity=10); background:#00F; }
+.BNHoverRowBorder 		{ z-index:0; border-top:1px solid #BBF; border-bottom:1px solid #BBF; cursor:default; }
+.BNHoverCellBorder 		{ z-index:0; padding:1px; border:1px solid #A0A0F0; background:white; }
+.BNFocusRowBackground 	{ opacity:0.1; filter:alpha(opacity=50); background:/*IBSB*/#F1FF8F; } /* <-- Sheet : Selected Row Background */
+.BNFocusRowBorder 		{ z-index:0; border:1px solid /*IBSB*/#ABD504S; } /* <-- Sheet : Selected Row Border */
+.BNFocusCellBorder		{ z-index:0; border:2px solid /*IBSB*/#ABD504; } /* <-- Sheet : Selected Cell Border */
+.BNFocusCellSpaceBorder,.BNEditCellSpaceBorder { z-index:4; }
+.BNEditCellBorder 		{ z-index:0; border:2px solid #FF6666;}    /*<-- Sheet : CellEdit Border */
+.BNEditCellInput 		{ position:relative; border:0 solid #39aefb; overflow:hidden; z-index:2; } 
+
+.BNCursorBackground, .BNCursorBorderLeft ,.BNCursorBorderRight,.BNCursorBorderTop,.BNCursorBorderBottom 
+ {position:relative;overflow:hidden;}
+
+.BNCursorBackground  {border:none; padding:0;}
+.BNCursorBorderLeft  {padding-right:0; padding-top:0; padding-bottom:0; border-right:none; border-top:none; border-bottom:none;  width:0; height:0;}
+.BNCursorBorderRight {padding-left:0; padding-top:0; padding-bottom:0; border-left:none; border-top:none; border-bottom:none;  width:0; height:0;}
+.BNCursorBorderTop 	 {padding-bottom:0; padding-left:0; padding-right:0; border-bottom:none; border-left:none; border-right:none;  width:0; height:0;}
+.BNCursorBorderBottom{padding-top:0; padding-left:0; padding-right:0; border-top:none; border-left:none; border-right:none; width:0; height:0;}
+
+/* Cell edges */
+.BNNoLeft { border-left:0; }
+.BNNoRight { border-right:0; }
+
+/* Dragging */
+.BNMouseObject { opacity:0.5; filter:alpha(opacity=50); z-index:300; overflow:hidden;}
+.BNDragObject {z-index:300; margin-left:10px; margin-top:10px; padding-left:3px; padding-right:3px;background:#E4E5F0 ; border:1px solid #777;}
+.BNDragColInsideTop,.BNDragColInsideBottom,.BNDragColOutsideTop,.BNDragColOutsideBottom{position:absolute;width:10px; height:11px; overflow:hidden; z-index:258;}
+.BNDragColInsideTop 	{background:url(in_top.gif) no-repeat;} 	
+.BNDragColInsideBottom  {background:url(in_bottom.gif) no-repeat;}	
+.BNDragColOutsideTop  	{background:url(out_top.gif) no-repeat;}	
+.BNDragColOutsideBottom {background:url(out_bottom.gif) no-repeat;}	 
+
+/* Messages */
+.BNDisabled{position:absolute; z-index:264; background:#ffffff; opacity:0.5; filter:alpha(opacity=50); } 
+.BNProcess {position: absolute; left:0; top:0; background:#E2F0FF; border:1px solid #777; white-space:nowrap; text-align:center; visibility:hidden; z-index:266;}
+.BNMessage {background:#E2F0FF; border:1px solid #000000; padding:10px; white-space:nowrap; text-align:center;
+			 position: absolute; left:0; top:0; visibility:hidden; z-index:266;}
+.BNMessageShadow 
+{position:absolute; margin-left:3px; margin-top:3px; z-index:265;background:#888; opacity:0.5; filter:alpha(opacity=50); left:0; top:0; visibility:hidden;}
+      
+/* Other */
+/* !!! No .BN style prefix here !!! */
+.GridTmpTag { position:absolute; left:5px; top:5px; visibility:hidden; }
+
+/* Popup menus, TGLib */
+.BNMenuMain  {position:absolute;left:0;top:0; z-index:258;}
+.BNMenuOuter {overflow:hidden; border:1px solid #000000; background:#fff; padding:1px; margin:1px;}
+.BNMenuHeader{overflow:hidden; position:absolute; z-index:258;border:1px solid #b0b0c0; background:#fff; cursor:pointer; _cursor:hand;}
+.BNMenuHead {background:#183873; color:white; cursor:default;text-align:center; padding-top:5px; padding-bottom:4px;}
+.BNMenuClose {float:right; width:14px; cursor:pointer; _cursor:hand; display:none;}
+.BNMenuBody {cursor:default; background-color:#fff; padding-top:1px; padding-bottom:1px;}
+.BNMenuShadow {position:absolute;margin:3px 0 0 3px;z-index:257;background-color:#888; opacity:0.5; filter:alpha(opacity=50);}
+.BNMenuCheckedIconRight {padding-right:17px; background:url(chk1.gif) no-repeat 96% center; }
+.BNMenuUncheckedIconRight { padding-right:17px;background:url(chk0.gif) no-repeat 96% center ; }
+
+.BNMenuCursorIcon {background-image:url(d_gray_right.gif); background-repeat:no-repeat; background-position: 3px center;_background-color:#fff}
+.BNMenuHoverIcon {background-image:url(d_right.gif); background-repeat:no-repeat; background-position: 3px center; _background-color:#ffeeaa }   
+
+.BNMenuNextIcon { padding-right:10px; }
+.BNMenuNextIconRtl { padding-left:10px; }
+
+.BNMenuItemText,.BNMenuItemIcon,.BNMenuEnum,.BNMenuEnumHeader,.BNMenuEdit 
+{white-space:nowrap; overflow:hidden; vertical-align: middle; padding:1px 0 0 0}
+.BNMenuItemDisabled {opacity:0.50; filter:alpha(opacity=30); overflow:hidden; }
+.BNMenuLevel {color:blue;text-align:center; }  
+.BNMenuEnumParent,.BNMenuEditParent {padding-left:5px; padding-right:2px}
+.BNMenuItemIcon {background-repeat:no-repeat;}
+.BNMenuEnum {border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; padding-left:15px; overflow:hidden;}
+.BNMenuEnumHeader  {padding:1px 0 2px 16px; cursor:default; } 
+.BNMenuEdit{border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; background:white; overflow:hidden;white-space:nowrap;
+  padding-left:2px; padding-right:2px;}
+.BNMenuEditInput,.BNMenuEditTextarea {margin:0;padding:0;border:0; background:#FDD;_margin:-1px; _padding-right:1px; _padding_left:1px; }   
+.BNMenuEditTextarea { line-height:13px;  }   
+.BNMenuEditInt,.BNMenuEditFloat,.BNMenuEditDate { text-align:right; } 
+.BNMenuEditMulti { white-space:normal; }
+.BNMenuItem {background-color:#ffffff;padding:2px;}  
+.BNMenuItemHover {background-color:#F1EADC; border:1px solid #9A8462;margin:0 1px; padding:1px 0;}
+.BNMenuFocusHover {margin:1px; background-color:#FFF0E2; border:1px solid #000000;}
+.BNMenuFocus 	  {margin:1px; background-color:#FFF0E2; border:1px solid #EAC3A2;}
+.BNMenuSeparator {margin:1px 3px 0 3px; height:1px; border-top:1px solid #aaaadd; overflow:hidden;}
+.BNMenuCaption {padding:2px; background:#ffffff; color:blue; text-align:center;}
+.BNMenuVSeparator { border-right:1px solid #DDD; }
+.BNMenuFoot { border-top:none; text-align:center; white-space:nowrap; }
+.BNMenuButton {font-size:11px;background:#EBE0CC; text-align:center; border:1px solid #9A8462;margin:5px 2px 4px 2px;padding:0;white-space:nowrap;width:48px;} 
+.BNMenuButtonHover { background:#F1EADC; border:1px solid #9A8462; }
+
+/* Grid configuration menus */
+.BNCfgMenuOuter,.BNColumnsMenuOuter { border:1px solid #000000; }
+.BNCfgMenuHead,.BNColumnsMenuHead { padding-left:3px; }
+.BNCfgMenuBody,.BNColumnsMenuBody { padding-left:4px; padding-right:4px;}
+.BNCfgMenuFoot,.BNColumnsMenuFoot { padding-right:3px; padding-left:3px;}
+.BNCfgMenuButton { width:70px; } 
+.BNCfgMenuItemText,.BNColumnsMenuItemText { padding-left:3px; }
+.BNColumnsMenuItemText { white-space:nowrap; }
+.BNCfgMenuItem,.BNColumnsMenuItem { padding-top:3px; padding-bottom:3px;}
+.BNCfgMenuItemHover,.BNCfgMenuFocus,.BNCfgMenuFocusHover,
+.BNColumnsMenuItemHover,.BNColumnsMenuFocus,.BNColumnsMenuFocusHover { padding-top:2px; padding-bottom:2px;}
+
+/* Popup grid dialog */
+.BNPopupGridOuter { border:0; overflow:visible; }
+.BNPopupGridHead { padding:0; }
+.BNPopupGridBody { padding:0; }
+.BNPopupGridFoot { padding:0; }
+.BNPopupGridButton { width:50px;margin-top:-2px; margin-bottom:3px;} 
+
+/* Calendar, TGLib */
+.BNPickMain  {position:absolute; left:0; top:0; z-index:258; }
+.BNPickOuter {overflow:hidden; background:white; padding:1px; border:1px solid #836C48; }
+.BNPickHeader{overflow:hidden; position:absolute; z-index:258; border:1px solid black; background:#ffffff; cursor:pointer; _cursor:hand;}
+.BNPickHeaderBottom{border-bottom:0; padding-bottom:1px;}
+.BNPickHeaderTop{border-top:0; padding-bottom:1px; }
+.BNPickHead {background:#5c8397; font:10px Dotum,Verdana,Arial; color:white; cursor:default; padding-left:5px; padding-top:1px; padding-bottom:1px;border-bottom:1px solid white;}
+.BNPickClose{float:right; width:14px; cursor:pointer; _cursor:hand; display:none;}
+.BNPickBody {cursor:default; padding:0; }
+.BNPickShadow{position:absolute; background:#888; z-index:257; margin:3px 0 0 3px;opacity:0.5; filter:alpha(opacity=50);} 
+.BNPickFooter,.BNPick2Footer{text-align:center; padding:2px; cursor:default; background:#EFF0F1; border-top:1px solid #E3E4E6}
+ 
+.BNPickMY{background-color:#EAE3D5;border-bottom:1px solid #9A8462;color:#645237; cursor:default;text-align:center;padding:2px 0 4px 0;}/* <-- Calender : Header Background */
+   
+.BNPickMYDown{padding-right:13px; background:url(d_down.gif) no-repeat right; cursor:pointer; _cursor:hand;}
+.BNPickMYUp {padding-right:13px; background:url(d_up.gif) no-repeat right center; cursor:pointer; _cursor:hand;}
+
+.BNPickMYRtl{padding-right:0; padding-left:13px; }
+.BNPickBL,.BNPickBR{padding-top:3px; cursor:pointer; _cursor:hand; width:16px; height:14px; overflow:hidden;}
+
+.BNPickBL {float:left; background:url(d_left.gif) no-repeat 50%; }
+.BNPickBR {float:right; background:url(d_right.gif) no-repeat 50%; }
+
+.BNPickTable{}
+.BNPickRow  {background:#ffffff;}
+.BNPickRowW {background:#E8DCC8;}
+.BNPickCell {width:22px;}
+.BNPickWDN {background:transparent; color:#333333;text-align:center; cursor:default; margin:2px 3px;padding:1px;}
+  
+.BNPickHover,.BNPickSelHover,.BNPickWD,.BNPickSa,.BNPickSu,.BNPickSel,.BNPickNow,.BNPickWDNE,.BNPickSaNE,.BNPickSuNE,
+.BNPickSelNE,.BNPickNowNE,.BNPickOM,.BNPickOMNE {text-align:center; border:1px solid #ffffff; cursor:pointer; _cursor:hand;margin:2px 3px;}
+.BNPickWN,.BNPickWNE {text-align:center; cursor:pointer; _cursor:hand;padding:3px 4px; border-right:1px solid #9A8462; background:#EFF0F1;}
+   
+.BNPickWDNE,.BNPickSaNE,.BNPickSuNE,.BNPickSelNE,.BNPickNowNE,.BNPickWNE {cursor:default;}
+.BNPickWD{background-color:#ffffff;}
+.BNPickSa{background-color:#ffffff;}
+.BNPickSu{background-color:#ffffff;}
+.BNPickSel{background-color:#CCFF00 ; border:1px solid #cccccc;}
+.BNPickSelNE{background-color:#fbea54; border:1px solid #dad1d1;}
+.BNPickNow {background-color:#c0f3ff; border:1px solid #dad1d1;}
+.BNPickNowNE{background-color:#c0f3ff; border:1px solid #dad1d1;}
+.BNPickHover{background-color:#ddd; border:1px solid #ddd;}
+.BNPickSelHover{background-color:#dddddd; border:1px solid #dddddd;}
+.BNPickOM{background-color:white; color:#aaaaaa;}
+.BNPickOMNE{color:#aaaaaa;}
+
+.BNPickEmpty{background:url(d_blank.gif) no-repeat 50%; cursor:pointer; _cursor:hand;padding:3px 0; }
+
+.BNPickTimeCell 
+{text-align:right; padding-bottom:4px; padding-top:6px; padding-right:5px; border-top:1px solid #9A8462; background:#EFF0F1;}
+
+.BNPickTime 
+{border:0px none; white-space:nowrap; text-align:right; background:#EFF0F1;}
+
+.BNPickButton{background:#EBE0CC; text-align:center; border:1px solid #9A8462; width:45px; height:16px}
+    
+.BNPickButtonHover{background:#F1EADC; border:1px solid #9A8462; }
+.BNPick2Table{width:auto; vertical-align:middle}
+.BNPick2CellM{height:20px; width:55px; }
+.BNPick2CellY{height:20px; width:35px; vertical-align:middle }
+.BNPick2CellSep{height:20px; width:5px; }
+.BNPick2Cell{vertical-align:middle}
+.BNPick2M,.BNPick2Y,.BNPick2MSel,.BNPick2YSel,.BNPick2MHover,.BNPick2YHover,.BNPick2MSelHover,.BNPick2YSelHover
+{cursor:pointer; _cursor:hand; text-align:center; margin-left:1px; margin-right:1px; padding-left:4px; padding-right:4px; overflow:hidden; }
+   
+.BNPick2MSel,.BNPick2YSel {background:#CCFF00; border:1px solid #cccccc; margin-left:0; margin-right:0;}
+.BNPick2MHover,.BNPick2YHover {background:#DDD; border:1px solid #ffffff; margin-left:0; margin-right:0;}
+.BNPick2MSelHover,.BNPick2YSelHover {background:#DCFF51; border:1px solid #FFFFFF;margin-left:0; margin-right:0;}   
+.BNPick2SepH {width:1px; height:1px; overflow:hidden; }
+.BNPick2Sep {width:1px; background:#E3E4E6; overflow:hidden; margin-left:2px; margin-right:2px; height:20px;}
+.BNPick2BL,.BNPick2BR {width:35px; cursor:pointer; _cursor:hand; }
+
+
+.BNPick2BL {background:url(d_left2.gif) no-repeat center center}
+.BNPick2BR {background:url(d_right2.gif) no-repeat center center}
+
+
+/* Edit controls, TGLib */
+.BNEdit,.BNEditInline {padding:2px 4px;border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666;background:#ffffff; white-space:nowrap; overflow:hidden;}
+  
+.BNEditInline { display:inline-block; vertical-align:bottom; }
+.BNEditInput,.BNEditTextarea {border:0 solid transparent; margin:0; padding:0;vertical-align: middle} 
+
+.BNEditTextarea { line-height:13px; }
+.BNEditSpaceInput { vertical-align:middle; }
+.BNEditNormalInput,.BNEditNormalTextarea,.BNEditSpaceTextarea { background-color:#FFFFFF; /*#FFDCFF;*/; }
+.BNEditInt,.BNEditFloat { text-align:right; }
+
+.BNEditMulti { white-space:normal; }
+.BNEditReadOnly { background-color:#FFEEFF; }   
+.BNEditParent { position:absolute; z-index:258; overflow:hidden; }
+
+.BNEnumHeaderLeft,.BNEnumHeaderRight,.BNEnumHeaderNone 
+{background:white; cursor:pointer; _cursor:hand; vertical-align:middle; text-align:left; padding:2px 0 2px 2px;}
+
+.BNEnumHeaderRight {background: url(combo.gif) no-repeat right center;margin:1px 1px 0 0;}
+ @media screen and (-webkit-min-device-pixel-ratio:0) {.BNEnumHeaderRight{margin:1px 0 0 0;}}/* hack:CR,SF */
+.BNEnumHeaderRight, x:-moz-any-link, x:default {margin:1px 0 0 0;} /* hack:FF */
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {.BNEnumHeaderRight{ margin:1px 0 0 0;}}/* hack:OP */
+
+.BNEnumMenuHeader { background:#ffffff; }
+
+.BNEnumControl,.BNEnumInline {
+   cursor:pointer; _cursor:hand; padding-left:15px; padding-right:4px; padding-top:2px; padding-bottom:2px;
+   border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; overflow:hidden;}
+   
+.BNEnumInline { display:inline-block; vertical-align:bottom; }
+.BNEnumHeader { cursor:pointer; _cursor:hand;padding-left:15px; padding-right:4px; padding-top:2px; padding-bottom:2px;} 
+
+/*  Custom scrollbars  */
+.BNCustScroll1RightHidden { background:url(VScroll.gif) left -108px; height:18px; overflow:hidden; }
+.BNCustScroll1Right { padding-right:18px; background:url(VScroll.gif) right 0; }
+.BNCustScroll1RightHover { padding-right:18px; background:url(VScroll.gif) right -18px; }
+.BNCustScroll1Left { padding-left:18px;  background:url(VScroll.gif) left 0; }
+.BNCustScroll1LeftHover { padding-left:18px;  background:url(VScroll.gif) left -18px; }
+.BNCustScroll1SliderRight { padding-right:3px; background:url(VScroll.gif) right -36px; }
+.BNCustScroll1SliderLeft { padding-left:3px; background:url(VScroll.gif) left -36px; }
+.BNCustScroll1SliderHIn { height:18px; overflow:hidden; background:url(VScroll.gif) center -54px; }
+.BNCustScroll1SliderRightHover { padding-right:3px; background:url(VScroll.gif) right -72px; }
+.BNCustScroll1SliderLeftHover { padding-left:3px; background:url(VScroll.gif) left -72px; }
+.BNCustScroll1SliderHInHover { height:18px; overflow:hidden; background:url(VScroll.gif) center -90px; }
+.BNCustScroll2RightHidden { background:url(VScroll.gif) left -108px; height:18px; overflow:hidden; }
+.BNCustScroll2Right { padding-right:18px; background:url(VScroll.gif) right 0; }
+.BNCustScroll2RightHover { padding-right:18px; background:url(VScroll.gif) right -18px; }
+.BNCustScroll2Left { padding-left:18px;  background:url(VScroll.gif) left 0; }
+.BNCustScroll2LeftHover { padding-left:18px;  background:url(VScroll.gif) left -18px; }
+.BNCustScroll2SliderRight { padding-right:3px; background:url(VScroll.gif) right -36px; }
+.BNCustScroll2SliderLeft { padding-left:3px; background:url(VScroll.gif) left -36px; }
+.BNCustScroll2SliderHIn { height:18px; overflow:hidden; background:url(VScroll.gif) center -54px; }
+.BNCustScroll2SliderRightHover { padding-right:3px; background:url(VScroll.gif) right -72px; }
+.BNCustScroll2SliderLeftHover { padding-left:3px; background:url(VScroll.gif) left -72px; }
+.BNCustScroll2SliderHInHover { height:18px; overflow:hidden; background:url(VScroll.gif) center -90px; }
+
+.BNCustScroll3Right,.BNCustScroll3RightHidden { background:white; height:9px; overflow:hidden; }
+.BNCustScroll3SliderRight,.BNCustScroll3SliderRightHover { padding-right:3px; height:9px; background:url(VScroll.gif) right -126px; }
+.BNCustScroll3SliderLeft,.BNCustScroll3SliderLeftHover { height:9px; background:url(VScroll.gif) left -126px; }
+.BNCustScroll3SliderRightHover { background-position:right -135px; }
+.BNCustScroll3SliderLeftHover { background-position:left -135px; }
+.BNCustScroll4Right,.BNCustScroll4RightHidden,.BNCustScroll4SliderRight,.BNCustScroll4SliderRightHover { height:1px; overflow:hidden; }
+
+.BNCustScroll1DownHidden { background:url(HScroll.png) -108px top; width:18px; overflow:hidden; }
+.BNCustScroll1Down { padding-bottom:18px; background:url(HScroll.png) 0px bottom; cursor:default; width:18px; overflow:hidden; }
+.BNCustScroll1DownHover { padding-bottom:18px; background:url(HScroll.png) -18px bottom; width:18px; overflow:hidden; }
+.BNCustScroll1Up { padding-top:18px; background:url(HScroll.png) 0px top; width:18px; overflow:hidden; }
+.BNCustScroll1UpHover { padding-top:18px;  background:url(HScroll.png) -18px top; width:18px; overflow:hidden; }
+.BNCustScroll1SliderDown { padding-bottom:3px; background:url(HScroll.png) -36px bottom; width:18px; overflow:hidden; }
+.BNCustScroll1SliderUp { padding-top:3px; background:url(HScroll.png) -36px top; width:18px; overflow:hidden; }
+.BNCustScroll1SliderVIn { background:url(HScroll.png) -54px center; width:18px; overflow:hidden; }
+.BNCustScroll1SliderDownHover { padding-bottom:3px; background:url(HScroll.png) -72px bottom; width:18px; overflow:hidden; }
+.BNCustScroll1SliderUpHover { padding-top:3px; background:url(HScroll.png) -72px top; width:18px; overflow:hidden; }
+.BNCustScroll1SliderVInHover { background:url(HScroll.png) -90px center; width:18px; overflow:hidden; }
+
+.BNCustScroll2DownHidden { background:url(HScroll.png) -108px top; width:18px; overflow:hidden; }
+.BNCustScroll2Down { padding-bottom:18px; background:url(HScroll.png) 0px bottom; cursor:default; width:18px; overflow:hidden; }
+.BNCustScroll2DownHover { padding-bottom:18px; background:url(HScroll.png) -18px bottom; width:18px; overflow:hidden; }
+.BNCustScroll2Up { padding-top:18px; background:url(HScroll.png) 0px top; width:18px; overflow:hidden; }
+.BNCustScroll2UpHover { padding-top:18px;  background:url(HScroll.png) -18px top; width:18px; overflow:hidden; }
+.BNCustScroll2SliderDown { padding-bottom:3px; background:url(HScroll.png) -36px bottom; width:18px; overflow:hidden; }
+.BNCustScroll2SliderUp { padding-top:3px; background:url(HScroll.png) -36px top; width:18px; overflow:hidden; }
+.BNCustScroll2SliderVIn { background:url(HScroll.png) -54px center; width:18px; overflow:hidden; }
+.BNCustScroll2SliderDownHover { padding-bottom:3px; background:url(HScroll.png) -72px bottom; width:18px; overflow:hidden; }
+.BNCustScroll2SliderUpHover { padding-top:3px; background:url(HScroll.png) -72px top; width:18px; overflow:hidden; }
+.BNCustScroll2SliderVInHover { background:url(HScroll.png) -90px center; width:18px; overflow:hidden; }
+
+.BNCustScroll3Down,.BNCustScroll3DownHidden { background:white; width:9px; overflow:hidden; cursor:default; }
+.BNCustScroll3SliderDown,.BNCustScroll3SliderDownHover { padding-bottom:3px; width:9px; background:url(HScroll.png) -126px bottom; }
+.BNCustScroll3SliderUp,.BNCustScroll3SliderUpHover { width:9px; background:url(HScroll.png) -126px top; cursor:default; }
+.BNCustScroll3SliderDownHover { background-position:-135px bottom; }
+.BNCustScroll3SliderUpHover { background-position:-135px top; cursor:default; }
+
+.BNCustScroll4Down,.BNCustScroll4DownHidden,.BNCustScroll4SliderDown,.BNCustScroll4SliderDownHover { width:1px; overflow:hidden; }
+
+/* Other messages, TGLib */
+.BNHintMain {position:absolute; margin-left:-1px; margin-top:-1px; left:0px; top:0px; z-index:260; background:#ffffff; cursor:default; }
+.BNHintOuter {overflow:hidden; border:1px solid #000000; background:#ffffff !important; color:black; text-align:left; }
+.BNHintHeaderOuter {background-color:#39aefb !important; color:#ffffff; border: 1px solid #ffffff; }
+.BNHintShadow {position:absolute; z-index:259;background:#888; opacity:0.3; filter:alpha(opacity=30);margin-left:2px; margin-top:2px;}
+.BNTipMain {position:absolute; left:0px; top:0px; z-index:262; visibility:hidden; }
+.BNTipOuter  {overflow:hidden; cursor:default; font:12px Arial;padding-left:3px; padding-right:3px; background:#E4E5F0; border:1px solid #777;}
+.BNTipBody {background:#E4E5F0; white-space:nowrap; }
+.BNTipShadow {position:absolute;z-index:261;background:#888; opacity:0.3; filter:alpha(opacity=30);visibility:hidden; margin-left:3px; margin-top:3px}
+.BNMouseOrig { background:yellow !important; opacity:0.5; filter:alpha(opacity=50); }
+.BNMouseDragObject { position:absolute; z-index:260; background:#888; opacity:0.5; filter:alpha(opacity=50); }
+.BNFocus { border:1px solid #AAF; border-top:1px solid #00F; border-left:1px solid #00F; background-color:#EEE; } 
+.GridDisabled { position:absolute; z-index:256; background:white; opacity:0.5; filter:alpha(opacity=50); } 
+
+/* Do not change, marks the style loaded */
+.BNLoaded { border:1px solid #000000 !important;}
+
+/*sum*/
+.BNSumCell{background:#efefef; color:#FF060C;}/*//text-align: right;font-weight:bold;*/
+.BNSubSumCell{background: #FCF0E7; border-top:1px solid #F7BBA1; border-bottom:1px solid #F7BBA1; color:#DA5615}
+.BNCumulateCell{background: #FCF0E7; border-bottom:1px solid #F7BBA1; color:#BE3600}
+
+/* FindDialog */
+.BNH1Pop,.BNPPop{margin:0; padding:0}
+.BNPaddingl10{padding-left:10px}
+.BNPaddingT10{padding-top:10px}
+.BNPPop{ padding:0 0 10px 0; text-align:center }
+.BNPop{width:410px; overflow:hidden; border:1px solid #8D7857; padding:0; font-size:12px;background:#F9F6F1; font-family:dotum, Arial, Helvetica, sans-serif}
+.BNPopTitle{width:100%;color:#fff;border-bottom:1px solid #8D7857; font-size:12px; font-weight:bold; display:block; line-height:28px;
+background: #977b64; /* Old browsers */
+background: -moz-linear-gradient(top,  #977b64 1%, #8a6a50 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#977b64), color-stop(100%,#8a6a50)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #977b64 1%,#8a6a50 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #977b64 1%,#8a6a50 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #977b64 1%,#8a6a50 100%); /* IE10+ */
+background: linear-gradient(top,  #977b64 1%,#8a6a50 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#977b64', endColorstr='#8a6a50',GradientType=0 ); /* IE6-9 */
+}
+.BNPopSearch{margin:10px; overflow:hidden; }
+.BNPopContent{border:1px solid #DBDCDD; background-color:#fff}
+.BNPopUl{list-style:none; margin:0; padding:10px;}
+.BNPopDiv{overflow:hidden; width:100%}
+.BNPopDiv2{overflow:hidden; width:100%}
+.BNPopLeft,.BNPopLeft2{width:220px; float:left; }
+.BNPopRight,.BNPopRight2{width:166px; float:right}
+.BNPopUl input {margin:-2px 2px 0px 0px;padding:0 ; width:13px; height:13px; vertical-align:middle;}
+.BNPopUl li{ padding-top:4px;padding-bottom:3px ; padding-left:5px}
+.BNBtn{margin-top:10px; text-align:center }
+.BNPopLeft, .BNPopRight{ height:120px}
+.BNPopLeft2, .BNPopRight2{ height:80px}
+.BNPopLabel{line-height:12px; margin:0 0 0 2px}
+.BNPopSubtitle{font-weight:bold; color:#000; border-bottom:1px solid  #E0E0E0; background-color:#E7E7E7;padding-left:4px;}
+.BNPopBtnBlue {text-align: center;text-decoration: none;color:#fff;position: relative;border:1px solid #8D7857; font-size:12px;width:50px !important;height:22px !important;
+background: #977b64; /* Old browsers */
+background: -moz-linear-gradient(top,  #977b64 1%, #8a6a50 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#977b64), color-stop(100%,#8a6a50)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #977b64 1%,#8a6a50 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #977b64 1%,#8a6a50 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #977b64 1%,#8a6a50 100%); /* IE10+ */
+background: linear-gradient(top,  #977b64 1%,#8a6a50 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#977b64', endColorstr='#8a6a50',GradientType=0 ); /* IE6-9 */
+}
+.BNPopBtnBlue:hover {
+background: #8a6a50; /* Old browsers */
+background: -moz-linear-gradient(top,  #8a6a50 0%, #977b64 99%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8a6a50), color-stop(99%,#977b64)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #8a6a50 0%,#977b64 99%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #8a6a50 0%,#977b64 99%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #8a6a50 0%,#977b64 99%); /* IE10+ */
+background: linear-gradient(top,  #8a6a50 0%,#977b64 99%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8a6a50', endColorstr='#977b64',GradientType=0 ); /* IE6-9 */
+}		

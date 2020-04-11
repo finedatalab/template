@@ -1,0 +1,131 @@
+/* -----------------------------------------------------------------------*/
+/* ----------------- "Main" IBUpload style definition --------------------*/
+/* -------------- viewType이 icon일 경우 설정되는 파일입니다.-------------*/
+/* -----------------------------------------------------------------------*/
+
+@charset "utf-8";
+
+ul,li {
+    margin:0;
+    padding:0;
+    font-size:12px;
+    font-family:dotum, Malgun Gothic, Arial, Helvetica, sans-serif;
+}
+
+/*.myUpload{*/
+/*overflow-x: hidden;*/
+/*overflow-y: auto;*/
+/*}*/
+
+.context-menu-one {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 90%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.ibupload_fileview {
+    list-style-type: none;
+    background-Color: #F6F6F6;
+    width:100%;
+}
+
+/* 선택, 드래그 아이콘 보기 */
+/* 1) 선택되고 있는 경우  */
+.ibupload_fileview .ui-selecting {
+    /* background: #FECA40; */
+    z-index:999999;
+}
+
+/* 2) 선택된 상태 */
+.ibupload_fileview .ui-selected {
+    background: #F2F8FA;
+    color: #262626;
+}
+
+.ui-state-icon.ui-selected, .ui-state-icon.ui-selecting, .ui-state-list.ui-selected, .ui-state-list.ui-selecting{
+    border:1.5px #5BA4FF dashed;
+    border-radius: 4px;
+}
+
+.ui-state-detail.ui-selected, .ui-state-detail.ui-selecting{
+    border:1.5px #5BA4FF dashed;
+}
+
+
+/* 마우스 드래그 선택 사각 영역을 점선으로 표시 */
+.ui-selectable-helper {
+    position: absolute;
+    z-index: 100000;
+    border: 3px solid #0E62CA;
+    background-Color: #94CEE1;
+    opacity: 0.3;
+    margin :10px;
+}
+
+/* 파일 추가 된 상태 */
+.ing  { border:1.5px #E12B88 dashed !important; border-radius:4px; background:#FFF6FC;}
+
+/* iconMode별 영역 설정 */
+/* 1) icon 타입 */
+.view-mode-icon {}
+.view-mode-icon li  {  margin: 2px; padding: 2px 15px 2px 15px; display: inline-block; height:50px; width: 150px; border:1.5px #f6f6f6 solid; }
+.view-mode-icon .ibupload_name {position: relative; top: 10px;}
+.view-mode-icon .ibupload_icon32 {width:35px; display:block;float:left;}
+.view-mode-icon .ibupload_icon16 {display:none;}
+.view-mode-icon .ibupload_size {display:none;}
+.view-mode-icon .ibupload_date {display:none;}
+.view-mode-icon .ibupload_type {display:none;}
+.view-mode-icon .ibupload_nm {padding-top:8px; color:#262626; display:block; white-space:nowrap; overflow:hidden; word-wrap:break-word; text-overflow:ellipsis; }
+.view-mode-icon .ibupload_progress  {display:none;}
+
+/* 2) list 타입 */
+.view-mode-list {}
+.view-mode-list li {height:32px; width: 150px; display:inline-block; margin:2px; border:1.5px #f6f6f6 solid; padding : 0 8px;}
+.view-mode-list .ibupload_name {width: 150px; color:white;display:inline; position: relative; left:3px; top:9px;}
+.view-mode-list .ibupload_icon32 {display:none;}
+.view-mode-list .ibupload_size {display:none;}
+.view-mode-list .ibupload_date {display:none;}
+.view-mode-list .ibupload_type {display:none;}
+.view-mode-list .ibupload_icon16 {padding:7px 1px 5px 7px; float:left }
+.view-mode-list .ibupload_nm {color:#262626; display:block; text-overflow: ellipsis; white-space:nowrap; word-wrap:break-word; overflow:hidden;}
+.view-mode-list .ibupload_progress  {display:none;}
+
+/* 3) detail 타입 */
+.view-mode-detail li {height:30px; margin:2px; vertical-align:middle; border-bottom:1.5px #E9E9E9 solid; border-top:1.5px solid #F6F6F6; border-left:1.5px solid #F6F6F6; border-right:1.5px solid #F6F6F6;}
+.view-mode-detail .ibupload_name { position:relative; top:7px;}
+.view-mode-detail .ibupload_name div {color:#262626; text-overflow: ellipsis; white-space:nowrap; word-wrap:break-word; overflow:hidden;}
+.view-mode-detail .ibupload_icon32 {width:50px; display:none;float:left;}
+.view-mode-detail .ibupload_icon16 {width:5%;text-align:center;max-width:40px; display:inline;float:left;}
+.view-mode-detail .ibupload_size {width:15%;color:white; float:left; text-align:left;padding-right:8px;}
+.view-mode-detail .ibupload_date {width:15%;color:white; float:left; text-align:left; padding-right:8px;}
+.view-mode-detail .ibupload_type {width:35%; color:white;float:left; text-align:left; text-overflow: ellipsis; white-space:nowrap; word-wrap:break-word; overflow:hidden;}
+.view-mode-detail .ibupload_nm {height:100%; width:15%;color:white;float:left;text-align:left; vertical-align:middle;}
+.view-mode-detail .ibupload_progress {height:100%; width:10%;color:white; text-align:left; float:left;vertical-align:middle;}
+
+
+/* detail타입일 경우 헤더 영역 설정 */
+.ib_header{
+    height:30px;
+    background-color: #34A7DB;
+    border-bottom:1px solid #E9E9E9;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+/* detail타입 일 경우 헤더 영역 설정 */
+.header_detail_ibupload_name {height:100%; width:100%; text-align:center; vertical-align:middle; line-height:2.6;}
+.header_detail_ibupload_icon32  {height:100%; width:50px; display:none;float:left;vertical-align:middle;}
+.header_detail_ibupload_icon16 {height:100%; max-width:40px; width:5%;color:white; display:inline; float:left;vertical-align:middle;}
+.header_detail_ibupload_nm {height:100%; width:15%;color:#262626; float:left;vertical-align:middle;}
+.header_detail_ibupload_type {height:100%; width:35%; color:white; text-overflow: ellipsis; float:left;vertical-align:middle;}
+.header_detail_ibupload_date {height:100%; width:15%;color:white; float:left; vertical-align:middle;}
+.header_detail_ibupload_size {height:100%; width:15%;color:white; float:left; vertical-align:middle;}
+.header_detail_ibupload_progress {height:100%; width:10%;color:white; float:left;vertical-align:middle;}
+.header_detail_ibupload_name div {color:#ffffff}
+
+
+

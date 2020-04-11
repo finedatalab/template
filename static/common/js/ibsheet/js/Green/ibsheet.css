@@ -1,0 +1,674 @@
+/* -----------------------------------------------------------------------*/
+/* ----------------- "Main" IBSheet style definition ---------------------*/
+/* -----------------------------------------------------------------------*/
+
+/* Base tags */
+.GNImage {padding-bottom:256px;}
+.GNNone {display:none;}
+.GNSection,.GNSectionFF3 {table-layout:fixed; width:0;}
+.GNSectionFF3 {border-collapse:collapse; }
+
+/* Sections */
+.GNMainTable {border:1px solid #dddddd; border-collapse:separate; text-align:left; background:#ffffff; font:12px Dotum,Helvetica,AppleGothic,Sans-serif;}
+.GNFootLeft,.GNFootMid {border-top:1px solid #6aaa4a;}
+.GNHeadLeft,.GNBodyLeft,.GNFootLeft,.GNHScrollLeft {border-right:1px solid #6aaa4a;}	
+.GNVScroll {padding-top:1px; padding-bottom:1px;}
+.GNHScrollLeft,.GNHScrollMid,.GNHScrollLeftResizeTouch,.GNHScrollRightResizeTouch {padding-left:1px; padding-right:1px; cursor:default;}
+.GNHScrollLeftResizeTouch {border-right:2px solid #000000; padding-right:18px; background:#F4F4F4;}
+.GNHScrollRightResizeTouch {border-left:2px solid #000000; padding-left:18px; background:#F4F4F4;}
+.GNHScrollMidLeftResizeTouch {border-left:1px solid #000000; padding-left:19px; background:#F4F4F4;}
+.GNHScrollMidRightResizeTouch {border-right:1px solid #000000; padding-right:19px; background:#F4F4F4;}
+.GNHScrollWide {padding-right:1px;}
+.GNHScrollHidden {overflow:visible !important; background:#F4F4F4; cursor:default; }
+.GNXScroll {background:#F4F4F4;}
+.GNPage {border-top:0px solid #E0E0E0;}
+
+/* Rows */
+.GNSpaceRowHeight{height:21px; }
+.GNRowHeight 	 {height:18px; }
+.GNRowHeightTouch{height:22px; }
+.GNSpaceMargin   {margin:0; }
+.GNSpaceMarginTouch{margin:5px; }
+.GNSpaceRow {background:#ffffff; white-space:nowrap; overflow:hidden; padding-top:2px; padding-bottom:2px; border-bottom:1px solid #e0e0ff;}
+.GNGroupRow,.GNSearchRow,.GNPagerRow 
+{background-color:#45951d; white-space:nowrap; padding-top:5px; padding-bottom:5px; overflow:hidden; border-bottom:1px solid #40841F;} 
+.GNGroupRow,.GNPagerRow {background-position:0 -1801px; }
+.GNFillRow {background:#ffffff; }
+.GNRowAbove,.GNRowBelow {border-left:1px solid #9cb6c8; border-right:1px solid #9cb6c8;}
+.GNRowAbove { margin-top:3px; overflow:hidden;}
+.GNRowBelow {margin-bottom:3px; overflow:hidden;}
+.GNNoDataRow {border-top:1px solid #000000;padding-left:5px; padding-top:5px; padding-bottom:5px;color:gray; font-style:italic;} 
+.GNCountRowTop {color: #ffffff; background-color:#45951d; white-space:nowrap;padding-top:5px; padding-bottom:5px; overflow:hidden; border-bottom:1px solid #40841F;}
+.GNCountRowBottom {color: #ffffff; background-color:#45951d; white-space:nowrap; padding-top:5px; padding-bottom:5px; overflow:hidden; border-top:1px solid #40841F;}
+
+/* Cell */
+.GNCell,.GNCellPanel,.GNCellFilter,.GNHeaderDrag,.GNHeaderGroup 
+ {color:#000000; border-bottom:1px solid #F3F3F3; border-right:1px solid #C6C9CC; border-left:0; border-top:0;vertical-align:top; overflow:hidden; height:auto; font-size:/*IBFS*/12px; font-family:/*IBFN*/"Dotum", "Helvetica", "AppleGothic", sans-serif;}
+
+.GNCellHeader,.GNCellHeaderEmpty
+ {vertical-align:middle; overflow:hidden;height:auto; background-color:#45951d; padding-top:1px; border-right:1px solid #40841F; border-bottom:1px solid #40841F;border-left:1px solid #CCFFCC;border-top:1px solid #CCFFCC;} 
+.GNCellBorderFF3 {border-left:0;border-top:0;} 
+.GNCellSpace {vertical-align:top; padding-top:5px !important; }
+.GNCellSpacePanel,.GNCellSpaceBool {vertical-align:top; }
+.GNCellSpaceRadio { padding-top:3px !important;}
+.GNCellSpaceEditButton { vertical-align:top; padding-top:4px !important; border:1px solid #000000 !important; background-color:#ffffff !important; }
+.GNCellSpaceButtonButton { vertical-align:top; }
+.GNCellSpaceButton { vertical-align:top; padding-top:5px !important; whiSte-space:nowrap; }
+.GNCellSpaceAbove { border-top:1px solid #9cb6c8; }
+.GNCellSpaceBelow { border-bottom:1px solid #9cb6c8; }
+.GNCellPanel,.GNCellHeaderPanel{ white-space:nowrap; } 
+.GNCellHidden { background:transparent!important; border-top:none!important; border-bottom:none!important; }
+.GNHeaderButton { padding:0; }
+.GNHeaderGroup {background: #358110; color:#ffffff; padding-left:3px; }
+.GNHeaderGroupFocus {background-color: #C0C0A0; }
+.GNHeaderGroupDelete {background-color: #F0F0E0; color: #F0F0E0; }
+.GNHeaderGroupCustom {color:#BBB; padding-left:5px; cursor:default; white-space:nowrap;}
+.GNHeaderDrag {background: #9FB9E9; cursor:default; overflow:hidden; }
+.GNHeaderFocus {background: #9FB9E9;}
+.GNPanel {padding-left:80px;}
+.GNNoTreeLines1 {text-align:right;}
+.GNNoTreeLines2 {text-align:right; vertical-align:middle; padding-top:0;}
+.GNTree {padding-top:0; white-space:nowrap;}
+.GNSpannedTree {vertical-align:top;}
+.GNCellClassInner {padding-top:0; padding-bottom:0;}
+
+/* Inside cell */
+.GNStatus,.GNSeq,.GNPopup,.GNPopupEdit,.GNHtml,.GNText,.GNLines,.GNPass,.GNInt,.GNFloat,.GNDate,
+.GNLink,.GNImg,.GNRadio,.GNRadioText,.GNList,.GNEnum,.GNDropCols,.GNAbs,.GNPagerEdit,.GNUser 
+ {white-space:nowrap;vertical-align: middle;padding:2px 3px;} 
+.GNInt,.GNFloat { text-align:right; }
+.GNLines,.GNRadio,.GNHtml,.GNList { white-space:normal; }	
+.GNImg,.GNHtml {padding:0; } 
+.GNPass { padding:0 0 0 3px; }
+.GNRadio,.GNRadioText { padding:0; font-weight:normal !important; }
+.GNBool { text-align:center; }
+.GNIcon { background-repeat:no-repeat; }
+.GNHiddenSpace { display:none; }
+.GNDropCols { padding-top:2px !important; }
+
+.GNHeaderText {color:#ffffff; vertical-align:middle; font-size:/*IBFS*/12px; font-family:/*IBFN*/"Dotum", "Helvetica", "AppleGothic", sans-serif;}
+.GNAbs { padding:0; }
+.GNUser { padding:0; }
+.GNPagerEdit { text-align:center; padding-top:3px; }
+.GNMergedCellH {padding:0 0 5px 0}
+.GNMergedCellV {padding:0 0 1px 0}
+
+.GNWrap0 { white-space:nowrap; }
+.GNWrap1 { white-space:normal; }
+.GNEllipsis { white-space:nowrap; text-overflow:ellipsis;}
+
+.GNAlignLeft { text-align:left; }
+.GNAlignCenter { text-align:center; }
+.GNAlignJustify { text-align:center; }
+.GNAlignRight { text-align:right;}
+
+/* Tree Img with lines */
+.GN000,.GN010,.GN001,.GN011,.GN100,.GN110,.GN101,.GN111, 
+.GN000T,.GN010T,.GN001T,.GN011T,.GN100T,.GN110T,.GN101T,.GN111T,
+.GN00,.GN01,.GN10,.GN11,.GN00T,.GN01T,.GN10T,.GN11T,
+.GN0T,.GN1T,.GN0TL,.GN1TL,.GN0C,.GN1C,.GN0CL,.GN1CL,.GN0E,.GN1E,.GN0EL,.GN1EL,
+.GN0,.GN1,.GNT,.GNTL,.GNC,.GNCL,.GNE,.GNEL,.GND0,.GND1,.GND2,.GND3,.GND4,.GND0L,.GND1L,.GND2L,.GND3L,.GND4L 
+{background-image:url(Tree.gif); vertical-align:top;}
+
+u.GN000,u.GN010,u.GN001,u.GN011,u.GN100,u.GN110,u.GN101,u.GN111 { padding-left:63px; }
+u.GN000T,u.GN010T,u.GN001T,u.GN011T,u.GN100T,u.GN110T,u.GN101T,u.GN111T { padding-left:89px; }
+u.GN00,u.GN01,u.GN10,u.GN11 { padding-left:42px; }   
+u.GN00T,u.GN01T,u.GN10T,u.GN11T { padding-left:68px; }   
+u.GN0T,u.GN1T,u.GN0TL,u.GN1TL,u.GN0C,u.GN1C,u.GN0CL,u.GN1CL,u.GN0E,u.GN1E,u.GN0EL,u.GN1EL { padding-left:47px; }   
+u.GN0,u.GN1 { padding-left:21px; }
+u.GNT,u.GNTL,u.GNC,u.GNCL,u.GNE,u.GNEL,u.GND0,u.GND1,u.GND2,u.GND3,u.GND4,u.GND0L,u.GND1L,u.GND2L,u.GND3L,u.GND4L { padding-left:26px; }   
+
+.GN000,.GN000T{ background-position:0px 0px; }
+.GN010,.GN010T{ background-position:-128px 0; }
+.GN001,.GN001T{ background-position:-256px 0; }
+.GN011,.GN011T{ background-position:-384px 0; }
+.GN100,.GN100T{ background-position:-512px 0; }
+.GN110,.GN110T{ background-position:-640px 0; }
+.GN101,.GN101T{ background-position:-768px 0; }
+.GN111,.GN111T{ background-position:-896px 0; }
+.GN00,.GN00T  { background-position:-21px 0;  }
+.GN10,.GN10T  { background-position:-149px 0; }
+.GN01,.GN01T  { background-position:-277px 0; }
+.GN11,.GN11T  { background-position:-405px 0; }
+.GN0,.GN0T 	  { background-position:-42px 0;  }
+.GN1,.GN1T 	  { background-position:-298px 0; }
+.GNT 		  { background-position:-63px 0;  }
+.GN0TL 		  { background-position:-1024px 0; }
+.GN1TL 		  { background-position:-1088px 0; }
+.GN0C 	      { background-position:-1152px 0; }
+.GN1C 		  { background-position:-1216px 0; }
+.GN0CL 		  { background-position:-1280px 0; }
+.GN1CL 		  { background-position:-1344px 0; }
+.GN0E 		  { background-position:-1408px 0; }
+.GN1E 		  { background-position:-1472px 0; }
+.GN0EL 		  { background-position:-1536px 0; }
+.GN1EL 		  { background-position:-1600px 0; }
+.GNTL 		  { background-position:-1045px 0; }
+.GNC 		  { background-position:-1173px 0; }
+.GNCL 		  { background-position:-1301px 0; }
+.GNE 		  { background-position:-1429px 0; }
+.GNEL 		  { background-position:-1557px 0; }
+.GND0 		  { background-position:-1664px 0; }
+.GND1 		  { background-position:-1696px 0; }
+.GND2 		  { background-position:-1728px 0; }
+.GND3 		  { background-position:-1760px 0; }
+.GND0L 		  { background-position:-1792px 0; }
+.GND1L 		  { background-position:-1824px 0; }
+.GND2L 		  { background-position:-1856px 0; }
+.GND3L 		  { background-position:-1888px 0; }
+.GND4 		  { background-position:-1920px 0; }
+.GND4L 		  { background-position:-1952px 0; }
+
+/* Tree Img without lines  */
+.GNND0,.GNND1,.GNND2,.GNND3,.GNND4,.GNNC,.GNNE,.GNNCR,.GNNER {background-image:url(TreeN.gif); background-repeat:no-repeat; vertical-align:top; }
+u.GNND0,u.GNND1,u.GNND2,u.GNND3,u.GNND4,u.GNNC,u.GNNE,u.GNNCR,u.GNNER { padding-left:20px; }
+.GNND0 { background-position: -6px 0; }
+.GNND1 { background-position: -56px 0; }
+.GNND2 { background-position: -106px 0; }
+.GNND3 { background-position: -156px 0; }
+.GNND4 { background-position: -206px 0; }
+.GNNC { background-position:right -50px;}
+.GNNE { background-position:right -2000px;}
+.GNNCR { background-position:-255px -50px;}
+.GNNER { background-position:-255px -2000px;}
+u.GNNL { padding-left:21px; }
+
+/* Cell images */
+.GNIconLink { text-decoration:none; width:1000px; display:inline-block; }
+.GNIconLeft,.GNIconRight,.GNIconCenter {  background-repeat:no-repeat; }
+.GNIconLeft { background-position:left 0; padding-left:20px !important; }
+.GNIconRight { background-position:right 0; padding-right:20px !important; }
+.GNIconCenter { background-position:center 0; }
+.GNPopupRight { background:url(popup.gif) no-repeat 5px center; }
+.GNExpandLeft,.GNCollapseLeft,.GNExpandHeaderLeft,.GNCollapseHeaderLeft { padding-left:20px!important; }
+.GNDateRight{ padding-right:20px!important;}
+u.GNDateRight,.GNPopupRight { padding-right:0!important; padding-left:17px; }
+.GNDateRight {background:url(calendar.gif) no-repeat 2px center}
+.GNEnumRight { background:url(combo.gif) no-repeat right center; }
+u.GNEnumRight {padding-right:0; padding-left:17px}
+.GNExpandLeft { background:url(ic_plus.gif) no-repeat 3px center; padding:2px 0 0  18px; _padding:0 0 0 18px }
+.GNCollapseLeft { background:url(ic_minus.gif) no-repeat 3px center ; padding:2px 0 0  18px; _padding:0 0 0 18px }
+.GNRadio0Right,.GNRadio1Right,.GNRadio2Right,.GNRadio3Right {line-height:17px; padding-right:17px; padding-left:3px; }
+u.GNFilter0,u.GNFilter1 { padding-left:16px; }
+.GNBool0,.GNBool0RO,.GNBool1,.GNBool1RO,.GNBool2,.GNBool2RO,.GNBool3,.GNBool3RO {background-position:center center; background-repeat:no-repeat;}
+
+.GNBool0   { background-image:url(chk0.gif);  }
+.GNBool0RO { background-image:url(chk0R.gif); }
+
+.GNBool1   { background-image:url(chk1.gif);  }
+.GNBool1RO { background-image:url(chk1R.gif); }
+
+.GNBool2   { background-image:url(chk2.gif);  }
+.GNBool2RO { background-image:url(chk2R.gif); }
+
+.GNBool3   { background-image:url(chk3.gif);  }
+.GNBool3RO { background-image:url(chk3R.gif); }
+
+/* Filter images  */
+.GNFilter0Left,.GNFilter1Left,.GNFilter2Left,.GNFilter3Left,.GNFilter4Left,.GNFilter5Left,.GNFilter6Left,.GNFilter7Left,
+.GNFilter8Left,.GNFilter9Left,.GNFilter10Left,.GNFilter11Left,.GNFilter12Left {padding-left:18px;}
+
+.GNFilter0Left,.GNFilter0Menu 	{ width:18px; height:18px; background:url(filter0.gif) no-repeat left center; }   
+.GNFilter1Left,.GNFilter1Menu 	{ width:18px; height:18px; background:url(filter1.gif) no-repeat left center; }
+.GNFilter2Left,.GNFilter2Menu 	{ width:18px; height:18px; background:url(filter2.gif) no-repeat left center; }
+.GNFilter3Left,.GNFilter3Menu 	{ width:18px; height:18px; background:url(filter3.gif) no-repeat left center; }
+.GNFilter4Left,.GNFilter4Menu 	{ width:18px; height:18px; background:url(filter4.gif) no-repeat left center; }
+.GNFilter5Left,.GNFilter5Menu 	{ width:18px; height:18px; background:url(filter5.gif) no-repeat left center; }   
+.GNFilter6Left,.GNFilter6Menu 	{ width:18px; height:18px; background:url(filter6.gif) no-repeat left center; }
+.GNFilter7Left,.GNFilter7Menu 	{ width:18px; height:18px; background:url(filter7.gif) no-repeat left center; }
+.GNFilter8Left,.GNFilter8Menu 	{ width:18px; height:18px; background:url(filter8.gif) no-repeat left center; }
+.GNFilter9Left,.GNFilter9Menu 	{ width:18px; height:18px; background:url(filter9.gif) no-repeat left center; }
+.GNFilter10Left,.GNFilter10Menu { width:18px; height:18px; background:url(filter10.gif) no-repeat left center; }
+.GNFilter11Left,.GNFilter11Menu { width:18px; height:18px; background:url(filter11.gif) no-repeat left center; }
+.GNFilter12Left,.GNFilter12Menu { width:18px; height:18px; background:url(filter12.gif) no-repeat left center; }
+
+.GNFilter0Menu,.GNFilter1Menu,.GNFilter2Menu,.GNFilter3Menu,.GNFilter4Menu,.GNFilter5Menu,.GNFilter6Menu,.GNFilter7Menu,.GNFilter8Menu,.GNFilter9Menu,
+.GNFilter10Menu,.GNFilter11Menu,.GNFilter12Menu {overflow:hidden; margin: -2px 0 0 -1px;}
+.GNFilterMenuHeader { padding-left:2px; border-bottom:0 !important; } 
+
+/*  Keyfield Image */
+.GNKeyfield {background-image:url(keyfield.gif); display:inline-block; vertical-align:middle; background-repeat: no-repeat; background-position:center 1px; padding: 0 2px 0 4px; }
+
+/* GMKeyfield : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .GNKeyfield{  background-position: center 3px;padding: 0 2px 0 4px; }}
+
+/* CheckBox Header Image */
+.GNCheckHeader0 {background-image:url(chk0.gif); display:inline-block; vertical-align:middle; background-repeat:no-repeat; background-position:5px 1px; padding:2px 7px 0 6px; margin:0 2px 0 0;}
+
+/* GMCheckHeader0 : hack CR,SF*/
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{.GNCheckHeader0{ background-position:6px 1px ; padding: 2px 8px 0 6px; }}
+
+/* GMCheckHeader0 : hack FF*/
+.GNCheckHeader0, x:-moz-any-link, x:default { background-position:6px 1px ; padding: 2px 8px 0 6px; }
+
+/* GMCheckHeader0 : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .GNCheckHeader0{ background-position:7px center ; padding:1px  17px 0 0; }}
+
+.GNCheckHeader1 {background-image:url(chk1.gif); display:inline-block; vertical-align:middle; background-repeat:no-repeat; background-position:4px 1px ; padding:2px 6px 0 6px; margin:0 2px 0 0}
+
+/* GMCheckHeader1 : hack CR,SF*/
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{.GNCheckHeader1{ background-position:6px 1px ; padding: 2px 8px 0 6px; }}
+
+/* GMCheckHeader1 : hack FF*/
+.GNCheckHeader1, x:-moz-any-link, x:default { background-position:6px 1px ; padding: 2px 8px 0 6px; }
+
+/* GMCheckHeader1 : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .GNCheckHeader1 { background-position:7px center ; padding:1px  17px 0 0;  }}
+
+/* Sort images */
+.GNSort {display:block; float:right; margin:2px 2px 0;width:7px}
+
+/* State classes */
+/* The colors must be set by numbers not by names */
+.GNColorDefault  { background-color:#FFFFFF;}
+.GNColorNoFocus  { background-color:#E8F4FF;}
+.GNColorReadOnly { background-color:#D3E8C8;}
+.GNColorPreview  { background-color:#FFFFFF;}
+.GNColorAlternate{ background-color:#F3F3F3;}
+.GNColorSelected { background-color:/*#FFFF80*/#aadbff; }
+
+.GNColorFilter {background-color:#FFFFFF;}
+
+/*//.GNClassSelected { }*/
+.GNColorError   { background-color:#FF6969; }
+.GNColorDeleted { background-color:#FFCDCD; }
+.GNClassDeleted { font-style:italic; }
+.GNColorAdded   { background-color:#CDFFCD; }
+.GNClassAdded   { font-weight:bold; }
+.GNColorMoved1  { background-color:#FFFFFF; }
+.GNColorMoved2  { background-color:#D7EBEB; }
+.GNColorChanged { background-color:#EBEBFF; }
+.GNColorChangedCell { background-color:#E1E1FF; }
+.GNClassChangedCell { font-weight:bold; }
+.GNColorMaxChildren { background-color:#FFFFF0; }
+.GNColorDetail { background-color:#FFF0FF; }
+.GNColorDetailSelected { background-color:#FFF0E0; }
+.GNColorDragged{ background-color:#E0E0C0; }
+.GNColorFound1 { background-color:#FF87FF; }
+.GNColorFound2 { background-color:#FFC387; }
+.GNColorFound3 { background-color:#87FF87; }
+.GNColorHovered 			{ background-color:#F0F0FF; }
+.GNColorHoveredCell 		{ background-color:#C0C0FF; }
+.GNColorHoveredCellReadOnly { background-color:#F0F0F0; }
+.GNColorHoveredCellNoFocus 	{ background-color:#F8F8F8; }
+
+.GNClassHoveredCellHeader 	{ background-position:0px -250px; }
+.GNClassHoveredCellPanel 	{ background-position:0px -1801px; background-repeat:repeat-x; }
+
+.GNColorHoveredCellSpace 	{ background-color:#FFFFFF; }
+.GNColorHoveredCellSpaceEdit{ background-color:#C0C0FF; }
+.GNColorHoveredCellSpaceBool{ background-color:#FFFFFF; }
+.GNColorHoveredCellButton 	{ background-color:#FFFFFE; }
+.GNClassHoveredCellButton 	{ color:green; }
+.GNColorHoveredCellButton1 	{ background-color:#FFFFFE; }
+.GNClassHoveredCellButton1 	{ color:red; }
+.GNColorHoveredCellTab 		{ background-color:#FFFFFE; }
+.GNClassHoveredCellTab 		{ background-position:0px -1801px; color:green; }
+.GNColorHoveredCellTab1 	{ background-color:#99bbcc; }
+.GNClassHoveredCellTab1 	{ background-image:none; }
+
+.GNColorFocused 			{ background-color:#E6E6E6; }
+.GNColorFocusedCell 		{ background-color:#FFFFFE; }
+.GNColorFocusedCellSafari 	{ background-color:#A0A0FF; }
+.GNColorFocusedCellSpace 	{ background-color:#E6E6E6; }
+.GNColorFocusedCellButton 	{ background-color:#BCD; }
+.GNColorFocusedCellHeader 	{ background-color:#FFFFFE; }
+.GNColorFocusedCellPanel 	{ background-color:#FFFFFE; }
+.GNColorEditedCell 			{ background-color:#FFFFFF; }
+.GNColorViewedCell 			{ background-color:#FFFFFF; }
+
+/* Hover, focus, edit cursors */
+.GNHoverRowBackground 	{ opacity:0.1; filter:alpha(opacity=10); background:#00F; }
+.GNHoverRowBorder 		{ z-index:0; border-top:1px solid #BBF; border-bottom:1px solid #BBF; cursor:default; }
+.GNHoverCellBorder 		{ z-index:0; padding:1px; border:1px solid #A0A0F0; background:white; }
+.GNFocusRowBackground 	{ opacity:0.1; filter:alpha(opacity=50); background:/*IBSB*/#F1FF8F; } /* <-- Sheet : Selected Row Background */
+.GNFocusRowBorder 		{ z-index:0; border:1px solid /*IBSB*/#ABD504; } /* <-- Sheet : Selected Row Border */
+.GNFocusCellBorder		{ z-index:0; border:2px solid /*IBSB*/#ABD504; } /* <-- Sheet : Selected Cell Border */
+.GNFocusCellSpaceBorder,.GNEditCellSpaceBorder { z-index:4; }
+.GNEditCellBorder 		{ z-index:0; border:2px solid #FF6666;}    /*<-- Sheet : CellEdit Border */
+.GNEditCellInput 		{ position:relative; border:0 solid #39aefb; overflow:hidden; z-index:2; } 
+
+.GNCursorBackground, .GNCursorBorderLeft ,.GNCursorBorderRight,.GNCursorBorderTop,.GNCursorBorderBottom 
+ {position:relative;overflow:hidden;}
+
+.GNCursorBackground  {border:none; padding:0;}
+.GNCursorBorderLeft  {padding-right:0; padding-top:0; padding-bottom:0; border-right:none; border-top:none; border-bottom:none;  width:0; height:0;}
+.GNCursorBorderRight {padding-left:0; padding-top:0; padding-bottom:0; border-left:none; border-top:none; border-bottom:none;  width:0; height:0;}
+.GNCursorBorderTop 	 {padding-bottom:0; padding-left:0; padding-right:0; border-bottom:none; border-left:none; border-right:none;  width:0; height:0;}
+.GNCursorBorderBottom{padding-top:0; padding-left:0; padding-right:0; border-top:none; border-left:none; border-right:none; width:0; height:0;}
+
+/* Cell edges */
+.GNNoLeft { border-left:0; }
+.GNNoRight { border-right:0; }
+
+/* Dragging */
+.GNMouseObject { opacity:0.5; filter:alpha(opacity=50); z-index:300; overflow:hidden;}
+.GNDragObject {z-index:300; margin-left:10px; margin-top:10px; padding-left:3px; padding-right:3px;background:#E4E5F0 ; border:1px solid #777;}
+.GNDragColInsideTop,.GNDragColInsideBottom,.GNDragColOutsideTop,.GNDragColOutsideBottom{position:absolute;width:10px; height:11px; overflow:hidden; z-index:258;}
+.GNDragColInsideTop 	{background:url(in_top.gif) no-repeat;} 	
+.GNDragColInsideBottom  {background:url(in_bottom.gif) no-repeat;}	
+.GNDragColOutsideTop  	{background:url(out_top.gif) no-repeat;}	
+.GNDragColOutsideBottom {background:url(out_bottom.gif) no-repeat;}	 
+
+/* Messages */
+.GNDisabled{position:absolute; z-index:264; background:#ffffff; opacity:0.5; filter:alpha(opacity=50); } 
+.GNProcess {position: absolute; left:0; top:0; background:#E2F0FF; border:1px solid #777; white-space:nowrap; text-align:center; visibility:hidden; z-index:266;}
+.GNMessage {background:#E2F0FF; border:1px solid #000000; padding:10px; white-space:nowrap; text-align:center;
+			 position: absolute; left:0; top:0; visibility:hidden; z-index:266;}
+.GNMessageShadow 
+{position:absolute; margin-left:3px; margin-top:3px; z-index:265;background:#888; opacity:0.5; filter:alpha(opacity=50); left:0; top:0; visibility:hidden;}
+      
+/* Other */
+/* !!! No .GN style prefix here !!! */
+.GridTmpTag { position:absolute; left:5px; top:5px; visibility:hidden; }
+
+/* Popup menus, TGLib */
+.GNMenuMain  {position:absolute;left:0;top:0; z-index:258;}
+.GNMenuOuter {overflow:hidden; border:1px solid #000000; background:#fff; padding:1px; margin:1px;}
+.GNMenuHeader{overflow:hidden; position:absolute; z-index:258;border:1px solid #b0b0c0; background:#fff; cursor:pointer; _cursor:hand;}
+.GNMenuHead {background:#183873; color:white; cursor:default;text-align:center; padding-top:5px; padding-bottom:4px;}
+.GNMenuClose {float:right; width:14px; cursor:pointer; _cursor:hand; display:none;}
+.GNMenuBody {cursor:default; background-color:#fff; padding-top:1px; padding-bottom:1px;}
+.GNMenuShadow {position:absolute;margin:3px 0 0 3px;z-index:257;background-color:#888; opacity:0.5; filter:alpha(opacity=50);}
+.GNMenuCheckedIconRight {padding-right:17px; background:url(chk1.gif) no-repeat 96% center; }
+.GNMenuUncheckedIconRight { padding-right:17px;background:url(chk0.gif) no-repeat 96% center ; }
+
+.GNMenuCursorIcon {background-image:url(d_gray_right.gif); background-repeat:no-repeat; background-position: 3px center;_background-color:#fff}
+.GNMenuHoverIcon {background-image:url(d_right.gif); background-repeat:no-repeat; background-position: 3px center; _background-color:#ffeeaa }   
+
+.GNMenuNextIcon { padding-right:10px; }
+.GNMenuNextIconRtl { padding-left:10px; }
+
+.GNMenuItemText,.GNMenuItemIcon,.GNMenuEnum,.GNMenuEnumHeader,.GNMenuEdit 
+{white-space:nowrap; overflow:hidden; vertical-align: middle; padding:1px 0 0 0}
+.GNMenuItemDisabled {opacity:0.50; filter:alpha(opacity=30); overflow:hidden; }
+.GNMenuLevel {color:blue;text-align:center; }  
+.GNMenuEnumParent,.GNMenuEditParent {padding-left:5px; padding-right:2px}
+.GNMenuItemIcon {background-repeat:no-repeat;}
+.GNMenuEnum {border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; padding-left:15px; overflow:hidden;}
+.GNMenuEnumHeader  {padding:1px 0 2px 16px; cursor:default; } 
+.GNMenuEdit{border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; background:white; overflow:hidden;white-space:nowrap;
+  padding-left:2px; padding-right:2px;}
+.GNMenuEditInput,.GNMenuEditTextarea {margin:0;padding:0;border:0; background:#FDD;_margin:-1px; _padding-right:1px; _padding_left:1px; }   
+.GNMenuEditTextarea { line-height:13px;  }   
+.GNMenuEditInt,.GNMenuEditFloat,.GNMenuEditDate { text-align:right; } 
+.GNMenuEditMulti { white-space:normal; }
+.GNMenuItem {background-color:#ffffff;padding:2px;}  
+.GNMenuItemHover {background-color:#CFEBAB; border:1px solid #4C9925;margin:0 1px; padding:1px 0;}
+.GNMenuFocusHover {margin:1px; background-color:#F0FFDB; border:1px solid #000000;}
+.GNMenuFocus 	  {margin:1px; background-color:#F0FFDB; border:1px solid #A7D58F;}
+.GNMenuSeparator {margin:1px 3px 0 3px; height:1px; border-top:1px solid #aaaadd; overflow:hidden;}
+.GNMenuCaption {padding:2px; background:#ffffff; color:blue; text-align:center;}
+.GNMenuVSeparator { border-right:1px solid #DDD; }
+.GNMenuFoot { border-top:none; text-align:center; white-space:nowrap; }
+.GNMenuButton {font-size:11px;background:#E8F8D3; text-align:center; border:1px solid #B0D67E;margin:5px 2px 4px 2px;padding:0;white-space:nowrap;width:48px;} 
+.GNMenuButtonHover { background:#CFEBAB; border:1px solid #4C9925; }
+
+/* Grid configuration menus */
+.GNCfgMenuOuter,.GNColumnsMenuOuter { border:1px solid #000000; }
+.GNCfgMenuHead,.GNColumnsMenuHead { padding-left:3px; }
+.GNCfgMenuBody,.GNColumnsMenuBody { padding-left:4px; padding-right:4px;}
+.GNCfgMenuFoot,.GNColumnsMenuFoot { padding-right:3px; padding-left:3px;}
+.GNCfgMenuButton { width:70px; } 
+.GNCfgMenuItemText,.GNColumnsMenuItemText { padding-left:3px; }
+.GNColumnsMenuItemText { white-space:nowrap; }
+.GNCfgMenuItem,.GNColumnsMenuItem { padding-top:3px; padding-bottom:3px;}
+.GNCfgMenuItemHover,.GNCfgMenuFocus,.GNCfgMenuFocusHover,
+.GNColumnsMenuItemHover,.GNColumnsMenuFocus,.GNColumnsMenuFocusHover { padding-top:2px; padding-bottom:2px;}
+
+/* Popup grid dialog */
+.GNPopupGridOuter { border:0; overflow:visible; }
+.GNPopupGridHead { padding:0; }
+.GNPopupGridBody { padding:0; }
+.GNPopupGridFoot { padding:0; }
+.GNPopupGridButton { width:50px;margin-top:-2px; margin-bottom:3px;} 
+
+/* Calendar, TGLib */
+.GNPickMain  {position:absolute; left:0; top:0; z-index:258; }
+.GNPickOuter {overflow:hidden; background:white; padding:1px; border:1px solid #707275; }
+.GNPickHeader{overflow:hidden; position:absolute; z-index:258; border:1px solid black; background:#ffffff; cursor:pointer; _cursor:hand;}
+.GNPickHeaderBottom{border-bottom:0; padding-bottom:1px;}
+.GNPickHeaderTop{border-top:0; padding-bottom:1px; }
+.GNPickHead {background:#5c8397; font:10px Dotum,Verdana,Arial; color:white; cursor:default; padding-left:5px; padding-top:1px; padding-bottom:1px;border-bottom:1px solid white;}
+.GNPickClose{float:right; width:14px; cursor:pointer; _cursor:hand; display:none;}
+.GNPickBody {cursor:default; padding:0; }
+.GNPickShadow{position:absolute; background:#888; z-index:257; margin:3px 0 0 3px;opacity:0.5; filter:alpha(opacity=50);} 
+.GNPickFooter,.GNPick2Footer{text-align:center; padding:2px; cursor:default; background:#EFF0F1; border-top:1px solid #E3E4E6}
+ 
+.GNPickMY{background-color:#CFEBAB;border-bottom:1px solid #B0D67E;color:#306E11; cursor:default;text-align:center;padding:2px 0 4px 0;}/* <-- Calender : Header Background */
+   
+.GNPickMYDown{padding-right:13px; background:url(d_down.gif) no-repeat right; cursor:pointer; _cursor:hand;}
+.GNPickMYUp {padding-right:13px; background:url(d_up.gif) no-repeat right center; cursor:pointer; _cursor:hand;}
+
+.GNPickMYRtl{padding-right:0; padding-left:13px; }
+.GNPickBL,.GNPickBR{padding-top:3px; cursor:pointer; _cursor:hand; width:16px; height:14px; overflow:hidden;}
+
+.GNPickBL {float:left; background:url(d_left.gif) no-repeat 50%; }
+.GNPickBR {float:right; background:url(d_right.gif) no-repeat 50%; }
+
+.GNPickTable{}
+.GNPickRow  {background:#ffffff;}
+.GNPickRowW {background:#E8F8D3;}
+.GNPickCell {width:22px;}
+.GNPickWDN {background:transparent; color:#333333;text-align:center; cursor:default; margin:2px 3px;padding:1px;}
+  
+.GNPickHover,.GNPickSelHover,.GNPickWD,.GNPickSa,.GNPickSu,.GNPickSel,.GNPickNow,.GNPickWDNE,.GNPickSaNE,.GNPickSuNE,
+.GNPickSelNE,.GNPickNowNE,.GNPickOM,.GNPickOMNE {text-align:center; border:1px solid #ffffff; cursor:pointer; _cursor:hand;margin:2px 3px;}
+.GNPickWN,.GNPickWNE {text-align:center; cursor:pointer; _cursor:hand;padding:3px 4px; border-right:1px solid #B0D67E; background:#EFF0F1;}
+   
+.GNPickWDNE,.GNPickSaNE,.GNPickSuNE,.GNPickSelNE,.GNPickNowNE,.GNPickWNE {cursor:default;}
+.GNPickWD{background-color:#ffffff;}
+.GNPickSa{background-color:#ffffff;}
+.GNPickSu{background-color:#ffffff;}
+.GNPickSel{background-color:#DBFF4D ; border:1px solid #cccccc;}
+.GNPickSelNE{background-color:#fbea54; border:1px solid #dad1d1;}
+.GNPickNow {background-color:#c0f3ff; border:1px solid #dad1d1;}
+.GNPickNowNE{background-color:#c0f3ff; border:1px solid #dad1d1;}
+.GNPickHover{background-color:#ddd; border:1px solid #ddd;}
+.GNPickSelHover{background-color:#dddddd; border:1px solid #dddddd;}
+.GNPickOM{background-color:white; color:#aaaaaa;}
+.GNPickOMNE{color:#aaaaaa;}
+
+.GNPickEmpty{background:url(d_blank.gif) no-repeat 50%; cursor:pointer; _cursor:hand;padding:3px 0; }
+
+.GNPickTimeCell 
+{text-align:right; padding-bottom:4px; padding-top:6px; padding-right:5px; border-top:1px solid #B0D67E; background:#EFF0F1;}
+
+.GNPickTime 
+{border:0px none; white-space:nowrap; text-align:right; background:#EFF0F1;}
+
+.GNPickButton{background:#E8F8D3; text-align:center; border:1px solid #B0D67E; width:45px; height:16px}
+    
+.GNPickButtonHover{background:#CFEBAB; border:1px solid #4C9925; }
+.GNPick2Table{width:auto; vertical-align:middle}
+.GNPick2CellM{height:20px; width:55px; }
+.GNPick2CellY{height:20px; width:35px; vertical-align:middle }
+.GNPick2CellSep{height:20px; width:5px; }
+.GNPick2Cell{vertical-align:middle}
+.GNPick2M,.GNPick2Y,.GNPick2MSel,.GNPick2YSel,.GNPick2MHover,.GNPick2YHover,.GNPick2MSelHover,.GNPick2YSelHover
+{cursor:pointer; _cursor:hand; text-align:center; margin-left:1px; margin-right:1px; padding-left:4px; padding-right:4px; overflow:hidden; }
+   
+.GNPick2MSel,.GNPick2YSel {background:#DBFF4D; border:1px solid #cccccc; margin-left:0; margin-right:0;}
+.GNPick2MHover,.GNPick2YHover {background:#DDD; border:1px solid #ffffff; margin-left:0; margin-right:0;}
+.GNPick2MSelHover,.GNPick2YSelHover {background:##CCFF00; border:1px solid #FFFFFF;margin-left:0; margin-right:0;}   
+.GNPick2SepH {width:1px; height:1px; overflow:hidden; }
+.GNPick2Sep {width:1px; background:#E3E4E6; overflow:hidden; margin-left:2px; margin-right:2px; height:20px;}
+.GNPick2BL,.GNPick2BR {width:35px; cursor:pointer; _cursor:hand; }
+
+
+.GNPick2BL {background:url(d_left2.gif) no-repeat center center}
+.GNPick2BR {background:url(d_right2.gif) no-repeat center center}
+
+
+/* Edit controls, TGLib */
+.GNEdit,.GNEditInline {padding:2px 4px;border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666;background:#ffffff; white-space:nowrap; overflow:hidden;}
+  
+.GNEditInline { display:inline-block; vertical-align:bottom; }
+.GNEditInput,.GNEditTextarea {border:0 solid transparent; margin:0; padding:0;vertical-align: middle} 
+
+.GNEditTextarea { line-height:13px; }
+.GNEditSpaceInput { vertical-align:middle; }
+.GNEditNormalInput,.GNEditNormalTextarea,.GNEditSpaceTextarea { background-color:#FFFFFF; /*#FFDCFF;*/; }
+.GNEditInt,.GNEditFloat { text-align:right; }
+
+.GNEditMulti { white-space:normal; }
+.GNEditReadOnly { background-color:#FFEEFF; }   
+.GNEditParent { position:absolute; z-index:258; overflow:hidden; }
+
+.GNEnumHeaderLeft,.GNEnumHeaderRight,.GNEnumHeaderNone 
+{background:white; cursor:pointer; _cursor:hand; vertical-align:middle; text-align:left; padding:2px 0 2px 2px;}
+
+.GNEnumHeaderRight {background: url(combo.gif) no-repeat right center;margin:1px 1px 0 0;}
+ @media screen and (-webkit-min-device-pixel-ratio:0) {.GNEnumHeaderRight{margin:1px 0 0 0;}}/* hack:CR,SF */
+.GNEnumHeaderRight, x:-moz-any-link, x:default {margin:1px 0 0 0;} /* hack:FF */
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {.GNEnumHeaderRight{ margin:1px 0 0 0;}}/* hack:OP */
+
+.GNEnumMenuHeader { background:#ffffff; }
+
+.GNEnumControl,.GNEnumInline {
+   cursor:pointer; _cursor:hand; padding-left:15px; padding-right:4px; padding-top:2px; padding-bottom:2px;
+   border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; overflow:hidden;}
+   
+.GNEnumInline { display:inline-block; vertical-align:bottom; }
+.GNEnumHeader { cursor:pointer; _cursor:hand;padding-left:15px; padding-right:4px; padding-top:2px; padding-bottom:2px;} 
+
+/*  Custom scrollbars  */
+.GNCustScroll1RightHidden { background:url(VScroll.gif) left -108px; height:18px; overflow:hidden; }
+.GNCustScroll1Right { padding-right:18px; background:url(VScroll.gif) right 0; }
+.GNCustScroll1RightHover { padding-right:18px; background:url(VScroll.gif) right -18px; }
+.GNCustScroll1Left { padding-left:18px;  background:url(VScroll.gif) left 0; }
+.GNCustScroll1LeftHover { padding-left:18px;  background:url(VScroll.gif) left -18px; }
+.GNCustScroll1SliderRight { padding-right:3px; background:url(VScroll.gif) right -36px; }
+.GNCustScroll1SliderLeft { padding-left:3px; background:url(VScroll.gif) left -36px; }
+.GNCustScroll1SliderHIn { height:18px; overflow:hidden; background:url(VScroll.gif) center -54px; }
+.GNCustScroll1SliderRightHover { padding-right:3px; background:url(VScroll.gif) right -72px; }
+.GNCustScroll1SliderLeftHover { padding-left:3px; background:url(VScroll.gif) left -72px; }
+.GNCustScroll1SliderHInHover { height:18px; overflow:hidden; background:url(VScroll.gif) center -90px; }
+.GNCustScroll2RightHidden { background:url(VScroll.gif) left -108px; height:18px; overflow:hidden; }
+.GNCustScroll2Right { padding-right:18px; background:url(VScroll.gif) right 0; }
+.GNCustScroll2RightHover { padding-right:18px; background:url(VScroll.gif) right -18px; }
+.GNCustScroll2Left { padding-left:18px;  background:url(VScroll.gif) left 0; }
+.GNCustScroll2LeftHover { padding-left:18px;  background:url(VScroll.gif) left -18px; }
+.GNCustScroll2SliderRight { padding-right:3px; background:url(VScroll.gif) right -36px; }
+.GNCustScroll2SliderLeft { padding-left:3px; background:url(VScroll.gif) left -36px; }
+.GNCustScroll2SliderHIn { height:18px; overflow:hidden; background:url(VScroll.gif) center -54px; }
+.GNCustScroll2SliderRightHover { padding-right:3px; background:url(VScroll.gif) right -72px; }
+.GNCustScroll2SliderLeftHover { padding-left:3px; background:url(VScroll.gif) left -72px; }
+.GNCustScroll2SliderHInHover { height:18px; overflow:hidden; background:url(VScroll.gif) center -90px; }
+
+.GNCustScroll3Right,.GNCustScroll3RightHidden { background:white; height:9px; overflow:hidden; }
+.GNCustScroll3SliderRight,.GNCustScroll3SliderRightHover { padding-right:3px; height:9px; background:url(VScroll.gif) right -126px; }
+.GNCustScroll3SliderLeft,.GNCustScroll3SliderLeftHover { height:9px; background:url(VScroll.gif) left -126px; }
+.GNCustScroll3SliderRightHover { background-position:right -135px; }
+.GNCustScroll3SliderLeftHover { background-position:left -135px; }
+.GNCustScroll4Right,.GNCustScroll4RightHidden,.GNCustScroll4SliderRight,.GNCustScroll4SliderRightHover { height:1px; overflow:hidden; }
+
+.GNCustScroll1DownHidden { background:url(HScroll.png) -108px top; width:18px; overflow:hidden; }
+.GNCustScroll1Down { padding-bottom:18px; background:url(HScroll.png) 0px bottom; cursor:default; width:18px; overflow:hidden; }
+.GNCustScroll1DownHover { padding-bottom:18px; background:url(HScroll.png) -18px bottom; width:18px; overflow:hidden; }
+.GNCustScroll1Up { padding-top:18px; background:url(HScroll.png) 0px top; width:18px; overflow:hidden; }
+.GNCustScroll1UpHover { padding-top:18px;  background:url(HScroll.png) -18px top; width:18px; overflow:hidden; }
+.GNCustScroll1SliderDown { padding-bottom:3px; background:url(HScroll.png) -36px bottom; width:18px; overflow:hidden; }
+.GNCustScroll1SliderUp { padding-top:3px; background:url(HScroll.png) -36px top; width:18px; overflow:hidden; }
+.GNCustScroll1SliderVIn { background:url(HScroll.png) -54px center; width:18px; overflow:hidden; }
+.GNCustScroll1SliderDownHover { padding-bottom:3px; background:url(HScroll.png) -72px bottom; width:18px; overflow:hidden; }
+.GNCustScroll1SliderUpHover { padding-top:3px; background:url(HScroll.png) -72px top; width:18px; overflow:hidden; }
+.GNCustScroll1SliderVInHover { background:url(HScroll.png) -90px center; width:18px; overflow:hidden; }
+
+.GNCustScroll2DownHidden { background:url(HScroll.png) -108px top; width:18px; overflow:hidden; }
+.GNCustScroll2Down { padding-bottom:18px; background:url(HScroll.png) 0px bottom; cursor:default; width:18px; overflow:hidden; }
+.GNCustScroll2DownHover { padding-bottom:18px; background:url(HScroll.png) -18px bottom; width:18px; overflow:hidden; }
+.GNCustScroll2Up { padding-top:18px; background:url(HScroll.png) 0px top; width:18px; overflow:hidden; }
+.GNCustScroll2UpHover { padding-top:18px;  background:url(HScroll.png) -18px top; width:18px; overflow:hidden; }
+.GNCustScroll2SliderDown { padding-bottom:3px; background:url(HScroll.png) -36px bottom; width:18px; overflow:hidden; }
+.GNCustScroll2SliderUp { padding-top:3px; background:url(HScroll.png) -36px top; width:18px; overflow:hidden; }
+.GNCustScroll2SliderVIn { background:url(HScroll.png) -54px center; width:18px; overflow:hidden; }
+.GNCustScroll2SliderDownHover { padding-bottom:3px; background:url(HScroll.png) -72px bottom; width:18px; overflow:hidden; }
+.GNCustScroll2SliderUpHover { padding-top:3px; background:url(HScroll.png) -72px top; width:18px; overflow:hidden; }
+.GNCustScroll2SliderVInHover { background:url(HScroll.png) -90px center; width:18px; overflow:hidden; }
+
+.GNCustScroll3Down,.GNCustScroll3DownHidden { background:white; width:9px; overflow:hidden; cursor:default; }
+.GNCustScroll3SliderDown,.GNCustScroll3SliderDownHover { padding-bottom:3px; width:9px; background:url(HScroll.png) -126px bottom; }
+.GNCustScroll3SliderUp,.GNCustScroll3SliderUpHover { width:9px; background:url(HScroll.png) -126px top; cursor:default; }
+.GNCustScroll3SliderDownHover { background-position:-135px bottom; }
+.GNCustScroll3SliderUpHover { background-position:-135px top; cursor:default; }
+
+.GNCustScroll4Down,.GNCustScroll4DownHidden,.GNCustScroll4SliderDown,.GNCustScroll4SliderDownHover { width:1px; overflow:hidden; }
+
+/* Other messages, TGLib */
+.GNHintMain {position:absolute; margin-left:-1px; margin-top:-1px; left:0px; top:0px; z-index:260; background:#ffffff; cursor:default; }
+.GNHintOuter {overflow:hidden; border:1px solid #000000; background:#ffffff !important; color:black; text-align:left; }
+.GNHintHeaderOuter {background-color:#39aefb !important; color:#ffffff; border: 1px solid #ffffff; }
+.GNHintShadow {position:absolute; z-index:259;background:#888; opacity:0.3; filter:alpha(opacity=30);margin-left:2px; margin-top:2px;}
+.GNTipMain {position:absolute; left:0px; top:0px; z-index:262; visibility:hidden; }
+.GNTipOuter  {overflow:hidden; cursor:default; font:12px Arial;padding-left:3px; padding-right:3px; background:#E4E5F0; border:1px solid #777;}
+.GNTipBody {background:#E4E5F0; white-space:nowrap; }
+.GNTipShadow {position:absolute;z-index:261;background:#888; opacity:0.3; filter:alpha(opacity=30);visibility:hidden; margin-left:3px; margin-top:3px}
+.GNMouseOrig { background:yellow !important; opacity:0.5; filter:alpha(opacity=50); }
+.GNMouseDragObject { position:absolute; z-index:260; background:#888; opacity:0.5; filter:alpha(opacity=50); }
+.GNFocus { border:1px solid #AAF; border-top:1px solid #00F; border-left:1px solid #00F; background-color:#EEE; } 
+.GridDisabled { position:absolute; z-index:256; background:white; opacity:0.5; filter:alpha(opacity=50); } 
+
+/* Do not change, marks the style loaded */
+.GNLoaded { border:1px solid #000000 !important;}
+
+/*sum*/
+.GNSumCell{background:#f7ffe7; color:#FF060C;}/*//text-align: right;font-weight:bold;*/
+.GNSubSumCell{background: #FCF0E7; border-top:1px solid #F7BBA1; border-bottom:1px solid #F7BBA1; color:#DA5615}
+.GNCumulateCell{background: #FCF0E7; border-bottom:1px solid #F7BBA1; color:#BE3600}
+
+/* FindDialog */
+.GNH1Pop,.GNPPop{margin:0; padding:0}
+.GNPaddingl10{padding-left:10px}
+.GNPaddingT10{padding-top:10px}
+.GNPPop{ padding:0 0 10px 0; text-align:center }
+.GNPop{width:410px; overflow:hidden; border:1px solid #438124; padding:0; font-size:12px;background:#F3F3F3; font-family:dotum, Arial, Helvetica, sans-serif}
+.GNPopTitle{width:100%;color:#fff;border-bottom:1px solid #438124; font-size:12px; font-weight:bold; display:block; line-height:28px;
+background: #6aaa4a; /* Old browsers */
+background: -moz-linear-gradient(top,  #6aaa4a 1%, #489720 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#6aaa4a), color-stop(100%,#489720)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #6aaa4a 1%,#489720 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #6aaa4a 1%,#489720 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #6aaa4a 1%,#489720 100%); /* IE10+ */
+background: linear-gradient(top,  #6aaa4a 1%,#489720 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6aaa4a', endColorstr='#489720',GradientType=0 ); /* IE6-9 */
+}
+.GNPopSearch{margin:10px; overflow:hidden; }
+.GNPopContent{border:1px solid #DBDCDD; background-color:#fff}
+.GNPopUl{list-style:none; margin:0; padding:10px;}
+.GNPopDiv{overflow:hidden; width:100%}
+.GNPopDiv2{overflow:hidden; width:100%}
+.GNPopLeft,.GNPopLeft2{width:220px; float:left; }
+.GNPopRight,.GNPopRight2{width:166px; float:right}
+.GNPopUl input {margin:-2px 2px 0px 0px;padding:0 ; width:13px; height:13px; vertical-align:middle;}
+.GNPopUl li{ padding-top:4px;padding-bottom:3px ; padding-left:5px}
+.GNBtn{margin-top:10px; text-align:center }
+.GNPopLeft, .GNPopRight{ height:120px}
+.GNPopLeft2, .GNPopRight2{ height:80px}
+.GNPopLabel{line-height:12px; margin:0 0 0 2px}
+.GNPopSubtitle{font-weight:bold; color:#000; border-bottom:1px solid  #E0E0E0; background-color:#E7E7E7;padding-left:4px;}
+.GNPopBtnBlue {text-align: center;text-decoration: none;color:#fff;position: relative;border:1px solid #438124; font-size:12px;width:50px !important;height:22px !important;
+background: #6aaa4a; /* Old browsers */
+background: -moz-linear-gradient(top,  #6aaa4a 1%, #489720 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#6aaa4a), color-stop(100%,#489720)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #6aaa4a 1%,#489720 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #6aaa4a 1%,#489720 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #6aaa4a 1%,#489720 100%); /* IE10+ */
+background: linear-gradient(top,  #6aaa4a 1%,#489720 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6aaa4a', endColorstr='#489720',GradientType=0 ); /* IE6-9 */
+}
+.GNPopBtnBlue:hover {
+background: #489720; /* Old browsers */
+background: -moz-linear-gradient(top,  #489720 0%, #6aaa4a 99%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#489720), color-stop(99%,#6aaa4a)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #489720 0%,#6aaa4a 99%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #489720 0%,#6aaa4a 99%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #489720 0%,#6aaa4a 99%); /* IE10+ */
+background: linear-gradient(top,  #489720 0%,#6aaa4a 99%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#489720', endColorstr='#6aaa4a',GradientType=0 ); /* IE6-9 */
+}		

@@ -1,0 +1,703 @@
+/* -----------------------------------------------------------------------*/
+/* ----------------- "Main" IBSheet style definition ---------------------*/
+/* -----------------------------------------------------------------------*/
+
+/* Base tags */
+.NBImage {padding-bottom:256px;}
+.NBNone {display:none;}
+.NBSection,.NBSectionFF3 {table-layout:fixed; width:0;}
+.NBSectionFF3 {border-collapse:collapse; }
+
+/* Sections */
+.NBMainTable {border:1px solid #466DA1; border-collapse:separate; text-align:left; background:#ffffff; font:12px Dotum,Helvetica,AppleGothic,Sans-serif;}
+.NBFootLeft,.NBFootMid {border-top:1px solid #678db6;}
+.NBHeadLeft,.NBBodyLeft,.NBFootLeft,.NBHScrollLeft {border-right:1px solid #678db6;}	
+.NBVScroll {padding-top:1px; padding-bottom:1px;}
+.NBHScrollLeft,.NBHScrollMid,.NBHScrollLeftResizeTouch,.NBHScrollRightResizeTouch {padding-left:1px; padding-right:1px; cursor:default;}
+.NBHScrollLeftResizeTouch {border-right:2px solid #000000; padding-right:18px; background:#F4F4F4;}
+.NBHScrollRightResizeTouch {border-left:2px solid #000000; padding-left:18px; background:#F4F4F4;}
+.NBHScrollMidLeftResizeTouch {border-left:1px solid #000000; padding-left:19px; background:#F4F4F4;}
+.NBHScrollMidRightResizeTouch {border-right:1px solid #000000; padding-right:19px; background:#F4F4F4;}
+.NBHScrollWide {padding-right:1px;}
+.NBHScrollHidden {overflow:visible !important; background:#F4F4F4; cursor:default; }
+.NBXScroll {background:#F4F4F4;}
+.NBPage {border-top:0px solid #E0E0E0;}
+
+/* Rows */
+.NBSpaceRowHeight{height:21px; }
+.NBRowHeight 	 {height:18px; }
+.NBRowHeightTouch{height:22px; }
+.NBSpaceMargin   {margin:0; }
+.NBSpaceMarginTouch{margin:5px; }
+.NBSpaceRow {background:#ffffff; white-space:nowrap; overflow:hidden; padding-top:2px; padding-bottom:2px; border-bottom:1px solid #e0e0ff;}
+
+.NBGroupRow,.NBSearchRow,.NBPagerRow 
+{background-color:#466da1; white-space:nowrap; padding-top:5px; padding-bottom:5px; overflow:hidden; border-bottom:1px solid #416594;} 
+
+.NBGroupRow,.NBPagerRow {background-position:0 -1801px; }
+.NBFillRow {background:#ffffff; }
+.NBRowAbove,.NBRowBelow {border-left:1px solid #9cb6c8; border-right:1px solid #9cb6c8;}
+.NBRowAbove { margin-top:3px; overflow:hidden;}
+.NBRowBelow {margin-bottom:3px; overflow:hidden;}
+.NBNoDataRow {border-top:1px solid #000000;padding-left:5px; padding-top:5px; padding-bottom:5px;color:gray; font-style:italic;} 
+.NBCountRowTop {color:#ffffff; background-color:#466da1; white-space:nowrap;padding-top:5px; padding-bottom:5px; overflow:hidden; border-bottom:1px solid #416594;}
+.NBCountRowBottom {color:#ffffff; background-color:#466da1; white-space:nowrap; padding-top:5px; padding-bottom:5px; overflow:hidden; border-top:1px solid #416594;}
+
+/* Cell */
+.NBCell,.NBCellPanel,.NBCellFilter,.NBHeaderDrag,.NBHeaderGroup 
+ {color:#000000; border-bottom:1px solid #F5FAFF; border-right:1px solid #A1A2AC; border-left:0; border-top:0;vertical-align:top; overflow:hidden; height:auto; font-size:/*IBFS*/12px; font-family:/*IBFN*/"Dotum", "Helvetica", "AppleGothic", sans-serif;}
+
+.NBCellHeader,.NBCellHeaderEmpty
+ {vertical-align:middle; overflow:hidden;height:auto; background-color:#466da1; padding-top:1px; border-right:1px solid #416594; border-bottom:1px solid #416594;} 
+
+.NBCellBorderFF3 {border-left:0;border-top:0;} 
+.NBCellSpace {vertical-align:top; padding-top:5px !important; }
+.NBCellSpacePanel,.NBCellSpaceBool {vertical-align:top; }
+.NBCellSpaceRadio { padding-top:3px !important;}
+.NBCellSpaceEditButton { vertical-align:top; padding-top:4px !important; border:1px solid #000000 !important; background-color:#ffffff !important; }
+.NBCellSpaceButtonButton { vertical-align:top; }
+.NBCellSpaceButton { vertical-align:top; padding-top:5px !important; white-space:nowrap; }
+.NBCellSpaceAbove { border-top:1px solid #9cb6c8; }
+.NBCellSpaceBelow { border-bottom:1px solid #9cb6c8; }
+.NBCellPanel,.NBCellHeaderPanel{ white-space:nowrap; } 
+.NBCellHidden { background:transparent!important; border-top:none!important; border-bottom:none!important; }
+.NBHeaderButton { padding:0; }
+.NBHeaderGroup {background: #2A5286; color:#ffffff; padding-left:3px; }
+.NBHeaderGroupFocus {background-color: #C0C0A0; }
+.NBHeaderGroupDelete {background-color: #F0F0E0; color: #F0F0E0; }
+.NBHeaderGroupCustom {color:#BBB; padding-left:5px; cursor:default; white-space:nowrap;}
+.NBHeaderDrag {background: #9FB9E9; cursor:default; overflow:hidden; }
+.NBHeaderFocus {background: #9FB9E9;}
+.NBPanel {padding-left:80px;}
+.NBNoTreeLines1 {text-align:right;}
+.NBNoTreeLines2 {text-align:right; vertical-align:middle; padding-top:0;}
+.NBTree {padding-top:0; white-space:nowrap;}
+.NBSpannedTree {vertical-align:top;}
+.NBCellClassInner {padding-top:0; padding-bottom:0;}
+
+/* Inside cell */
+.NBStatus,.NBSeq,.NBPopup,.NBPopupEdit,.NBHtml,.NBText,.NBLines,.NBPass,.NBInt,.NBFloat,.NBDate,
+.NBLink,.NBImg,.NBRadio,.NBRadioText,.NBList,.NBEnum,.NBDropCols,.NBAbs,.NBPagerEdit,.NBUser 
+ {white-space:nowrap;vertical-align: middle;padding:2px 3px;} 
+.NBInt,.NBFloat { text-align:right; }
+.NBLines,.NBRadio,.NBHtml,.NBList { white-space:normal; }	
+.NBImg,.NBHtml {padding:0; } 
+.NBPass { padding:0 0 0 3px; }
+.NBRadio,.NBRadioText { padding:0; font-weight:normal !important; }
+.NBBool { text-align:center; }
+.NBIcon { background-repeat:no-repeat; }
+.NBHiddenSpace { display:none; }
+.NBDropCols { padding-top:2px !important; }
+
+.NBHeaderText {color:#ffffff; vertical-align:middle; font-size:/*IBFS*/12px; font-family:/*IBFN*/"Dotum", "Helvetica", "AppleGothic", sans-serif;}
+.NBAbs { padding:0; }
+.NBUser { padding:0; }
+.NBPagerEdit { text-align:center; padding-top:3px; }
+.NBMergedCellH {padding:0 0 5px 0}
+.NBMergedCellV {padding:0 0 1px 0}
+
+.NBWrap0 { white-space:nowrap; }
+.NBWrap1 { white-space:normal; }
+.NBEllipsis { white-space:nowrap; text-overflow:ellipsis;}
+
+.NBAlignLeft { text-align:left; }
+.NBAlignCenter { text-align:center; }
+.NBAlignJustify { text-align:center; }
+.NBAlignRight { text-align:right;}
+
+/* Tree Img with lines */
+.NB000,.NB010,.NB001,.NB011,.NB100,.NB110,.NB101,.NB111, 
+.NB000T,.NB010T,.NB001T,.NB011T,.NB100T,.NB110T,.NB101T,.NB111T,
+.NB00,.NB01,.NB10,.NB11,.NB00T,.NB01T,.NB10T,.NB11T,
+.NB0T,.NB1T,.NB0TL,.NB1TL,.NB0C,.NB1C,.NB0CL,.NB1CL,.NB0E,.NB1E,.NB0EL,.NB1EL,
+.NB0,.NB1,.NBT,.NBTL,.NBC,.NBCL,.NBE,.NBEL,.NBD0,.NBD1,.NBD2,.NBD3,.NBD4,.NBD0L,.NBD1L,.NBD2L,.NBD3L,.NBD4L 
+{background-image:url(Tree.gif); vertical-align:top;}
+
+u.NB000,u.NB010,u.NB001,u.NB011,u.NB100,u.NB110,u.NB101,u.NB111 { padding-left:63px; }
+u.NB000T,u.NB010T,u.NB001T,u.NB011T,u.NB100T,u.NB110T,u.NB101T,u.NB111T { padding-left:89px; }
+u.NB00,u.NB01,u.NB10,u.NB11 { padding-left:42px; }   
+u.NB00T,u.NB01T,u.NB10T,u.NB11T { padding-left:68px; }   
+u.NB0T,u.NB1T,u.NB0TL,u.NB1TL,u.NB0C,u.NB1C,u.NB0CL,u.NB1CL,u.NB0E,u.NB1E,u.NB0EL,u.NB1EL { padding-left:47px; }   
+u.NB0,u.NB1 { padding-left:21px; }
+u.NBT,u.NBTL,u.NBC,u.NBCL,u.NBE,u.NBEL,u.NBD0,u.NBD1,u.NBD2,u.NBD3,u.NBD4,u.NBD0L,u.NBD1L,u.NBD2L,u.NBD3L,u.NBD4L { padding-left:26px; }   
+
+.NB000,.NB000T{ background-position:0px 0px; }
+.NB010,.NB010T{ background-position:-128px 0; }
+.NB001,.NB001T{ background-position:-256px 0; }
+.NB011,.NB011T{ background-position:-384px 0; }
+.NB100,.NB100T{ background-position:-512px 0; }
+.NB110,.NB110T{ background-position:-640px 0; }
+.NB101,.NB101T{ background-position:-768px 0; }
+.NB111,.NB111T{ background-position:-896px 0; }
+.NB00,.NB00T  { background-position:-21px 0;  }
+.NB10,.NB10T  { background-position:-149px 0; }
+.NB01,.NB01T  { background-position:-277px 0; }
+.NB11,.NB11T  { background-position:-405px 0; }
+.NB0,.NB0T 	  { background-position:-42px 0;  }
+.NB1,.NB1T 	  { background-position:-298px 0; }
+.NBT 		  { background-position:-63px 0;  }
+.NB0TL 		  { background-position:-1024px 0; }
+.NB1TL 		  { background-position:-1088px 0; }
+.NB0C 	      { background-position:-1152px 0; }
+.NB1C 		  { background-position:-1216px 0; }
+.NB0CL 		  { background-position:-1280px 0; }
+.NB1CL 		  { background-position:-1344px 0; }
+.NB0E 		  { background-position:-1408px 0; }
+.NB1E 		  { background-position:-1472px 0; }
+.NB0EL 		  { background-position:-1536px 0; }
+.NB1EL 		  { background-position:-1600px 0; }
+.NBTL 		  { background-position:-1045px 0; }
+.NBC 		  { background-position:-1173px 0; }
+.NBCL 		  { background-position:-1301px 0; }
+.NBE 		  { background-position:-1429px 0; }
+.NBEL 		  { background-position:-1557px 0; }
+.NBD0 		  { background-position:-1664px 0; }
+.NBD1 		  { background-position:-1696px 0; }
+.NBD2 		  { background-position:-1728px 0; }
+.NBD3 		  { background-position:-1760px 0; }
+.NBD0L 		  { background-position:-1792px 0; }
+.NBD1L 		  { background-position:-1824px 0; }
+.NBD2L 		  { background-position:-1856px 0; }
+.NBD3L 		  { background-position:-1888px 0; }
+.NBD4 		  { background-position:-1920px 0; }
+.NBD4L 		  { background-position:-1952px 0; }
+
+/* Tree Img without lines  */
+.NBND0,.NBND1,.NBND2,.NBND3,.NBND4,.NBNC,.NBNE,.NBNCR,.NBNER {background-image:url(TreeN.gif); background-repeat:no-repeat; vertical-align:top; }
+u.NBND0,u.NBND1,u.NBND2,u.NBND3,u.NBND4,u.NBNC,u.NBNE,u.NBNCR,u.NBNER { padding-left:20px; }
+.NBND0 { background-position: -6px 0; }
+.NBND1 { background-position: -56px 0; }
+.NBND2 { background-position: -106px 0; }
+.NBND3 { background-position: -156px 0; }
+.NBND4 { background-position: -206px 0; }
+.NBNC { background-position:right -50px;}
+.NBNE { background-position:right -2000px;}
+.NBNCR { background-position:-255px -50px;}
+.NBNER { background-position:-255px -2000px;}
+u.NBNL { padding-left:21px; }
+
+/* Cell images */
+.NBIconLink { text-decoration:none; width:1000px; display:inline-block; }
+.NBIconLeft,.NBIconRight,.NBIconCenter {  background-repeat:no-repeat; }
+.NBIconLeft { background-position:left 0; padding-left:20px !important; }
+.NBIconRight { background-position:right 0; padding-right:20px !important; }
+.NBIconCenter { background-position:center 0; }
+.NBPopupRight { background:url(popup.gif) no-repeat 5px center; }
+.NBExpandLeft,.NBCollapseLeft,.NBExpandHeaderLeft,.NBCollapseHeaderLeft { padding-left:20px!important; }
+.NBDateRight{ padding-right:20px!important;}
+u.NBDateRight,.NBPopupRight { padding-right:0!important; padding-left:17px; }
+.NBDateRight {background:url(calendar.gif) no-repeat 2px center}
+.NBEnumRight { background:url(combo.gif) no-repeat right center; }
+u.NBEnumRight {padding-right:0; padding-left:17px}
+.NBExpandLeft { background:url(ic_plus.gif) no-repeat 3px center; padding:2px 0 0  18px; _padding:0 0 0 18px }
+.NBCollapseLeft { background:url(ic_minus.gif) no-repeat 3px center ; padding:2px 0 0  18px; _padding:0 0 0 18px }
+.NBRadio0Right,.NBRadio1Right,.NBRadio2Right,.NBRadio3Right {line-height:17px; padding-right:17px; padding-left:3px; }
+u.NBFilter0,u.NBFilter1 { padding-left:16px; }
+.NBBool0,.NBBool0RO,.NBBool1,.NBBool1RO,.NBBool2,.NBBool2RO,.NBBool3,.NBBool3RO {background-position:center center; background-repeat:no-repeat;}
+
+.NBBool0   { background-image:url(chk0.gif);  }
+.NBBool0RO { background-image:url(chk0R.gif); }
+
+.NBBool1   { background-image:url(chk1.gif);  }
+.NBBool1RO { background-image:url(chk1R.gif); }
+
+.NBBool2   { background-image:url(chk2.gif);  }
+.NBBool2RO { background-image:url(chk2R.gif); }
+
+.NBBool3   { background-image:url(chk3.gif);  }
+.NBBool3RO { background-image:url(chk3R.gif); }
+
+/* Filter images  */
+.NBFilter0Left,.NBFilter1Left,.NBFilter2Left,.NBFilter3Left,.NBFilter4Left,.NBFilter5Left,.NBFilter6Left,.NBFilter7Left,
+.NBFilter8Left,.NBFilter9Left,.NBFilter10Left,.NBFilter11Left,.NBFilter12Left {padding-left:18px;}
+
+.NBFilter0Left,.NBFilter0Menu 	{ width:18px; height:18px; background:url(filter0.gif) no-repeat left center; }   
+.NBFilter1Left,.NBFilter1Menu 	{ width:18px; height:18px; background:url(filter1.gif) no-repeat left center; }
+.NBFilter2Left,.NBFilter2Menu 	{ width:18px; height:18px; background:url(filter2.gif) no-repeat left center; }
+.NBFilter3Left,.NBFilter3Menu 	{ width:18px; height:18px; background:url(filter3.gif) no-repeat left center; }
+.NBFilter4Left,.NBFilter4Menu 	{ width:18px; height:18px; background:url(filter4.gif) no-repeat left center; }
+.NBFilter5Left,.NBFilter5Menu 	{ width:18px; height:18px; background:url(filter5.gif) no-repeat left center; }   
+.NBFilter6Left,.NBFilter6Menu 	{ width:18px; height:18px; background:url(filter6.gif) no-repeat left center; }
+.NBFilter7Left,.NBFilter7Menu 	{ width:18px; height:18px; background:url(filter7.gif) no-repeat left center; }
+.NBFilter8Left,.NBFilter8Menu 	{ width:18px; height:18px; background:url(filter8.gif) no-repeat left center; }
+.NBFilter9Left,.NBFilter9Menu 	{ width:18px; height:18px; background:url(filter9.gif) no-repeat left center; }
+.NBFilter10Left,.NBFilter10Menu { width:18px; height:18px; background:url(filter10.gif) no-repeat left center; }
+.NBFilter11Left,.NBFilter11Menu { width:18px; height:18px; background:url(filter11.gif) no-repeat left center; }
+.NBFilter12Left,.NBFilter12Menu { width:18px; height:18px; background:url(filter12.gif) no-repeat left center; }
+
+.NBFilter0Menu,.NBFilter1Menu,.NBFilter2Menu,.NBFilter3Menu,.NBFilter4Menu,.NBFilter5Menu,.NBFilter6Menu,.NBFilter7Menu,.NBFilter8Menu,.NBFilter9Menu,
+.NBFilter10Menu,.NBFilter11Menu,.NBFilter12Menu {overflow:hidden; margin: -2px 0 0 -1px;}
+.NBFilterMenuHeader { padding-left:2px; border-bottom:0 !important; } 
+
+/*  Keyfield Image */
+.NBKeyfield {background-image:url(keyfield.gif); display:inline-block; vertical-align:middle; background-repeat: no-repeat; background-position:center 1px; padding: 0 2px 0 4px; }
+
+/* GMKeyfield : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .NBKeyfield{  background-position: center 3px;padding: 0 2px 0 4px; }}
+
+/* CheckBox Header Image */
+.NBCheckHeader0 {background-image:url(chk0.gif); display:inline-block; vertical-align:middle; background-repeat:no-repeat; background-position:5px 1px; padding:2px 7px 0 6px; margin:0 2px 0 0;}
+
+/* GMCheckHeader0 : hack CR,SF*/
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{.NBCheckHeader0{ background-position:6px 1px ; padding: 2px 8px 0 6px; }}
+
+/* GMCheckHeader0 : hack FF*/
+.NBCheckHeader0, x:-moz-any-link, x:default { background-position:6px 1px ; padding: 2px 8px 0 6px; }
+
+/* GMCheckHeader0 : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .NBCheckHeader0{ background-position:7px center ; padding:1px  17px 0 0; }}
+
+.NBCheckHeader1 {background-image:url(chk1.gif); display:inline-block; vertical-align:middle; background-repeat:no-repeat; background-position:4px 1px ; padding:2px 6px 0 6px; margin:0 2px 0 0}
+
+/* GMCheckHeader1 : hack CR,SF*/
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{.NBCheckHeader1{ background-position:6px 1px ; padding: 2px 8px 0 6px; }}
+
+/* GMCheckHeader1 : hack FF*/
+.NBCheckHeader1, x:-moz-any-link, x:default { background-position:6px 1px ; padding: 2px 8px 0 6px; }
+
+/* GMCheckHeader1 : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .NBCheckHeader1 { background-position:7px center ; padding:1px  17px 0 0;  }}
+
+/* Sort images */
+.NBSort {display:block; float:right; margin:2px 2px 0;width:7px}
+
+/* State classes */
+/* The colors must be set by numbers not by names */
+.NBColorDefault  { background-color:#FFFFFF;}
+
+.NBColorNoFocus  { background-color:#E8F4FF;}
+.NBColorReadOnly { background-color:#C9E1F5;}
+.NBColorPreview  { background-color:#FFFFFF;}
+
+.NBColorAlternate{ background-color:#f5faff;}
+
+.NBColorSelected { background-color:/*#FFFF80*/#aadbff; }
+
+.NBColorFilter {background-color:#FFFFFF;}
+
+/*//.NBClassSelected { }*/
+.NBColorError   { background-color:#FF6969; }
+.NBColorDeleted { background-color:#FFCDCD; }
+.NBClassDeleted { font-style:italic; }
+.NBColorAdded   { background-color:#CDFFCD; }
+.NBClassAdded   { font-weight:bold; }
+.NBColorMoved1  { background-color:#FFFFFF; }
+.NBColorMoved2  { background-color:#D7EBEB; }
+.NBColorChanged { background-color:#EBEBFF; }
+.NBColorChangedCell { background-color:#E1E1FF; }
+.NBClassChangedCell { font-weight:bold; }
+.NBColorMaxChildren { background-color:#FFFFF0; }
+.NBColorDetail { background-color:#FFF0FF; }
+.NBColorDetailSelected { background-color:#FFF0E0; }
+.NBColorDragged{ background-color:#E0E0C0; }
+.NBColorFound1 { background-color:#FF87FF; }
+.NBColorFound2 { background-color:#FFC387; }
+.NBColorFound3 { background-color:#87FF87; }
+.NBColorHovered 			{ background-color:#F0F0FF; }
+.NBColorHoveredCell 		{ background-color:#C0C0FF; }
+.NBColorHoveredCellReadOnly { background-color:#F0F0F0; }
+.NBColorHoveredCellNoFocus 	{ background-color:#F8F8F8; }
+
+.NBClassHoveredCellHeader 	{ background-position:0px -250px; }
+.NBClassHoveredCellPanel 	{ background-position:0px -1801px; background-repeat:repeat-x; }
+
+.NBColorHoveredCellSpace 	{ background-color:#FFFFFF; }
+.NBColorHoveredCellSpaceEdit{ background-color:#C0C0FF; }
+.NBColorHoveredCellSpaceBool{ background-color:#FFFFFF; }
+.NBColorHoveredCellButton 	{ background-color:#FFFFFE; }
+.NBClassHoveredCellButton 	{ color:green; }
+.NBColorHoveredCellButton1 	{ background-color:#FFFFFE; }
+.NBClassHoveredCellButton1 	{ color:red; }
+.NBColorHoveredCellTab 		{ background-color:#FFFFFE; }
+.NBClassHoveredCellTab 		{ background-position:0px -1801px; color:green; }
+.NBColorHoveredCellTab1 	{ background-color:#99bbcc; }
+.NBClassHoveredCellTab1 	{ background-image:none; }
+
+.NBColorFocused 			{ background-color:#E6E6E6; }
+.NBColorFocusedCell 		{ background-color:#FFFFFE; }
+.NBColorFocusedCellSafari 	{ background-color:#A0A0FF; }
+.NBColorFocusedCellSpace 	{ background-color:#E6E6E6; }
+.NBColorFocusedCellButton 	{ background-color:#BCD; }
+.NBColorFocusedCellHeader 	{ background-color:#FFFFFE; }
+.NBColorFocusedCellPanel 	{ background-color:#FFFFFE; }
+.NBColorEditedCell 			{ background-color:#FFFFFF; }
+.NBColorViewedCell 			{ background-color:#FFFFFF; }
+
+/* Hover, focus, edit cursors */
+.NBHoverRowBackground 	{ opacity:0.1; filter:alpha(opacity=10); background:#00F; }
+.NBHoverRowBorder 		{ z-index:0; border-top:1px solid #BBF; border-bottom:1px solid #BBF; cursor:default; }
+.NBHoverCellBorder 		{ z-index:0; padding:1px; border:1px solid #A0A0F0; background:white; }
+
+.NBFocusRowBackground 	{ opacity:0.1; filter:alpha(opacity=50); background:/*IBSB*/#F1FF8F; } /* <-- Sheet : Selected Row Background */
+
+.NBFocusRowBorder 		{ z-index:0; border:1px solid /*IBSB*/#ABD504; } /* <-- Sheet : Selected Row Border */
+.NBFocusCellBorder		{ z-index:0; border:2px solid /*IBSB*/#ABD504; } /* <-- Sheet : Selected Cell Border */
+
+.NBFocusCellSpaceBorder,.NBEditCellSpaceBorder { z-index:4; }
+.NBEditCellBorder 		{ z-index:0; border:2px solid #FF6666;}    /*<-- Sheet : CellEdit Border */
+.NBEditCellInput 		{ position:relative; border:0 solid #39aefb; overflow:hidden; z-index:2; } 
+
+.NBCursorBackground, .NBCursorBorderLeft ,.NBCursorBorderRight,.NBCursorBorderTop,.NBCursorBorderBottom 
+ {position:relative;overflow:hidden;}
+
+.NBCursorBackground  {border:none; padding:0;}
+.NBCursorBorderLeft  {padding-right:0; padding-top:0; padding-bottom:0; border-right:none; border-top:none; border-bottom:none;  width:0; height:0;}
+.NBCursorBorderRight {padding-left:0; padding-top:0; padding-bottom:0; border-left:none; border-top:none; border-bottom:none;  width:0; height:0;}
+.NBCursorBorderTop 	 {padding-bottom:0; padding-left:0; padding-right:0; border-bottom:none; border-left:none; border-right:none;  width:0; height:0;}
+.NBCursorBorderBottom{padding-top:0; padding-left:0; padding-right:0; border-top:none; border-left:none; border-right:none; width:0; height:0;}
+
+/* Cell edges */
+.NBNoLeft { border-left:0; }
+.NBNoRight { border-right:0; }
+
+/* Dragging */
+.NBMouseObject { opacity:0.5; filter:alpha(opacity=50); z-index:300; overflow:hidden;}
+.NBDragObject {z-index:300; margin-left:10px; margin-top:10px; padding-left:3px; padding-right:3px;background:#E4E5F0 ; border:1px solid #777;}
+.NBDragColInsideTop,.NBDragColInsideBottom,.NBDragColOutsideTop,.NBDragColOutsideBottom{position:absolute;width:10px; height:11px; overflow:hidden; z-index:258;}
+.NBDragColInsideTop 	{background:url(in_top.gif) no-repeat;} 	
+.NBDragColInsideBottom  {background:url(in_bottom.gif) no-repeat;}	
+.NBDragColOutsideTop  	{background:url(out_top.gif) no-repeat;}	
+.NBDragColOutsideBottom {background:url(out_bottom.gif) no-repeat;}	 
+
+/* Messages */
+.NBDisabled{position:absolute; z-index:264; background:#ffffff; opacity:0.5; filter:alpha(opacity=50); } 
+.NBProcess {position: absolute; left:0; top:0; background:#E2F0FF; border:1px solid #777; white-space:nowrap; text-align:center; visibility:hidden; z-index:266;}
+.NBMessage {background:#E2F0FF; border:1px solid #000000; padding:10px; white-space:nowrap; text-align:center;
+			 position: absolute; left:0; top:0; visibility:hidden; z-index:266;}
+.NBMessageShadow 
+{position:absolute; margin-left:3px; margin-top:3px; z-index:265;background:#888; opacity:0.5; filter:alpha(opacity=50); left:0; top:0; visibility:hidden;}
+      
+/* Other */
+/* !!! No .NB style prefix here !!! */
+.GridTmpTag { position:absolute; left:5px; top:5px; visibility:hidden; }
+
+/* Popup menus, TGLib */
+.NBMenuMain  {position:absolute;left:0;top:0; z-index:258;}
+.NBMenuOuter {overflow:hidden; border:1px solid #000000; background:#fff; padding:1px; margin:1px;}
+.NBMenuHeader{overflow:hidden; position:absolute; z-index:258;border:1px solid #b0b0c0; background:#fff; cursor:pointer; _cursor:hand;}
+.NBMenuHead {background:#183873; color:white; cursor:default;text-align:center; padding-top:5px; padding-bottom:4px;}
+.NBMenuClose {float:right; width:14px; cursor:pointer; _cursor:hand; display:none;}
+.NBMenuBody {cursor:default; background-color:#fff; padding-top:1px; padding-bottom:1px;}
+.NBMenuShadow {position:absolute;margin:3px 0 0 3px;z-index:257;background-color:#888; opacity:0.5; filter:alpha(opacity=50);}
+.NBMenuCheckedIconRight {padding-right:17px; background:url(chk1.gif) no-repeat 96% center; }
+.NBMenuUncheckedIconRight { padding-right:17px;background:url(chk0.gif) no-repeat 96% center ; }
+
+.NBMenuCursorIcon {background-image:url(d_gray_right.gif); background-repeat:no-repeat; background-position: 3px center;_background-color:#fff}
+.NBMenuHoverIcon {background-image:url(d_right.gif); background-repeat:no-repeat; background-position: 3px center; _background-color:#ffeeaa }   
+
+.NBMenuNextIcon { padding-right:10px; }
+.NBMenuNextIconRtl { padding-left:10px; }
+
+.NBMenuItemText,.NBMenuItemIcon,.NBMenuEnum,.NBMenuEnumHeader,.NBMenuEdit 
+{white-space:nowrap; overflow:hidden; vertical-align: middle; padding:1px 0 0 0}
+.NBMenuItemDisabled {opacity:0.50; filter:alpha(opacity=30); overflow:hidden; }
+.NBMenuLevel {color:blue;text-align:center; }  
+.NBMenuEnumParent,.NBMenuEditParent {padding-left:5px; padding-right:2px}
+.NBMenuItemIcon {background-repeat:no-repeat;}
+.NBMenuEnum {border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; padding-left:15px; overflow:hidden;}
+.NBMenuEnumHeader  {padding:1px 0 2px 16px; cursor:default; } 
+.NBMenuEdit{border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; background:white; overflow:hidden;white-space:nowrap;
+  padding-left:2px; padding-right:2px;}
+.NBMenuEditInput,.NBMenuEditTextarea {margin:0;padding:0;border:0; background:#FDD;_margin:-1px; _padding-right:1px; _padding_left:1px; }   
+.NBMenuEditTextarea { line-height:13px;  }   
+.NBMenuEditInt,.NBMenuEditFloat,.NBMenuEditDate { text-align:right; } 
+.NBMenuEditMulti { white-space:normal; }
+.NBMenuItem {background-color:#ffffff;padding:2px;}  
+
+
+.NBMenuItemHover {background-color:#FFEEAA; border:1px solid #AAAADD;margin:0 1px; padding:1px 0;}
+
+.NBMenuFocusHover {margin:1px; background-color:#D4EBFA; border:1px solid #000000;}
+.NBMenuFocus 	  {margin:1px; background-color:#D4EBFA; border:1px solid #84A7D2;}
+
+.NBMenuSeparator {margin:1px 3px 0 3px; height:1px; border-top:1px solid #aaaadd; overflow:hidden;}
+.NBMenuCaption {padding:2px; background:#ffffff; color:blue; text-align:center;}
+.NBMenuVSeparator { border-right:1px solid #DDD; }
+.NBMenuFoot { border-top:none; text-align:center; white-space:nowrap; }
+
+.NBMenuButton {font-size:11px;background:#DCECF8; text-align:center; border:1px solid #8A8FB5; margin:5px 2px 4px 2px;padding:0;white-space:nowrap;width:48px;} 
+
+.NBMenuButtonHover { background:#FFEEAA; border:1px solid #AAAADD; }
+
+/* Grid configuration menus */
+.NBCfgMenuOuter,.NBColumnsMenuOuter { border:1px solid #000000; }
+.NBCfgMenuHead,.NBColumnsMenuHead { padding-left:3px; }
+.NBCfgMenuBody,.NBColumnsMenuBody { padding-left:4px; padding-right:4px;}
+.NBCfgMenuFoot,.NBColumnsMenuFoot { padding-right:3px; padding-left:3px;}
+.NBCfgMenuButton { width:70px; } 
+.NBCfgMenuItemText,.NBColumnsMenuItemText { padding-left:3px; }
+.NBColumnsMenuItemText { white-space:nowrap; }
+.NBCfgMenuItem,.NBColumnsMenuItem { padding-top:3px; padding-bottom:3px;}
+.NBCfgMenuItemHover,.NBCfgMenuFocus,.NBCfgMenuFocusHover,
+.NBColumnsMenuItemHover,.NBColumnsMenuFocus,.NBColumnsMenuFocusHover { padding-top:2px; padding-bottom:2px;}
+
+/* Popup grid dialog */
+.NBPopupGridOuter { border:0; overflow:visible; }
+.NBPopupGridHead { padding:0; }
+.NBPopupGridBody { padding:0; }
+.NBPopupGridFoot { padding:0; }
+.NBPopupGridButton { width:50px;margin-top:-2px; margin-bottom:3px;} 
+
+/* Calendar, TGLib */
+.NBPickMain  {position:absolute; left:0; top:0; z-index:258; }
+
+.NBPickOuter {overflow:hidden; background:white; padding:1px; border:1px solid #426B8C; }
+
+.NBPickHeader{overflow:hidden; position:absolute; z-index:258; border:1px solid black; background:#ffffff; cursor:pointer; _cursor:hand;}
+.NBPickHeaderBottom{border-bottom:0; padding-bottom:1px;}
+.NBPickHeaderTop{border-top:0; padding-bottom:1px; }
+.NBPickHead {background:#5c8397; font:10px Dotum,Verdana,Arial; color:white; cursor:default; padding-left:5px; padding-top:1px; padding-bottom:1px;border-bottom:1px solid white;}
+.NBPickClose{float:right; width:14px; cursor:pointer; _cursor:hand; display:none;}
+.NBPickBody {cursor:default; padding:0; }
+.NBPickShadow{position:absolute; background:#888; z-index:257; margin:3px 0 0 3px;opacity:0.5; filter:alpha(opacity=50);} 
+.NBPickFooter,.NBPick2Footer{text-align:center; padding:2px; cursor:default; background:#EFF0F1; border-top:1px solid #E3E4E6}
+ 
+.NBPickMY{background-color:#C9E1F5;border-bottom:1px solid #99BCE8;color:#15498B; cursor:default;text-align:center;padding:2px 0 4px 0;}/* <-- Calender : Header Background */
+   
+.NBPickMYDown{padding-right:13px; background:url(d_down.gif) no-repeat right; cursor:pointer; _cursor:hand;}
+.NBPickMYUp {padding-right:13px; background:url(d_up.gif) no-repeat right center; cursor:pointer; _cursor:hand;}
+
+.NBPickMYRtl{padding-right:0; padding-left:13px; }
+.NBPickBL,.NBPickBR{padding-top:3px; cursor:pointer; _cursor:hand; width:16px; height:14px; overflow:hidden;}
+
+.NBPickBL {float:left; background:url(d_left.gif) no-repeat 50%; }
+.NBPickBR {float:right; background:url(d_right.gif) no-repeat 50%; }
+
+.NBPickTable{}
+.NBPickRow  {background:#ffffff;}
+
+.NBPickRowW {background:#DAEAF8;}
+
+.NBPickCell {width:22px;}
+.NBPickWDN {background:transparent; color:#333333;text-align:center; cursor:default; margin:2px 3px;padding:1px;}
+  
+.NBPickHover,.NBPickSelHover,.NBPickWD,.NBPickSa,.NBPickSu,.NBPickSel,.NBPickNow,.NBPickWDNE,.NBPickSaNE,.NBPickSuNE,
+.NBPickSelNE,.NBPickNowNE,.NBPickOM,.NBPickOMNE {text-align:center; border:1px solid #ffffff; cursor:pointer; _cursor:hand;margin:2px 3px;}
+
+.NBPickWN,.NBPickWNE {text-align:center; cursor:pointer; _cursor:hand;padding:3px 4px; border-right:1px solid #8CA9E1; background:#EFF0F1;}
+   
+.NBPickWDNE,.NBPickSaNE,.NBPickSuNE,.NBPickSelNE,.NBPickNowNE,.NBPickWNE {cursor:default;}
+.NBPickWD{background-color:#ffffff;}
+.NBPickSa{background-color:#ffffff;}
+.NBPickSu{background-color:#ffffff;}
+
+.NBPickSel{background-color:#FBEA54; border:1px solid #DAD1D1;}
+
+.NBPickSelNE{background-color:#fbea54; border:1px solid #dad1d1;}
+.NBPickNow {background-color:#c0f3ff; border:1px solid #dad1d1;}
+.NBPickNowNE{background-color:#c0f3ff; border:1px solid #dad1d1;}
+.NBPickHover{background-color:#ddd; border:1px solid #ddd;}
+
+.NBPickSelHover{background-color:#dddddd; border:1px solid #dddddd;}
+
+.NBPickOM{background-color:white; color:#aaaaaa;}
+.NBPickOMNE{color:#aaaaaa;}
+
+.NBPickEmpty{background:url(d_blank.gif) no-repeat 50%; cursor:pointer; _cursor:hand;padding:3px 0; }
+
+.NBPickTimeCell 
+{text-align:right; padding-bottom:4px; padding-top:6px; padding-right:5px; border-top:1px solid #8CA9E1; background:#EFF0F1;}
+
+.NBPickTime 
+{border:0px none; white-space:nowrap; text-align:right; background:#EFF0F1;}
+
+.NBPickButton{background:#DCECF8; text-align:center; border:1px solid #8A8FB5; width:45px; height:16px}
+    
+.NBPickButtonHover{background:#FFEEAA; border:1px solid #AAAADD; }
+
+.NBPick2Table{width:auto; vertical-align:middle}
+.NBPick2CellM{height:20px; width:55px; }
+.NBPick2CellY{height:20px; width:35px; vertical-align:middle }
+.NBPick2CellSep{height:20px; width:5px; }
+.NBPick2Cell{vertical-align:middle}
+.NBPick2M,.NBPick2Y,.NBPick2MSel,.NBPick2YSel,.NBPick2MHover,.NBPick2YHover,.NBPick2MSelHover,.NBPick2YSelHover
+{cursor:pointer; _cursor:hand; text-align:center; margin-left:1px; margin-right:1px; padding-left:4px; padding-right:4px; overflow:hidden; }
+   
+
+.NBPick2MSel,.NBPick2YSel {background:#C0F3FF; border:1px solid #DAD1D1; margin-left:0; margin-right:0;}
+
+.NBPick2MHover,.NBPick2YHover {background:#DDD; border:1px solid #ffffff; margin-left:0; margin-right:0;}
+
+.NBPick2MSelHover,.NBPick2YSelHover {background:#80E0F0; border:1px solid #FFFFFF;margin-left:0; margin-right:0;}   
+
+.NBPick2SepH {width:1px; height:1px; overflow:hidden; }
+.NBPick2Sep {width:1px; background:#E3E4E6; overflow:hidden; margin-left:2px; margin-right:2px; height:20px;}
+.NBPick2BL,.NBPick2BR {width:35px; cursor:pointer; _cursor:hand; }
+
+
+.NBPick2BL {background:url(d_left2.gif) no-repeat center center}
+.NBPick2BR {background:url(d_right2.gif) no-repeat center center}
+
+
+/* Edit controls, TGLib */
+.NBEdit,.NBEditInline {padding:2px 4px;border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666;background:#ffffff; white-space:nowrap; overflow:hidden;}
+  
+.NBEditInline { display:inline-block; vertical-align:bottom; }
+.NBEditInput,.NBEditTextarea {border:0 solid transparent; margin:0; padding:0;vertical-align: middle} 
+
+.NBEditTextarea { line-height:13px; }
+.NBEditSpaceInput { vertical-align:middle; }
+.NBEditNormalInput,.NBEditNormalTextarea,.NBEditSpaceTextarea { background-color:#FFFFFF; /*#FFDCFF;*/; }
+.NBEditInt,.NBEditFloat { text-align:right; }
+
+.NBEditMulti { white-space:normal; }
+.NBEditReadOnly { background-color:#FFEEFF; }   
+.NBEditParent { position:absolute; z-index:258; overflow:hidden; }
+
+.NBEnumHeaderLeft,.NBEnumHeaderRight,.NBEnumHeaderNone 
+{background:white; cursor:pointer; _cursor:hand; vertical-align:middle; text-align:left; padding:2px 0 2px 2px;}
+
+.NBEnumHeaderRight {background: url(combo.gif) no-repeat right center;margin:1px 1px 0 0;}
+ @media screen and (-webkit-min-device-pixel-ratio:0) {.NBEnumHeaderRight{margin:1px 0 0 0;}}/* hack:CR,SF */
+.NBEnumHeaderRight, x:-moz-any-link, x:default {margin:1px 0 0 0;} /* hack:FF */
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {.NBEnumHeaderRight{ margin:1px 0 0 0;}}/* hack:OP */
+
+.NBEnumMenuHeader { background:#ffffff; }
+
+.NBEnumControl,.NBEnumInline {
+   cursor:pointer; _cursor:hand; padding-left:15px; padding-right:4px; padding-top:2px; padding-bottom:2px;
+   border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; overflow:hidden;}
+   
+.NBEnumInline { display:inline-block; vertical-align:bottom; }
+.NBEnumHeader { cursor:pointer; _cursor:hand;padding-left:15px; padding-right:4px; padding-top:2px; padding-bottom:2px;} 
+
+/*  Custom scrollbars  */
+.NBCustScroll1RightHidden { background:url(VScroll.gif) left -108px; height:18px; overflow:hidden; }
+.NBCustScroll1Right { padding-right:18px; background:url(VScroll.gif) right 0; }
+.NBCustScroll1RightHover { padding-right:18px; background:url(VScroll.gif) right -18px; }
+.NBCustScroll1Left { padding-left:18px;  background:url(VScroll.gif) left 0; }
+.NBCustScroll1LeftHover { padding-left:18px;  background:url(VScroll.gif) left -18px; }
+.NBCustScroll1SliderRight { padding-right:3px; background:url(VScroll.gif) right -36px; }
+.NBCustScroll1SliderLeft { padding-left:3px; background:url(VScroll.gif) left -36px; }
+.NBCustScroll1SliderHIn { height:18px; overflow:hidden; background:url(VScroll.gif) center -54px; }
+.NBCustScroll1SliderRightHover { padding-right:3px; background:url(VScroll.gif) right -72px; }
+.NBCustScroll1SliderLeftHover { padding-left:3px; background:url(VScroll.gif) left -72px; }
+.NBCustScroll1SliderHInHover { height:18px; overflow:hidden; background:url(VScroll.gif) center -90px; }
+.NBCustScroll2RightHidden { background:url(VScroll.gif) left -108px; height:18px; overflow:hidden; }
+.NBCustScroll2Right { padding-right:18px; background:url(VScroll.gif) right 0; }
+.NBCustScroll2RightHover { padding-right:18px; background:url(VScroll.gif) right -18px; }
+.NBCustScroll2Left { padding-left:18px;  background:url(VScroll.gif) left 0; }
+.NBCustScroll2LeftHover { padding-left:18px;  background:url(VScroll.gif) left -18px; }
+.NBCustScroll2SliderRight { padding-right:3px; background:url(VScroll.gif) right -36px; }
+.NBCustScroll2SliderLeft { padding-left:3px; background:url(VScroll.gif) left -36px; }
+.NBCustScroll2SliderHIn { height:18px; overflow:hidden; background:url(VScroll.gif) center -54px; }
+.NBCustScroll2SliderRightHover { padding-right:3px; background:url(VScroll.gif) right -72px; }
+.NBCustScroll2SliderLeftHover { padding-left:3px; background:url(VScroll.gif) left -72px; }
+.NBCustScroll2SliderHInHover { height:18px; overflow:hidden; background:url(VScroll.gif) center -90px; }
+
+.NBCustScroll3Right,.NBCustScroll3RightHidden { background:white; height:9px; overflow:hidden; }
+.NBCustScroll3SliderRight,.NBCustScroll3SliderRightHover { padding-right:3px; height:9px; background:url(VScroll.gif) right -126px; }
+.NBCustScroll3SliderLeft,.NBCustScroll3SliderLeftHover { height:9px; background:url(VScroll.gif) left -126px; }
+.NBCustScroll3SliderRightHover { background-position:right -135px; }
+.NBCustScroll3SliderLeftHover { background-position:left -135px; }
+.NBCustScroll4Right,.NBCustScroll4RightHidden,.NBCustScroll4SliderRight,.NBCustScroll4SliderRightHover { height:1px; overflow:hidden; }
+
+.NBCustScroll1DownHidden { background:url(HScroll.png) -108px top; width:18px; overflow:hidden; }
+.NBCustScroll1Down { padding-bottom:18px; background:url(HScroll.png) 0px bottom; cursor:default; width:18px; overflow:hidden; }
+.NBCustScroll1DownHover { padding-bottom:18px; background:url(HScroll.png) -18px bottom; width:18px; overflow:hidden; }
+.NBCustScroll1Up { padding-top:18px; background:url(HScroll.png) 0px top; width:18px; overflow:hidden; }
+.NBCustScroll1UpHover { padding-top:18px;  background:url(HScroll.png) -18px top; width:18px; overflow:hidden; }
+.NBCustScroll1SliderDown { padding-bottom:3px; background:url(HScroll.png) -36px bottom; width:18px; overflow:hidden; }
+.NBCustScroll1SliderUp { padding-top:3px; background:url(HScroll.png) -36px top; width:18px; overflow:hidden; }
+.NBCustScroll1SliderVIn { background:url(HScroll.png) -54px center; width:18px; overflow:hidden; }
+.NBCustScroll1SliderDownHover { padding-bottom:3px; background:url(HScroll.png) -72px bottom; width:18px; overflow:hidden; }
+.NBCustScroll1SliderUpHover { padding-top:3px; background:url(HScroll.png) -72px top; width:18px; overflow:hidden; }
+.NBCustScroll1SliderVInHover { background:url(HScroll.png) -90px center; width:18px; overflow:hidden; }
+
+.NBCustScroll2DownHidden { background:url(HScroll.png) -108px top; width:18px; overflow:hidden; }
+.NBCustScroll2Down { padding-bottom:18px; background:url(HScroll.png) 0px bottom; cursor:default; width:18px; overflow:hidden; }
+.NBCustScroll2DownHover { padding-bottom:18px; background:url(HScroll.png) -18px bottom; width:18px; overflow:hidden; }
+.NBCustScroll2Up { padding-top:18px; background:url(HScroll.png) 0px top; width:18px; overflow:hidden; }
+.NBCustScroll2UpHover { padding-top:18px;  background:url(HScroll.png) -18px top; width:18px; overflow:hidden; }
+.NBCustScroll2SliderDown { padding-bottom:3px; background:url(HScroll.png) -36px bottom; width:18px; overflow:hidden; }
+.NBCustScroll2SliderUp { padding-top:3px; background:url(HScroll.png) -36px top; width:18px; overflow:hidden; }
+.NBCustScroll2SliderVIn { background:url(HScroll.png) -54px center; width:18px; overflow:hidden; }
+.NBCustScroll2SliderDownHover { padding-bottom:3px; background:url(HScroll.png) -72px bottom; width:18px; overflow:hidden; }
+.NBCustScroll2SliderUpHover { padding-top:3px; background:url(HScroll.png) -72px top; width:18px; overflow:hidden; }
+.NBCustScroll2SliderVInHover { background:url(HScroll.png) -90px center; width:18px; overflow:hidden; }
+
+.NBCustScroll3Down,.NBCustScroll3DownHidden { background:white; width:9px; overflow:hidden; cursor:default; }
+.NBCustScroll3SliderDown,.NBCustScroll3SliderDownHover { padding-bottom:3px; width:9px; background:url(HScroll.png) -126px bottom; }
+.NBCustScroll3SliderUp,.NBCustScroll3SliderUpHover { width:9px; background:url(HScroll.png) -126px top; cursor:default; }
+.NBCustScroll3SliderDownHover { background-position:-135px bottom; }
+.NBCustScroll3SliderUpHover { background-position:-135px top; cursor:default; }
+
+.NBCustScroll4Down,.NBCustScroll4DownHidden,.NBCustScroll4SliderDown,.NBCustScroll4SliderDownHover { width:1px; overflow:hidden; }
+
+/* Other messages, TGLib */
+.NBHintMain {position:absolute; margin-left:-1px; margin-top:-1px; left:0px; top:0px; z-index:260; background:#ffffff; cursor:default; }
+.NBHintOuter {overflow:hidden; border:1px solid #000000; background:#ffffff !important; color:black; text-align:left; }
+.NBHintHeaderOuter {background-color:#39aefb !important; color:#ffffff; border: 1px solid #ffffff; }
+.NBHintShadow {position:absolute; z-index:259;background:#888; opacity:0.3; filter:alpha(opacity=30);margin-left:2px; margin-top:2px;}
+.NBTipMain {position:absolute; left:0px; top:0px; z-index:262; visibility:hidden; }
+.NBTipOuter  {overflow:hidden; cursor:default; font:12px Arial;padding-left:3px; padding-right:3px; background:#E4E5F0; border:1px solid #777;}
+.NBTipBody {background:#E4E5F0; white-space:nowrap; }
+.NBTipShadow {position:absolute;z-index:261;background:#888; opacity:0.3; filter:alpha(opacity=30);visibility:hidden; margin-left:3px; margin-top:3px}
+.NBMouseOrig { background:yellow !important; opacity:0.5; filter:alpha(opacity=50); }
+.NBMouseDragObject { position:absolute; z-index:260; background:#888; opacity:0.5; filter:alpha(opacity=50); }
+.NBFocus { border:1px solid #AAF; border-top:1px solid #00F; border-left:1px solid #00F; background-color:#EEE; } 
+.GridDisabled { position:absolute; z-index:256; background:white; opacity:0.5; filter:alpha(opacity=50); } 
+
+/* Do not change, marks the style loaded */
+.NBLoaded { border:1px solid #000000 !important;}
+
+/*sum*/
+.NBSumCell{background:#eaf5ff; color:#FF060C;}/*//text-align: right;font-weight:bold;*/
+.NBSubSumCell{background: #FCF0E7; border-top:1px solid #F7BBA1; border-bottom:1px solid #F7BBA1; color:#DA5615}
+.NBCumulateCell{background: #FCF0E7; border-bottom:1px solid #F7BBA1; color:#BE3600}
+
+/* FindDialog */
+.NBH1Pop,.NBPPop{margin:0; padding:0}
+.NBPaddingl10{padding-left:10px}
+.NBPaddingT10{padding-top:10px}
+.NBPPop{ padding:0 0 10px 0; text-align:center }
+.NBPop{width:410px; overflow:hidden; border:1px solid #426B8C; padding:0; font-size:12px;background:#EBF2F5; font-family:dotum, Arial, Helvetica, sans-serif}
+.NBPopTitle{width:100%; border-bottom:1px solid #3a6ea0; font-size:12px; font-weight:bold; display:block; line-height:28px; color:#fff;
+background: #5689b9; /* Old browsers */
+background: -moz-linear-gradient(top,  #5689b9 0%, #3a6ea0 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5689b9), color-stop(100%,#3a6ea0)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #5689b9 0%,#3a6ea0 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #5689b9 0%,#3a6ea0 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #5689b9 0%,#3a6ea0 100%); /* IE10+ */
+background: linear-gradient(top,  #5689b9 0%,#3a6ea0 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5689b9', endColorstr='#3a6ea0',GradientType=0 ); /* IE6-9 */
+}
+.NBPopSearch{margin:10px; overflow:hidden; }
+.NBPopContent{border:1px solid #DBDCDD; background-color:#fff}
+.NBPopUl{list-style:none; margin:0; padding:10px;}
+.NBPopDiv{overflow:hidden; width:100%}
+.NBPopDiv2{overflow:hidden; width:100%}
+.NBPopLeft,.NBPopLeft2{width:220px; float:left; }
+.NBPopRight,.NBPopRight2{width:166px; float:right}
+.NBPopUl input {margin:-2px 2px 0px 0px;padding:0 ; width:13px; height:13px; vertical-align:middle;}
+.NBPopUl li{ padding-top:4px;padding-bottom:3px ; padding-left:5px}
+.NBBtn{margin-top:10px; text-align:center }
+.NBPopLeft, .NBPopRight{ height:120px}
+.NBPopLeft2, .NBPopRight2{ height:80px}
+.NBPopLabel{line-height:12px; margin:0 0 0 2px}
+.NBPopSubtitle{font-weight:bold; color:#000; border-bottom:1px solid  #E0E0E0; background-color:#E7E7E7;padding-left:4px;}
+.NBPopBtnBlue {text-align: center;text-decoration: none;color:#fff;position: relative;border:1px solid #316290; font-size:12px;width:50px !important;height:22px !important;
+background: #5689b9; /* Old browsers */
+background: -moz-linear-gradient(top,  #5689b9 0%, #3a6ea0 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5689b9), color-stop(100%,#3a6ea0)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #5689b9 0%,#3a6ea0 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #5689b9 0%,#3a6ea0 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #5689b9 0%,#3a6ea0 100%); /* IE10+ */
+background: linear-gradient(top,  #5689b9 0%,#3a6ea0 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5689b9', endColorstr='#3a6ea0',GradientType=0 ); /* IE6-9 */
+}
+.NBPopBtnBlue:hover {
+background: #3a6ea0; /* Old browsers */
+background: -moz-linear-gradient(top,  #3a6ea0 0%, #5689b9 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3a6ea0), color-stop(100%,#5689b9)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #3a6ea0 0%,#5689b9 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #3a6ea0 0%,#5689b9 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #3a6ea0 0%,#5689b9 100%); /* IE10+ */
+background: linear-gradient(top,  #3a6ea0 0%,#5689b9 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a6ea0', endColorstr='#5689b9',GradientType=0 ); /* IE6-9 */
+}		

@@ -1,0 +1,675 @@
+/* -----------------------------------------------------------------------*/
+/* ----------------- "Main" IBSheet style definition ---------------------*/
+/* -----------------------------------------------------------------------*/
+
+/* Base tags */
+.GYImage {padding-bottom:256px;}
+.GYNone {display:none;}
+.GYSection,.GYSectionFF3 {table-layout:fixed; width:0;}
+.GYSectionFF3 {border-collapse:collapse; }
+
+/* Sections */
+.GYMainTable {border:1px solid #858585; border-collapse:separate; text-align:left; background:#ffffff; font:12px Dotum,Helvetica,AppleGothic,Sans-serif;}
+.GYFootLeft,.GYFootMid {border-top:1px solid #858585;}
+.GYHeadLeft,.GYBodyLeft,.GYFootLeft,.GYHScrollLeft {border-right:1px solid #858585;}	
+.GYVScroll {padding-top:1px; padding-bottom:1px;}
+.GYHScrollLeft,.GYHScrollMid,.GYHScrollLeftResizeTouch,.GYHScrollRightResizeTouch {padding-left:1px; padding-right:1px; cursor:default;}
+.GYHScrollLeftResizeTouch {border-right:2px solid #000000; padding-right:18px; background:#F4F4F4;}
+.GYHScrollRightResizeTouch {border-left:2px solid #000000; padding-left:18px; background:#F4F4F4;}
+.GYHScrollMidLeftResizeTouch {border-left:1px solid #000000; padding-left:19px; background:#F4F4F4;}
+.GYHScrollMidRightResizeTouch {border-right:1px solid #000000; padding-right:19px; background:#F4F4F4;}
+.GYHScrollWide {padding-right:1px;}
+.GYHScrollHidden {overflow:visible !important; background:#F4F4F4; cursor:default; }
+.GYXScroll {background:#F4F4F4;}
+.GYPage {border-top:0px solid #E0E0E0;}
+
+/* Rows */
+.GYSpaceRowHeight{height:21px; }
+.GYRowHeight 	 {height:18px; }
+.GYRowHeightTouch{height:22px; }
+.GYSpaceMargin   {margin:0; }
+.GYSpaceMarginTouch{margin:5px; }
+.GYSpaceRow {background:#ffffff; white-space:nowrap; overflow:hidden; padding-top:2px; padding-bottom:2px; border-bottom:1px solid #e0e0ff;}
+.GYGroupRow,.GYSearchRow,.GYPagerRow 
+{background-color:#999999; white-space:nowrap; padding-top:5px; padding-bottom:5px; overflow:hidden; border-bottom:1px solid #858585;} 
+.GYGroupRow,.GYPagerRow {background-position:0 -1801px; }
+.GYFillRow {background:#ffffff; }
+.GYRowAbove,.GYRowBelow {border-left:1px solid #9cb6c8; border-right:1px solid #9cb6c8;}
+.GYRowAbove { margin-top:3px; overflow:hidden;}
+.GYRowBelow {margin-bottom:3px; overflow:hidden;}
+.GYNoDataRow {border-top:1px solid #000000;padding-left:5px; padding-top:5px; padding-bottom:5px;color:gray; font-style:italic;} 
+.GYCountRowTop {color:#ffffff; background-color:#999999; white-space:nowrap;padding-top:5px; padding-bottom:5px; overflow:hidden; border-bottom:1px solid #858585;}
+.GYCountRowBottom {color:#ffffff; background-color:#999999; white-space:nowrap; padding-top:5px; padding-bottom:5px; overflow:hidden; border-top:1px solid #858585;}
+
+/* Cell */
+.GYCell,.GYCellPanel,.GYCellFilter,.GYHeaderDrag,.GYHeaderGroup 
+ {border-bottom:1px solid #DFE1E3; border-right:1px solid #DFE1E3; border-left:0; border-top:0;vertical-align:top; overflow:hidden; height:auto; font-size:/*IBFS*/12px; font-family:/*IBFN*/"Dotum", "Helvetica", "AppleGothic", sans-serif;}
+
+.GYCellHeader,.GYCellHeaderEmpty
+ {color:#000000; vertical-align:middle; overflow:hidden;height:auto; background-color:#999999; padding-top:1px; border-right:1px solid #858585; border-bottom:1px solid #858585;} 
+.GYCellBorderFF3 {border-left:0;border-top:0;} 
+.GYCellSpace {vertical-align:top; padding-top:5px !important; }
+.GYCellSpacePanel,.GYCellSpaceBool {vertical-align:top; }
+.GYCellSpaceRadio { padding-top:3px !important;}
+.GYCellSpaceEditButton { vertical-align:top; padding-top:4px !important; border:1px solid #000000 !important; background-color:#ffffff !important; }
+.GYCellSpaceButtonButton { vertical-align:top; }
+.GYCellSpaceButton { vertical-align:top; padding-top:5px !important; whiSte-space:nowrap; }
+.GYCellSpaceAbove { border-top:1px solid #9cb6c8; }
+.GYCellSpaceBelow { border-bottom:1px solid #9cb6c8; }
+.GYCellPanel,.GYCellHeaderPanel{ white-space:nowrap; } 
+.GYCellHidden { background:transparent!important; border-top:none!important; border-bottom:none!important; }
+.GYHeaderButton { padding:0; }
+.GYHeaderGroup {background: #818181; color:#ffffff; padding-left:3px; }
+.GYHeaderGroupFocus {background-color: #C0C0A0; }
+.GYHeaderGroupDelete {background-color: #F0F0E0; color: #F0F0E0; }
+.GYHeaderGroupCustom {color:#BBB; padding-left:5px; cursor:default; white-space:nowrap;}
+.GYHeaderDrag {background: #9FB9E9; cursor:default; overflow:hidden; }
+.GYHeaderFocus {background: #9FB9E9;}
+.GYPanel {padding-left:80px;}
+.GYNoTreeLines1 {text-align:right;}
+.GYNoTreeLines2 {text-align:right; vertical-align:middle; padding-top:0;}
+.GYTree {padding-top:0; white-space:nowrap;}
+.GYSpannedTree {vertical-align:top;}
+.GYCellClassInner {padding-top:0; padding-bottom:0;}
+
+/* Inside cell */
+.GYStatus,.GYSeq,.GYPopup,.GYPopupEdit,.GYHtml,.GYText,.GYLines,.GYPass,.GYInt,.GYFloat,.GYDate,
+.GYLink,.GYImg,.GYRadio,.GYRadioText,.GYList,.GYEnum,.GYDropCols,.GYAbs,.GYPagerEdit,.GYUser 
+ {white-space:nowrap;vertical-align: middle;padding:2px 3px;} 
+.GYInt,.GYFloat { text-align:right; }
+.GYLines,.GYRadio,.GYHtml,.GYList { white-space:normal; }	
+.GYImg,.GYHtml {padding:0; } 
+.GYPass { padding:0 0 0 3px; }
+.GYRadio,.GYRadioText { padding:0; font-weight:normal !important; }
+.GYBool { text-align:center; }
+.GYIcon { background-repeat:no-repeat; }
+.GYHiddenSpace { display:none; }
+.GYDropCols { padding-top:2px !important; }
+
+.GYHeaderText {color:#ffffff; vertical-align:middle; font-size:/*IBFS*/12px; font-family:/*IBFN*/"Dotum", "Helvetica", "AppleGothic", sans-serif;}
+.GYAbs { padding:0; }
+.GYUser { padding:0; }
+.GYPagerEdit { text-align:center; padding-top:3px; }
+.GYMergedCellH {padding:0 0 5px 0}
+.GYMergedCellV {padding:0 0 1px 0}
+
+.GYWrap0 { white-space:nowrap; }
+.GYWrap1 { white-space:normal; }
+.GYEllipsis { white-space:nowrap; text-overflow:ellipsis;}
+
+.GYAlignLeft { text-align:left; }
+.GYAlignCenter { text-align:center; }
+.GYAlignJustify { text-align:center; }
+.GYAlignRight { text-align:right;}
+
+/* Tree Img with lines */
+.GY000,.GY010,.GY001,.GY011,.GY100,.GY110,.GY101,.GY111, 
+.GY000T,.GY010T,.GY001T,.GY011T,.GY100T,.GY110T,.GY101T,.GY111T,
+.GY00,.GY01,.GY10,.GY11,.GY00T,.GY01T,.GY10T,.GY11T,
+.GY0T,.GY1T,.GY0TL,.GY1TL,.GY0C,.GY1C,.GY0CL,.GY1CL,.GY0E,.GY1E,.GY0EL,.GY1EL,
+.GY0,.GY1,.GYT,.GYTL,.GYC,.GYCL,.GYE,.GYEL,.GYD0,.GYD1,.GYD2,.GYD3,.GYD4,.GYD0L,.GYD1L,.GYD2L,.GYD3L,.GYD4L 
+{background-image:url(Tree.gif); vertical-align:top;}
+
+u.GY000,u.GY010,u.GY001,u.GY011,u.GY100,u.GY110,u.GY101,u.GY111 { padding-left:63px; }
+u.GY000T,u.GY010T,u.GY001T,u.GY011T,u.GY100T,u.GY110T,u.GY101T,u.GY111T { padding-left:89px; }
+u.GY00,u.GY01,u.GY10,u.GY11 { padding-left:42px; }   
+u.GY00T,u.GY01T,u.GY10T,u.GY11T { padding-left:68px; }   
+u.GY0T,u.GY1T,u.GY0TL,u.GY1TL,u.GY0C,u.GY1C,u.GY0CL,u.GY1CL,u.GY0E,u.GY1E,u.GY0EL,u.GY1EL { padding-left:47px; }   
+u.GY0,u.GY1 { padding-left:21px; }
+u.GYT,u.GYTL,u.GYC,u.GYCL,u.GYE,u.GYEL,u.GYD0,u.GYD1,u.GYD2,u.GYD3,u.GYD4,u.GYD0L,u.GYD1L,u.GYD2L,u.GYD3L,u.GYD4L { padding-left:26px; }   
+
+.GY000,.GY000T{ background-position:0px 0px; }
+.GY010,.GY010T{ background-position:-128px 0; }
+.GY001,.GY001T{ background-position:-256px 0; }
+.GY011,.GY011T{ background-position:-384px 0; }
+.GY100,.GY100T{ background-position:-512px 0; }
+.GY110,.GY110T{ background-position:-640px 0; }
+.GY101,.GY101T{ background-position:-768px 0; }
+.GY111,.GY111T{ background-position:-896px 0; }
+.GY00,.GY00T  { background-position:-21px 0;  }
+.GY10,.GY10T  { background-position:-149px 0; }
+.GY01,.GY01T  { background-position:-277px 0; }
+.GY11,.GY11T  { background-position:-405px 0; }
+.GY0,.GY0T 	  { background-position:-42px 0;  }
+.GY1,.GY1T 	  { background-position:-298px 0; }
+.GYT 		  { background-position:-63px 0;  }
+.GY0TL 		  { background-position:-1024px 0; }
+.GY1TL 		  { background-position:-1088px 0; }
+.GY0C 	      { background-position:-1152px 0; }
+.GY1C 		  { background-position:-1216px 0; }
+.GY0CL 		  { background-position:-1280px 0; }
+.GY1CL 		  { background-position:-1344px 0; }
+.GY0E 		  { background-position:-1408px 0; }
+.GY1E 		  { background-position:-1472px 0; }
+.GY0EL 		  { background-position:-1536px 0; }
+.GY1EL 		  { background-position:-1600px 0; }
+.GYTL 		  { background-position:-1045px 0; }
+.GYC 		  { background-position:-1173px 0; }
+.GYCL 		  { background-position:-1301px 0; }
+.GYE 		  { background-position:-1429px 0; }
+.GYEL 		  { background-position:-1557px 0; }
+.GYD0 		  { background-position:-1664px 0; }
+.GYD1 		  { background-position:-1696px 0; }
+.GYD2 		  { background-position:-1728px 0; }
+.GYD3 		  { background-position:-1760px 0; }
+.GYD0L 		  { background-position:-1792px 0; }
+.GYD1L 		  { background-position:-1824px 0; }
+.GYD2L 		  { background-position:-1856px 0; }
+.GYD3L 		  { background-position:-1888px 0; }
+.GYD4 		  { background-position:-1920px 0; }
+.GYD4L 		  { background-position:-1952px 0; }
+
+/* Tree Img without lines  */
+.GYND0,.GYND1,.GYND2,.GYND3,.GYND4,.GYNC,.GYNE,.GYNCR,.GYNER {background-image:url(TreeN.gif); background-repeat:no-repeat; vertical-align:top; }
+u.GYND0,u.GYND1,u.GYND2,u.GYND3,u.GYND4,u.GYNC,u.GYNE,u.GYNCR,u.GYNER { padding-left:20px; }
+.GYND0 { background-position: -6px 0; }
+.GYND1 { background-position: -56px 0; }
+.GYND2 { background-position: -106px 0; }
+.GYND3 { background-position: -156px 0; }
+.GYND4 { background-position: -206px 0; }
+.GYNC { background-position:right -50px;}
+.GYNE { background-position:right -2000px;}
+.GYNCR { background-position:-255px -50px;}
+.GYNER { background-position:-255px -2000px;}
+u.GYNL { padding-left:21px; }
+
+/* Cell images */
+.GYIconLink { text-decoration:none; width:1000px; display:inline-block; }
+.GYIconLeft,.GYIconRight,.GYIconCenter {  background-repeat:no-repeat; }
+.GYIconLeft { background-position:left 0; padding-left:20px !important; }
+.GYIconRight { background-position:right 0; padding-right:20px !important; }
+.GYIconCenter { background-position:center 0; }
+.GYPopupRight { background:url(popup.gif) no-repeat 5px center; }
+.GYExpandLeft,.GYCollapseLeft,.GYExpandHeaderLeft,.GYCollapseHeaderLeft { padding-left:20px!important; }
+.GYDateRight{ padding-right:20px!important;}
+u.GYDateRight,.GYPopupRight { padding-right:0!important; padding-left:17px; }
+.GYDateRight {background:url(calendar.gif) no-repeat 2px center}
+.GYEnumRight { background:url(combo.gif) no-repeat right center; }
+u.GYEnumRight {padding-right:0; padding-left:17px}
+.GYExpandLeft { background:url(ic_plus.gif) no-repeat 3px center; padding:2px 0 0  18px; _padding:0 0 0 18px }
+.GYCollapseLeft { background:url(ic_minus.gif) no-repeat 3px center ; padding:2px 0 0  18px; _padding:0 0 0 18px }
+.GYRadio0Right,.GYRadio1Right,.GYRadio2Right,.GYRadio3Right {line-height:17px; padding-right:17px; padding-left:3px; }
+u.GYFilter0,u.GYFilter1 { padding-left:16px; }
+.GYBool0,.GYBool0RO,.GYBool1,.GYBool1RO,.GYBool2,.GYBool2RO,.GYBool3,.GYBool3RO {background-position:center center; background-repeat:no-repeat;}
+
+.GYBool0   { background-image:url(chk0.gif);  }
+.GYBool0RO { background-image:url(chk0R.gif); }
+
+.GYBool1   { background-image:url(chk1.gif);  }
+.GYBool1RO { background-image:url(chk1R.gif); }
+
+.GYBool2   { background-image:url(chk2.gif);  }
+.GYBool2RO { background-image:url(chk2R.gif); }
+
+.GYBool3   { background-image:url(chk3.gif);  }
+.GYBool3RO { background-image:url(chk3R.gif); }
+
+/* Filter images  */
+.GYFilter0Left,.GYFilter1Left,.GYFilter2Left,.GYFilter3Left,.GYFilter4Left,.GYFilter5Left,.GYFilter6Left,.GYFilter7Left,
+.GYFilter8Left,.GYFilter9Left,.GYFilter10Left,.GYFilter11Left,.GYFilter12Left {padding-left:18px;}
+
+.GYFilter0Left,.GYFilter0Menu 	{ width:18px; height:18px; background:url(filter0.gif) no-repeat left center; }   
+.GYFilter1Left,.GYFilter1Menu 	{ width:18px; height:18px; background:url(filter1.gif) no-repeat left center; }
+.GYFilter2Left,.GYFilter2Menu 	{ width:18px; height:18px; background:url(filter2.gif) no-repeat left center; }
+.GYFilter3Left,.GYFilter3Menu 	{ width:18px; height:18px; background:url(filter3.gif) no-repeat left center; }
+.GYFilter4Left,.GYFilter4Menu 	{ width:18px; height:18px; background:url(filter4.gif) no-repeat left center; }
+.GYFilter5Left,.GYFilter5Menu 	{ width:18px; height:18px; background:url(filter5.gif) no-repeat left center; }   
+.GYFilter6Left,.GYFilter6Menu 	{ width:18px; height:18px; background:url(filter6.gif) no-repeat left center; }
+.GYFilter7Left,.GYFilter7Menu 	{ width:18px; height:18px; background:url(filter7.gif) no-repeat left center; }
+.GYFilter8Left,.GYFilter8Menu 	{ width:18px; height:18px; background:url(filter8.gif) no-repeat left center; }
+.GYFilter9Left,.GYFilter9Menu 	{ width:18px; height:18px; background:url(filter9.gif) no-repeat left center; }
+.GYFilter10Left,.GYFilter10Menu { width:18px; height:18px; background:url(filter10.gif) no-repeat left center; }
+.GYFilter11Left,.GYFilter11Menu { width:18px; height:18px; background:url(filter11.gif) no-repeat left center; }
+.GYFilter12Left,.GYFilter12Menu { width:18px; height:18px; background:url(filter12.gif) no-repeat left center; }
+
+.GYFilter0Menu,.GYFilter1Menu,.GYFilter2Menu,.GYFilter3Menu,.GYFilter4Menu,.GYFilter5Menu,.GYFilter6Menu,.GYFilter7Menu,.GYFilter8Menu,.GYFilter9Menu,
+.GYFilter10Menu,.GYFilter11Menu,.GYFilter12Menu {overflow:hidden; margin: -2px 0 0 -1px;}
+.GYFilterMenuHeader { padding-left:2px; border-bottom:0 !important; } 
+
+/*  Keyfield Image */
+.GYKeyfield {background-image:url(keyfield.gif); display:inline-block; vertical-align:middle; background-repeat: no-repeat; background-position:center 1px; padding: 0 2px 0 4px; }
+
+/* GMKeyfield : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .GYKeyfield{  background-position: center 3px;padding: 0 2px 0 4px; }}
+
+/* CheckBox Header Image */
+.GYCheckHeader0 {background-image:url(chk0.gif); display:inline-block; vertical-align:middle; background-repeat:no-repeat; background-position:5px 1px; padding:2px 7px 0 6px; margin:0 2px 0 0;}
+
+/* GMCheckHeader0 : hack CR,SF*/
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{.GYCheckHeader0{ background-position:6px 1px ; padding: 2px 8px 0 6px; }}
+
+/* GMCheckHeader0 : hack FF*/
+.GYCheckHeader0, x:-moz-any-link, x:default { background-position:6px 1px ; padding: 2px 8px 0 6px; }
+
+/* GMCheckHeader0 : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .GYCheckHeader0{ background-position:7px center ; padding:1px  17px 0 0; }}
+
+.GYCheckHeader1 {background-image:url(chk1.gif); display:inline-block; vertical-align:middle; background-repeat:no-repeat; background-position:4px 1px ; padding:2px 6px 0 6px; margin:0 2px 0 0}
+
+/* GMCheckHeader1 : hack CR,SF*/
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{.GYCheckHeader1{ background-position:6px 1px ; padding: 2px 8px 0 6px; }}
+
+/* GMCheckHeader1 : hack FF*/
+.GYCheckHeader1, x:-moz-any-link, x:default { background-position:6px 1px ; padding: 2px 8px 0 6px; }
+
+/* GMCheckHeader1 : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .GYCheckHeader1 { background-position:7px center ; padding:1px  17px 0 0;  }}
+
+/* Sort images */
+.GYSort {display:block; float:right; margin:2px 2px 0;width:7px}
+
+
+/* State classes */
+/* The colors must be set by numbers not by names */
+.GYColorDefault  { background-color:#FFFFFF;}
+.GYColorNoFocus  { background-color:#E8F4FF;}
+.GYColorReadOnly { background-color:#E8E8E8;}
+.GYColorPreview  { background-color:#FFFFFF;}
+.GYColorAlternate{ background-color:#f3f3f3;}
+.GYColorSelected { background-color:/*#FFFF80*/#aadbff; }
+
+.GYColorFilter {background-color:#FFFFFF;}
+
+/*//.GYClassSelected { }*/
+.GYColorError   { background-color:#FF6969; }
+.GYColorDeleted { background-color:#FFCDCD; }
+.GYClassDeleted { font-style:italic; }
+.GYColorAdded   { background-color:#CDFFCD; }
+.GYClassAdded   { font-weight:bold; }
+.GYColorMoved1  { background-color:#FFFFFF; }
+.GYColorMoved2  { background-color:#D7EBEB; }
+.GYColorChanged { background-color:#EBEBFF; }
+.GYColorChangedCell { background-color:#E1E1FF; }
+.GYClassChangedCell { font-weight:bold; }
+.GYColorMaxChildren { background-color:#FFFFF0; }
+.GYColorDetail { background-color:#FFF0FF; }
+.GYColorDetailSelected { background-color:#FFF0E0; }
+.GYColorDragged{ background-color:#E0E0C0; }
+.GYColorFound1 { background-color:#FF87FF; }
+.GYColorFound2 { background-color:#FFC387; }
+.GYColorFound3 { background-color:#87FF87; }
+.GYColorHovered 			{ background-color:#F0F0FF; }
+.GYColorHoveredCell 		{ background-color:#C0C0FF; }
+.GYColorHoveredCellReadOnly { background-color:#F0F0F0; }
+.GYColorHoveredCellNoFocus 	{ background-color:#F8F8F8; }
+
+.GYClassHoveredCellHeader 	{ background-position:0px -250px; }
+.GYClassHoveredCellPanel 	{ background-position:0px -1801px; background-repeat:repeat-x; }
+
+.GYColorHoveredCellSpace 	{ background-color:#FFFFFF; }
+.GYColorHoveredCellSpaceEdit{ background-color:#C0C0FF; }
+.GYColorHoveredCellSpaceBool{ background-color:#FFFFFF; }
+.GYColorHoveredCellButton 	{ background-color:#FFFFFE; }
+.GYClassHoveredCellButton 	{ color:green; }
+.GYColorHoveredCellButton1 	{ background-color:#FFFFFE; }
+.GYClassHoveredCellButton1 	{ color:red; }
+.GYColorHoveredCellTab 		{ background-color:#FFFFFE; }
+.GYClassHoveredCellTab 		{ background-position:0px -1801px; color:green; }
+.GYColorHoveredCellTab1 	{ background-color:#99bbcc; }
+.GYClassHoveredCellTab1 	{ background-image:none; }
+
+.GYColorFocused 			{ background-color:#E6E6E6; }
+.GYColorFocusedCell 		{ background-color:#FFFFFE; }
+.GYColorFocusedCellSafari 	{ background-color:#A0A0FF; }
+.GYColorFocusedCellSpace 	{ background-color:#E6E6E6; }
+.GYColorFocusedCellButton 	{ background-color:#BCD; }
+.GYColorFocusedCellHeader 	{ background-color:#FFFFFE; }
+.GYColorFocusedCellPanel 	{ background-color:#FFFFFE; }
+.GYColorEditedCell 			{ background-color:#FFFFFF; }
+.GYColorViewedCell 			{ background-color:#FFFFFF; }
+
+/* Hover, focus, edit cursors */
+.GYHoverRowBackground 	{ opacity:0.1; filter:alpha(opacity=10); background:#00F; }
+.GYHoverRowBorder 		{ z-index:0; border-top:1px solid #BBF; border-bottom:1px solid #BBF; cursor:default; }
+.GYHoverCellBorder 		{ z-index:0; padding:1px; border:1px solid #A0A0F0; background:white; }
+.GYFocusRowBackground 	{ opacity:0.1; filter:alpha(opacity=50); background:/*IBSB*/#FFFF9F; } /* <-- Sheet : Selected Row Background */
+.GYFocusRowBorder 		{ z-index:0; border:1px solid /*IBSB*/#FAC800; } /* <-- Sheet : Selected Row Border */
+.GYFocusCellBorder		{ z-index:0; border:2px solid /*IBSB*/#FAC800; } /* <-- Sheet : Selected Cell Border */
+.GYFocusCellSpaceBorder,.GYEditCellSpaceBorder { z-index:4; }
+.GYEditCellBorder 		{ z-index:0; border:2px solid #FF6666;}    /*<-- Sheet : CellEdit Border */
+.GYEditCellInput 		{ position:relative; border:0 solid #39aefb; overflow:hidden; z-index:2; } 
+
+.GYCursorBackground, .GYCursorBorderLeft ,.GYCursorBorderRight,.GYCursorBorderTop,.GYCursorBorderBottom 
+ {position:relative;overflow:hidden;}
+
+.GYCursorBackground  {border:none; padding:0;}
+.GYCursorBorderLeft  {padding-right:0; padding-top:0; padding-bottom:0; border-right:none; border-top:none; border-bottom:none;  width:0; height:0;}
+.GYCursorBorderRight {padding-left:0; padding-top:0; padding-bottom:0; border-left:none; border-top:none; border-bottom:none;  width:0; height:0;}
+.GYCursorBorderTop 	 {padding-bottom:0; padding-left:0; padding-right:0; border-bottom:none; border-left:none; border-right:none;  width:0; height:0;}
+.GYCursorBorderBottom{padding-top:0; padding-left:0; padding-right:0; border-top:none; border-left:none; border-right:none; width:0; height:0;}
+
+/* Cell edges */
+.GYNoLeft { border-left:0; }
+.GYNoRight { border-right:0; }
+
+/* Dragging */
+.GYMouseObject { opacity:0.5; filter:alpha(opacity=50); z-index:300; overflow:hidden;}
+.GYDragObject {z-index:300; margin-left:10px; margin-top:10px; padding-left:3px; padding-right:3px;background:#E4E5F0 ; border:1px solid #777;}
+.GYDragColInsideTop,.GYDragColInsideBottom,.GYDragColOutsideTop,.GYDragColOutsideBottom{position:absolute;width:10px; height:11px; overflow:hidden; z-index:258;}
+.GYDragColInsideTop 	{background:url(in_top.gif) no-repeat;} 	
+.GYDragColInsideBottom  {background:url(in_bottom.gif) no-repeat;}	
+.GYDragColOutsideTop  	{background:url(out_top.gif) no-repeat;}	
+.GYDragColOutsideBottom {background:url(out_bottom.gif) no-repeat;}	 
+
+/* Messages */
+.GYDisabled{position:absolute; z-index:264; background:#ffffff; opacity:0.5; filter:alpha(opacity=50); } 
+.GYProcess {position: absolute; left:0; top:0; background:#E2F0FF; border:1px solid #777; white-space:nowrap; text-align:center; visibility:hidden; z-index:266;}
+.GYMessage {background:#E2F0FF; border:1px solid #000000; padding:10px; white-space:nowrap; text-align:center;
+			 position: absolute; left:0; top:0; visibility:hidden; z-index:266;}
+.GYMessageShadow 
+{position:absolute; margin-left:3px; margin-top:3px; z-index:265;background:#888; opacity:0.5; filter:alpha(opacity=50); left:0; top:0; visibility:hidden;}
+      
+/* Other */
+/* !!! No .GY style prefix here !!! */
+.GridTmpTag { position:absolute; left:5px; top:5px; visibility:hidden; }
+
+/* Popup menus, TGLib */
+.GYMenuMain  {position:absolute;left:0;top:0; z-index:258;}
+.GYMenuOuter {overflow:hidden; border:1px solid #000000; background:#fff; padding:1px; margin:1px;}
+.GYMenuHeader{overflow:hidden; position:absolute; z-index:258;border:1px solid #b0b0c0; background:#fff; cursor:pointer; _cursor:hand;}
+.GYMenuHead {background:#183873; color:white; cursor:default;text-align:center; padding-top:5px; padding-bottom:4px;}
+.GYMenuClose {float:right; width:14px; cursor:pointer; _cursor:hand; display:none;}
+.GYMenuBody {cursor:default; background-color:#fff; padding-top:1px; padding-bottom:1px;}
+.GYMenuShadow {position:absolute;margin:3px 0 0 3px;z-index:257;background-color:#888; opacity:0.5; filter:alpha(opacity=50);}
+.GYMenuCheckedIconRight {padding-right:17px; background:url(chk1.gif) no-repeat 96% center; }
+.GYMenuUncheckedIconRight { padding-right:17px;background:url(chk0.gif) no-repeat 96% center ; }
+
+.GYMenuCursorIcon {background-image:url(d_gray_right.gif); background-repeat:no-repeat; background-position: 3px center;_background-color:#fff}
+.GYMenuHoverIcon {background-image:url(d_right.gif); background-repeat:no-repeat; background-position: 3px center; _background-color:#ffeeaa }   
+
+.GYMenuNextIcon { padding-right:10px; }
+.GYMenuNextIconRtl { padding-left:10px; }
+
+.GYMenuItemText,.GYMenuItemIcon,.GYMenuEnum,.GYMenuEnumHeader,.GYMenuEdit 
+{white-space:nowrap; overflow:hidden; vertical-align: middle; padding:1px 0 0 0}
+.GYMenuItemDisabled {opacity:0.50; filter:alpha(opacity=30); overflow:hidden; }
+.GYMenuLevel {color:blue;text-align:center; }  
+.GYMenuEnumParent,.GYMenuEditParent {padding-left:5px; padding-right:2px}
+.GYMenuItemIcon {background-repeat:no-repeat;}
+.GYMenuEnum {border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; padding-left:15px; overflow:hidden;}
+.GYMenuEnumHeader  {padding:1px 0 2px 16px; cursor:default; } 
+.GYMenuEdit{border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; background:white; overflow:hidden;white-space:nowrap;
+  padding-left:2px; padding-right:2px;}
+.GYMenuEditInput,.GYMenuEditTextarea {margin:0;padding:0;border:0; background:#FDD;_margin:-1px; _padding-right:1px; _padding_left:1px; }   
+.GYMenuEditTextarea { line-height:13px;  }   
+.GYMenuEditInt,.GYMenuEditFloat,.GYMenuEditDate { text-align:right; } 
+.GYMenuEditMulti { white-space:normal; }
+.GYMenuItem {background-color:#ffffff;padding:2px;}  
+.GYMenuItemHover {background-color:#E8E8E8; border:1px solid #727478;margin:0 1px; padding:1px 0;}
+.GYMenuFocusHover {margin:1px; background-color:#F0F1F1; border:1px solid #000000;}
+.GYMenuFocus 	  {margin:1px; background-color:#F0F1F1; border:1px solid #CFCFCF;}
+.GYMenuSeparator {margin:1px 3px 0 3px; height:1px; border-top:1px solid #aaaadd; overflow:hidden;}
+.GYMenuCaption {padding:2px; background:#ffffff; color:blue; text-align:center;}
+.GYMenuVSeparator { border-right:1px solid #DDD; }
+.GYMenuFoot { border-top:none; text-align:center; white-space:nowrap; }
+.GYMenuButton {font-size:11px;background:#DFDFDF; text-align:center; border:1px solid #727478;margin:5px 2px 4px 2px;padding:0;white-space:nowrap;width:48px;} 
+.GYMenuButtonHover { background:#E8E8E8; border:1px solid #727478; }
+
+/* Grid configuration menus */
+.GYCfgMenuOuter,.GYColumnsMenuOuter { border:1px solid #000000; }
+.GYCfgMenuHead,.GYColumnsMenuHead { padding-left:3px; }
+.GYCfgMenuBody,.GYColumnsMenuBody { padding-left:4px; padding-right:4px;}
+.GYCfgMenuFoot,.GYColumnsMenuFoot { padding-right:3px; padding-left:3px;}
+.GYCfgMenuButton { width:70px; } 
+.GYCfgMenuItemText,.GYColumnsMenuItemText { padding-left:3px; }
+.GYColumnsMenuItemText { white-space:nowrap; }
+.GYCfgMenuItem,.GYColumnsMenuItem { padding-top:3px; padding-bottom:3px;}
+.GYCfgMenuItemHover,.GYCfgMenuFocus,.GYCfgMenuFocusHover,
+.GYColumnsMenuItemHover,.GYColumnsMenuFocus,.GYColumnsMenuFocusHover { padding-top:2px; padding-bottom:2px;}
+
+/* Popup grid dialog */
+.GYPopupGridOuter { border:0; overflow:visible; }
+.GYPopupGridHead { padding:0; }
+.GYPopupGridBody { padding:0; }
+.GYPopupGridFoot { padding:0; }
+.GYPopupGridButton { width:50px;margin-top:-2px; margin-bottom:3px;} 
+
+/* Calendar, TGLib */
+.GYPickMain  {position:absolute; left:0; top:0; z-index:258; }
+.GYPickOuter {overflow:hidden; background:white; padding:1px; border:1px solid #707275; }
+.GYPickHeader{overflow:hidden; position:absolute; z-index:258; border:1px solid black; background:#ffffff; cursor:pointer; _cursor:hand;}
+.GYPickHeaderBottom{border-bottom:0; padding-bottom:1px;}
+.GYPickHeaderTop{border-top:0; padding-bottom:1px; }
+.GYPickHead {background:#5c8397; font:10px Dotum,Verdana,Arial; color:white; cursor:default; padding-left:5px; padding-top:1px; padding-bottom:1px;border-bottom:1px solid white;}
+.GYPickClose{float:right; width:14px; cursor:pointer; _cursor:hand; display:none;}
+.GYPickBody {cursor:default; padding:0; }
+.GYPickShadow{position:absolute; background:#888; z-index:257; margin:3px 0 0 3px;opacity:0.5; filter:alpha(opacity=50);} 
+.GYPickFooter,.GYPick2Footer{text-align:center; padding:2px; cursor:default; background:#EFF0F1; border-top:1px solid #E3E4E6}
+ 
+.GYPickMY{background-color:#DFDFDF;border-bottom:1px solid #C6C9CC;color:#434343; cursor:default;text-align:center;padding:2px 0 4px 0;}/* <-- Calender : Header Background */
+   
+.GYPickMYDown{padding-right:13px; background:url(d_down.gif) no-repeat right; cursor:pointer; _cursor:hand;}
+.GYPickMYUp {padding-right:13px; background:url(d_up.gif) no-repeat right center; cursor:pointer; _cursor:hand;}
+
+.GYPickMYRtl{padding-right:0; padding-left:13px; }
+.GYPickBL,.GYPickBR{padding-top:3px; cursor:pointer; _cursor:hand; width:16px; height:14px; overflow:hidden;}
+
+.GYPickBL {float:left; background:url(d_left.gif) no-repeat 50%; }
+.GYPickBR {float:right; background:url(d_right.gif) no-repeat 50%; }
+
+.GYPickTable{}
+.GYPickRow  {background:#ffffff;}
+.GYPickRowW {background:#E8E8E8;}
+.GYPickCell {width:22px;}
+.GYPickWDN {background:transparent; color:#333333;text-align:center; cursor:default; margin:2px 3px;padding:1px;}
+  
+.GYPickHover,.GYPickSelHover,.GYPickWD,.GYPickSa,.GYPickSu,.GYPickSel,.GYPickNow,.GYPickWDNE,.GYPickSaNE,.GYPickSuNE,
+.GYPickSelNE,.GYPickNowNE,.GYPickOM,.GYPickOMNE {text-align:center; border:1px solid #ffffff; cursor:pointer; _cursor:hand;margin:2px 3px;}
+.GYPickWN,.GYPickWNE {text-align:center; cursor:pointer; _cursor:hand;padding:3px 4px; border-right:1px solid #C6C9CC; background:#EFF0F1;}
+   
+.GYPickWDNE,.GYPickSaNE,.GYPickSuNE,.GYPickSelNE,.GYPickNowNE,.GYPickWNE {cursor:default;}
+.GYPickWD{background-color:#ffffff;}
+.GYPickSa{background-color:#ffffff;}
+.GYPickSu{background-color:#ffffff;}
+.GYPickSel{background-color:#CCFF00 ; border:1px solid #cccccc;}
+.GYPickSelNE{background-color:#fbea54; border:1px solid #dad1d1;}
+.GYPickNow {background-color:#c0f3ff; border:1px solid #dad1d1;}
+.GYPickNowNE{background-color:#c0f3ff; border:1px solid #dad1d1;}
+.GYPickHover{background-color:#ddd; border:1px solid #ddd;}
+.GYPickSelHover{background-color:#dddddd; border:1px solid #dddddd;}
+.GYPickOM{background-color:white; color:#aaaaaa;}
+.GYPickOMNE{color:#aaaaaa;}
+
+.GYPickEmpty{background:url(d_blank.gif) no-repeat 50%; cursor:pointer; _cursor:hand;padding:3px 0; }
+
+.GYPickTimeCell 
+{text-align:right; padding-bottom:4px; padding-top:6px; padding-right:5px; border-top:1px solid #C6C9CC; background:#EFF0F1;}
+
+.GYPickTime 
+{border:0px none; white-space:nowrap; text-align:right; background:#EFF0F1;}
+
+.GYPickButton{background:#DFDFDF; text-align:center; border:1px solid #727478; width:45px; height:16px}
+    
+.GYPickButtonHover{background:#E8E8E8; border:1px solid #727478; }
+.GYPick2Table{width:auto; vertical-align:middle}
+.GYPick2CellM{height:20px; width:55px; }
+.GYPick2CellY{height:20px; width:35px; vertical-align:middle }
+.GYPick2CellSep{height:20px; width:5px; }
+.GYPick2Cell{vertical-align:middle}
+.GYPick2M,.GYPick2Y,.GYPick2MSel,.GYPick2YSel,.GYPick2MHover,.GYPick2YHover,.GYPick2MSelHover,.GYPick2YSelHover
+{cursor:pointer; _cursor:hand; text-align:center; margin-left:1px; margin-right:1px; padding-left:4px; padding-right:4px; overflow:hidden; }
+   
+.GYPick2MSel,.GYPick2YSel {background:#CCFF00; border:1px solid #cccccc; margin-left:0; margin-right:0;}
+.GYPick2MHover,.GYPick2YHover {background:#DDD; border:1px solid #ffffff; margin-left:0; margin-right:0;}
+.GYPick2MSelHover,.GYPick2YSelHover {background:#DDFF53; border:1px solid #FFFFFF;margin-left:0; margin-right:0;}   
+.GYPick2SepH {width:1px; height:1px; overflow:hidden; }
+.GYPick2Sep {width:1px; background:#E3E4E6; overflow:hidden; margin-left:2px; margin-right:2px; height:20px;}
+.GYPick2BL,.GYPick2BR {width:35px; cursor:pointer; _cursor:hand; }
+
+
+.GYPick2BL {background:url(d_left2.gif) no-repeat center center}
+.GYPick2BR {background:url(d_right2.gif) no-repeat center center}
+
+
+/* Edit controls, TGLib */
+.GYEdit,.GYEditInline {padding:2px 4px;border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666;background:#ffffff; white-space:nowrap; overflow:hidden;}
+  
+.GYEditInline { display:inline-block; vertical-align:bottom; }
+.GYEditInput,.GYEditTextarea {border:0 solid transparent; margin:0; padding:0;vertical-align: middle} 
+
+.GYEditTextarea { line-height:13px; }
+.GYEditSpaceInput { vertical-align:middle; }
+.GYEditNormalInput,.GYEditNormalTextarea,.GYEditSpaceTextarea { background-color:#FFFFFF; /*#FFDCFF;*/; }
+.GYEditInt,.GYEditFloat { text-align:right; }
+
+.GYEditMulti { white-space:normal; }
+.GYEditReadOnly { background-color:#FFEEFF; }   
+.GYEditParent { position:absolute; z-index:258; overflow:hidden; }
+
+.GYEnumHeaderLeft,.GYEnumHeaderRight,.GYEnumHeaderNone 
+{background:white; cursor:pointer; _cursor:hand; vertical-align:middle; text-align:left; padding:2px 0 2px 2px;}
+
+.GYEnumHeaderRight {background: url(combo.gif) no-repeat right center;margin:1px 1px 0 0;}
+ @media screen and (-webkit-min-device-pixel-ratio:0) {.GYEnumHeaderRight{margin:1px 0 0 0;}}/* hack:CR,SF */
+.GYEnumHeaderRight, x:-moz-any-link, x:default {margin:1px 0 0 0;} /* hack:FF */
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {.GYEnumHeaderRight{ margin:1px 0 0 0;}}/* hack:OP */
+
+.GYEnumMenuHeader { background:#ffffff; }
+
+.GYEnumControl,.GYEnumInline {
+   cursor:pointer; _cursor:hand; padding-left:15px; padding-right:4px; padding-top:2px; padding-bottom:2px;
+   border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; overflow:hidden;}
+   
+.GYEnumInline { display:inline-block; vertical-align:bottom; }
+.GYEnumHeader { cursor:pointer; _cursor:hand;padding-left:15px; padding-right:4px; padding-top:2px; padding-bottom:2px;} 
+
+/*  Custom scrollbars  */
+.GYCustScroll1RightHidden { background:url(VScroll.gif) left -108px; height:18px; overflow:hidden; }
+.GYCustScroll1Right { padding-right:18px; background:url(VScroll.gif) right 0; }
+.GYCustScroll1RightHover { padding-right:18px; background:url(VScroll.gif) right -18px; }
+.GYCustScroll1Left { padding-left:18px;  background:url(VScroll.gif) left 0; }
+.GYCustScroll1LeftHover { padding-left:18px;  background:url(VScroll.gif) left -18px; }
+.GYCustScroll1SliderRight { padding-right:3px; background:url(VScroll.gif) right -36px; }
+.GYCustScroll1SliderLeft { padding-left:3px; background:url(VScroll.gif) left -36px; }
+.GYCustScroll1SliderHIn { height:18px; overflow:hidden; background:url(VScroll.gif) center -54px; }
+.GYCustScroll1SliderRightHover { padding-right:3px; background:url(VScroll.gif) right -72px; }
+.GYCustScroll1SliderLeftHover { padding-left:3px; background:url(VScroll.gif) left -72px; }
+.GYCustScroll1SliderHInHover { height:18px; overflow:hidden; background:url(VScroll.gif) center -90px; }
+.GYCustScroll2RightHidden { background:url(VScroll.gif) left -108px; height:18px; overflow:hidden; }
+.GYCustScroll2Right { padding-right:18px; background:url(VScroll.gif) right 0; }
+.GYCustScroll2RightHover { padding-right:18px; background:url(VScroll.gif) right -18px; }
+.GYCustScroll2Left { padding-left:18px;  background:url(VScroll.gif) left 0; }
+.GYCustScroll2LeftHover { padding-left:18px;  background:url(VScroll.gif) left -18px; }
+.GYCustScroll2SliderRight { padding-right:3px; background:url(VScroll.gif) right -36px; }
+.GYCustScroll2SliderLeft { padding-left:3px; background:url(VScroll.gif) left -36px; }
+.GYCustScroll2SliderHIn { height:18px; overflow:hidden; background:url(VScroll.gif) center -54px; }
+.GYCustScroll2SliderRightHover { padding-right:3px; background:url(VScroll.gif) right -72px; }
+.GYCustScroll2SliderLeftHover { padding-left:3px; background:url(VScroll.gif) left -72px; }
+.GYCustScroll2SliderHInHover { height:18px; overflow:hidden; background:url(VScroll.gif) center -90px; }
+
+.GYCustScroll3Right,.GYCustScroll3RightHidden { background:white; height:9px; overflow:hidden; }
+.GYCustScroll3SliderRight,.GYCustScroll3SliderRightHover { padding-right:3px; height:9px; background:url(VScroll.gif) right -126px; }
+.GYCustScroll3SliderLeft,.GYCustScroll3SliderLeftHover { height:9px; background:url(VScroll.gif) left -126px; }
+.GYCustScroll3SliderRightHover { background-position:right -135px; }
+.GYCustScroll3SliderLeftHover { background-position:left -135px; }
+.GYCustScroll4Right,.GYCustScroll4RightHidden,.GYCustScroll4SliderRight,.GYCustScroll4SliderRightHover { height:1px; overflow:hidden; }
+
+.GYCustScroll1DownHidden { background:url(HScroll.png) -108px top; width:18px; overflow:hidden; }
+.GYCustScroll1Down { padding-bottom:18px; background:url(HScroll.png) 0px bottom; cursor:default; width:18px; overflow:hidden; }
+.GYCustScroll1DownHover { padding-bottom:18px; background:url(HScroll.png) -18px bottom; width:18px; overflow:hidden; }
+.GYCustScroll1Up { padding-top:18px; background:url(HScroll.png) 0px top; width:18px; overflow:hidden; }
+.GYCustScroll1UpHover { padding-top:18px;  background:url(HScroll.png) -18px top; width:18px; overflow:hidden; }
+.GYCustScroll1SliderDown { padding-bottom:3px; background:url(HScroll.png) -36px bottom; width:18px; overflow:hidden; }
+.GYCustScroll1SliderUp { padding-top:3px; background:url(HScroll.png) -36px top; width:18px; overflow:hidden; }
+.GYCustScroll1SliderVIn { background:url(HScroll.png) -54px center; width:18px; overflow:hidden; }
+.GYCustScroll1SliderDownHover { padding-bottom:3px; background:url(HScroll.png) -72px bottom; width:18px; overflow:hidden; }
+.GYCustScroll1SliderUpHover { padding-top:3px; background:url(HScroll.png) -72px top; width:18px; overflow:hidden; }
+.GYCustScroll1SliderVInHover { background:url(HScroll.png) -90px center; width:18px; overflow:hidden; }
+
+.GYCustScroll2DownHidden { background:url(HScroll.png) -108px top; width:18px; overflow:hidden; }
+.GYCustScroll2Down { padding-bottom:18px; background:url(HScroll.png) 0px bottom; cursor:default; width:18px; overflow:hidden; }
+.GYCustScroll2DownHover { padding-bottom:18px; background:url(HScroll.png) -18px bottom; width:18px; overflow:hidden; }
+.GYCustScroll2Up { padding-top:18px; background:url(HScroll.png) 0px top; width:18px; overflow:hidden; }
+.GYCustScroll2UpHover { padding-top:18px;  background:url(HScroll.png) -18px top; width:18px; overflow:hidden; }
+.GYCustScroll2SliderDown { padding-bottom:3px; background:url(HScroll.png) -36px bottom; width:18px; overflow:hidden; }
+.GYCustScroll2SliderUp { padding-top:3px; background:url(HScroll.png) -36px top; width:18px; overflow:hidden; }
+.GYCustScroll2SliderVIn { background:url(HScroll.png) -54px center; width:18px; overflow:hidden; }
+.GYCustScroll2SliderDownHover { padding-bottom:3px; background:url(HScroll.png) -72px bottom; width:18px; overflow:hidden; }
+.GYCustScroll2SliderUpHover { padding-top:3px; background:url(HScroll.png) -72px top; width:18px; overflow:hidden; }
+.GYCustScroll2SliderVInHover { background:url(HScroll.png) -90px center; width:18px; overflow:hidden; }
+
+.GYCustScroll3Down,.GYCustScroll3DownHidden { background:white; width:9px; overflow:hidden; cursor:default; }
+.GYCustScroll3SliderDown,.GYCustScroll3SliderDownHover { padding-bottom:3px; width:9px; background:url(HScroll.png) -126px bottom; }
+.GYCustScroll3SliderUp,.GYCustScroll3SliderUpHover { width:9px; background:url(HScroll.png) -126px top; cursor:default; }
+.GYCustScroll3SliderDownHover { background-position:-135px bottom; }
+.GYCustScroll3SliderUpHover { background-position:-135px top; cursor:default; }
+
+.GYCustScroll4Down,.GYCustScroll4DownHidden,.GYCustScroll4SliderDown,.GYCustScroll4SliderDownHover { width:1px; overflow:hidden; }
+
+/* Other messages, TGLib */
+.GYHintMain {position:absolute; margin-left:-1px; margin-top:-1px; left:0px; top:0px; z-index:260; background:#ffffff; cursor:default; }
+.GYHintOuter {overflow:hidden; border:1px solid #000000; background:#ffffff !important; color:black; text-align:left; }
+.GYHintHeaderOuter {background-color:#39aefb !important; color:#ffffff; border: 1px solid #ffffff; }
+.GYHintShadow {position:absolute; z-index:259;background:#888; opacity:0.3; filter:alpha(opacity=30);margin-left:2px; margin-top:2px;}
+.GYTipMain {position:absolute; left:0px; top:0px; z-index:262; visibility:hidden; }
+.GYTipOuter  {overflow:hidden; cursor:default; font:12px Arial;padding-left:3px; padding-right:3px; background:#E4E5F0; border:1px solid #777;}
+.GYTipBody {background:#E4E5F0; white-space:nowrap; }
+.GYTipShadow {position:absolute;z-index:261;background:#888; opacity:0.3; filter:alpha(opacity=30);visibility:hidden; margin-left:3px; margin-top:3px}
+.GYMouseOrig { background:yellow !important; opacity:0.5; filter:alpha(opacity=50); }
+.GYMouseDragObject { position:absolute; z-index:260; background:#888; opacity:0.5; filter:alpha(opacity=50); }
+.GYFocus { border:1px solid #AAF; border-top:1px solid #00F; border-left:1px solid #00F; background-color:#EEE; } 
+.GridDisabled { position:absolute; z-index:256; background:white; opacity:0.5; filter:alpha(opacity=50); } 
+
+/* Do not change, marks the style loaded */
+.GYLoaded { border:1px solid #000000 !important;}
+
+/*sum*/
+.GYSumCell{background:#eaeaea; color:#FF060C;}/*//text-align: right;font-weight:bold;*/
+.GYSubSumCell{background: #FCF0E7; border-top:1px solid #F7BBA1; border-bottom:1px solid #F7BBA1; color:#DA5615}
+.GYCumulateCell{background: #FCF0E7; border-bottom:1px solid #F7BBA1; color:#BE3600}
+
+/* FindDialog */
+.GYH1Pop,.GYPPop{margin:0; padding:0}
+.GYPaddingl10{padding-left:10px}
+.GYPaddingT10{padding-top:10px}
+.GYPPop{ padding:0 0 10px 0; text-align:center }
+.GYPop{width:410px; overflow:hidden; border:1px solid #767676; padding:0; font-size:12px;background:#F3F3F3; font-family:dotum, Arial, Helvetica, sans-serif}
+.GYPopTitle{width:100%;color:#fff;border-bottom:1px solid #767676; font-size:12px; font-weight:bold; display:block; line-height:28px;
+background: #a8a8a8; /* Old browsers */
+background: -moz-linear-gradient(top,  #a8a8a8 0%, #999999 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a8a8a8), color-stop(100%,#999999)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #a8a8a8 0%,#999999 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #a8a8a8 0%,#999999 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #a8a8a8 0%,#999999 100%); /* IE10+ */
+background: linear-gradient(top,  #a8a8a8 0%,#999999 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a8a8a8', endColorstr='#999999',GradientType=0 ); /* IE6-9 */
+}
+.GYPopSearch{margin:10px; overflow:hidden; }
+.GYPopContent{border:1px solid #DBDCDD; background-color:#fff}
+.GYPopUl{list-style:none; margin:0; padding:10px;}
+.GYPopDiv{overflow:hidden; width:100%}
+.GYPopDiv2{overflow:hidden; width:100%}
+.GYPopLeft,.GYPopLeft2{width:220px; float:left; }
+.GYPopRight,.GYPopRight2{width:166px; float:right}
+.GYPopUl input {margin:-2px 2px 0px 0px;padding:0 ; width:13px; height:13px; vertical-align:middle;}
+.GYPopUl li{ padding-top:4px;padding-bottom:3px ; padding-left:5px}
+.GYBtn{margin-top:10px; text-align:center }
+.GYPopLeft, .GYPopRight{ height:120px}
+.GYPopLeft2, .GYPopRight2{ height:80px}
+.GYPopLabel{line-height:12px; margin:0 0 0 2px}
+.GYPopSubtitle{font-weight:bold; color:#000; border-bottom:1px solid  #E0E0E0; background-color:#E7E7E7;padding-left:4px;}
+.GYPopBtnBlue {text-align: center;text-decoration: none;color:#fff;position: relative;border:1px solid #767676; font-size:12px;width:50px !important;height:22px !important;
+background: #a8a8a8; /* Old browsers */
+background: -moz-linear-gradient(top,  #a8a8a8 0%, #999999 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a8a8a8), color-stop(100%,#999999)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #a8a8a8 0%,#999999 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #a8a8a8 0%,#999999 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #a8a8a8 0%,#999999 100%); /* IE10+ */
+background: linear-gradient(top,  #a8a8a8 0%,#999999 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a8a8a8', endColorstr='#999999',GradientType=0 ); /* IE6-9 */
+}
+.GYPopBtnBlue:hover {
+background: #999999; /* Old browsers */
+background: -moz-linear-gradient(top,  #999999 0%, #a8a8a8 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#999999), color-stop(100%,#a8a8a8)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #999999 0%,#a8a8a8 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #999999 0%,#a8a8a8 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #999999 0%,#a8a8a8 100%); /* IE10+ */
+background: linear-gradient(top,  #999999 0%,#a8a8a8 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#999999', endColorstr='#a8a8a8',GradientType=0 ); /* IE6-9 */
+}		

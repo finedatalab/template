@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		{% include "inc/header_inc.html" ignore missing %}
+	</head>
+	{% include "inc/header_coment.html" ignore missing %}
+	<body class="">
+
+		<!-- HEADER -->
+		{% include "inc/header.html" ignore missing %}
+		<!-- END HEADER -->
+
+		<!-- Left panel : Navigation area -->
+		<!-- Note: This width of the aside area can be adjusted through LESS variables -->
+		{% include "inc/leftpanel.html" ignore missing %}
+		<!-- END NAVIGATION -->
+
+		<!-- MAIN PANEL -->
+        {% block main %}        
+        {% endblock %}
+		<!-- END MAIN PANEL -->
+
+		<!-- PAGE FOOTER -->
+		{% include "inc/footer.html" ignore missing %}
+		<!-- END PAGE FOOTER -->
+
+		<!-- SHORTCUT AREA : With large tiles (activated via clicking user name tag)
+		Note: These tiles are completely responsive,
+		you can add as many as you like
+		-->
+		{% include "inc/shortcutarea.html" ignore missing %}
+		<!-- END SHORTCUT AREA -->
+		{% include "inc/script_inc.html" ignore missing %}			
+		
+		{% block script%}
+		{% endblock %}		
+
+		<!-- Your GOOGLE ANALYTICS CODE Below -->
+		{% include "inc/ga.html" ignore missing %}	
+
+	</body>
+
+</html>

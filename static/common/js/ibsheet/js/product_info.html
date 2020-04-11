@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>IBSheet7 ProductInfo</title>
+	<script type="text/javascript" src="ibsheet.js"></script>
+	<script type="text/javascript" src="ibsheetinfo.js"></script>
+
+</head>
+
+<script type="text/javascript">
+	function fnLoadPage() {
+		var cols = [
+			{Type:"Text", Align:"Center", Width:100},
+			{Type:"Text", Align:"Left", Width:200},
+		];
+
+		mySheet.InitColumns(cols);
+
+		mySheet.SetEditable(0);
+
+		mySheet.DataInsert();
+		mySheet.DataInsert();
+		mySheet.DataInsert();
+
+		mySheet.SetCellValue(1, 0, "제품명");
+		mySheet.SetCellValue(1, 1, "IB Sheet 7");
+		mySheet.SetCellValue(2, 0, "버전정보");
+		mySheet.SetCellValue(2, 1, "7.0.0.0");
+
+		mySheet.SetCellValue(3, 1, "(주)아이비리더스");
+	}
+</script>
+
+<body onload="fnLoadPage();">
+  <script type="text/javascript"> createIBSheet("mySheet", "320px", "90px"); </script>
+</body>
+
+</html>

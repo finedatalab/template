@@ -1,0 +1,693 @@
+/* -----------------------------------------------------------------------*/
+/* ----------------- "Main" IBSheet style definition ---------------------*/
+/* -----------------------------------------------------------------------*/
+
+/* Base tags */
+.RIBImage {padding-bottom:256px;}
+.RIBNone {display:none;}
+.RIBSection,.RIBSectionFF3 {table-layout:fixed; width:0;}
+.RIBSectionFF3 {border-collapse:collapse; }
+
+/* Sections */
+.RIBMainTable {border:1px solid #cbcbcb; border-collapse:separate; text-align:left; background:#ffffff; font:12px Dotum,Helvetica,AppleGothic,Sans-serif;}
+.RIBFootLeft,.RIBFootMid {border-top:1px solid #C9C9F5;}
+.RIBHeadLeft,.RIBBodyLeft,.RIBFootLeft,.RIBHScrollLeft {border-right:1px solid #C9C9F5;}	
+.RIBVScroll {padding-top:1px; padding-bottom:1px;}
+.RIBHScrollLeft,.RIBHScrollMid,.RIBHScrollLeftResizeTouch,.RIBHScrollRightResizeTouch {padding-left:1px; padding-right:1px; cursor:default;}
+.RIBHScrollLeftResizeTouch {border-right:2px solid #000000; padding-right:18px; background:#F4F4F4;}
+.RIBHScrollRightResizeTouch {border-left:2px solid #000000; padding-left:18px; background:#F4F4F4;}
+.RIBHScrollMidLeftResizeTouch {border-left:1px solid #000000; padding-left:19px; background:#F4F4F4;}
+.RIBHScrollMidRightResizeTouch {border-right:1px solid #000000; padding-right:19px; background:#F4F4F4;}
+.RIBHScrollWide {padding-right:1px;}
+.RIBHScrollHidden {overflow:visible !important; background:#F4F4F4; cursor:default; }
+.RIBXScroll {background:#F4F4F4;}
+.RIBPage {border-top:0px solid #E0E0E0;}
+
+/* Rows */
+.RIBSpaceRowHeight{height:21px; }
+.RIBRowHeight 	 {height:18px; }
+.RIBRowHeightTouch{height:22px; }
+.RIBSpaceMargin   {margin:0; }
+.RIBSpaceMarginTouch{margin:5px; }
+.RIBSpaceRow {background:#ffffff; white-space:nowrap; overflow:hidden; padding-top:2px; padding-bottom:2px; border-bottom:1px solid #e0e0ff;}
+.RIBGroupRow,.RIBSearchRow,.RIBPagerRow 
+{background-color:#DDDDFF; white-space:nowrap; padding-top:5px; padding-bottom:5px; overflow:hidden; border-bottom:1px solid #C9C9F5;} 
+.RIBGroupRow,.RIBPagerRow {background-position:0 -1801px; }
+.RIBFillRow {background:#ffffff; }
+.RIBRowAbove,.RIBRowBelow {border-left:1px solid #9cb6c8; border-right:1px solid #9cb6c8;}
+.RIBRowAbove { margin-top:3px; overflow:hidden;}
+.RIBRowBelow {margin-bottom:3px; overflow:hidden;}
+.RIBNoDataRow {border-top:1px solid #000000;padding-left:5px; padding-top:5px; padding-bottom:5px;color:gray; font-style:italic;} 
+.RIBCountRowTop {color:#535353; background-color:#DDDDFF; white-space:nowrap;padding-top:5px; padding-bottom:5px; overflow:hidden; border-bottom:1px solid #C9C9F5;}
+.RIBCountRowBottom {color:#535353; background-color:#DDDDFF; white-space:nowrap; padding-top:5px; padding-bottom:5px; overflow:hidden; border-top:1px solid #C9C9F5;}
+
+/* Cell */
+.RIBCell,.RIBCellPanel,.RIBCellFilter,.RIBHeaderDrag,.RIBHeaderGroup 
+ {color:#444444; border-bottom:1px solid #F8F8FF; border-right:1px solid #cbcbcb; border-left:0; border-top:0;vertical-align:top; overflow:hidden; height:auto; font-size:/*IBFS*/12px; font-family:/*IBFN*/"Dotum", "Helvetica", "AppleGothic", sans-serif;}
+
+.RIBCellHeader,.RIBCellHeaderEmpty
+ {vertical-align:middle; overflow:hidden;height:auto; padding-top:1px; border-right:1px solid #C9C9F5; border-bottom:1px solid #C9C9F5;
+ 	
+ 	background: #f22000; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YyMjAwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjIxJSIgc3RvcC1jb2xvcj0iI2Y3OTEwMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjM1JSIgc3RvcC1jb2xvcj0iI2ZmZjc2MCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUyJSIgc3RvcC1jb2xvcj0iIzBiZmMwNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjcxJSIgc3RvcC1jb2xvcj0iIzA1YjZmYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijg2JSIgc3RvcC1jb2xvcj0iIzAwMmRmOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3ZjAwZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  #f22000 0%, #f79102 21%, #fff760 35%, #0bfc07 52%, #05b6fc 71%, #002df9 86%, #7f00ff 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f22000), color-stop(21%,#f79102), color-stop(35%,#fff760), color-stop(52%,#0bfc07), color-stop(71%,#05b6fc), color-stop(86%,#002df9), color-stop(100%,#7f00ff)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #f22000 0%,#f79102 21%,#fff760 35%,#0bfc07 52%,#05b6fc 71%,#002df9 86%,#7f00ff 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #f22000 0%,#f79102 21%,#fff760 35%,#0bfc07 52%,#05b6fc 71%,#002df9 86%,#7f00ff 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #f22000 0%,#f79102 21%,#fff760 35%,#0bfc07 52%,#05b6fc 71%,#002df9 86%,#7f00ff 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #f22000 0%,#f79102 21%,#fff760 35%,#0bfc07 52%,#05b6fc 71%,#002df9 86%,#7f00ff 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f22000', endColorstr='#7f00ff',GradientType=0 ); /* IE6-8 */
+
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	} 
+.RIBCellBorderFF3 {border-left:0;border-top:0;} 
+.RIBCellSpace {vertical-align:top; padding-top:5px !important; }
+.RIBCellSpacePanel,.RIBCellSpaceBool {vertical-align:top; }
+.RIBCellSpaceRadio { padding-top:3px !important;}
+.RIBCellSpaceEditButton { vertical-align:top; padding-top:4px !important; border:1px solid #000000 !important; background-color:#ffffff !important; }
+.RIBCellSpaceButtonButton { vertical-align:top; }
+.RIBCellSpaceButton { vertical-align:top; padding-top:5px !important; white-space:nowrap; }
+.RIBCellSpaceAbove { border-top:1px solid #9cb6c8; }
+.RIBCellSpaceBelow { border-bottom:1px solid #9cb6c8; }
+.RIBCellPanel,.RIBCellHeaderPanel{ white-space:nowrap; } 
+.RIBCellHidden { background:transparent!important; border-top:none!important; border-bottom:none!important; }
+.RIBHeaderButton { padding:0; }
+.RIBHeaderGroup {background: #C5C5F6; color:#ffffff; padding-left:3px; }
+.RIBHeaderGroupFocus {background-color: #C0C0A0; }
+.RIBHeaderGroupDelete {background-color: #F0F0E0; color: #F0F0E0; }
+.RIBHeaderGroupCustom {color:#BBB; padding-left:5px; cursor:default; white-space:nowrap;}
+.RIBHeaderDrag {background: #9FB9E9; cursor:default; overflow:hidden; }
+.RIBHeaderFocus {background: #9FB9E9;}
+.RIBPanel {padding-left:80px;}
+.RIBNoTreeLines1 {text-align:right;}
+.RIBNoTreeLines2 {text-align:right; vertical-align:middle; padding-top:0;}
+.RIBTree {padding-top:0; white-space:nowrap;}
+.RIBSpannedTree {vertical-align:top;}
+.RIBCellClassInner {padding-top:0; padding-bottom:0;}
+
+/* Inside cell */
+.RIBStatus,.RIBSeq,.RIBPopup,.RIBPopupEdit,.RIBHtml,.RIBText,.RIBLines,.RIBPass,.RIBInt,.RIBFloat,.RIBDate,
+.RIBLink,.RIBImg,.RIBRadio,.RIBRadioText,.RIBList,.RIBEnum,.RIBDropCols,.RIBAbs,.RIBPagerEdit,.RIBUser 
+ {white-space:nowrap;vertical-align: middle;padding:2px 3px;} 
+.RIBInt,.RIBFloat { text-align:right; }
+.RIBLines,.RIBRadio,.RIBHtml,.RIBList { white-space:normal; }	
+.RIBImg,.RIBHtml {padding:0; } 
+.RIBPass { padding:0 0 0 3px; }
+.RIBRadio,.RIBRadioText { padding:0; font-weight:normal !important; }
+.RIBBool { text-align:center; }
+.RIBIcon { background-repeat:no-repeat; }
+.RIBHiddenSpace { display:none; }
+.RIBDropCols { padding-top:2px !important; }
+
+.RIBHeaderText {color:#535353; vertical-align:middle; font-size:/*IBFS*/12px; font-family:/*IBFN*/"Dotum", "Helvetica", "AppleGothic", sans-serif;}
+.RIBAbs { padding:0; }
+.RIBUser { padding:0; }
+.RIBPagerEdit { text-align:center; padding-top:3px; }
+.RIBMergedCellH {padding:0 0 5px 0}
+.RIBMergedCellV {padding:0 0 1px 0}
+
+.RIBWrap0 { white-space:nowrap; }
+.RIBWrap1 { white-space:normal; }
+.RIBEllipsis { white-space:nowrap; text-overflow:ellipsis;}
+
+.RIBAlignLeft { text-align:left; }
+.RIBAlignCenter { text-align:center; }
+.RIBAlignJustify { text-align:center; }
+.RIBAlignRight { text-align:right;}
+
+/* Tree Img with lines */
+.RIB000,.RIB010,.RIB001,.RIB011,.RIB100,.RIB110,.RIB101,.RIB111, 
+.RIB000T,.RIB010T,.RIB001T,.RIB011T,.RIB100T,.RIB110T,.RIB101T,.RIB111T,
+.RIB00,.RIB01,.RIB10,.RIB11,.RIB00T,.RIB01T,.RIB10T,.RIB11T,
+.RIB0T,.RIB1T,.RIB0TL,.RIB1TL,.RIB0C,.RIB1C,.RIB0CL,.RIB1CL,.RIB0E,.RIB1E,.RIB0EL,.RIB1EL,
+.RIB0,.RIB1,.RIBT,.RIBTL,.RIBC,.RIBCL,.RIBE,.RIBEL,.RIBD0,.RIBD1,.RIBD2,.RIBD3,.RIBD4,.RIBD0L,.RIBD1L,.RIBD2L,.RIBD3L,.RIBD4L 
+{background-image:url(Tree.gif); vertical-align:top;}
+
+u.RIB000,u.RIB010,u.RIB001,u.RIB011,u.RIB100,u.RIB110,u.RIB101,u.RIB111 { padding-left:63px; }
+u.RIB000T,u.RIB010T,u.RIB001T,u.RIB011T,u.RIB100T,u.RIB110T,u.RIB101T,u.RIB111T { padding-left:89px; }
+u.RIB00,u.RIB01,u.RIB10,u.RIB11 { padding-left:42px; }   
+u.RIB00T,u.RIB01T,u.RIB10T,u.RIB11T { padding-left:68px; }   
+u.RIB0T,u.RIB1T,u.RIB0TL,u.RIB1TL,u.RIB0C,u.RIB1C,u.RIB0CL,u.RIB1CL,u.RIB0E,u.RIB1E,u.RIB0EL,u.RIB1EL { padding-left:47px; }   
+u.RIB0,u.RIB1 { padding-left:21px; }
+u.RIBT,u.RIBTL,u.RIBC,u.RIBCL,u.RIBE,u.RIBEL,u.RIBD0,u.RIBD1,u.RIBD2,u.RIBD3,u.RIBD4,u.RIBD0L,u.RIBD1L,u.RIBD2L,u.RIBD3L,u.RIBD4L { padding-left:26px; }   
+
+.RIB000,.RIB000T{ background-position:0px 0px; }
+.RIB010,.RIB010T{ background-position:-128px 0; }
+.RIB001,.RIB001T{ background-position:-256px 0; }
+.RIB011,.RIB011T{ background-position:-384px 0; }
+.RIB100,.RIB100T{ background-position:-512px 0; }
+.RIB110,.RIB110T{ background-position:-640px 0; }
+.RIB101,.RIB101T{ background-position:-768px 0; }
+.RIB111,.RIB111T{ background-position:-896px 0; }
+.RIB00,.RIB00T  { background-position:-21px 0;  }
+.RIB10,.RIB10T  { background-position:-149px 0; }
+.RIB01,.RIB01T  { background-position:-277px 0; }
+.RIB11,.RIB11T  { background-position:-405px 0; }
+.RIB0,.RIB0T 	  { background-position:-42px 0;  }
+.RIB1,.RIB1T 	  { background-position:-298px 0; }
+.RIBT 		  { background-position:-63px 0;  }
+.RIB0TL 		  { background-position:-1024px 0; }
+.RIB1TL 		  { background-position:-1088px 0; }
+.RIB0C 	      { background-position:-1152px 0; }
+.RIB1C 		  { background-position:-1216px 0; }
+.RIB0CL 		  { background-position:-1280px 0; }
+.RIB1CL 		  { background-position:-1344px 0; }
+.RIB0E 		  { background-position:-1408px 0; }
+.RIB1E 		  { background-position:-1472px 0; }
+.RIB0EL 		  { background-position:-1536px 0; }
+.RIB1EL 		  { background-position:-1600px 0; }
+.RIBTL 		  { background-position:-1045px 0; }
+.RIBC 		  { background-position:-1173px 0; }
+.RIBCL 		  { background-position:-1301px 0; }
+.RIBE 		  { background-position:-1429px 0; }
+.RIBEL 		  { background-position:-1557px 0; }
+.RIBD0 		  { background-position:-1664px 0; }
+.RIBD1 		  { background-position:-1696px 0; }
+.RIBD2 		  { background-position:-1728px 0; }
+.RIBD3 		  { background-position:-1760px 0; }
+.RIBD0L 		  { background-position:-1792px 0; }
+.RIBD1L 		  { background-position:-1824px 0; }
+.RIBD2L 		  { background-position:-1856px 0; }
+.RIBD3L 		  { background-position:-1888px 0; }
+.RIBD4 		  { background-position:-1920px 0; }
+.RIBD4L 		  { background-position:-1952px 0; }
+
+/* Tree Img without lines  */
+.RIBND0,.RIBND1,.RIBND2,.RIBND3,.RIBND4,.RIBNC,.RIBNE,.RIBNCR,.RIBNER {background-image:url(TreeN.gif); background-repeat:no-repeat; vertical-align:top; }
+u.RIBND0,u.RIBND1,u.RIBND2,u.RIBND3,u.RIBND4,u.RIBNC,u.RIBNE,u.RIBNCR,u.RIBNER { padding-left:20px; }
+.RIBND0 { background-position: -6px 0; }
+.RIBND1 { background-position: -56px 0; }
+.RIBND2 { background-position: -106px 0; }
+.RIBND3 { background-position: -156px 0; }
+.RIBND4 { background-position: -206px 0; }
+.RIBNC { background-position:right -50px;}
+.RIBNE { background-position:right -2000px;}
+.RIBNCR { background-position:-255px -50px;}
+.RIBNER { background-position:-255px -2000px;}
+u.RIBNL { padding-left:21px; }
+
+/* Cell images */
+.RIBIconLink { text-decoration:none; width:1000px; display:inline-block; }
+.RIBIconLeft,.RIBIconRight,.RIBIconCenter {  background-repeat:no-repeat; }
+.RIBIconLeft { background-position:left 0; padding-left:20px !important; }
+.RIBIconRight { background-position:right 0; padding-right:20px !important; }
+.RIBIconCenter { background-position:center 0; }
+.RIBPopupRight { background:url(popup.gif) no-repeat 5px center; }
+.RIBExpandLeft,.RIBCollapseLeft,.RIBExpandHeaderLeft,.RIBCollapseHeaderLeft { padding-left:20px!important; }
+.RIBDateRight{ padding-right:20px!important;}
+u.RIBDateRight,.RIBPopupRight { padding-right:0!important; padding-left:17px; }
+.RIBDateRight {background:url(calendar.gif) no-repeat 2px center}
+.RIBEnumRight { background:url(combo.gif) no-repeat right center; }
+u.RIBEnumRight {padding-right:0; padding-left:17px}
+.RIBExpandLeft { background:url(ic_plus.gif) no-repeat 3px center; padding:2px 0 0  18px; _padding:0 0 0 18px }
+.RIBCollapseLeft { background:url(ic_minus.gif) no-repeat 3px center ; padding:2px 0 0  18px; _padding:0 0 0 18px }
+.RIBRadio0Right,.RIBRadio1Right,.RIBRadio2Right,.RIBRadio3Right {line-height:17px; padding-right:17px; padding-left:3px; }
+u.RIBFilter0,u.RIBFilter1 { padding-left:16px; }
+.RIBBool0,.RIBBool0RO,.RIBBool1,.RIBBool1RO,.RIBBool2,.RIBBool2RO,.RIBBool3,.RIBBool3RO {background-position:center center; background-repeat:no-repeat;}
+
+.RIBBool0   { background-image:url(chk0.gif);  }
+.RIBBool0RO { background-image:url(chk0R.gif); }
+
+.RIBBool1   { background-image:url(chk1.gif);  }
+.RIBBool1RO { background-image:url(chk1R.gif); }
+
+.RIBBool2   { background-image:url(chk2.gif);  }
+.RIBBool2RO { background-image:url(chk2R.gif); }
+
+.RIBBool3   { background-image:url(chk3.gif);  }
+.RIBBool3RO { background-image:url(chk3R.gif); }
+
+/* Filter images  */
+.RIBFilter0Left,.RIBFilter1Left,.RIBFilter2Left,.RIBFilter3Left,.RIBFilter4Left,.RIBFilter5Left,.RIBFilter6Left,.RIBFilter7Left,
+.RIBFilter8Left,.RIBFilter9Left,.RIBFilter10Left,.RIBFilter11Left,.RIBFilter12Left {padding-left:18px;}
+
+.RIBFilter0Left,.RIBFilter0Menu 	{ width:18px; height:18px; background:url(filter0.gif) no-repeat left center; }   
+.RIBFilter1Left,.RIBFilter1Menu 	{ width:18px; height:18px; background:url(filter1.gif) no-repeat left center; }
+.RIBFilter2Left,.RIBFilter2Menu 	{ width:18px; height:18px; background:url(filter2.gif) no-repeat left center; }
+.RIBFilter3Left,.RIBFilter3Menu 	{ width:18px; height:18px; background:url(filter3.gif) no-repeat left center; }
+.RIBFilter4Left,.RIBFilter4Menu 	{ width:18px; height:18px; background:url(filter4.gif) no-repeat left center; }
+.RIBFilter5Left,.RIBFilter5Menu 	{ width:18px; height:18px; background:url(filter5.gif) no-repeat left center; }   
+.RIBFilter6Left,.RIBFilter6Menu 	{ width:18px; height:18px; background:url(filter6.gif) no-repeat left center; }
+.RIBFilter7Left,.RIBFilter7Menu 	{ width:18px; height:18px; background:url(filter7.gif) no-repeat left center; }
+.RIBFilter8Left,.RIBFilter8Menu 	{ width:18px; height:18px; background:url(filter8.gif) no-repeat left center; }
+.RIBFilter9Left,.RIBFilter9Menu 	{ width:18px; height:18px; background:url(filter9.gif) no-repeat left center; }
+.RIBFilter10Left,.RIBFilter10Menu { width:18px; height:18px; background:url(filter10.gif) no-repeat left center; }
+.RIBFilter11Left,.RIBFilter11Menu { width:18px; height:18px; background:url(filter11.gif) no-repeat left center; }
+.RIBFilter12Left,.RIBFilter12Menu { width:18px; height:18px; background:url(filter12.gif) no-repeat left center; }
+
+.RIBFilter0Menu,.RIBFilter1Menu,.RIBFilter2Menu,.RIBFilter3Menu,.RIBFilter4Menu,.RIBFilter5Menu,.RIBFilter6Menu,.RIBFilter7Menu,.RIBFilter8Menu,.RIBFilter9Menu,
+.RIBFilter10Menu,.RIBFilter11Menu,.RIBFilter12Menu {overflow:hidden; margin: -2px 0 0 -1px;}
+.RIBFilterMenuHeader { padding-left:2px; border-bottom:0 !important; } 
+
+/*  Keyfield Image */
+.RIBKeyfield {background-image:url(keyfield.gif); display:inline-block; vertical-align:middle; background-repeat: no-repeat; background-position:center 1px; padding: 0 2px 0 4px; }
+
+/* GMKeyfield : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .RIBKeyfield{  background-position: center 3px;padding: 0 2px 0 4px; }}
+
+/* CheckBox Header Image */
+.RIBCheckHeader0 {background-image:url(chk0.gif); display:inline-block; vertical-align:middle; background-repeat:no-repeat; background-position:5px 1px; padding:2px 7px 0 6px; margin:0 2px 0 0;}
+
+/* GMCheckHeader0 : hack CR,SF*/
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{.RIBCheckHeader0{ background-position:6px 1px ; padding: 2px 8px 0 6px; }}
+
+/* GMCheckHeader0 : hack FF*/
+.RIBCheckHeader0, x:-moz-any-link, x:default { background-position:6px 1px ; padding: 2px 8px 0 6px; }
+
+/* GMCheckHeader0 : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .RIBCheckHeader0{ background-position:7px center ; padding:1px  17px 0 0; }}
+
+.RIBCheckHeader1 {background-image:url(chk1.gif); display:inline-block; vertical-align:middle; background-repeat:no-repeat; background-position:4px 1px ; padding:2px 6px 0 6px; margin:0 2px 0 0}
+
+/* GMCheckHeader1 : hack CR,SF*/
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{.RIBCheckHeader1{ background-position:6px 1px ; padding: 2px 8px 0 6px; }}
+
+/* GMCheckHeader1 : hack FF*/
+.RIBCheckHeader1, x:-moz-any-link, x:default { background-position:6px 1px ; padding: 2px 8px 0 6px; }
+
+/* GMCheckHeader1 : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .RIBCheckHeader1 { background-position:7px center ; padding:1px  17px 0 0;  }}
+
+/* Sort images */
+.RIBSort {display:block; float:right; margin:2px 2px 0;width:7px}
+
+/* State classes */
+/* The colors must be set by numbers not by names */
+.RIBColorDefault  { background-color:#FFFFFF;}
+.RIBColorNoFocus  { background-color:#E8F4FF;}
+.RIBColorReadOnly { background-color:#F2F2FF;}
+.RIBColorPreview  { background-color:#FFFFFF;}
+.RIBColorAlternate{ background-color:#f8f8ff;}
+.RIBColorSelected { background-color:/*#FFFF80*/#aadbff; }
+
+.RIBColorFilter {background-color:#FFFFFF;}
+
+/*//.RIBClassSelected { }*/
+.RIBColorError   { background-color:#FF6969; }
+.RIBColorDeleted { background-color:#FFCDCD; }
+.RIBClassDeleted { font-style:italic; }
+.RIBColorAdded   { background-color:#CDFFCD; }
+.RIBClassAdded   { font-weight:bold; }
+.RIBColorMoved1  { background-color:#FFFFFF; }
+.RIBColorMoved2  { background-color:#D7EBEB; }
+.RIBColorChanged { background-color:#EBEBFF; }
+.RIBColorChangedCell { background-color:#E1E1FF; }
+.RIBClassChangedCell { font-weight:bold; }
+.RIBColorMaxChildren { background-color:#FFFFF0; }
+.RIBColorDetail { background-color:#FFF0FF; }
+.RIBColorDetailSelected { background-color:#FFF0E0; }
+.RIBColorDragged{ background-color:#E0E0C0; }
+.RIBColorFound1 { background-color:#FF87FF; }
+.RIBColorFound2 { background-color:#FFC387; }
+.RIBColorFound3 { background-color:#87FF87; }
+.RIBColorHovered 			{ background-color:#F0F0FF; }
+.RIBColorHoveredCell 		{ background-color:#C0C0FF; }
+.RIBColorHoveredCellReadOnly { background-color:#F0F0F0; }
+.RIBColorHoveredCellNoFocus 	{ background-color:#F8F8F8; }
+
+.RIBClassHoveredCellHeader 	{ background-position:0px -250px; }
+.RIBClassHoveredCellPanel 	{ background-position:0px -1801px; background-repeat:repeat-x; }
+
+.RIBColorHoveredCellSpace 	{ background-color:#FFFFFF; }
+.RIBColorHoveredCellSpaceEdit{ background-color:#C0C0FF; }
+.RIBColorHoveredCellSpaceBool{ background-color:#FFFFFF; }
+.RIBColorHoveredCellButton 	{ background-color:#FFFFFE; }
+.RIBClassHoveredCellButton 	{ color:green; }
+.RIBColorHoveredCellButton1 	{ background-color:#FFFFFE; }
+.RIBClassHoveredCellButton1 	{ color:red; }
+.RIBColorHoveredCellTab 		{ background-color:#FFFFFE; }
+.RIBClassHoveredCellTab 		{ background-position:0px -1801px; color:green; }
+.RIBColorHoveredCellTab1 	{ background-color:#99bbcc; }
+.RIBClassHoveredCellTab1 	{ background-image:none; }
+
+.RIBColorFocused 			{ background-color:#E6E6E6; }
+.RIBColorFocusedCell 		{ background-color:#FFFFFE; }
+.RIBColorFocusedCellSafari 	{ background-color:#A0A0FF; }
+.RIBColorFocusedCellSpace 	{ background-color:#E6E6E6; }
+.RIBColorFocusedCellButton 	{ background-color:#BCD; }
+.RIBColorFocusedCellHeader 	{ background-color:#FFFFFE; }
+.RIBColorFocusedCellPanel 	{ background-color:#FFFFFE; }
+.RIBColorEditedCell 			{ background-color:#FFFFFF; }
+.RIBColorViewedCell 			{ background-color:#FFFFFF; }
+
+/* Hover, focus, edit cursors */
+.RIBHoverRowBackground 	{ opacity:0.1; filter:alpha(opacity=10); background:#00F; }
+.RIBHoverRowBorder 		{ z-index:0; border-top:1px solid #BBF; border-bottom:1px solid #BBF; cursor:default; }
+.RIBHoverCellBorder 		{ z-index:0; padding:1px; border:1px solid #A0A0F0; background:white; }
+.RIBFocusRowBackground 	{ opacity:0.1; filter:alpha(opacity=50); background:/*IBSB*/#FFFF9F; } /* <-- Sheet : Selected Row Background */
+.RIBFocusRowBorder 		{ z-index:0; border:1px solid /*IBSB*/#FAC800; } /* <-- Sheet : Selected Row Border */
+.RIBFocusCellBorder		{ z-index:0; border:2px solid /*IBSB*/#FAC800; } /* <-- Sheet : Selected Cell Border */
+.RIBFocusCellSpaceBorder,.RIBEditCellSpaceBorder { z-index:4; }
+.RIBEditCellBorder 		{ z-index:0; border:2px solid #FF6666;}    /*<-- Sheet : CellEdit Border */
+.RIBEditCellInput 		{ position:relative; border:0 solid #39aefb; overflow:hidden; z-index:2; } 
+
+.RIBCursorBackground, .RIBCursorBorderLeft ,.RIBCursorBorderRight,.RIBCursorBorderTop,.RIBCursorBorderBottom 
+ {position:relative;overflow:hidden;}
+
+.RIBCursorBackground  {border:none; padding:0;}
+.RIBCursorBorderLeft  {padding-right:0; padding-top:0; padding-bottom:0; border-right:none; border-top:none; border-bottom:none;  width:0; height:0;}
+.RIBCursorBorderRight {padding-left:0; padding-top:0; padding-bottom:0; border-left:none; border-top:none; border-bottom:none;  width:0; height:0;}
+.RIBCursorBorderTop 	 {padding-bottom:0; padding-left:0; padding-right:0; border-bottom:none; border-left:none; border-right:none;  width:0; height:0;}
+.RIBCursorBorderBottom{padding-top:0; padding-left:0; padding-right:0; border-top:none; border-left:none; border-right:none; width:0; height:0;}
+
+/* Cell edges */
+.RIBNoLeft { border-left:0; }
+.RIBNoRight { border-right:0; }
+
+/* Dragging */
+.RIBMouseObject { opacity:0.5; filter:alpha(opacity=50); z-index:300; overflow:hidden;}
+.RIBDragObject {z-index:300; margin-left:10px; margin-top:10px; padding-left:3px; padding-right:3px;background:#E4E5F0 ; border:1px solid #777;}
+.RIBDragColInsideTop,.RIBDragColInsideBottom,.RIBDragColOutsideTop,.RIBDragColOutsideBottom{position:absolute;width:10px; height:11px; overflow:hidden; z-index:258;}
+.RIBDragColInsideTop 	{background:url(in_top.gif) no-repeat;} 	
+.RIBDragColInsideBottom  {background:url(in_bottom.gif) no-repeat;}	
+.RIBDragColOutsideTop  	{background:url(out_top.gif) no-repeat;}	
+.RIBDragColOutsideBottom {background:url(out_bottom.gif) no-repeat;}	 
+
+/* Messages */
+.RIBDisabled{position:absolute; z-index:264; background:#ffffff; opacity:0.5; filter:alpha(opacity=50); } 
+.RIBProcess {position: absolute; left:0; top:0; background:#E2F0FF; border:1px solid #777; white-space:nowrap; text-align:center; visibility:hidden; z-index:266;}
+.RIBMessage {background:#E2F0FF; border:1px solid #000000; padding:10px; white-space:nowrap; text-align:center;
+			 position: absolute; left:0; top:0; visibility:hidden; z-index:266;}
+.RIBMessageShadow 
+{position:absolute; margin-left:3px; margin-top:3px; z-index:265;background:#888; opacity:0.5; filter:alpha(opacity=50); left:0; top:0; visibility:hidden;}
+      
+/* Other */
+/* !!! No .RIB style prefix here !!! */
+.GridTmpTag { position:absolute; left:5px; top:5px; visibility:hidden; }
+
+/* Popup menus, TGLib */
+.RIBMenuMain  {position:absolute;left:0;top:0; z-index:258;}
+.RIBMenuOuter {overflow:hidden; border:1px solid #000000; background:#fff; padding:1px; margin:1px;}
+.RIBMenuHeader{overflow:hidden; position:absolute; z-index:258;border:1px solid #b0b0c0; background:#fff; cursor:pointer; _cursor:hand;}
+.RIBMenuHead {background:#183873; color:white; cursor:default;text-align:center; padding-top:5px; padding-bottom:4px;}
+.RIBMenuClose {float:right; width:14px; cursor:pointer; _cursor:hand; display:none;}
+.RIBMenuBody {cursor:default; background-color:#fff; padding-top:1px; padding-bottom:1px;}
+.RIBMenuShadow {position:absolute;margin:3px 0 0 3px;z-index:257;background-color:#888; opacity:0.5; filter:alpha(opacity=50);}
+.RIBMenuCheckedIconRight {padding-right:17px; background:url(chk1.gif) no-repeat 96% center; }
+.RIBMenuUncheckedIconRight { padding-right:17px;background:url(chk0.gif) no-repeat 96% center ; }
+
+.RIBMenuCursorIcon {background-image:url(d_gray_right.gif); background-repeat:no-repeat; background-position: 3px center;_background-color:#fff}
+.RIBMenuHoverIcon {background-image:url(d_right.gif); background-repeat:no-repeat; background-position: 3px center; _background-color:#ffeeaa }   
+
+.RIBMenuNextIcon { padding-right:10px; }
+.RIBMenuNextIconRtl { padding-left:10px; }
+
+.RIBMenuItemText,.RIBMenuItemIcon,.RIBMenuEnum,.RIBMenuEnumHeader,.RIBMenuEdit 
+{white-space:nowrap; overflow:hidden; vertical-align: middle; padding:1px 0 0 0}
+.RIBMenuItemDisabled {opacity:0.50; filter:alpha(opacity=30); overflow:hidden; }
+.RIBMenuLevel {color:blue;text-align:center; }  
+.RIBMenuEnumParent,.RIBMenuEditParent {padding-left:5px; padding-right:2px}
+.RIBMenuItemIcon {background-repeat:no-repeat;}
+.RIBMenuEnum {border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; padding-left:15px; overflow:hidden;}
+.RIBMenuEnumHeader  {padding:1px 0 2px 16px; cursor:default; } 
+.RIBMenuEdit{border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; background:white; overflow:hidden;white-space:nowrap;
+  padding-left:2px; padding-right:2px;}
+.RIBMenuEditInput,.RIBMenuEditTextarea {margin:0;padding:0;border:0; background:#FDD;_margin:-1px; _padding-right:1px; _padding_left:1px; }   
+.RIBMenuEditTextarea { line-height:13px;  }   
+.RIBMenuEditInt,.RIBMenuEditFloat,.RIBMenuEditDate { text-align:right; } 
+.RIBMenuEditMulti { white-space:normal; }
+.RIBMenuItem {background-color:#ffffff;padding:2px;}  
+.RIBMenuItemHover {background-color:#BBBBFF; border:1px solid #ACACE8;margin:0 1px; padding:1px 0;}
+.RIBMenuFocusHover {margin:1px; background-color:#dedeff; border:1px solid #000000;}
+.RIBMenuFocus 	  {margin:1px; background-color:#dedeff; border:1px solid #B2B2E0;}
+.RIBMenuSeparator {margin:1px 3px 0 3px; height:1px; border-top:1px solid #aaaadd; overflow:hidden;}
+.RIBMenuCaption {padding:2px; background:#ffffff; color:blue; text-align:center;}
+.RIBMenuVSeparator { border-right:1px solid #DDD; }
+.RIBMenuFoot { border-top:none; text-align:center; white-space:nowrap; }
+.RIBMenuButton {font-size:11px;background:#E1E1FF; text-align:center; border:1px solid #ACACE8;margin:5px 2px 4px 2px;padding:0;white-space:nowrap;width:48px;} 
+.RIBMenuButtonHover { background:#BBBBFF; border:1px solid #ACACE8; }
+
+/* Grid configuration menus */
+.RIBCfgMenuOuter,.RIBColumnsMenuOuter { border:1px solid #000000; }
+.RIBCfgMenuHead,.RIBColumnsMenuHead { padding-left:3px; }
+.RIBCfgMenuBody,.RIBColumnsMenuBody { padding-left:4px; padding-right:4px;}
+.RIBCfgMenuFoot,.RIBColumnsMenuFoot { padding-right:3px; padding-left:3px;}
+.RIBCfgMenuButton { width:70px; } 
+.RIBCfgMenuItemText,.RIBColumnsMenuItemText { padding-left:3px; }
+.RIBColumnsMenuItemText { white-space:nowrap; }
+.RIBCfgMenuItem,.RIBColumnsMenuItem { padding-top:3px; padding-bottom:3px;}
+.RIBCfgMenuItemHover,.RIBCfgMenuFocus,.RIBCfgMenuFocusHover,
+.RIBColumnsMenuItemHover,.RIBColumnsMenuFocus,.RIBColumnsMenuFocusHover { padding-top:2px; padding-bottom:2px;}
+
+/* Popup grid dialog */
+.RIBPopupGridOuter { border:0; overflow:visible; }
+.RIBPopupGridHead { padding:0; }
+.RIBPopupGridBody { padding:0; }
+.RIBPopupGridFoot { padding:0; }
+.RIBPopupGridButton { width:50px;margin-top:-2px; margin-bottom:3px;} 
+
+/* Calendar, TGLib */
+.RIBPickMain  {position:absolute; left:0; top:0; z-index:258; }
+.RIBPickOuter {overflow:hidden; background:white; padding:1px; border:1px solid #6D6DB9; }
+.RIBPickHeader{overflow:hidden; position:absolute; z-index:258; border:1px solid black; background:#ffffff; cursor:pointer; _cursor:hand;}
+.RIBPickHeaderBottom{border-bottom:0; padding-bottom:1px;}
+.RIBPickHeaderTop{border-top:0; padding-bottom:1px; }
+.RIBPickHead {background:#5c8397; font:10px Dotum,Verdana,Arial; color:white; cursor:default; padding-left:5px; padding-top:1px; padding-bottom:1px;border-bottom:1px solid white;}
+.RIBPickClose{float:right; width:14px; cursor:pointer; _cursor:hand; display:none;}
+.RIBPickBody {cursor:default; padding:0; }
+.RIBPickShadow{position:absolute; background:#888; z-index:257; margin:3px 0 0 3px;opacity:0.5; filter:alpha(opacity=50);} 
+.RIBPickFooter,.RIBPick2Footer{text-align:center; padding:2px; cursor:default; background:#EFF0F1; border-top:1px solid #E3E4E6}
+ 
+.RIBPickMY{background-color:#E0E0FF;border-bottom:1px solid #C9C9F5;color:#474778; cursor:default;text-align:center;padding:2px 0 4px 0;}/* <-- Calender : Header Background */
+   
+.RIBPickMYDown{padding-right:13px; background:url(d_down.gif) no-repeat right; cursor:pointer; _cursor:hand;}
+.RIBPickMYUp {padding-right:13px; background:url(d_up.gif) no-repeat right center; cursor:pointer; _cursor:hand;}
+
+.RIBPickMYRtl{padding-right:0; padding-left:13px; }
+.RIBPickBL,.RIBPickBR{padding-top:3px; cursor:pointer; _cursor:hand; width:16px; height:14px; overflow:hidden;}
+
+.RIBPickBL {float:left; background:url(d_left.gif) no-repeat 50%; }
+.RIBPickBR {float:right; background:url(d_right.gif) no-repeat 50%; }
+
+.RIBPickTable{}
+.RIBPickRow  {background:#ffffff;}
+.RIBPickRowW {background:#EBEBFF;}
+.RIBPickCell {width:22px;}
+.RIBPickWDN {background:transparent; color:#333333;text-align:center; cursor:default; margin:2px 3px;padding:1px;}
+  
+.RIBPickHover,.RIBPickSelHover,.RIBPickWD,.RIBPickSa,.RIBPickSu,.RIBPickSel,.RIBPickNow,.RIBPickWDNE,.RIBPickSaNE,.RIBPickSuNE,
+.RIBPickSelNE,.RIBPickNowNE,.RIBPickOM,.RIBPickOMNE {text-align:center; border:1px solid #ffffff; cursor:pointer; _cursor:hand;margin:2px 3px;}
+.RIBPickWN,.RIBPickWNE {text-align:center; cursor:pointer; _cursor:hand;padding:3px 4px; border-right:1px solid #C9C9F5; background:#EFF0F1;}
+   
+.RIBPickWDNE,.RIBPickSaNE,.RIBPickSuNE,.RIBPickSelNE,.RIBPickNowNE,.RIBPickWNE {cursor:default;}
+.RIBPickWD{background-color:#ffffff;}
+.RIBPickSa{background-color:#ffffff;}
+.RIBPickSu{background-color:#ffffff;}
+.RIBPickSel{background-color:#FAEC00; border:1px solid #DAD1D1;}
+.RIBPickSelNE{background-color:#fbea54; border:1px solid #dad1d1;}
+.RIBPickNow {background-color:#c0f3ff; border:1px solid #dad1d1;}
+.RIBPickNowNE{background-color:#c0f3ff; border:1px solid #dad1d1;}
+.RIBPickHover{background-color:#ddd; border:1px solid #ddd;}
+.RIBPickSelHover{background-color:#dddddd; border:1px solid #dddddd;}
+.RIBPickOM{background-color:white; color:#aaaaaa;}
+.RIBPickOMNE{color:#aaaaaa;}
+
+.RIBPickEmpty{background:url(d_blank.gif) no-repeat 50%; cursor:pointer; _cursor:hand;padding:3px 0; }
+
+.RIBPickTimeCell 
+{text-align:right; padding-bottom:4px; padding-top:6px; padding-right:5px; border-top:1px solid #C9C9F5; background:#EFF0F1;}
+
+.RIBPickTime 
+{border:0px none; white-space:nowrap; text-align:right; background:#EFF0F1;}
+
+.RIBPickButton{background:#E1E1FF; text-align:center; border:1px solid #ACACE8; width:45px; height:16px}
+    
+.RIBPickButtonHover{background:#BBBBFF; border:1px solid #ACACE8; }
+.RIBPick2Table{width:auto; vertical-align:middle}
+.RIBPick2CellM{height:20px; width:55px; }
+.RIBPick2CellY{height:20px; width:35px; vertical-align:middle }
+.RIBPick2CellSep{height:20px; width:5px; }
+.RIBPick2Cell{vertical-align:middle}
+.RIBPick2M,.RIBPick2Y,.RIBPick2MSel,.RIBPick2YSel,.RIBPick2MHover,.RIBPick2YHover,.RIBPick2MSelHover,.RIBPick2YSelHover
+{cursor:pointer; _cursor:hand; text-align:center; margin-left:1px; margin-right:1px; padding-left:4px; padding-right:4px; overflow:hidden; }
+   
+.RIBPick2MSel,.RIBPick2YSel {background:#FAEC00; border:1px solid #cccccc; margin-left:0; margin-right:0;}
+.RIBPick2MHover,.RIBPick2YHover {background:#DDD; border:1px solid #ffffff; margin-left:0; margin-right:0;}
+.RIBPick2MSelHover,.RIBPick2YSelHover {background:#C9C9F5; border:1px solid #ffffff;margin-left:0; margin-right:0;}   
+.RIBPick2SepH {width:1px; height:1px; overflow:hidden; }
+.RIBPick2Sep {width:1px; background:#E3E4E6; overflow:hidden; margin-left:2px; margin-right:2px; height:20px;}
+.RIBPick2BL,.RIBPick2BR {width:35px; cursor:pointer; _cursor:hand; }
+
+
+.RIBPick2BL {background:url(d_left2.gif) no-repeat center center}
+.RIBPick2BR {background:url(d_right2.gif) no-repeat center center}
+
+
+/* Edit controls, TGLib */
+.RIBEdit,.RIBEditInline {padding:2px 4px;border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666;background:#ffffff; white-space:nowrap; overflow:hidden;}
+  
+.RIBEditInline { display:inline-block; vertical-align:bottom; }
+.RIBEditInput,.RIBEditTextarea {border:0 solid transparent; margin:0; padding:0;vertical-align: middle} 
+
+.RIBEditTextarea { line-height:13px; }
+.RIBEditSpaceInput { vertical-align:middle; }
+.RIBEditNormalInput,.RIBEditNormalTextarea,.RIBEditSpaceTextarea { background-color:#FFFFFF; /*#FFDCFF;*/; }
+.RIBEditInt,.RIBEditFloat { text-align:right; }
+
+.RIBEditMulti { white-space:normal; }
+.RIBEditReadOnly { background-color:#FFEEFF; }   
+.RIBEditParent { position:absolute; z-index:258; overflow:hidden; }
+
+.RIBEnumHeaderLeft,.RIBEnumHeaderRight,.RIBEnumHeaderNone 
+{background:white; cursor:pointer; _cursor:hand; vertical-align:middle; text-align:left; padding:2px 0 2px 2px;}
+
+.RIBEnumHeaderRight {background: url(combo.gif) no-repeat right center;margin:1px 1px 0 0;}
+ @media screen and (-webkit-min-device-pixel-ratio:0) {.RIBEnumHeaderRight{margin:1px 0 0 0;}}/* hack:CR,SF */
+.RIBEnumHeaderRight, x:-moz-any-link, x:default {margin:1px 0 0 0;} /* hack:FF */
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {.RIBEnumHeaderRight{ margin:1px 0 0 0;}}/* hack:OP */
+
+.RIBEnumMenuHeader { background:#ffffff; }
+
+.RIBEnumControl,.RIBEnumInline {
+   cursor:pointer; _cursor:hand; padding-left:15px; padding-right:4px; padding-top:2px; padding-bottom:2px;
+   border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; overflow:hidden;}
+   
+.RIBEnumInline { display:inline-block; vertical-align:bottom; }
+.RIBEnumHeader { cursor:pointer; _cursor:hand;padding-left:15px; padding-right:4px; padding-top:2px; padding-bottom:2px;} 
+
+/*  Custom scrollbars  */
+.RIBCustScroll1RightHidden { background:url(VScroll.gif) left -108px; height:18px; overflow:hidden; }
+.RIBCustScroll1Right { padding-right:18px; background:url(VScroll.gif) right 0; }
+.RIBCustScroll1RightHover { padding-right:18px; background:url(VScroll.gif) right -18px; }
+.RIBCustScroll1Left { padding-left:18px;  background:url(VScroll.gif) left 0; }
+.RIBCustScroll1LeftHover { padding-left:18px;  background:url(VScroll.gif) left -18px; }
+.RIBCustScroll1SliderRight { padding-right:3px; background:url(VScroll.gif) right -36px; }
+.RIBCustScroll1SliderLeft { padding-left:3px; background:url(VScroll.gif) left -36px; }
+.RIBCustScroll1SliderHIn { height:18px; overflow:hidden; background:url(VScroll.gif) center -54px; }
+.RIBCustScroll1SliderRightHover { padding-right:3px; background:url(VScroll.gif) right -72px; }
+.RIBCustScroll1SliderLeftHover { padding-left:3px; background:url(VScroll.gif) left -72px; }
+.RIBCustScroll1SliderHInHover { height:18px; overflow:hidden; background:url(VScroll.gif) center -90px; }
+.RIBCustScroll2RightHidden { background:url(VScroll.gif) left -108px; height:18px; overflow:hidden; }
+.RIBCustScroll2Right { padding-right:18px; background:url(VScroll.gif) right 0; }
+.RIBCustScroll2RightHover { padding-right:18px; background:url(VScroll.gif) right -18px; }
+.RIBCustScroll2Left { padding-left:18px;  background:url(VScroll.gif) left 0; }
+.RIBCustScroll2LeftHover { padding-left:18px;  background:url(VScroll.gif) left -18px; }
+.RIBCustScroll2SliderRight { padding-right:3px; background:url(VScroll.gif) right -36px; }
+.RIBCustScroll2SliderLeft { padding-left:3px; background:url(VScroll.gif) left -36px; }
+.RIBCustScroll2SliderHIn { height:18px; overflow:hidden; background:url(VScroll.gif) center -54px; }
+.RIBCustScroll2SliderRightHover { padding-right:3px; background:url(VScroll.gif) right -72px; }
+.RIBCustScroll2SliderLeftHover { padding-left:3px; background:url(VScroll.gif) left -72px; }
+.RIBCustScroll2SliderHInHover { height:18px; overflow:hidden; background:url(VScroll.gif) center -90px; }
+
+.RIBCustScroll3Right,.RIBCustScroll3RightHidden { background:white; height:9px; overflow:hidden; }
+.RIBCustScroll3SliderRight,.RIBCustScroll3SliderRightHover { padding-right:3px; height:9px; background:url(VScroll.gif) right -126px; }
+.RIBCustScroll3SliderLeft,.RIBCustScroll3SliderLeftHover { height:9px; background:url(VScroll.gif) left -126px; }
+.RIBCustScroll3SliderRightHover { background-position:right -135px; }
+.RIBCustScroll3SliderLeftHover { background-position:left -135px; }
+.RIBCustScroll4Right,.RIBCustScroll4RightHidden,.RIBCustScroll4SliderRight,.RIBCustScroll4SliderRightHover { height:1px; overflow:hidden; }
+
+.RIBCustScroll1DownHidden { background:url(HScroll.png) -108px top; width:18px; overflow:hidden; }
+.RIBCustScroll1Down { padding-bottom:18px; background:url(HScroll.png) 0px bottom; cursor:default; width:18px; overflow:hidden; }
+.RIBCustScroll1DownHover { padding-bottom:18px; background:url(HScroll.png) -18px bottom; width:18px; overflow:hidden; }
+.RIBCustScroll1Up { padding-top:18px; background:url(HScroll.png) 0px top; width:18px; overflow:hidden; }
+.RIBCustScroll1UpHover { padding-top:18px;  background:url(HScroll.png) -18px top; width:18px; overflow:hidden; }
+.RIBCustScroll1SliderDown { padding-bottom:3px; background:url(HScroll.png) -36px bottom; width:18px; overflow:hidden; }
+.RIBCustScroll1SliderUp { padding-top:3px; background:url(HScroll.png) -36px top; width:18px; overflow:hidden; }
+.RIBCustScroll1SliderVIn { background:url(HScroll.png) -54px center; width:18px; overflow:hidden; }
+.RIBCustScroll1SliderDownHover { padding-bottom:3px; background:url(HScroll.png) -72px bottom; width:18px; overflow:hidden; }
+.RIBCustScroll1SliderUpHover { padding-top:3px; background:url(HScroll.png) -72px top; width:18px; overflow:hidden; }
+.RIBCustScroll1SliderVInHover { background:url(HScroll.png) -90px center; width:18px; overflow:hidden; }
+
+.RIBCustScroll2DownHidden { background:url(HScroll.png) -108px top; width:18px; overflow:hidden; }
+.RIBCustScroll2Down { padding-bottom:18px; background:url(HScroll.png) 0px bottom; cursor:default; width:18px; overflow:hidden; }
+.RIBCustScroll2DownHover { padding-bottom:18px; background:url(HScroll.png) -18px bottom; width:18px; overflow:hidden; }
+.RIBCustScroll2Up { padding-top:18px; background:url(HScroll.png) 0px top; width:18px; overflow:hidden; }
+.RIBCustScroll2UpHover { padding-top:18px;  background:url(HScroll.png) -18px top; width:18px; overflow:hidden; }
+.RIBCustScroll2SliderDown { padding-bottom:3px; background:url(HScroll.png) -36px bottom; width:18px; overflow:hidden; }
+.RIBCustScroll2SliderUp { padding-top:3px; background:url(HScroll.png) -36px top; width:18px; overflow:hidden; }
+.RIBCustScroll2SliderVIn { background:url(HScroll.png) -54px center; width:18px; overflow:hidden; }
+.RIBCustScroll2SliderDownHover { padding-bottom:3px; background:url(HScroll.png) -72px bottom; width:18px; overflow:hidden; }
+.RIBCustScroll2SliderUpHover { padding-top:3px; background:url(HScroll.png) -72px top; width:18px; overflow:hidden; }
+.RIBCustScroll2SliderVInHover { background:url(HScroll.png) -90px center; width:18px; overflow:hidden; }
+
+.RIBCustScroll3Down,.RIBCustScroll3DownHidden { background:white; width:9px; overflow:hidden; cursor:default; }
+.RIBCustScroll3SliderDown,.RIBCustScroll3SliderDownHover { padding-bottom:3px; width:9px; background:url(HScroll.png) -126px bottom; }
+.RIBCustScroll3SliderUp,.RIBCustScroll3SliderUpHover { width:9px; background:url(HScroll.png) -126px top; cursor:default; }
+.RIBCustScroll3SliderDownHover { background-position:-135px bottom; }
+.RIBCustScroll3SliderUpHover { background-position:-135px top; cursor:default; }
+
+.RIBCustScroll4Down,.RIBCustScroll4DownHidden,.RIBCustScroll4SliderDown,.RIBCustScroll4SliderDownHover { width:1px; overflow:hidden; }
+
+/* Other messages, TGLib */
+.RIBHintMain {position:absolute; margin-left:-1px; margin-top:-1px; left:0px; top:0px; z-index:260; background:#ffffff; cursor:default; }
+.RIBHintOuter {overflow:hidden; border:1px solid #000000; background:#ffffff !important; color:black; text-align:left; }
+.RIBHintHeaderOuter {background-color:#39aefb !important; color:#ffffff; border: 1px solid #ffffff; }
+.RIBHintShadow {position:absolute; z-index:259;background:#888; opacity:0.3; filter:alpha(opacity=30);margin-left:2px; margin-top:2px;}
+.RIBTipMain {position:absolute; left:0px; top:0px; z-index:262; visibility:hidden; }
+.RIBTipOuter  {overflow:hidden; cursor:default; font:12px Arial;padding-left:3px; padding-right:3px; background:#E4E5F0; border:1px solid #777;}
+.RIBTipBody {background:#E4E5F0; white-space:nowrap; }
+.RIBTipShadow {position:absolute;z-index:261;background:#888; opacity:0.3; filter:alpha(opacity=30);visibility:hidden; margin-left:3px; margin-top:3px}
+.RIBMouseOrig { background:yellow !important; opacity:0.5; filter:alpha(opacity=50); }
+.RIBMouseDragObject { position:absolute; z-index:260; background:#888; opacity:0.5; filter:alpha(opacity=50); }
+.RIBFocus { border:1px solid #AAF; border-top:1px solid #00F; border-left:1px solid #00F; background-color:#EEE; } 
+.GridDisabled { position:absolute; z-index:256; background:white; opacity:0.5; filter:alpha(opacity=50); } 
+
+/* Do not change, marks the style loaded */
+.RIBLoaded { border:1px solid #000000 !important;}
+
+/*sum*/
+.RIBSumCell{background:#ebebff; color:#FF060C;}/*//text-align: right;font-weight:bold;*/
+.RIBSubSumCell{background: #F2F9FA; border-top:1px solid #D1E7F4; border-bottom:1px solid #D1E7F4; color:#7A7AE2}
+.RIBCumulateCell{background: #F2F9FA; border-bottom:1px solid #D1E7F4; color:#6445BE}
+
+/* FindDialog */
+.RIBH1Pop,.RIBPPop{margin:0; padding:0}
+.RIBPaddingl10{padding-left:10px}
+.RIBPaddingT10{padding-top:10px}
+.RIBPPop{ padding:0 0 10px 0; text-align:center }
+.RIBPop{width:410px; overflow:hidden; border:1px solid #BFBFE1; padding:0; font-size:12px;background:#F3F3FA; font-family:dotum, Arial, Helvetica, sans-serif}
+.RIBPopTitle{width:100%;color:#474778;border-bottom:1px solid #BFBFE1; font-size:12px; font-weight:bold; display:block; line-height:28px;
+background: #ebebff; /* Old browsers */
+background: -moz-linear-gradient(top,  #ebebff 0%, #e0e0ff 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebebff), color-stop(100%,#e0e0ff)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ebebff 0%,#e0e0ff 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ebebff 0%,#e0e0ff 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ebebff 0%,#e0e0ff 100%); /* IE10+ */
+background: linear-gradient(top,  #ebebff 0%,#e0e0ff 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebebff', endColorstr='#e0e0ff',GradientType=0 ); /* IE6-9 */
+}
+.RIBPopSearch{margin:10px; overflow:hidden; }
+.RIBPopContent{border:1px solid #DBDCDD; background-color:#fff}
+.RIBPopUl{list-style:none; margin:0; padding:10px;}
+.RIBPopDiv{overflow:hidden; width:100%}
+.RIBPopDiv2{overflow:hidden; width:100%}
+.RIBPopLeft,.RIBPopLeft2{width:220px; float:left; }
+.RIBPopRight,.RIBPopRight2{width:166px; float:right}
+.RIBPopUl input {margin:-2px 2px 0px 0px;padding:0 ; width:13px; height:13px; vertical-align:middle;}
+.RIBPopUl li{ padding-top:4px;padding-bottom:3px ; padding-left:5px}
+.RIBBtn{margin-top:10px; text-align:center }
+.RIBPopLeft, .RIBPopRight{ height:120px}
+.RIBPopLeft2, .RIBPopRight2{ height:80px}
+.RIBPopLabel{line-height:12px; margin:0 0 0 2px}
+.RIBPopSubtitle{font-weight:bold; color:#000; border-bottom:1px solid  #E0E0E0; background-color:#E7E7E7;padding-left:4px;}
+.RIBPopBtnBlue {text-align: center;text-decoration: none;color:#474778;position: relative;border:1px solid #9A9ACF; font-size:12px;width:50px !important;height:22px !important;
+background: #ebebff; /* Old browsers */
+background: -moz-linear-gradient(top,  #ebebff 0%, #e0e0ff 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebebff), color-stop(100%,#e0e0ff)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ebebff 0%,#e0e0ff 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ebebff 0%,#e0e0ff 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ebebff 0%,#e0e0ff 100%); /* IE10+ */
+background: linear-gradient(top,  #ebebff 0%,#e0e0ff 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebebff', endColorstr='#e0e0ff',GradientType=0 ); /* IE6-9 */
+}
+.RIBPopBtnBlue:hover {
+background: #e0e0ff; /* Old browsers */
+background: -moz-linear-gradient(top,  #e0e0ff 0%, #ebebff 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e0e0ff), color-stop(100%,#ebebff)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #e0e0ff 0%,#ebebff 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #e0e0ff 0%,#ebebff 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #e0e0ff 0%,#ebebff 100%); /* IE10+ */
+background: linear-gradient(top,  #e0e0ff 0%,#ebebff 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e0ff', endColorstr='#ebebff',GradientType=0 ); /* IE6-9 */
+}		

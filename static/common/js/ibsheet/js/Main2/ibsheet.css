@@ -1,0 +1,788 @@
+/* -----------------------------------------------------------------------*/
+/* ----------------- "Main" IBSheet style definition ---------------------*/
+/* -----------------------------------------------------------------------*/
+
+/* Base tags */
+.GM2Image {padding-bottom:256px;}
+.GM2None {display:none;}
+.GM2Section,.GM2SectionFF3, .GM2ChildPart {table-layout:fixed; width:0;}
+.GM2SectionFF3 {border-collapse:collapse; }
+
+/* Sections */
+.GM2MainTable {border:1px solid #99BCE8; border-collapse:separate; text-align:left; background:#ffffff; font:12px Dotum,Helvetica,AppleGothic,Sans-serif;}
+.GM2FootLeft,.GM2FootMid,.GM2FootRight {border-top:1px solid #99BCE8;}
+.GM2HeadLeft,.GM2BodyLeft,.GM2FootLeft,.GM2HScrollLeft {border-right:1px solid #c0c0ff;}	
+.GM2HeadRight,.GM2BodyRight,.GM2FootRight,.GM2HScrollRight {border-left:1px solid #c0c0ff;}	
+.GM2VScroll {padding-top:1px; padding-bottom:1px;}
+.GM2HScrollLeft,.GM2HScrollMid,.GM2HScrollLeftResizeTouch,.GM2HScrollRightResizeTouch {padding-left:1px; padding-right:1px; cursor:default;}
+.GM2HScrollLeftResizeTouch {border-right:2px solid #000000; padding-right:18px; background:#F4F4F4;}
+.GM2HScrollRightResizeTouch {border-left:2px solid #000000; padding-left:18px; background:#F4F4F4;}
+.GM2HScrollMidLeftResizeTouch {border-left:1px solid #000000; padding-left:19px; background:#F4F4F4;}
+.GM2HScrollMidRightResizeTouch {border-right:1px solid #000000; padding-right:19px; background:#F4F4F4;}
+.GM2HScrollWide {padding-right:1px;}
+.GM2HScrollHidden {overflow:visible !important; background:#F4F4F4; cursor:default; }
+.GM2XScroll {background:#F4F4F4;}
+.GM2Page {border-top:0px solid #E0E0E0;}
+
+/* Rows */
+.GM2SpaceRowHeight{height:21px; }
+.GM2RowHeight 	 {height:18px; }
+.GM2RowHeightTouch{height:22px; }
+.GM2SpaceMargin   {margin:0; }
+.GM2SpaceMarginTouch{margin:0; }
+.GM2SpaceRow {background:#ffffff; white-space:nowrap; overflow:hidden; padding-top:2px; padding-bottom:2px; border-bottom:1px solid #e0e0ff;}
+.GM2GroupRow,.GM2SearchRow,.GM2PagerRow 
+{background-color:#C9E1F5; white-space:nowrap; padding-top:5px; padding-bottom:5px; overflow:hidden; border-bottom:1px solid #99BCE8;} 
+.GM2GroupRow,.GM2PagerRow {background-position:0 -1801px; }
+.GM2FillRow {background:#ffffff; }
+.GM2RowAbove,.GM2RowBelow {border-left:1px solid #9cb6c8; border-right:1px solid #9cb6c8;}
+.GM2RowAbove { margin-top:3px; overflow:hidden;}
+.GM2RowBelow {margin-bottom:3px; overflow:hidden;}
+.GM2CountRowTop {background-color:#C9E1F5; white-space:nowrap;padding-top:5px; padding-bottom:5px; overflow:hidden; border-bottom:1px solid #99BCE8;}
+.GM2CountRowBottom {background-color:#C9E1F5; white-space:nowrap; padding-top:5px; padding-bottom:5px; overflow:hidden; border-top:1px solid #99BCE8;}
+.GM2CountFont { font-size:/*IBFS*/12px; font-family:/*IBFN*/"Dotum", "Helvetica", "AppleGothic", sans-serif; }
+.GM2NoDataRow {padding-top:0px; padding-bottom:0px; background-color:#ffffff; color:#000000;}
+
+/* Cell */
+.GM2Cell,.GM2CellPanel,.GM2CellFilter,.GM2HeaderDrag,.GM2HeaderGroup 
+ {border-bottom:1px solid #e0e0ff; border-right:1px solid #e0e0ff; border-left:0; border-top:0;vertical-align:top; overflow:hidden; height:auto; font-size:/*IBFS*/12px; font-family:/*IBFN*/"Dotum", "Helvetica", "AppleGothic", sans-serif;}
+
+.GM2CellHeader,.GM2CellHeaderEmpty
+ {vertical-align:middle; overflow:hidden;height:auto; background-color:#C9E1F5; padding-top:1px; border-right:1px solid #99BCE8; border-bottom:1px solid #99BCE8;} 
+.GM2CellBorderFF3 {border-left:0;border-top:0;} 
+.GM2CellSpace {vertical-align:top; padding-top:5px !important; }
+.GM2CellSpacePanel,.GM2CellSpaceBool {vertical-align:top; }
+.GM2CellSpaceRadio { padding-top:3px !important;}
+.GM2CellSpaceEditButton { vertical-align:top; padding-top:4px !important; border:1px solid #000000 !important; background-color:#ffffff !important; }
+.GM2CellSpaceButtonButton { vertical-align:top; }
+.GM2CellSpaceButton { vertical-align:top; padding-top:5px !important; white-space:nowrap; }
+.GM2CellSpaceAbove { border-top:1px solid #9cb6c8; }
+.GM2CellSpaceBelow { border-bottom:1px solid #9cb6c8; }
+.GM2CellPanel,.GM2CellHeaderPanel{ white-space:nowrap; } 
+.GM2CellHidden { background:transparent!important; border-top:none!important; border-bottom:none!important; }
+.GM2HeaderButton { padding:0; }
+.GM2HeaderGroup {background: #7FA9E6; color:#ffffff; padding-left:3px; }
+.GM2HeaderGroupFocus {background-color: #C0C0A0; }
+.GM2HeaderGroupDelete {background-color: #F0F0E0; color: #F0F0E0; }
+.GM2HeaderGroupCustom {color:#BBB; padding-left:5px; cursor:default; white-space:nowrap;}
+.GM2HeaderDrag {background: #9FB9E9; cursor:default; overflow:hidden; }
+.GM2HeaderFocus {background: #9FB9E9;}
+.GM2Panel {padding-left:80px;}
+.GM2NoTreeLines1 {text-align:right;}
+.GM2NoTreeLines2 {text-align:right; vertical-align:middle; padding-top:0;}
+.GM2Tree {padding-top:0; white-space:nowrap;}
+.GM2SpannedTree {vertical-align:top;}
+.GM2CellClassInner {padding-top:0; padding-bottom:0;}
+
+/* Inside cell */
+.GM2Status,.GM2Seq,.GM2Popup,.GM2PopupEdit,.GM2Html,.GM2Text,.GM2Lines,.GM2Pass,.GM2Int,.GM2Float,.GM2Date,
+.GM2Link,.GM2Img,.GM2Radio,.GM2RadioText,.GM2List,.GM2Enum,.GM2DropCols,.GM2Abs,.GM2PagerEdit,.GM2User,.GM2Result 
+ {white-space:nowrap;vertical-align: middle;padding:2px 3px;} 
+.GM2Int,.GM2Float { text-align:right; }
+.GM2Lines,.GM2Radio,.GM2Html,.GM2List { white-space:normal; }	
+.GM2Img,.GM2Html {padding:0; } 
+.GM2Pass { padding:0 0 0 3px; }
+.GM2Radio,.GM2RadioText { padding:0; font-weight:normal !important; }
+.GM2Bool { text-align:center; }
+.GM2Icon { background-repeat:no-repeat; }
+.GM2HiddenSpace { display:none; }
+.GM2DropCols { padding-top:2px !important; }
+
+.GM2HeaderText {color: #15498B; vertical-align:middle; font-size:/*IBFS*/12px; font-family:/*IBFN*/"Dotum", "Helvetica", "AppleGothic", sans-serif;}
+.GM2Abs { padding:0; }
+.GM2User { padding:0; }
+.GM2PagerEdit { text-align:center; padding-top:3px; }
+.GM2MergedCellH {padding:0 0 5px 0}
+.GM2MergedCellV {padding:0 0 1px 0}
+
+.GM2Wrap0 { white-space:nowrap; }
+.GM2Wrap1 { white-space:normal; }
+.GM2Ellipsis { white-space:nowrap; text-overflow:ellipsis;}
+
+.GM2AlignLeft { text-align:left; }
+.GM2AlignCenter { text-align:center; }
+.GM2AlignJustify { text-align:center; }
+.GM2AlignRight { text-align:right;}
+
+/* Tree Img with lines */
+.GM2000,.GM2010,.GM2001,.GM2011,.GM2100,.GM2110,.GM2101,.GM2111, 
+.GM2000T,.GM2010T,.GM2001T,.GM2011T,.GM2100T,.GM2110T,.GM2101T,.GM2111T,
+.GM200,.GM201,.GM210,.GM211,.GM200T,.GM201T,.GM210T,.GM211T,
+.GM20T,.GM21T,.GM20TL,.GM21TL,.GM20C,.GM21C,.GM20CL,.GM21CL,.GM20E,.GM21E,.GM20EL,.GM21EL,
+.GM20,.GM21,.GM2T,.GM2TL,.GM2C,.GM2CL,.GM2E,.GM2EL,.GM2D0,.GM2D1,.GM2D2,.GM2D3,.GM2D4,.GM2D0L,.GM2D1L,.GM2D2L,.GM2D3L,.GM2D4L 
+{background-image:url(Tree.gif); vertical-align:top;}
+
+u.GM2000,u.GM2010,u.GM2001,u.GM2011,u.GM2100,u.GM2110,u.GM2101,u.GM2111 { padding-left:39px; }
+u.GM2000T,u.GM2010T,u.GM2001T,u.GM2011T,u.GM2100T,u.GM2110T,u.GM2101T,u.GM2111T { padding-left:60px; }
+u.GM200,u.GM201,u.GM210,u.GM211 { padding-left:26px; }   
+u.GM200T,u.GM201T,u.GM210T,u.GM211T { padding-left:47px; }   
+u.GM20T,u.GM21T,u.GM20TL,u.GM21TL,u.GM20C,u.GM21C,u.GM20CL,u.GM21CL,u.GM20E,u.GM21E,u.GM20EL,u.GM21EL { padding-left:34px; }   
+u.GM20,u.GM21 { padding-left:13px; }
+u.GM2T,u.GM2TL,u.GM2C,u.GM2CL,u.GM2E,u.GM2EL,u.GM2D0,u.GM2D1,u.GM2D2,u.GM2D3,u.GM2D4,u.GM2D0L,u.GM2D1L,u.GM2D2L,u.GM2D3L,u.GM2D4L { padding-left:21px; }   
+
+.GM2000,.GM2000T{ background-position:-24px 0px; }
+.GM2010,.GM2010T{ background-position:-136px 0; }
+.GM2001,.GM2001T{ background-position:-272px 0; }
+.GM2011,.GM2011T{ background-position:-392px 0; }
+.GM2100,.GM2100T{ background-position:-512px 0; }
+.GM2110,.GM2110T{ background-position:-640px 0; }
+.GM2101,.GM2101T{ background-position:-768px 0; }
+.GM2111,.GM2111T{ background-position:-896px 0; }
+.GM200,.GM200T  { background-position:-37px 0;  }
+.GM210,.GM210T  { background-position:-149px 0; }
+.GM201,.GM201T  { background-position:-285px 0; }
+.GM211,.GM211T  { background-position:-405px 0; }
+.GM20,.GM20T 	  { background-position:-50px 0;  }
+.GM21,.GM21T 	  { background-position:-298px 0; }
+.GM2T 		  { background-position:-63px 0;  }
+.GM20TL 		  { background-position:-1032px 0; }
+.GM21TL 		  { background-position:-1088px 0; }
+.GM20C 	      { background-position:-1160px 0; }
+.GM21C 		  { background-position:-1216px 0; }
+.GM20CL 		  { background-position:-1288px 0; }
+.GM21CL 		  { background-position:-1344px 0; }
+.GM20E 		  { background-position:-1416px 0; }
+.GM21E 		  { background-position:-1472px 0; }
+.GM20EL 		  { background-position:-1544px 0; }
+.GM21EL 		  { background-position:-1600px 0; }
+.GM2TL 		  { background-position:-1045px 0; }
+.GM2C 		  { background-position:-1173px 0; }
+.GM2CL 		  { background-position:-1301px 0; }
+.GM2E 		  { background-position:-1429px 0; }
+.GM2EL 		  { background-position:-1557px 0; }
+.GM2D0 		  { background-position:-1664px 0; }
+.GM2D1 		  { background-position:-1696px 0; }
+.GM2D2 		  { background-position:-1728px 0; }
+.GM2D3 		  { background-position:-1760px 0; }
+.GM2D0L 		  { background-position:-1792px 0; }
+.GM2D1L 		  { background-position:-1824px 0; }
+.GM2D2L 		  { background-position:-1856px 0; }
+.GM2D3L 		  { background-position:-1888px 0; }
+.GM2D4 		  { background-position:-1920px 0; }
+.GM2D4L 		  { background-position:-1952px 0; }
+
+/* Tree Img without lines  */
+.GM2ND0,.GM2ND1,.GM2ND2,.GM2ND3,.GM2ND4,.GM2NC,.GM2NE,.GM2NCR,.GM2NER {background-image:url(TreeN.gif); background-repeat:no-repeat; vertical-align:top; }
+u.GM2ND0,u.GM2ND1,u.GM2ND2,u.GM2ND3,u.GM2ND4,u.GM2NC,u.GM2NE,u.GM2NCR,u.GM2NER { padding-left:20px; }
+.GM2ND0 { background-position: -6px 0; }
+.GM2ND1 { background-position: -56px 0; }
+.GM2ND2 { background-position: -106px 0; }
+.GM2ND3 { background-position: -156px 0; }
+.GM2ND4 { background-position: -206px 0; }
+.GM2NC { background-position:right -50px;}
+.GM2NE { background-position:right -2000px;}
+.GM2NCR { background-position:-255px -50px;}
+.GM2NER { background-position:-255px -2000px;}
+u.GM2NL { padding-left:21px; }
+
+/* Cell images */
+.GM2IconLink { text-decoration:none; width:1000px; display:inline-block; }
+.GM2IconLeft,.GM2IconRight,.GM2IconCenter {  background-repeat:no-repeat; }
+.GM2IconLeft { background-position:left 0; padding-left:20px !important; }
+.GM2IconRight { background-position:right 0; padding-right:20px !important; }
+.GM2IconCenter { background-position:center 0; }
+.GM2PopupRight { background:url(popup.gif) no-repeat 5px center; }
+.GM2ExpandLeft,.GM2CollapseLeft,.GM2ExpandHeaderLeft,.GM2CollapseHeaderLeft { padding-left:20px!important; }
+.GM2DateRight{ padding-right:20px!important;}
+u.GM2DateRight,u.GM2PopupRight { padding-right:0!important; padding-left:17px; }
+.GM2DateRight {background:url(calendar.gif) no-repeat 2px center}
+.GM2EnumRight { background:url(combo.gif) no-repeat right center; }
+u.GM2EnumRight {padding-right:0; padding-left:17px}
+.GM2ExpandLeft { background:url(ic_plus.gif) no-repeat 3px center; padding:2px 0 0  18px; _padding:0 0 0 18px }
+.GM2CollapseLeft { background:url(ic_minus.gif) no-repeat 3px center ; padding:2px 0 0  18px; _padding:0 0 0 18px }
+.GM2Radio0Right,.GM2Radio1Right,.GM2Radio2Right,.GM2Radio3Right {line-height:17px; padding-right:17px; padding-left:3px; }
+u.GM2Filter0,u.GM2Filter1 { padding-left:16px; }
+.GM2Bool0,.GM2Bool0RO,.GM2Bool1,.GM2Bool1RO,.GM2Bool2,.GM2Bool2RO,.GM2Bool3,.GM2Bool3RO {background-position:center center; background-repeat:no-repeat;}
+
+.GM2Bool0   { background-image:url(chk0.gif);  }
+.GM2Bool0RO { background-image:url(chk0R.gif); }
+
+.GM2Bool1   { background-image:url(chk1.gif);  }
+.GM2Bool1RO { background-image:url(chk1R.gif); }
+
+.GM2Bool2   { background-image:url(chk2.gif);  }
+.GM2Bool2RO { background-image:url(chk2R.gif); }
+
+.GM2Bool3   { background-image:url(chk3.gif);  }
+.GM2Bool3RO { background-image:url(chk3R.gif); }
+
+/* Filter images  */
+.GM2Filter0Left,.GM2Filter1Left,.GM2Filter2Left,.GM2Filter3Left,.GM2Filter4Left,.GM2Filter5Left,.GM2Filter6Left,.GM2Filter7Left,
+.GM2Filter8Left,.GM2Filter9Left,.GM2Filter10Left,.GM2Filter11Left,.GM2Filter12Left {padding-left:18px;}
+
+.GM2Filter0Left,.GM2Filter0Menu 	{ width:18px; height:18px; background:url(filter0.gif) no-repeat left center; }   
+.GM2Filter1Left,.GM2Filter1Menu 	{ width:18px; height:18px; background:url(filter1.gif) no-repeat left center; }
+.GM2Filter2Left,.GM2Filter2Menu 	{ width:18px; height:18px; background:url(filter2.gif) no-repeat left center; }
+.GM2Filter3Left,.GM2Filter3Menu 	{ width:18px; height:18px; background:url(filter3.gif) no-repeat left center; }
+.GM2Filter4Left,.GM2Filter4Menu 	{ width:18px; height:18px; background:url(filter4.gif) no-repeat left center; }
+.GM2Filter5Left,.GM2Filter5Menu 	{ width:18px; height:18px; background:url(filter5.gif) no-repeat left center; }   
+.GM2Filter6Left,.GM2Filter6Menu 	{ width:18px; height:18px; background:url(filter6.gif) no-repeat left center; }
+.GM2Filter7Left,.GM2Filter7Menu 	{ width:18px; height:18px; background:url(filter7.gif) no-repeat left center; }
+.GM2Filter8Left,.GM2Filter8Menu 	{ width:18px; height:18px; background:url(filter8.gif) no-repeat left center; }
+.GM2Filter9Left,.GM2Filter9Menu 	{ width:18px; height:18px; background:url(filter9.gif) no-repeat left center; }
+.GM2Filter10Left,.GM2Filter10Menu { width:18px; height:18px; background:url(filter10.gif) no-repeat left center; }
+.GM2Filter11Left,.GM2Filter11Menu { width:18px; height:18px; background:url(filter11.gif) no-repeat left center; }
+.GM2Filter12Left,.GM2Filter12Menu { width:18px; height:18px; background:url(filter12.gif) no-repeat left center; }
+
+.GM2Filter0Menu,.GM2Filter1Menu,.GM2Filter2Menu,.GM2Filter3Menu,.GM2Filter4Menu,.GM2Filter5Menu,.GM2Filter6Menu,.GM2Filter7Menu,.GM2Filter8Menu,.GM2Filter9Menu,
+.GM2Filter10Menu,.GM2Filter11Menu,.GM2Filter12Menu {overflow:hidden; margin: -2px 0 0 -1px;}
+.GM2FilterMenuHeader { padding-left:2px; border-bottom:0 !important; } 
+
+/*  Keyfield Image */
+.GM2Keyfield {background-image:url(keyfield.gif); display:inline-block; vertical-align:middle; background-repeat: no-repeat; background-position:center 1px; padding: 0 2px 0 4px; }
+
+/* GMKeyfield : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .GM2Keyfield{  background-position: center 3px;padding: 0 2px 0 4px; }}
+
+/* CheckBox Header Image */
+.GM2CheckHeader0 {background-image:url(chk0.gif); display:inline-block; vertical-align:middle; background-repeat:no-repeat; background-position:5px 1px; padding:2px 7px 0 6px; margin:0 2px 0 0;}
+
+/* GMCheckHeader0 : hack CR,SF*/
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{.GM2CheckHeader0{ background-position:6px 1px ; padding: 2px 8px 0 6px; }}
+
+/* GMCheckHeader0 : hack FF*/
+.GM2CheckHeader0, x:-moz-any-link, x:default { background-position:6px 1px ; padding: 2px 8px 0 6px; }
+
+/* GMCheckHeader0 : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .GM2CheckHeader0{ background-position:7px center ; padding:1px  17px 0 0; }}
+
+.GM2CheckHeader1 {background-image:url(chk1.gif); display:inline-block; vertical-align:middle; background-repeat:no-repeat; background-position:4px 1px ; padding:2px 6px 0 6px; margin:0 2px 0 0}
+
+/* GMCheckHeader1 : hack CR,SF*/
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{.GM2CheckHeader1{ background-position:6px 1px ; padding: 2px 8px 0 6px; }}
+
+/* GMCheckHeader1 : hack FF*/
+.GM2CheckHeader1, x:-moz-any-link, x:default { background-position:6px 1px ; padding: 2px 8px 0 6px; }
+
+/* GMCheckHeader1 : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .GM2CheckHeader1 { background-position:7px center ; padding:1px  17px 0 0;  }}
+
+/* Sort images */
+.GM2Sort {display:block; float:right; margin:2px 2px 0; width:7px;}
+
+/* State classes */
+/* The colors must be set by numbers not by names */
+.GM2ColorDefault  { background-color:#FFFFFF;}
+.GM2ColorNoFocus  { background-color:#E8F4FF;}
+.GM2ColorReadOnly { background-color:#F4F4F4;}
+.GM2ColorPreview  { background-color:#FFFFFF;}
+.GM2ColorAlternate{ background-color:#EBFFFF;}
+.GM2ColorSelected { background-color:/*#FFFF80*/#aadbff; }
+
+.GM2ColorFilter {background-color:#FFFFFF;}
+
+/*//.GM2ClassSelected { }*/
+.GM2ColorError   { background-color:#FF6969; }
+.GM2ColorDeleted { background-color:#FFCDCD; }
+.GM2ClassDeleted { font-style:italic; }
+.GM2ColorAdded   { background-color:#CDFFCD; }
+.GM2ClassAdded   { font-weight:bold; }
+.GM2ColorMoved1  { background-color:#FFFFFF; }
+.GM2ColorMoved2  { background-color:#D7EBEB; }
+.GM2ColorChanged { background-color:#EBEBFF; }
+.GM2ColorChangedCell { background-color:#E1E1FF; }
+.GM2ClassChangedCell { font-weight:bold; }
+.GM2ColorMaxChildren { background-color:#FFFFF0; }
+.GM2ColorDetail { background-color:#FFF0FF; }
+.GM2ColorDetailSelected { background-color:#FFF0E0; }
+.GM2ColorDragged{ background-color:#E0E0C0; }
+.GM2ColorFound1 { background-color:#FF87FF; }
+.GM2ColorFound2 { background-color:#FFC387; }
+.GM2ColorFound3 { background-color:#87FF87; }
+.GM2ColorHovered 			{ background-color:#F0F0FF; }
+.GM2ColorHoveredCell 		{ background-color:#C0C0FF; }
+.GM2ColorHoveredCellReadOnly { background-color:#F0F0F0; }
+.GM2ColorHoveredCellNoFocus 	{ background-color:#F8F8F8; }
+
+.GM2ClassHoveredCellHeader 	{ background-position:0px -250px; }
+.GM2ClassHoveredCellPanel 	{ background-position:0px -1801px; background-repeat:repeat-x; }
+
+.GM2ColorHoveredCellSpace 	{ background-color:#FFFFFF; }
+.GM2ColorHoveredCellSpaceEdit{ background-color:#C0C0FF; }
+.GM2ColorHoveredCellSpaceBool{ background-color:#FFFFFF; }
+.GM2ColorHoveredCellButton 	{ background-color:#FFFFFE; }
+.GM2ClassHoveredCellButton 	{ color:green; }
+.GM2ColorHoveredCellButton1 	{ background-color:#FFFFFE; }
+.GM2ClassHoveredCellButton1 	{ color:red; }
+.GM2ColorHoveredCellTab 		{ background-color:#FFFFFE; }
+.GM2ClassHoveredCellTab 		{ background-position:0px -1801px; color:green; }
+.GM2ColorHoveredCellTab1 	{ background-color:#99bbcc; }
+.GM2ClassHoveredCellTab1 	{ background-image:none; }
+
+.GM2ColorFocused 			{ background-color:#E6E6E6; }
+.GM2ColorFocusedCell 		{ background-color:#FFFFFE; }
+.GM2ColorFocusedCellSafari 	{ background-color:#A0A0FF; }
+.GM2ColorFocusedCellSpace 	{ background-color:#E6E6E6; }
+.GM2ColorFocusedCellButton 	{ background-color:#BCD; }
+.GM2ColorFocusedCellHeader 	{ background-color:#FFFFFE; }
+.GM2ColorFocusedCellPanel 	{ background-color:#FFFFFE; }
+.GM2ColorEditedCell 			{ background-color:#FFFFFF; }
+.GM2ColorViewedCell 			{ background-color:#FFFFFF; }
+
+/* Hover, focus, edit cursors */
+.GM2HoverRowBackground 	{ opacity:0.1; filter:alpha(opacity=10); background:#00F; }
+.GM2HoverRowBorder 		{ z-index:0; border-top:1px solid #BBF; border-bottom:1px solid #BBF; cursor:default; }
+.GM2HoverCellBorder 		{ z-index:0; padding:1px; border:1px solid #A0A0F0; background:white; }
+.GM2FocusRowBackground 	{ opacity:0.1; filter:alpha(opacity=20); background:/*IBSB*/#b6d102; } /* <-- Sheet : Selected Row Background */
+.GM2FocusRowBorder 		{ z-index:0; border:1px solid /*IBSB*/#D6E581; } /* <-- Sheet : Selected Row Border */
+.GM2FocusCellBorder		{ z-index:0; border:2px solid /*IBSB*/#CCE24C; } /* <-- Sheet : Selected Cell Border */
+.GM2FocusCellSpaceBorder,.GM2EditCellSpaceBorder { z-index:4; }
+.GM2EditCellBorder 		{ z-index:0; border:2px solid #FF6666;}    /*<-- Sheet : CellEdit Border */
+.GM2EditCellInput 		{ position:relative; border:0 solid #39aefb; overflow:hidden; z-index:2; } 
+
+.GM2CursorBackground, .GM2CursorBorderLeft ,.GM2CursorBorderRight,.GM2CursorBorderTop,.GM2CursorBorderBottom 
+ {position:relative;overflow:hidden;}
+
+.GM2CursorBackground  {border:none; padding:0;}
+.GM2CursorBorderLeft  {padding-right:0; padding-top:0; padding-bottom:0; border-right:none; border-top:none; border-bottom:none;  width:0; height:0;}
+.GM2CursorBorderRight {padding-left:0; padding-top:0; padding-bottom:0; border-left:none; border-top:none; border-bottom:none;  width:0; height:0;}
+.GM2CursorBorderTop 	 {padding-bottom:0; padding-left:0; padding-right:0; border-bottom:none; border-left:none; border-right:none;  width:0; height:0;}
+.GM2CursorBorderBottom{padding-top:0; padding-left:0; padding-right:0; border-top:none; border-left:none; border-right:none; width:0; height:0;}
+
+/* Cell edges */
+.GM2NoLeft { border-left:0; }
+.GM2NoRight { border-right:0; }
+
+/* Dragging */
+.GM2MouseObject { opacity:0.5; filter:alpha(opacity=50); z-index:300; overflow:hidden;}
+.GM2DragObject {z-index:300; margin-left:10px; margin-top:10px; padding-left:3px; padding-right:3px;background:#E4E5F0 ; border:1px solid #777;}
+.GM2DragColInsideTop,.GM2DragColInsideBottom,.GM2DragColOutsideTop,.GM2DragColOutsideBottom{position:absolute;width:10px; height:11px; overflow:hidden; z-index:258;}
+.GM2DragColInsideTop 	{background:url(in_top.gif) no-repeat;} 	
+.GM2DragColInsideBottom  {background:url(in_bottom.gif) no-repeat;}	
+.GM2DragColOutsideTop  	{background:url(out_top.gif) no-repeat;}	
+.GM2DragColOutsideBottom {background:url(out_bottom.gif) no-repeat;}	 
+
+/* Messages */
+.GM2Disabled{position:absolute; z-index:264; background:#ffffff; opacity:0.5; filter:alpha(opacity=50); } 
+.GM2Process {position: absolute; left:0; top:0; background:#E2F0FF; border:1px solid #777; white-space:nowrap; text-align:center; visibility:hidden; z-index:266;}
+.GM2Message {background:#E2F0FF; border:1px solid #000000; padding:10px; white-space:nowrap; text-align:center;
+			 position: absolute; left:0; top:0; visibility:hidden; z-index:266;}
+.GM2MessageShadow 
+{position:absolute; margin-left:3px; margin-top:3px; z-index:265;background:#888; opacity:0.5; filter:alpha(opacity=50); left:0; top:0; visibility:hidden;}
+      
+/* Other */
+/* !!! No .GM2 style prefix here !!! */
+.GridTmpTag { position:absolute; left:5px; top:5px; visibility:hidden; }
+
+/* Popup menus */
+.GM2MenuMain  {position:absolute;left:0;top:0; z-index:258;}
+.GM2MenuOuter {overflow:hidden; border:1px solid #000000; background:#fff; padding:1px; margin:1px;}
+.GM2MenuHeader{overflow:hidden; position:absolute; z-index:258;border:1px solid #b0b0c0; background:#fff; cursor:pointer; _cursor:hand;}
+.GM2MenuHead {color:#15498B; cursor:pointer; text-align:left; font-weight:bold; padding-top:5px; padding-bottom:4px;
+	background: #c9e1f5; /* Old browsers */
+	background: -moz-linear-gradient(top,  #c9e1f5 0%, #99bce8 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c9e1f5), color-stop(100%,#99bce8)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #c9e1f5 0%,#99bce8 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #c9e1f5 0%,#99bce8 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #c9e1f5 0%,#99bce8 100%); /* IE10+ */
+	background: linear-gradient(top,  #c9e1f5 0%,#99bce8 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9e1f5', endColorstr='#99bce8',GradientType=0 ); /* IE6-9 */
+}
+.GM2MenuClose {float:right; width:14px; cursor:pointer; _cursor:hand; display:none;}
+.GM2MenuBody {cursor:default; background-color:#fff; padding-top:1px; padding-bottom:1px;}
+.GM2MenuShadow {position:absolute;margin:3px 0 0 3px;z-index:257;background-color:#888; opacity:0.5; filter:alpha(opacity=50);}
+.GM2MenuCheckedIconRight {padding-right:17px; background:url(chk1.gif) no-repeat 96% center; }
+.GM2MenuUncheckedIconRight { padding-right:17px;background:url(chk0.gif) no-repeat 96% center ; }
+
+.GM2MenuCursorIcon {background-image:url(d_gray_right.gif); background-repeat:no-repeat; background-position: 3px center;_background-color:#fff}
+.GM2MenuHoverIcon {background-image:url(d_right.gif); background-repeat:no-repeat; background-position: 3px center; _background-color:#ffeeaa }   
+
+.GM2MenuNextIcon { padding-right:10px; }
+.GM2MenuNextIconRtl { padding-left:10px; }
+
+.GM2MenuItemText,.GM2MenuItemIcon,.GM2MenuEnum,.GM2MenuEnumHeader,.GM2MenuEdit,.GM2FilterMenuItemText
+{white-space:nowrap; overflow:hidden; vertical-align: middle; padding:1px 0 0 0; font-size:/*IBFS*/12px; font-family:/*IBFN*/"Dotum", "Helvetica", "AppleGothic", sans-serif;}
+.GM2MenuItemDisabled {opacity:0.50; filter:alpha(opacity=30); overflow:hidden; }
+.GM2MenuLevel {color:blue;text-align:center; }  
+.GM2MenuEnumParent,.GM2MenuEditParent {padding-left:5px; padding-right:2px}
+.GM2MenuItemIcon {background-repeat:no-repeat;}
+.GM2MenuEnum {border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; padding-left:15px; overflow:hidden;}
+.GM2MenuEnumHeader  {padding:1px 0 2px 16px; cursor:default; } 
+.GM2MenuEdit{border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; background:white; overflow:hidden;white-space:nowrap;
+  padding-left:2px; padding-right:2px;}
+.GM2MenuEditInput,.GM2MenuEditTextarea {margin:0;padding:0;border:0; background:#FDD;_margin:-1px; _padding-right:1px; _padding_left:1px; }   
+.GM2MenuEditTextarea { line-height:13px;  }   
+.GM2MenuEditInt,.GM2MenuEditFloat,.GM2MenuEditDate { text-align:right; } 
+.GM2MenuEditMulti { white-space:normal; }
+.GM2MenuItem {background-color:#ffffff;padding:2px;}  
+.GM2MenuItemHover {background-color:#ffeeaa; border:1px solid #aaaadd;margin:0 1px; padding:1px 0;}
+.GM2MenuFocusHover {margin:1px; background-color:#CAE1F3; border:1px solid #000000;}
+.GM2MenuFocus 	  {margin:1px; background-color:#CAE1F3; border:1px solid #aaaadd;}
+.GM2MenuSeparator {margin:1px 3px 0 3px; height:1px; border-top:1px solid #aaaadd; overflow:hidden;}
+.GM2MenuCaption {padding:2px; background:#ffffff; color:blue; text-align:center;}
+.GM2MenuVSeparator { border-right:1px solid #DDD; }
+.GM2MenuFoot { border-top:none; text-align:center; white-space:nowrap; }
+.GM2MenuButton {font-size:11px;background:#dcecf8; text-align:center; border:1px solid #8a8fb5;margin:5px 2px 4px 2px;padding:0;white-space:nowrap;width:48px;} 
+.GM2MenuButtonHover { background:#ffeeaa; border:1px solid #aaaadd; }
+
+.GM2EnumMenuItem {background-color:#ffffff;padding:2px;padding-top:0px;padding-bottom:0px;}  
+.GM2EnumMenuFocus      {margin:1px; background-color:#CAE1F3; border:1px solid #aaaadd;}
+.GM2EnumMenuFocusHover {margin:1px; background-color:#CAE1F3; border:1px solid #000000;}
+.GM2EnumMenuItemHover {background-color:#ffeeaa; border:0px solid #aaaadd;margin:0 1px; padding:1px;padding-top:0px;padding-bottom:0px;}
+.GM2EnumMenuColBorderColor {border-color:#e0e0ff; font-size:/*IBFS*/12px; font-family:/*IBFN*/"Dotum", "Helvetica", "AppleGothic", sans-serif;}
+
+.GM2SuggestMenuItem {background-color:#ffffff;padding:2px;padding-top:0px;padding-bottom:0px;}  
+.GM2SuggestMenuFocus       {margin:1px; background-color:#CAE1F3; border:1px solid #aaaadd;}
+.GM2SuggestMenuFocusHover {margin:1px; background-color:#CAE1F3; border:1px solid #000000;}
+.GM2SuggestMenuItemHover {background-color:#ffeeaa; border:0px solid #aaaadd;margin:0 1px; padding:1px;padding-top:0px;padding-bottom:0px;}
+.GM2SuggestMenuColBorderColor {border-color:#e0e0ff;}
+
+/* Grid configuration menus */
+.GM2CfgMenuOuter,.GM2ColumnsMenuOuter { border:1px solid #000000; }
+.GM2CfgMenuHead,.GM2ColumnsMenuHead { padding-left:3px; }
+.GM2CfgMenuBody,.GM2ColumnsMenuBody { padding-left:4px; padding-right:4px;}
+.GM2CfgMenuFoot,.GM2ColumnsMenuFoot { padding-right:3px; padding-left:3px;}
+.GM2CfgMenuButton { width:70px; } 
+.GM2CfgMenuItemText,.GM2ColumnsMenuItemText { padding-left:3px; }
+.GM2ColumnsMenuItemText { white-space:nowrap; }
+.GM2CfgMenuItem,.GM2ColumnsMenuItem { padding-top:3px; padding-bottom:3px;}
+.GM2CfgMenuItemHover,.GM2CfgMenuFocus,.GM2CfgMenuFocusHover,
+.GM2ColumnsMenuItemHover,.GM2ColumnsMenuFocus,.GM2ColumnsMenuFocusHover { padding-top:2px; padding-bottom:2px;}
+
+/* Popup grid dialog */
+.GM2PopupGridOuter { border:0; overflow:visible; }
+.GM2PopupGridHead { padding:0; }
+.GM2PopupGridBody { padding:0; }
+.GM2PopupGridFoot { padding:0; }
+.GM2PopupGridButton { width:50px;margin-top:-2px; margin-bottom:3px;} 
+
+/* Calendar */
+/* calendar small design */
+.GM2PickMain  {position:absolute; left:0; top:0; z-index:258; }
+.GM2PickOuter {overflow:hidden; background:white; padding:1px; border:1px solid #426b8c; }
+.GM2PickHeader{overflow:hidden; position:absolute; z-index:258; border:1px solid black; background:#ffffff; cursor:pointer; _cursor:hand;}
+.GM2PickHeaderBottom{border-bottom:0; padding-bottom:1px;}
+.GM2PickHeaderTop{border-top:0; padding-bottom:1px; }
+.GM2PickHead {background:#5c8397; font:10px Dotum,Verdana,Arial; color:white; cursor:default; padding-left:5px; padding-top:1px; padding-bottom:1px;border-bottom:1px solid white;}
+.GM2PickClose{float:right; width:14px; cursor:pointer; _cursor:hand; display:none;}
+.GM2PickBody {cursor:default; padding:0; }
+.GM2PickShadow{position:absolute; background:#888; z-index:257; margin:3px 0 0 3px;opacity:0.5; filter:alpha(opacity=50);} 
+.GM2PickFooter,.GM2Pick2Footer{text-align:center; padding:2px; cursor:default; background:#EFF0F1; border-top:1px solid #E3E4E6}
+ 
+.GM2PickMY{background-color:#C9E1F5;border-bottom:1px solid #99BCE8;color:#15498B; cursor:default;text-align:center;padding:2px 0 4px 0;}
+   
+.GM2PickMYDown{padding-right:13px; background:url(d_down.gif) no-repeat right; cursor:pointer; _cursor:hand;}
+.GM2PickMYUp {padding-right:13px; background:url(d_up.gif) no-repeat right center; cursor:pointer; _cursor:hand;}
+
+.GM2PickMYRtl{padding-right:0; padding-left:13px; }
+.GM2PickBL,.GM2PickBR{padding-top:3px; cursor:pointer; _cursor:hand; width:16px; height:14px; overflow:hidden;}
+
+.GM2PickBL {float:left; background:url(d_left.gif) no-repeat 50%; }
+.GM2PickBR {float:right; background:url(d_right.gif) no-repeat 50%; }
+
+.GM2PickTable{width:160px !important;}
+.GM2PickRow  {background:#ffffff;}
+.GM2PickRowW {background:#DAEAF8;}
+.GM2PickCell {width:22px;}
+.GM2PickWDN {background:transparent; color:#333333;text-align:center; cursor:default; margin:2px 3px;padding:1px;}
+
+.GM2PickHover,.GM2PickSelHover,.GM2PickWD,.GM2PickSa,.GM2PickSu,.GM2PickSel,.GM2PickNow,.GM2PickWDNE,.GM2PickSaNE,.GM2PickSuNE,
+.GM2PickSelNE,.GM2PickNowNE,.GM2PickOM,.GM2PickOMNE {text-align:center; border:1px solid #ffffff; cursor:pointer; _cursor:hand;margin:2px 3px;}
+.GM2PickWN,.GM2PickWNE {text-align:center; cursor:pointer; _cursor:hand;padding:3px 4px; border-right:1px solid #8CA9E1; background:#EFF0F1; white-space:nowrap;}
+
+.GM2PickWDNE,.GM2PickSaNE,.GM2PickSuNE,.GM2PickSelNE,.GM2PickNowNE,.GM2PickWNE {cursor:default;}
+.GM2PickWD{background-color:#ffffff;}
+.GM2PickSa{background-color:#ffffff; color:blue;}
+.GM2PickSu{background-color:#ffffff; color:red;}
+.GM2PickSel{background-color:#fbea54; border:1px solid #dad1d1;}
+.GM2PickSelNE{background-color:#fbea54; border:1px solid #dad1d1;}
+.GM2PickNow {background-color:#c0f3ff; border:1px solid #dad1d1;}
+.GM2PickNowNE{background-color:#c0f3ff; border:1px solid #dad1d1;}
+.GM2PickHover{background-color:#ddd; border:1px solid #ddd;}
+.GM2PickSelHover{background-color:#eeeeaa; border:1px solid #ddd;}
+.GM2PickOM{background-color:white; color:#aaaaaa;}
+.GM2PickOMNE{color:#aaaaaa;}
+
+.GM2PickEmpty{background:url(d_blank.gif) no-repeat 50%; cursor:pointer; _cursor:hand;padding:3px 0; }
+
+.GM2PickTimeCell 
+{text-align:right; padding-bottom:4px; padding-top:6px; padding-right:5px; border-top:1px solid #8CA9E1; background:#EFF0F1;}
+
+.GM2PickTime 
+{border:0px none; white-space:nowrap; text-align:right; background:#EFF0F1;}
+
+.GM2PickButton{background:#dcecf8; text-align:center; border:1px solid #8a8fb5; width:45px; height:16px}
+    
+.GM2PickButtonHover{background:#ffeeaa; border:1px solid #aaaadd; }
+.GM2Pick2Table{width:158px !important; vertical-align:middle}
+.GM2Pick2CellM{height:20px; width:55px; }
+.GM2Pick2CellY{height:20px; width:35px; vertical-align:middle }
+.GM2Pick2CellSep{height:20px; width:5px; }
+.GM2Pick2Cell{vertical-align:middle}
+.GM2Pick2M,.GM2Pick2Y,.GM2Pick2MSel,.GM2Pick2YSel,.GM2Pick2MHover,.GM2Pick2YHover,.GM2Pick2MSelHover,.GM2Pick2YSelHover
+{cursor:pointer; _cursor:hand; text-align:center; margin-left:1px; margin-right:1px; padding-left:4px; padding-right:4px; overflow:hidden; }
+   
+.GM2Pick2MSel,.GM2Pick2YSel {background:#c0f3ff; border:1px solid #dad1d1; margin-left:0; margin-right:0;}
+.GM2Pick2MHover,.GM2Pick2YHover {background:#DDD; border:1px solid #ffffff; margin-left:0; margin-right:0;}
+.GM2Pick2MSelHover,.GM2Pick2YSelHover {background:#80e0f0; border:1px solid #ffffff;margin-left:0; margin-right:0;}   
+.GM2Pick2SepH {width:1px; height:1px; overflow:hidden; }
+.GM2Pick2Sep {width:1px; background:#E3E4E6; overflow:hidden; margin-left:2px; margin-right:2px; height:20px;}
+.GM2Pick2BL,.GM2Pick2BR {width:35px; cursor:pointer; _cursor:hand; }
+
+
+.GM2Pick2BL {background:url(d_left2.gif) no-repeat center center}
+.GM2Pick2BR {background:url(d_right2.gif) no-repeat center center}
+
+/* calendar large design */
+/*
+.GM2PickMain { position:absolute; left:0px; top:0px; z-index:258; }
+.GM2PickOuter { overflow:hidden; border:1px solid black; background:white; }
+.GM2PickHeader { overflow:hidden; position:absolute; z-index:258; border:1px solid black; background:white; cursor:pointer; _cursor:hand; }
+.GM2PickHeaderBottom { border-bottom:0px none; padding-bottom:1px; }
+.GM2PickHeaderTop { border-top:0px none; padding-bottom:1px; }
+.GM2PickHead { background:white; font:bold 13px "Microsoft Sans Serif",Arial; cursor:default; padding-left:5px; padding-top:3px; padding-bottom:4px; }
+.GM2PickClose { float:right; width:14px; cursor:pointer; _cursor:hand; display:none; background:url(Menu.gif) no-repeat right -353px; }
+.GM2PickBody { cursor:default; border:none;}
+.GM2PickShadow { position:absolute; background:#888; z-index:257; margin-left:3px; margin-top:3px; opacity:0.5; filter:alpha(opacity=50); }   
+.GM2PickFooter,.GM2Pick2Footer { border-top:1px solid #E3E4E6; background:#EFF0F1; color:blue; cursor:default; padding:2px; text-align:center; }
+
+.GM2PickMY{background-color:#0062b1; color:white; cursor:default; text-align:center; padding:4px 0 4px 0;}
+
+.GM2PickMYNone { font:15px "Microsoft Sans Serif",Arial; padding-right:13px; }
+.GM2PickMYDown { font:15px "Microsoft Sans Serif",Arial; padding-right:13px; background:url(d_l_down.gif) no-repeat right; cursor:pointer; _cursor:hand; }   
+.GM2PickMYUp { font:15px "Microsoft Sans Serif",Arial; padding-right:13px; background:url(d_l_up.gif) no-repeat right; cursor:pointer; _cursor:hand; }
+.GM2PickMYRtl { padding-right:0px; padding-left:13px; }
+
+.GM2PickBL,.GM2PickBR { padding-top:10px; cursor:pointer; _cursor:hand; width:16px; overflow:hidden; }
+.GM2PickBL { float:left; background:url(d_l_left.gif) no-repeat 50%;}
+.GM2PickBR { float:right; background:url(d_l_right.gif) no-repeat 50%;}
+
+.GM2PickTableParent { padding-left:3px; padding-right:5px; padding-bottom:5px; padding-top:3px; clear:both; }
+.GM2PickTable { width:240px !important; }
+.GM2PickRow { background:white; }
+.GM2PickRowW { background:#a8daff;}   
+.GM2PickCell { width:30px;}
+.GM2PickWDN {
+   text-align:center; padding:1px; color:#010101;
+   padding-left:3px; padding-right:3px; padding-top:2px; padding-bottom:2px;border-left:1px solid #fff;
+   font:15px "Microsoft Sans Serif",Arial; cursor:default;
+   }
+.GM2PickHover,.GM2PickSelHover,.GM2PickWD,.GM2PickSa,.GM2PickSu,.GM2PickSel,.GM2PickNow,.GM2PickWDNE,.GM2PickSaNE,.GM2PickSuNE,.GM2PickSelNE,.GM2PickNowNE,.GM2PickOM,.GM2PickOMNE {
+   text-align:center; padding-top:4px; padding-bottom:4px; padding-left:3px; padding-right:3px;
+   font:15px "Microsoft Sans Serif",Arial; cursor:pointer; _cursor:hand;border-bottom:1px solid #e4e4e4;border-right:1px solid #e4e4e4;
+   }
+.GM2PickWN,.GM2PickWNE { 
+   text-align:center; font:15px "Microsoft Sans Serif",Arial; cursor:pointer; _cursor:hand;
+   padding-left:4px; padding-right:4px; padding-top:4px; padding-bottom:4px;
+   background:#488; color:white;
+   }
+.GM2PickWDNE,.GM2PickSaNE,.GM2PickSuNE,.GM2PickSelNE,.GM2PickNowNE,.GM2PickWNE { cursor:default; background-color:#e4e4e4; color:#000; border-bottom:1px solid #d0d0d0; border-left:1px solid #d0d0d0;}
+.GM2PickWD { background-color:#fff; }
+.GM2PickSa { color:#0d3def; } 
+.GM2PickSu { color:#e40505; } 
+.GM2PickSel { color:#05467c;font-weight:bold;background-color:#e4e4e4; }
+.GM2PickSelNE { color:#05467c;font-weight:bold;background-color:#e4e4e4; }
+.GM2PickNow { background-color:#a8daff; }
+.GM2PickNowNE { background-color:#ffe0ff; }
+.GM2PickOM { background-color:inherit; color:#c1c1c1; }
+.GM2PickOMNE { color:#aaaaaa; }
+.GM2PickEmpty { background:url(d_blank.gif) no-repeat 50%; cursor:pointer; _cursor:hand; padding:6px 0 0 0;}
+.GM2PickHover { background-color:#DDD; }
+.GM2PickSelHover { background-color:#eeee77; }
+
+.GM2PickTimeCell { text-align:right; background-color:white; padding-bottom:4px; padding-top:6px; padding-right:5px; }
+.GM2PickTime { font:13px Verdana,Arial; border:0px none; white-space:nowrap; text-align:right; }
+.GM2PickButton {font:14px "Microsoft Sans Serif",Arial; background:#dcecf8; text-align:center; border:1px solid #8a8fb5; width:60px; height:20px}
+    
+.GM2PickButtonHover{background:#9cd0fa; border:1px solid #aaaadd; }
+
+.GM2Pick2TableParent { padding-left:3px; padding-right:3px; padding-bottom:1px; padding-top:2px; text-align:center; }
+.GM2Pick2Table { vertical-align:middle; width:240px !important; }
+.GM2Pick2Row { background:white;}
+.GM2Pick2CellM { height:35px; width:76px; }
+.GM2Pick2CellY { vertical-align:middle; height:27px; width:55px;text-align:center;}
+.GM2Pick2CellSep { height:27px; width:10px; }
+.GM2Pick2Cell { vertical-align:middle; height:27px; width:55px;}
+.GM2Pick2M,.GM2Pick2Y,.GM2Pick2MSel,.GM2Pick2YSel,.GM2Pick2MHover,.GM2Pick2YHover,.GM2Pick2MSelHover,.GM2Pick2YSelHover {
+   font:14px "Microsoft Sans Serif",Arial; overflow:hidden;
+   margin-left:1px; margin-right:1px;
+   padding-left:4px; padding-right:4px; overflow:hidden;
+   background-color:white; cursor:pointer; _cursor:hand; text-align:center;
+   }
+.GM2Pick2MSel,.GM2Pick2YSel { background-color:#d1ebff; border:1px solid #dad1d1; margin-left:0; margin-right:0;}
+.GM2Pick2MHover,.GM2Pick2YHover { background-color:#DDD; border:1px solid #ffffff; margin-left:0; margin-right:0;}
+.GM2Pick2MSelHover,.GM2Pick2YSelHover { background-color:#9cd0fa; border:1px solid #ffffff; margin-left:0; margin-right:0;}   
+.GM2Pick2SepH { width:1px; height:1px; overflow:hidden; }
+.GM2Pick2Sep { width:1px; background:#E3E4E6; overflow:hidden; margin-left:4px; margin-right:5px; height:27px; }    
+.GM2Pick2BL,.GM2Pick2BR {width:24px !important; cursor:pointer; _cursor:hand;padding:3px 0px;margin:0 auto;}
+.GM2Pick2BL { background:url(d_l_left2.gif) no-repeat center center;}
+.GM2Pick2BR { background:url(d_l_right2.gif) no-repeat center center;}
+*/
+
+/* Edit controls */
+.GM2Edit,.GM2EditInline {padding:2px 4px;border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666;background:#ffffff; white-space:nowrap; overflow:hidden;}
+  
+.GM2EditInline { display:inline-block; vertical-align:bottom; }
+.GM2EditInput,.GM2EditTextarea {border:0 solid transparent !important; margin:0; padding:0;vertical-align: middle; font-size:/*IBFS*/12px; font-family:/*IBFN*/"Dotum", "Helvetica", "AppleGothic", sans-serif;} 
+
+.GM2EditTextarea { line-height:13px; }
+.GM2EditSpaceInput { vertical-align:middle; }
+.GM2EditNormalInput,.GM2EditNormalTextarea,.GM2EditSpaceTextarea { background-color:#FFFFFF; /*#FFDCFF;*/; }
+.GM2EditInt,.GM2EditFloat { text-align:right; }
+
+.GM2EditMulti { white-space:normal; }
+.GM2EditReadOnly { background-color:#FFEEFF; }   
+.GM2EditParent { position:absolute; z-index:258; overflow:hidden; }
+
+.GM2EnumHeaderLeft,.GM2EnumHeaderRight,.GM2EnumHeaderNone 
+{background:white; cursor:pointer; _cursor:hand; vertical-align:middle; text-align:left; padding:2px 0 2px 2px; font-size:/*IBFS*/12px; font-family:/*IBFN*/"Dotum", "Helvetica", "AppleGothic", sans-serif;}
+
+.GM2EnumHeaderRight {background: url(combo.gif) no-repeat right center;margin:1px 1px 0 0;}
+ @media screen and (-webkit-min-device-pixel-ratio:0) {.GM2EnumHeaderRight{margin:1px 0 0 0;}}/* hack:CR,SF */
+.GM2EnumHeaderRight, x:-moz-any-link, x:default {margin:1px 0 0 0;} /* hack:FF */
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {.GM2EnumHeaderRight{ margin:1px 0 0 0;}}/* hack:OP */
+
+.GM2EnumMenuHeader { background:#ffffff; }
+
+.GM2EnumControl,.GM2EnumInline {
+   cursor:pointer; _cursor:hand; padding-left:15px; padding-right:4px; padding-top:2px; padding-bottom:2px;
+   border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; overflow:hidden;}
+   
+.GM2EnumInline { display:inline-block; vertical-align:bottom; }
+.GM2EnumHeader { cursor:pointer; _cursor:hand;padding-left:15px; padding-right:4px; padding-top:2px; padding-bottom:2px;} 
+
+/*  Custom scrollbars  */
+.GM2CustScroll1RightHidden { background:url(VScroll.gif) left -108px; height:18px; overflow:hidden; }
+.GM2CustScroll1Right { padding-right:18px; background:url(VScroll.gif) right 0; }
+.GM2CustScroll1RightHover { padding-right:18px; background:url(VScroll.gif) right -18px; }
+.GM2CustScroll1Left { padding-left:18px;  background:url(VScroll.gif) left 0; }
+.GM2CustScroll1LeftHover { padding-left:18px;  background:url(VScroll.gif) left -18px; }
+.GM2CustScroll1SliderRight { padding-right:3px; background:url(VScroll.gif) right -36px; }
+.GM2CustScroll1SliderLeft { padding-left:3px; background:url(VScroll.gif) left -36px; }
+.GM2CustScroll1SliderHIn { height:18px; overflow:hidden; background:url(VScroll.gif) center -54px; }
+.GM2CustScroll1SliderRightHover { padding-right:3px; background:url(VScroll.gif) right -72px; }
+.GM2CustScroll1SliderLeftHover { padding-left:3px; background:url(VScroll.gif) left -72px; }
+.GM2CustScroll1SliderHInHover { height:18px; overflow:hidden; background:url(VScroll.gif) center -90px; }
+
+.GM2CustScroll2RightHidden { background:url(VScroll.gif) left -460px; height:10px; overflow:hidden; }
+.GM2CustScroll2Right { padding-right:10px; background:url(VScroll.gif) right -400px; }
+.GM2CustScroll2RightHover { padding-right:10px; background:url(VScroll.gif) right -410px; }
+.GM2CustScroll2Left { padding-left:10px;  background:url(VScroll.gif) left -400px; }
+.GM2CustScroll2LeftHover { padding-left:10px;  background:url(VScroll.gif) left -410px; }
+.GM2CustScroll2SliderRight { padding-right:6px; background:url(VScroll.gif) right -420px; }
+.GM2CustScroll2SliderLeft { padding-left:6px; background:url(VScroll.gif) left -420px; }
+.GM2CustScroll2SliderHIn { height:10px; overflow:hidden; background:url(VScroll.gif) center -430px; }
+.GM2CustScroll2SliderRightHover { padding-right:6px; background:url(VScroll.gif) right -440px; }
+.GM2CustScroll2SliderLeftHover { padding-left:6px; background:url(VScroll.gif) left -440px; }
+.GM2CustScroll2SliderHInHover { height:10px; overflow:hidden; background:url(VScroll.gif) center -450px; }
+
+.GM2CustScroll3Right,.GM2CustScroll3RightHidden { background:white; height:9px; overflow:hidden; }
+.GM2CustScroll3SliderRight,.GM2CustScroll3SliderRightHover { padding-right:3px; height:9px; background:url(VScroll.gif) right -126px; }
+.GM2CustScroll3SliderLeft,.GM2CustScroll3SliderLeftHover { height:9px; background:url(VScroll.gif) left -126px; }
+.GM2CustScroll3SliderRightHover { background-position:right -135px; }
+.GM2CustScroll3SliderLeftHover { background-position:left -135px; }
+
+.GM2CustScroll4Right,.GM2CustScroll4RightHidden,.GM2CustScroll4SliderRight,.GM2CustScroll4SliderRightHover { height:1px; overflow:hidden; }
+
+.GM2CustScroll1DownHidden { background:url(HScroll.gif) -108px top; width:18px; overflow:hidden; }
+.GM2CustScroll1Down { padding-bottom:18px; background:url(HScroll.gif) 0px bottom; cursor:default; width:18px; overflow:hidden; }
+.GM2CustScroll1DownHover { padding-bottom:18px; background:url(HScroll.gif) -18px bottom; width:18px; overflow:hidden; }
+.GM2CustScroll1Up { padding-top:18px; background:url(HScroll.gif) 0px top; width:18px; overflow:hidden; }
+.GM2CustScroll1UpHover { padding-top:18px;  background:url(HScroll.gif) -18px top; width:18px; overflow:hidden; }
+.GM2CustScroll1SliderDown { padding-bottom:3px; background:url(HScroll.gif) -36px bottom; width:18px; overflow:hidden; }
+.GM2CustScroll1SliderUp { padding-top:3px; background:url(HScroll.gif) -36px top; width:18px; overflow:hidden; }
+.GM2CustScroll1SliderVIn { background:url(HScroll.gif) -54px center; width:18px; overflow:hidden; }
+.GM2CustScroll1SliderDownHover { padding-bottom:3px; background:url(HScroll.gif) -72px bottom; width:18px; overflow:hidden; }
+.GM2CustScroll1SliderUpHover { padding-top:3px; background:url(HScroll.gif) -72px top; width:18px; overflow:hidden; }
+.GM2CustScroll1SliderVInHover { background:url(HScroll.gif) -90px center; width:18px; overflow:hidden; }
+
+.GM2CustScroll2DownHidden { background:url(HScroll.gif) -460px top; width:10px; overflow:hidden; }
+.GM2CustScroll2Down { padding-bottom:10px; background:url(HScroll.gif) -400px bottom; cursor:default; width:10px; overflow:hidden; }
+.GM2CustScroll2DownHover { padding-bottom:10px; background:url(HScroll.gif) -410px bottom; width:10px; overflow:hidden; }
+.GM2CustScroll2Up { padding-top:10px; background:url(HScroll.gif) -400px top; width:10px; overflow:hidden; }
+.GM2CustScroll2UpHover { padding-top:10px;  background:url(HScroll.gif) -410px top; width:10px; overflow:hidden; }
+.GM2CustScroll2SliderDown { padding-bottom:6px; background:url(HScroll.gif) -420px bottom; width:10px; overflow:hidden; }
+.GM2CustScroll2SliderUp { padding-top:6px; background:url(HScroll.gif) -420px top; width:10px; overflow:hidden; }
+.GM2CustScroll2SliderVIn { background:url(HScroll.gif) -430px center; width:10px; overflow:hidden; }
+.GM2CustScroll2SliderDownHover { padding-bottom:6px; background:url(HScroll.gif) -440px bottom; width:10px; overflow:hidden; }
+.GM2CustScroll2SliderUpHover { padding-top:6px; background:url(HScroll.gif) -440px top; width:10px; overflow:hidden; }
+.GM2CustScroll2SliderVInHover { background:url(HScroll.gif) -450px center; width:10px; overflow:hidden; }
+
+.GM2CustScroll3Down,.GM2CustScroll3DownHidden { background:white; width:9px; overflow:hidden; cursor:default; }
+.GM2CustScroll3SliderDown,.GM2CustScroll3SliderDownHover { padding-bottom:3px; width:9px; background:url(HScroll.gif) -126px bottom; }
+.GM2CustScroll3SliderUp,.GM2CustScroll3SliderUpHover { width:9px; background:url(HScroll.gif) -126px top; cursor:default; }
+.GM2CustScroll3SliderDownHover { background-position:-135px bottom; }
+.GM2CustScroll3SliderUpHover { background-position:-135px top; cursor:default; }
+
+.GM2CustScroll4Down,.GM2CustScroll4DownHidden,.GM2CustScroll4SliderDown,.GM2CustScroll4SliderDownHover { width:1px; overflow:hidden; }
+
+/* Other messages */
+.GM2HintMain {position:absolute; margin-left:-1px; margin-top:-1px; left:0px; top:0px; z-index:260; background:#ffffff; cursor:default; }
+.GM2HintOuter {overflow:hidden; border:1px solid #000000; background:#ffffff !important; color:black; text-align:left; }
+.GM2HintHeaderOuter {background-color:#39aefb !important; color:#ffffff; border: 1px solid #ffffff; }
+.GM2HintShadow {position:absolute; z-index:259;background:#888; opacity:0.3; filter:alpha(opacity=30);margin-left:2px; margin-top:2px;}
+.GM2TipMain {position:absolute; left:0px; top:0px; z-index:262; visibility:hidden; }
+.GM2TipOuter  {overflow:hidden; cursor:default; font:12px Arial;padding-left:3px; padding-right:3px; background:#E4E5F0; border:1px solid #777;}
+.GM2TipBody {background:#E4E5F0; white-space:nowrap; }
+.GM2TipShadow {position:absolute;z-index:261;background:#888; opacity:0.3; filter:alpha(opacity=30);visibility:hidden; margin-left:3px; margin-top:3px}
+.GM2MouseOrig { background:yellow !important; opacity:0.5; filter:alpha(opacity=50); }
+.GM2MouseDragObject { position:absolute; z-index:260; background:#888; opacity:0.5; filter:alpha(opacity=50); }
+.GM2Focus { border:1px solid #AAF; border-top:1px solid #00F; border-left:1px solid #00F; background-color:#EEE; } 
+.GridDisabled { position:absolute; z-index:256; background:white; opacity:0.5; filter:alpha(opacity=50); } 
+
+/* Do not change, marks the style loaded */
+.GM2Loaded { border:1px solid #000000 !important;}
+
+/*sum*/
+.GM2SumCell{background:#EAF1FB; color:#F30;}/*//text-align: right;font-weight:bold;*/
+.GM2SubSumCell{background: #FFFFEF; border-bottom:1px solid #F5D9CD; color:#FF6600}
+.GM2CumulateCell{background: #FFFFEF; border-bottom:1px solid #F5D9CD; color:#AE4600}
+
+/* FindDialog */
+.GM2H1Pop,.GM2PPop{margin:0; padding:0}
+.GM2Paddingl10{padding-left:10px}
+.GM2PaddingT10{padding-top:10px}
+.GM2PPop{ padding:0 0 10px 0; text-align:center }
+.GM2Pop{width:410px; overflow:hidden; border:1px solid #426B8C; padding:0; font-size:12px;background:#EBF2F5; font-family:dotum, Arial, Helvetica, sans-serif}
+.GM2PopTitle{width:100%; border-bottom:1px solid #99BCE8; font-size:12px; font-weight:bold; display:block; line-height:28px; color:#15498B;
+background: #c9e1f5; /* Old browsers */
+background: -moz-linear-gradient(top,  #c9e1f5 0%, #99bce8 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c9e1f5), color-stop(100%,#99bce8)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #c9e1f5 0%,#99bce8 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #c9e1f5 0%,#99bce8 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #c9e1f5 0%,#99bce8 100%); /* IE10+ */
+background: linear-gradient(top,  #c9e1f5 0%,#99bce8 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9e1f5', endColorstr='#99bce8',GradientType=0 ); /* IE6-9 */
+}
+.GM2PopSearch{margin:10px; overflow:hidden; }
+.GM2PopContent{border:1px solid #D0DBE8; background-color:#fff}
+.GM2PopUl{list-style:none; margin:0; padding:10px;}
+.GM2PopDiv{overflow:hidden; width:100%}
+.GM2PopDiv2{overflow:hidden; width:100%}
+.GM2PopLeft,.GM2PopLeft2{width:220px; float:left; }
+.GM2PopRight,.GM2PopRight2{width:166px; float:right}
+.GM2PopUl input {margin:-2px 2px 0px 0px;padding:0 ; width:13px; height:13px; vertical-align:middle;}
+.GM2PopUl li{ padding-top:4px;padding-bottom:3px ; padding-left:5px}
+.GM2Btn{margin-top:10px; text-align:center }
+.GM2PopLeft, .GM2PopRight{ height:120px}
+.GM2PopLeft2, .GM2PopRight2{ height:80px}
+.GM2PopLabel{line-height:12px; margin:0 0 0 2px}
+.GM2PopSubtitle{font-weight:bold; color:#000; border-bottom:1px solid  #E0E0E0; background-color:#E7E7E7;padding-left:4px;}
+.GM2PopBtn {text-align: center;text-decoration: none;color:#fff;position: relative;border:1px solid #316290;
+		  font-size:12px;width:50px !important;height:22px !important; cursor:pointer;}
+.GM2PopBtn:hover {color:#fff;}
+.GM2PopBtnBlue {
+	background: #5689b9; /* Old browsers */
+	background: -moz-linear-gradient(top,  #5689b9 0%, #3a6ea0 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5689b9), color-stop(100%,#3a6ea0)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #5689b9 0%,#3a6ea0 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #5689b9 0%,#3a6ea0 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #5689b9 0%,#3a6ea0 100%); /* IE10+ */
+	background: linear-gradient(top,  #5689b9 0%,#3a6ea0 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5689b9', endColorstr='#3a6ea0',GradientType=0 ); /* IE6-9 */
+}
+.GM2PopBtnBlue:hover {
+	background: #3a6ea0; /* Old browsers */
+	background: -moz-linear-gradient(top,  #3a6ea0 0%, #5689b9 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3a6ea0), color-stop(100%,#5689b9)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #3a6ea0 0%,#5689b9 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #3a6ea0 0%,#5689b9 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #3a6ea0 0%,#5689b9 100%); /* IE10+ */
+	background: linear-gradient(top,  #3a6ea0 0%,#5689b9 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a6ea0', endColorstr='#5689b9',GradientType=0 ); /* IE6-9 */
+}		

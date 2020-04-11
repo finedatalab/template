@@ -1,0 +1,48 @@
+html,body{margin:0px;width:100%;height:100%;padding:0px}
+div{margin:0px;}
+#main {width:100%;height:100%;overflow:hidden;float:left;}
+#left { width: 200px; padding: 5px; float:left;height:100%}
+#left h3 { text-align: center; margin: 0px; }
+.ui-menu {z-index:10; }
+.hspace {height:5px;}
+#contents{margin:0px;padding:0px;height:100%;background-color:#FFFFFF;float:left;}
+#splitter{height:100%;background-color:#ADADAD;float:left;width:5px;}
+#splitter:hover{background-color:#EDEDED;}
+#container {
+	background:	#999;
+	height:		900px;
+	margin:		0 auto;
+	width:		100%;
+	max-width:	100%;
+	min-width:	700px;
+	_width:		700px; /* min-width for IE6 */
+}
+.pane {
+	display:	none; /* will appear when layout inits */
+}
+
+.maintitle{
+
+	background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0, #ADADAD),
+	color-stop(1, #282828)
+);
+background-image: -o-linear-gradient(bottom, #ADADAD 0%, #282828 100%);
+background-image: -moz-linear-gradient(bottom, #ADADAD 0%, #282828 100%);
+background-image: -webkit-linear-gradient(bottom, #ADADAD 0%, #282828 100%);
+background-image: -ms-linear-gradient(bottom, #ADADAD 0%, #282828 100%);
+background-image: linear-gradient(to bottom, #ADADAD 0%, #282828 100%);
+border-radius:0.5em;
+
+font-weight:800;
+font-size:15pt;
+color: #FFFFFF; /* text colour (black) */
+height: auto; /* gradient uses the full height of the element */
+padding: 10px; /* distance from border edge to text */
+margin:2px;
+width:900px;
+}
+

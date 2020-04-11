@@ -1,0 +1,717 @@
+/* -----------------------------------------------------------------------*/
+/* ----------------- "Main" IBSheet style definition ---------------------*/
+/* -----------------------------------------------------------------------*/
+
+/* Base tags */
+.ORImage {padding-bottom:256px;}
+.ORNone {display:none;}
+.ORSection,.ORSectionFF3 {table-layout:fixed; width:0;}
+.ORSectionFF3 {border-collapse:collapse; }
+
+/* Sections */
+.ORMainTable {border:1px solid #dddddd; border-collapse:separate; text-align:left; background:#ffffff; font:12px Dotum,Helvetica,AppleGothic,Sans-serif;}
+
+.ORFootLeft,.ORFootMid {border-top:1px solid #f18151;}
+.ORHeadLeft,.ORBodyLeft,.ORFootLeft,.ORHScrollLeft {border-right:1px solid #f18151;}	
+.ORVScroll {padding-top:1px; padding-bottom:1px;}
+.ORHScrollLeft,.ORHScrollMid,.ORHScrollLeftResizeTouch,.ORHScrollRightResizeTouch {padding-left:1px; padding-right:1px; cursor:default;}
+.ORHScrollLeftResizeTouch {border-right:2px solid #000000; padding-right:18px; background:#F4F4F4;}
+.ORHScrollRightResizeTouch {border-left:2px solid #000000; padding-left:18px; background:#F4F4F4;}
+.ORHScrollMidLeftResizeTouch {border-left:1px solid #000000; padding-left:19px; background:#F4F4F4;}
+.ORHScrollMidRightResizeTouch {border-right:1px solid #000000; padding-right:19px; background:#F4F4F4;}
+.ORHScrollWide {padding-right:1px;}
+.ORHScrollHidden {overflow:visible !important; background:#F4F4F4; cursor:default; }
+.ORXScroll {background:#F4F4F4;}
+.ORPage {border-top:0px solid #E0E0E0;}
+
+/* Rows */
+.ORSpaceRowHeight{height:21px; }
+.ORRowHeight 	 {height:18px; }
+.ORRowHeightTouch{height:22px; }
+.ORSpaceMargin   {margin:0; }
+.ORSpaceMarginTouch{margin:5px; }
+.ORSpaceRow {background:#ffffff; white-space:nowrap; overflow:hidden; padding-top:2px; padding-bottom:2px; border-bottom:1px solid #e0e0ff;}
+
+.ORGroupRow,.ORSearchRow,.ORPagerRow 
+{background-color:#FF7E00; white-space:nowrap; padding-top:5px; padding-bottom:5px; overflow:hidden; border-bottom:1px solid #F26223;} 
+
+.ORGroupRow,.ORPagerRow {background-position:0 -1801px; }
+.ORFillRow {background:#ffffff; }
+.ORRowAbove,.ORRowBelow {border-left:1px solid #9cb6c8; border-right:1px solid #9cb6c8;}
+.ORRowAbove { margin-top:3px; overflow:hidden;}
+.ORRowBelow {margin-bottom:3px; overflow:hidden;}
+.ORNoDataRow {border-top:1px solid #000000;padding-left:5px; padding-top:5px; padding-bottom:5px;color:gray; font-style:italic;} 
+
+.ORCountRowTop {color:#ffffff; background-color:#FF7E00; white-space:nowrap;padding-top:5px; padding-bottom:5px; overflow:hidden; border-bottom:1px solid #F26223;}
+.ORCountRowBottom {color:#ffffff; background-color:#FF7E00; white-space:nowrap; padding-top:5px; padding-bottom:5px; overflow:hidden; border-top:1px solid #F26223;}
+
+/* Cell */
+.ORCell,.ORCellPanel,.ORCellFilter,.ORHeaderDrag,.ORHeaderGroup 
+ {color:#000000; border-bottom:1px solid #F7F7F7; border-right:1px solid #C6C9CC; border-left:0; border-top:0;vertical-align:top; overflow:hidden; height:auto; font-size:/*IBFS*/12px; font-family:/*IBFN*/"Dotum", "Helvetica", "AppleGothic", sans-serif;}
+
+.ORCellHeader,.ORCellHeaderEmpty
+ {vertical-align:middle; overflow:hidden;height:auto; background-color:#FF7E00; padding-top:1px; border-right:1px solid #F26223; border-bottom:1px solid #F26223;} 
+
+
+.ORCellBorderFF3 {border-left:0;border-top:0;} 
+.ORCellSpace {vertical-align:top; padding-top:5px !important; }
+.ORCellSpacePanel,.ORCellSpaceBool {vertical-align:top; }
+.ORCellSpaceRadio { padding-top:3px !important;}
+.ORCellSpaceEditButton { vertical-align:top; padding-top:4px !important; border:1px solid #000000 !important; background-color:#ffffff !important; }
+.ORCellSpaceButtonButton { vertical-align:top; }
+.ORCellSpaceButton { vertical-align:top; padding-top:5px !important; white-space:nowrap; }
+.ORCellSpaceAbove { border-top:1px solid #9cb6c8; }
+.ORCellSpaceBelow { border-bottom:1px solid #9cb6c8; }
+.ORCellPanel,.ORCellHeaderPanel{ white-space:nowrap; } 
+.ORCellHidden { background:transparent!important; border-top:none!important; border-bottom:none!important; }
+.ORHeaderButton { padding:0; }
+.ORHeaderGroup {background: #F56200; color:#ffffff; padding-left:3px; }
+.ORHeaderGroupFocus {background-color: #C0C0A0; }
+.ORHeaderGroupDelete {background-color: #F0F0E0; color: #F0F0E0; }
+.ORHeaderGroupCustom {color:#BBB; padding-left:5px; cursor:default; white-space:nowrap;}
+.ORHeaderDrag {background: #9FB9E9; cursor:default; overflow:hidden; }
+.ORHeaderFocus {background: #9FB9E9;}
+.ORPanel {padding-left:80px;}
+.ORNoTreeLines1 {text-align:right;}
+.ORNoTreeLines2 {text-align:right; vertical-align:middle; padding-top:0;}
+.ORTree {padding-top:0; white-space:nowrap;}
+.ORSpannedTree {vertical-align:top;}
+.ORCellClassInner {padding-top:0; padding-bottom:0;}
+
+/* Inside cell */
+.ORStatus,.ORSeq,.ORPopup,.ORPopupEdit,.ORHtml,.ORText,.ORLines,.ORPass,.ORInt,.ORFloat,.ORDate,
+.ORLink,.ORImg,.ORRadio,.ORRadioText,.ORList,.OREnum,.ORDropCols,.ORAbs,.ORPagerEdit,.ORUser 
+ {white-space:nowrap;vertical-align: middle;padding:2px 3px;} 
+.ORInt,.ORFloat { text-align:right; }
+.ORLines,.ORRadio,.ORHtml,.ORList { white-space:normal; }	
+.ORImg,.ORHtml {padding:0; } 
+.ORPass { padding:0 0 0 3px; }
+.ORRadio,.ORRadioText { padding:0; font-weight:normal !important; }
+.ORBool { text-align:center; }
+.ORIcon { background-repeat:no-repeat; }
+.ORHiddenSpace { display:none; }
+.ORDropCols { padding-top:2px !important; }
+
+.ORHeaderText {color:#ffffff; vertical-align:middle; font-size:/*IBFS*/12px; font-family:/*IBFN*/"Dotum", "Helvetica", "AppleGothic", sans-serif;}
+.ORAbs { padding:0; }
+.ORUser { padding:0; }
+.ORPagerEdit { text-align:center; padding-top:3px; }
+.ORMergedCellH {padding:0 0 5px 0}
+.ORMergedCellV {padding:0 0 1px 0}
+
+.ORWrap0 { white-space:nowrap; }
+.ORWrap1 { white-space:normal; }
+.OREllipsis { white-space:nowrap; text-overflow:ellipsis;}
+
+.ORAlignLeft { text-align:left; }
+.ORAlignCenter { text-align:center; }
+.ORAlignJustify { text-align:center; }
+.ORAlignRight { text-align:right;}
+
+/* Tree Img with lines */
+.OR000,.OR010,.OR001,.OR011,.OR100,.OR110,.OR101,.OR111, 
+.OR000T,.OR010T,.OR001T,.OR011T,.OR100T,.OR110T,.OR101T,.OR111T,
+.OR00,.OR01,.OR10,.OR11,.OR00T,.OR01T,.OR10T,.OR11T,
+.OR0T,.OR1T,.OR0TL,.OR1TL,.OR0C,.OR1C,.OR0CL,.OR1CL,.OR0E,.OR1E,.OR0EL,.OR1EL,
+.OR0,.OR1,.ORT,.ORTL,.ORC,.ORCL,.ORE,.OREL,.ORD0,.ORD1,.ORD2,.ORD3,.ORD4,.ORD0L,.ORD1L,.ORD2L,.ORD3L,.ORD4L 
+{background-image:url(Tree.gif); vertical-align:top;}
+
+u.OR000,u.OR010,u.OR001,u.OR011,u.OR100,u.OR110,u.OR101,u.OR111 { padding-left:63px; }
+u.OR000T,u.OR010T,u.OR001T,u.OR011T,u.OR100T,u.OR110T,u.OR101T,u.OR111T { padding-left:89px; }
+u.OR00,u.OR01,u.OR10,u.OR11 { padding-left:42px; }   
+u.OR00T,u.OR01T,u.OR10T,u.OR11T { padding-left:68px; }   
+u.OR0T,u.OR1T,u.OR0TL,u.OR1TL,u.OR0C,u.OR1C,u.OR0CL,u.OR1CL,u.OR0E,u.OR1E,u.OR0EL,u.OR1EL { padding-left:47px; }   
+u.OR0,u.OR1 { padding-left:21px; }
+u.ORT,u.ORTL,u.ORC,u.ORCL,u.ORE,u.OREL,u.ORD0,u.ORD1,u.ORD2,u.ORD3,u.ORD4,u.ORD0L,u.ORD1L,u.ORD2L,u.ORD3L,u.ORD4L { padding-left:26px; }   
+
+.OR000,.OR000T{ background-position:0px 0px; }
+.OR010,.OR010T{ background-position:-128px 0; }
+.OR001,.OR001T{ background-position:-256px 0; }
+.OR011,.OR011T{ background-position:-384px 0; }
+.OR100,.OR100T{ background-position:-512px 0; }
+.OR110,.OR110T{ background-position:-640px 0; }
+.OR101,.OR101T{ background-position:-768px 0; }
+.OR111,.OR111T{ background-position:-896px 0; }
+.OR00,.OR00T  { background-position:-21px 0;  }
+.OR10,.OR10T  { background-position:-149px 0; }
+.OR01,.OR01T  { background-position:-277px 0; }
+.OR11,.OR11T  { background-position:-405px 0; }
+.OR0,.OR0T 	  { background-position:-42px 0;  }
+.OR1,.OR1T 	  { background-position:-298px 0; }
+.ORT 		  { background-position:-63px 0;  }
+.OR0TL 		  { background-position:-1024px 0; }
+.OR1TL 		  { background-position:-1088px 0; }
+.OR0C 	      { background-position:-1152px 0; }
+.OR1C 		  { background-position:-1216px 0; }
+.OR0CL 		  { background-position:-1280px 0; }
+.OR1CL 		  { background-position:-1344px 0; }
+.OR0E 		  { background-position:-1408px 0; }
+.OR1E 		  { background-position:-1472px 0; }
+.OR0EL 		  { background-position:-1536px 0; }
+.OR1EL 		  { background-position:-1600px 0; }
+.ORTL 		  { background-position:-1045px 0; }
+.ORC 		  { background-position:-1173px 0; }
+.ORCL 		  { background-position:-1301px 0; }
+.ORE 		  { background-position:-1429px 0; }
+.OREL 		  { background-position:-1557px 0; }
+.ORD0 		  { background-position:-1664px 0; }
+.ORD1 		  { background-position:-1696px 0; }
+.ORD2 		  { background-position:-1728px 0; }
+.ORD3 		  { background-position:-1760px 0; }
+.ORD0L 		  { background-position:-1792px 0; }
+.ORD1L 		  { background-position:-1824px 0; }
+.ORD2L 		  { background-position:-1856px 0; }
+.ORD3L 		  { background-position:-1888px 0; }
+.ORD4 		  { background-position:-1920px 0; }
+.ORD4L 		  { background-position:-1952px 0; }
+
+/* Tree Img without lines  */
+.ORND0,.ORND1,.ORND2,.ORND3,.ORND4,.ORNC,.ORNE,.ORNCR,.ORNER {background-image:url(TreeN.gif); background-repeat:no-repeat; vertical-align:top; }
+u.ORND0,u.ORND1,u.ORND2,u.ORND3,u.ORND4,u.ORNC,u.ORNE,u.ORNCR,u.ORNER { padding-left:20px; }
+.ORND0 { background-position: -6px 0; }
+.ORND1 { background-position: -56px 0; }
+.ORND2 { background-position: -106px 0; }
+.ORND3 { background-position: -156px 0; }
+.ORND4 { background-position: -206px 0; }
+.ORNC { background-position:right -50px;}
+.ORNE { background-position:right -2000px;}
+.ORNCR { background-position:-255px -50px;}
+.ORNER { background-position:-255px -2000px;}
+u.ORNL { padding-left:21px; }
+
+/* Cell images */
+.ORIconLink { text-decoration:none; width:1000px; display:inline-block; }
+.ORIconLeft,.ORIconRight,.ORIconCenter {  background-repeat:no-repeat; }
+.ORIconLeft { background-position:left 0; padding-left:20px !important; }
+.ORIconRight { background-position:right 0; padding-right:20px !important; }
+.ORIconCenter { background-position:center 0; }
+.ORPopupRight { background:url(popup.gif) no-repeat 5px center; }
+.ORExpandLeft,.ORCollapseLeft,.ORExpandHeaderLeft,.ORCollapseHeaderLeft { padding-left:20px!important; }
+.ORDateRight{ padding-right:20px!important;}
+u.ORDateRight,.ORPopupRight { padding-right:0!important; padding-left:17px; }
+.ORDateRight {background:url(calendar.gif) no-repeat 2px center}
+.OREnumRight { background:url(combo.gif) no-repeat right center; }
+u.OREnumRight {padding-right:0; padding-left:17px}
+.ORExpandLeft { background:url(ic_plus.gif) no-repeat 3px center; padding:2px 0 0  18px; _padding:0 0 0 18px }
+.ORCollapseLeft { background:url(ic_minus.gif) no-repeat 3px center ; padding:2px 0 0  18px; _padding:0 0 0 18px }
+.ORRadio0Right,.ORRadio1Right,.ORRadio2Right,.ORRadio3Right {line-height:17px; padding-right:17px; padding-left:3px; }
+u.ORFilter0,u.ORFilter1 { padding-left:16px; }
+.ORBool0,.ORBool0RO,.ORBool1,.ORBool1RO,.ORBool2,.ORBool2RO,.ORBool3,.ORBool3RO {background-position:center center; background-repeat:no-repeat;}
+
+.ORBool0   { background-image:url(chk0.gif);  }
+.ORBool0RO { background-image:url(chk0R.gif); }
+
+.ORBool1   { background-image:url(chk1.gif);  }
+.ORBool1RO { background-image:url(chk1R.gif); }
+
+.ORBool2   { background-image:url(chk2.gif);  }
+.ORBool2RO { background-image:url(chk2R.gif); }
+
+.ORBool3   { background-image:url(chk3.gif);  }
+.ORBool3RO { background-image:url(chk3R.gif); }
+
+/* Filter images  */
+.ORFilter0Left,.ORFilter1Left,.ORFilter2Left,.ORFilter3Left,.ORFilter4Left,.ORFilter5Left,.ORFilter6Left,.ORFilter7Left,
+.ORFilter8Left,.ORFilter9Left,.ORFilter10Left,.ORFilter11Left,.ORFilter12Left {padding-left:18px;}
+
+.ORFilter0Left,.ORFilter0Menu 	{ width:18px; height:18px; background:url(filter0.gif) no-repeat left center; }   
+.ORFilter1Left,.ORFilter1Menu 	{ width:18px; height:18px; background:url(filter1.gif) no-repeat left center; }
+.ORFilter2Left,.ORFilter2Menu 	{ width:18px; height:18px; background:url(filter2.gif) no-repeat left center; }
+.ORFilter3Left,.ORFilter3Menu 	{ width:18px; height:18px; background:url(filter3.gif) no-repeat left center; }
+.ORFilter4Left,.ORFilter4Menu 	{ width:18px; height:18px; background:url(filter4.gif) no-repeat left center; }
+.ORFilter5Left,.ORFilter5Menu 	{ width:18px; height:18px; background:url(filter5.gif) no-repeat left center; }   
+.ORFilter6Left,.ORFilter6Menu 	{ width:18px; height:18px; background:url(filter6.gif) no-repeat left center; }
+.ORFilter7Left,.ORFilter7Menu 	{ width:18px; height:18px; background:url(filter7.gif) no-repeat left center; }
+.ORFilter8Left,.ORFilter8Menu 	{ width:18px; height:18px; background:url(filter8.gif) no-repeat left center; }
+.ORFilter9Left,.ORFilter9Menu 	{ width:18px; height:18px; background:url(filter9.gif) no-repeat left center; }
+.ORFilter10Left,.ORFilter10Menu { width:18px; height:18px; background:url(filter10.gif) no-repeat left center; }
+.ORFilter11Left,.ORFilter11Menu { width:18px; height:18px; background:url(filter11.gif) no-repeat left center; }
+.ORFilter12Left,.ORFilter12Menu { width:18px; height:18px; background:url(filter12.gif) no-repeat left center; }
+
+.ORFilter0Menu,.ORFilter1Menu,.ORFilter2Menu,.ORFilter3Menu,.ORFilter4Menu,.ORFilter5Menu,.ORFilter6Menu,.ORFilter7Menu,.ORFilter8Menu,.ORFilter9Menu,
+.ORFilter10Menu,.ORFilter11Menu,.ORFilter12Menu {overflow:hidden; margin: -2px 0 0 -1px;}
+.ORFilterMenuHeader { padding-left:2px; border-bottom:0 !important; } 
+
+/*  Keyfield Image */
+.ORKeyfield {background-image:url(keyfield.gif); display:inline-block; vertical-align:middle; background-repeat: no-repeat; background-position:center 1px; padding: 0 2px 0 4px; }
+
+/* GMKeyfield : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .ORKeyfield{  background-position: center 3px;padding: 0 2px 0 4px; }}
+
+/* CheckBox Header Image */
+.ORCheckHeader0 {background-image:url(chk0.gif); display:inline-block; vertical-align:middle; background-repeat:no-repeat; background-position:5px 1px; padding:2px 7px 0 6px; margin:0 2px 0 0;}
+
+/* GMCheckHeader0 : hack CR,SF*/
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{.ORCheckHeader0{ background-position:6px 1px ; padding: 2px 8px 0 6px; }}
+
+/* GMCheckHeader0 : hack FF*/
+.ORCheckHeader0, x:-moz-any-link, x:default { background-position:6px 1px ; padding: 2px 8px 0 6px; }
+
+/* GMCheckHeader0 : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .ORCheckHeader0{ background-position:7px center ; padding:1px  17px 0 0; }}
+
+.ORCheckHeader1 {background-image:url(chk1.gif); display:inline-block; vertical-align:middle; background-repeat:no-repeat; background-position:4px 1px ; padding:2px 6px 0 6px; margin:0 2px 0 0}
+
+/* GMCheckHeader1 : hack CR,SF*/
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{.ORCheckHeader1{ background-position:6px 1px ; padding: 2px 8px 0 6px; }}
+
+/* GMCheckHeader1 : hack FF*/
+.ORCheckHeader1, x:-moz-any-link, x:default { background-position:6px 1px ; padding: 2px 8px 0 6px; }
+
+/* GMCheckHeader1 : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .ORCheckHeader1 { background-position:7px center ; padding:1px  17px 0 0;  }}
+
+/* Sort images */
+.ORSort {display:block; float:right; margin:2px 2px 0;width:7px}
+
+/* State classes */
+/* The colors must be set by numbers not by names */
+
+.ORColorDefault  { background-color:#FFFFFF;}
+
+.ORColorNoFocus  { background-color:#E8F4FF;}
+.ORColorReadOnly { background-color:#FFEFE1;}
+.ORColorPreview  { background-color:#FFFFFF;}
+
+.ORColorAlternate{ background-color:#F7F7F7;}
+
+.ORColorSelected { background-color:/*#FFFF80*/#aadbff; }
+
+.ORColorFilter {background-color:#FFFFFF;}
+
+/*//.ORClassSelected { }*/
+.ORColorError   { background-color:#FF6969; }
+.ORColorDeleted { background-color:#FFCDCD; }
+.ORClassDeleted { font-style:italic; }
+.ORColorAdded   { background-color:#CDFFCD; }
+.ORClassAdded   { font-weight:bold; }
+.ORColorMoved1  { background-color:#FFFFFF; }
+.ORColorMoved2  { background-color:#D7EBEB; }
+.ORColorChanged { background-color:#EBEBFF; }
+.ORColorChangedCell { background-color:#E1E1FF; }
+.ORClassChangedCell { font-weight:bold; }
+.ORColorMaxChildren { background-color:#FFFFF0; }
+.ORColorDetail { background-color:#FFF0FF; }
+.ORColorDetailSelected { background-color:#FFF0E0; }
+.ORColorDragged{ background-color:#E0E0C0; }
+.ORColorFound1 { background-color:#FF87FF; }
+.ORColorFound2 { background-color:#FFC387; }
+.ORColorFound3 { background-color:#87FF87; }
+.ORColorHovered 			{ background-color:#F0F0FF; }
+.ORColorHoveredCell 		{ background-color:#C0C0FF; }
+.ORColorHoveredCellReadOnly { background-color:#F0F0F0; }
+.ORColorHoveredCellNoFocus 	{ background-color:#F8F8F8; }
+
+.ORClassHoveredCellHeader 	{ background-position:0px -250px; }
+.ORClassHoveredCellPanel 	{ background-position:0px -1801px; background-repeat:repeat-x; }
+
+.ORColorHoveredCellSpace 	{ background-color:#FFFFFF; }
+.ORColorHoveredCellSpaceEdit{ background-color:#C0C0FF; }
+.ORColorHoveredCellSpaceBool{ background-color:#FFFFFF; }
+.ORColorHoveredCellButton 	{ background-color:#FFFFFE; }
+.ORClassHoveredCellButton 	{ color:green; }
+.ORColorHoveredCellButton1 	{ background-color:#FFFFFE; }
+.ORClassHoveredCellButton1 	{ color:red; }
+.ORColorHoveredCellTab 		{ background-color:#FFFFFE; }
+.ORClassHoveredCellTab 		{ background-position:0px -1801px; color:green; }
+.ORColorHoveredCellTab1 	{ background-color:#99bbcc; }
+.ORClassHoveredCellTab1 	{ background-image:none; }
+
+.ORColorFocused 			{ background-color:#E6E6E6; }
+.ORColorFocusedCell 		{ background-color:#FFFFFE; }
+.ORColorFocusedCellSafari 	{ background-color:#A0A0FF; }
+.ORColorFocusedCellSpace 	{ background-color:#E6E6E6; }
+.ORColorFocusedCellButton 	{ background-color:#BCD; }
+.ORColorFocusedCellHeader 	{ background-color:#FFFFFE; }
+.ORColorFocusedCellPanel 	{ background-color:#FFFFFE; }
+.ORColorEditedCell 			{ background-color:#FFFFFF; }
+.ORColorViewedCell 			{ background-color:#FFFFFF; }
+
+/* Hover, focus, edit cursors */
+.ORHoverRowBackground 	{ opacity:0.1; filter:alpha(opacity=10); background:#00F; }
+.ORHoverRowBorder 		{ z-index:0; border-top:1px solid #BBF; border-bottom:1px solid #BBF; cursor:default; }
+.ORHoverCellBorder 		{ z-index:0; padding:1px; border:1px solid #A0A0F0; background:white; }
+
+
+.ORFocusRowBackground 	{ opacity:0.1; filter:alpha(opacity=50); background:/*IBSB*/#FFFF9F; } /* <-- Sheet : Selected Row Background */
+.ORFocusRowBorder 		{ z-index:0; border:1px solid /*IBSB*/#FAC800; } /* <-- Sheet : Selected Row Border */
+.ORFocusCellBorder		{ z-index:0; border:2px solid /*IBSB*/#FAC800; } /* <-- Sheet : Selected Cell Border */
+.ORFocusCellSpaceBorder,.OREditCellSpaceBorder { z-index:4; }
+
+
+.OREditCellBorder 		{ z-index:0; border:2px solid #FF6666;}    /*<-- Sheet : CellEdit Border */
+.OREditCellInput 		{ position:relative; border:0 solid #39aefb; overflow:hidden; z-index:2; } 
+
+.ORCursorBackground, .ORCursorBorderLeft ,.ORCursorBorderRight,.ORCursorBorderTop,.ORCursorBorderBottom 
+ {position:relative;overflow:hidden;}
+
+.ORCursorBackground  {border:none; padding:0;}
+.ORCursorBorderLeft  {padding-right:0; padding-top:0; padding-bottom:0; border-right:none; border-top:none; border-bottom:none;  width:0; height:0;}
+.ORCursorBorderRight {padding-left:0; padding-top:0; padding-bottom:0; border-left:none; border-top:none; border-bottom:none;  width:0; height:0;}
+.ORCursorBorderTop 	 {padding-bottom:0; padding-left:0; padding-right:0; border-bottom:none; border-left:none; border-right:none;  width:0; height:0;}
+.ORCursorBorderBottom{padding-top:0; padding-left:0; padding-right:0; border-top:none; border-left:none; border-right:none; width:0; height:0;}
+
+/* Cell edges */
+.ORNoLeft { border-left:0; }
+.ORNoRight { border-right:0; }
+
+/* Dragging */
+.ORMouseObject { opacity:0.5; filter:alpha(opacity=50); z-index:300; overflow:hidden;}
+.ORDragObject {z-index:300; margin-left:10px; margin-top:10px; padding-left:3px; padding-right:3px;background:#E4E5F0 ; border:1px solid #777;}
+.ORDragColInsideTop,.ORDragColInsideBottom,.ORDragColOutsideTop,.ORDragColOutsideBottom{position:absolute;width:10px; height:11px; overflow:hidden; z-index:258;}
+.ORDragColInsideTop 	{background:url(in_top.gif) no-repeat;} 	
+.ORDragColInsideBottom  {background:url(in_bottom.gif) no-repeat;}	
+.ORDragColOutsideTop  	{background:url(out_top.gif) no-repeat;}	
+.ORDragColOutsideBottom {background:url(out_bottom.gif) no-repeat;}	 
+
+/* Messages */
+.ORDisabled{position:absolute; z-index:264; background:#ffffff; opacity:0.5; filter:alpha(opacity=50); } 
+.ORProcess {position: absolute; left:0; top:0; background:#E2F0FF; border:1px solid #777; white-space:nowrap; text-align:center; visibility:hidden; z-index:266;}
+.ORMessage {background:#E2F0FF; border:1px solid #000000; padding:10px; white-space:nowrap; text-align:center;
+			 position: absolute; left:0; top:0; visibility:hidden; z-index:266;}
+.ORMessageShadow 
+{position:absolute; margin-left:3px; margin-top:3px; z-index:265;background:#888; opacity:0.5; filter:alpha(opacity=50); left:0; top:0; visibility:hidden;}
+      
+/* Other */
+/* !!! No .OR style prefix here !!! */
+.GridTmpTag { position:absolute; left:5px; top:5px; visibility:hidden; }
+
+/* Popup menus, TGLib */
+.ORMenuMain  {position:absolute;left:0;top:0; z-index:258;}
+.ORMenuOuter {overflow:hidden; border:1px solid #000000; background:#fff; padding:1px; margin:1px;}
+.ORMenuHeader{overflow:hidden; position:absolute; z-index:258;border:1px solid #b0b0c0; background:#fff; cursor:pointer; _cursor:hand;}
+.ORMenuHead {background:#183873; color:white; cursor:default;text-align:center; padding-top:5px; padding-bottom:4px;}
+.ORMenuClose {float:right; width:14px; cursor:pointer; _cursor:hand; display:none;}
+.ORMenuBody {cursor:default; background-color:#fff; padding-top:1px; padding-bottom:1px;}
+.ORMenuShadow {position:absolute;margin:3px 0 0 3px;z-index:257;background-color:#888; opacity:0.5; filter:alpha(opacity=50);}
+.ORMenuCheckedIconRight {padding-right:17px; background:url(chk1.gif) no-repeat 96% center; }
+.ORMenuUncheckedIconRight { padding-right:17px;background:url(chk0.gif) no-repeat 96% center ; }
+
+.ORMenuCursorIcon {background-image:url(d_gray_right.gif); background-repeat:no-repeat; background-position: 3px center;_background-color:#fff}
+.ORMenuHoverIcon {background-image:url(d_right.gif); background-repeat:no-repeat; background-position: 3px center; _background-color:#ffeeaa }   
+
+.ORMenuNextIcon { padding-right:10px; }
+.ORMenuNextIconRtl { padding-left:10px; }
+
+.ORMenuItemText,.ORMenuItemIcon,.ORMenuEnum,.ORMenuEnumHeader,.ORMenuEdit 
+{white-space:nowrap; overflow:hidden; vertical-align: middle; padding:1px 0 0 0}
+.ORMenuItemDisabled {opacity:0.50; filter:alpha(opacity=30); overflow:hidden; }
+.ORMenuLevel {color:blue;text-align:center; }  
+.ORMenuEnumParent,.ORMenuEditParent {padding-left:5px; padding-right:2px}
+.ORMenuItemIcon {background-repeat:no-repeat;}
+.ORMenuEnum {border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; padding-left:15px; overflow:hidden;}
+.ORMenuEnumHeader  {padding:1px 0 2px 16px; cursor:default; } 
+.ORMenuEdit{border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; background:white; overflow:hidden;white-space:nowrap;
+  padding-left:2px; padding-right:2px;}
+.ORMenuEditInput,.ORMenuEditTextarea {margin:0;padding:0;border:0; background:#FDD;_margin:-1px; _padding-right:1px; _padding_left:1px; }   
+.ORMenuEditTextarea { line-height:13px;  }   
+.ORMenuEditInt,.ORMenuEditFloat,.ORMenuEditDate { text-align:right; } 
+.ORMenuEditMulti { white-space:normal; }
+
+
+.ORMenuItem {background-color:#ffffff;padding:2px;}  
+
+.ORMenuItemHover {background-color:#FFE7D0; border:1px solid #D79B7E; margin:0 1px; padding:1px 0;}
+
+
+.ORMenuFocusHover {margin:1px; background-color:#FFF0E8; border:1px solid #000000;}
+.ORMenuFocus 	  {margin:1px; background-color:#FFF0E8; border:1px solid #FDC496;}
+
+.ORMenuSeparator {margin:1px 3px 0 3px; height:1px; border-top:1px solid #aaaadd; overflow:hidden;}
+.ORMenuCaption {padding:2px; background:#ffffff; color:blue; text-align:center;}
+.ORMenuVSeparator { border-right:1px solid #DDD; }
+.ORMenuFoot { border-top:none; text-align:center; white-space:nowrap; }
+
+.ORMenuButton {font-size:11px;background:#FFF1E3; text-align:center; border:1px solid #F2C69F; margin:5px 2px 4px 2px;padding:0;white-space:nowrap;width:48px;} 
+
+.ORMenuButtonHover { background:#FFE7D0; border:1px solid #D79B7E; }
+
+/* Grid configuration menus */
+.ORCfgMenuOuter,.ORColumnsMenuOuter { border:1px solid #000000; }
+.ORCfgMenuHead,.ORColumnsMenuHead { padding-left:3px; }
+.ORCfgMenuBody,.ORColumnsMenuBody { padding-left:4px; padding-right:4px;}
+.ORCfgMenuFoot,.ORColumnsMenuFoot { padding-right:3px; padding-left:3px;}
+.ORCfgMenuButton { width:70px; } 
+.ORCfgMenuItemText,.ORColumnsMenuItemText { padding-left:3px; }
+.ORColumnsMenuItemText { white-space:nowrap; }
+.ORCfgMenuItem,.ORColumnsMenuItem { padding-top:3px; padding-bottom:3px;}
+.ORCfgMenuItemHover,.ORCfgMenuFocus,.ORCfgMenuFocusHover,
+.ORColumnsMenuItemHover,.ORColumnsMenuFocus,.ORColumnsMenuFocusHover { padding-top:2px; padding-bottom:2px;}
+
+/* Popup grid dialog */
+.ORPopupGridOuter { border:0; overflow:visible; }
+.ORPopupGridHead { padding:0; }
+.ORPopupGridBody { padding:0; }
+.ORPopupGridFoot { padding:0; }
+.ORPopupGridButton { width:50px;margin-top:-2px; margin-bottom:3px;} 
+
+/* Calendar, TGLib */
+.ORPickMain  {position:absolute; left:0; top:0; z-index:258; }
+
+.ORPickOuter {overflow:hidden; background:white; padding:1px; border:1px solid #D79B7E; }
+
+.ORPickHeader{overflow:hidden; position:absolute; z-index:258; border:1px solid black; background:#ffffff; cursor:pointer; _cursor:hand;}
+.ORPickHeaderBottom{border-bottom:0; padding-bottom:1px;}
+.ORPickHeaderTop{border-top:0; padding-bottom:1px; }
+.ORPickHead {background:#5c8397; font:10px Dotum,Verdana,Arial; color:white; cursor:default; padding-left:5px; padding-top:1px; padding-bottom:1px;border-bottom:1px solid white;}
+.ORPickClose{float:right; width:14px; cursor:pointer; _cursor:hand; display:none;}
+.ORPickBody {cursor:default; padding:0; }
+.ORPickShadow{position:absolute; background:#888; z-index:257; margin:3px 0 0 3px;opacity:0.5; filter:alpha(opacity=50);} 
+.ORPickFooter,.ORPick2Footer{text-align:center; padding:2px; cursor:default; background:#EFF0F1; border-top:1px solid #E3E4E6}
+ 
+.ORPickMY{background-color:#FFE2C8;border-bottom:1px solid #F2C69F;color:#434343; cursor:default;text-align:center;padding:2px 0 4px 0;}/* <-- Calender : Header Background */
+   
+.ORPickMYDown{padding-right:13px; background:url(d_down.gif) no-repeat right; cursor:pointer; _cursor:hand;}
+.ORPickMYUp {padding-right:13px; background:url(d_up.gif) no-repeat right center; cursor:pointer; _cursor:hand;}
+
+.ORPickMYRtl{padding-right:0; padding-left:13px; }
+.ORPickBL,.ORPickBR{padding-top:3px; cursor:pointer; _cursor:hand; width:16px; height:14px; overflow:hidden;}
+
+.ORPickBL {float:left; background:url(d_left.gif) no-repeat 50%; }
+.ORPickBR {float:right; background:url(d_right.gif) no-repeat 50%; }
+
+.ORPickTable{}
+.ORPickRow  {background:#ffffff;}
+
+.ORPickRowW {background:#FFF1E3;}
+
+.ORPickCell {width:22px;}
+.ORPickWDN {background:transparent; color:#333333;text-align:center; cursor:default; margin:2px 3px;padding:1px;}
+  
+.ORPickHover,.ORPickSelHover,.ORPickWD,.ORPickSa,.ORPickSu,.ORPickSel,.ORPickNow,.ORPickWDNE,.ORPickSaNE,.ORPickSuNE,
+.ORPickSelNE,.ORPickNowNE,.ORPickOM,.ORPickOMNE {text-align:center; border:1px solid #ffffff; cursor:pointer; _cursor:hand;margin:2px 3px;}
+
+
+.ORPickWN,.ORPickWNE {text-align:center; cursor:pointer; _cursor:hand;padding:3px 4px; border-right:1px solid #F2C69F; background:#EFF0F1;}
+
+
+   
+.ORPickWDNE,.ORPickSaNE,.ORPickSuNE,.ORPickSelNE,.ORPickNowNE,.ORPickWNE {cursor:default;}
+.ORPickWD{background-color:#ffffff;}
+.ORPickSa{background-color:#ffffff;}
+.ORPickSu{background-color:#ffffff;}
+
+.ORPickSel{background-color:#ECFF9C; border:1px solid #cccccc;}
+
+
+.ORPickSelNE{background-color:#fbea54; border:1px solid #dad1d1;}
+.ORPickNow {background-color:#c0f3ff; border:1px solid #dad1d1;}
+.ORPickNowNE{background-color:#c0f3ff; border:1px solid #dad1d1;}
+.ORPickHover{background-color:#ddd; border:1px solid #ddd;}
+
+.ORPickSelHover{background-color:#dddddd; border:1px solid #dddddd;}
+
+
+.ORPickOM{background-color:white; color:#aaaaaa;}
+.ORPickOMNE{color:#aaaaaa;}
+
+.ORPickEmpty{background:url(d_blank.gif) no-repeat 50%; cursor:pointer; _cursor:hand;padding:3px 0; }
+
+.ORPickTimeCell 
+{text-align:right; padding-bottom:4px; padding-top:6px; padding-right:5px; border-top:1px solid #F2C69F; background:#EFF0F1;}
+
+.ORPickTime 
+{border:0px none; white-space:nowrap; text-align:right; background:#EFF0F1;}
+
+.ORPickButton{background:#FFF1E3; text-align:center; border:1px solid #F2C69F; width:45px; height:16px}
+.ORPickButtonHover{background:#FFE7D0; border:1px solid #D79B7E; }
+
+.ORPick2Table{width:auto; vertical-align:middle}
+.ORPick2CellM{height:20px; width:55px; }
+.ORPick2CellY{height:20px; width:35px; vertical-align:middle }
+.ORPick2CellSep{height:20px; width:5px; }
+.ORPick2Cell{vertical-align:middle}
+.ORPick2M,.ORPick2Y,.ORPick2MSel,.ORPick2YSel,.ORPick2MHover,.ORPick2YHover,.ORPick2MSelHover,.ORPick2YSelHover
+{cursor:pointer; _cursor:hand; text-align:center; margin-left:1px; margin-right:1px; padding-left:4px; padding-right:4px; overflow:hidden; }
+   
+
+.ORPick2MSel,.ORPick2YSel {background:#ECFF9C; border:1px solid #cccccc; margin-left:0; margin-right:0;}
+
+.ORPick2MHover,.ORPick2YHover {background:#DDD; border:1px solid #ffffff; margin-left:0; margin-right:0;}
+
+.ORPick2MSelHover,.ORPick2YSelHover {background:#CCFF00; border:1px solid #FFFFFF;margin-left:0; margin-right:0;}   
+
+
+.ORPick2SepH {width:1px; height:1px; overflow:hidden; }
+.ORPick2Sep {width:1px; background:#E3E4E6; overflow:hidden; margin-left:2px; margin-right:2px; height:20px;}
+.ORPick2BL,.ORPick2BR {width:35px; cursor:pointer; _cursor:hand; }
+
+
+.ORPick2BL {background:url(d_left2.gif) no-repeat center center}
+.ORPick2BR {background:url(d_right2.gif) no-repeat center center}
+
+
+/* Edit controls, TGLib */
+.OREdit,.OREditInline {padding:2px 4px;border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666;background:#ffffff; white-space:nowrap; overflow:hidden;}
+  
+.OREditInline { display:inline-block; vertical-align:bottom; }
+.OREditInput,.OREditTextarea {border:0 solid transparent; margin:0; padding:0;vertical-align: middle} 
+
+.OREditTextarea { line-height:13px; }
+.OREditSpaceInput { vertical-align:middle; }
+.OREditNormalInput,.OREditNormalTextarea,.OREditSpaceTextarea { background-color:#FFFFFF; /*#FFDCFF;*/; }
+.OREditInt,.OREditFloat { text-align:right; }
+
+.OREditMulti { white-space:normal; }
+.OREditReadOnly { background-color:#FFEEFF; }   
+.OREditParent { position:absolute; z-index:258; overflow:hidden; }
+
+.OREnumHeaderLeft,.OREnumHeaderRight,.OREnumHeaderNone 
+{background:white; cursor:pointer; _cursor:hand; vertical-align:middle; text-align:left; padding:2px 0 2px 2px;}
+
+.OREnumHeaderRight {background: url(combo.gif) no-repeat right center;margin:1px 1px 0 0;}
+ @media screen and (-webkit-min-device-pixel-ratio:0) {.OREnumHeaderRight{margin:1px 0 0 0;}}/* hack:CR,SF */
+.OREnumHeaderRight, x:-moz-any-link, x:default {margin:1px 0 0 0;} /* hack:FF */
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {.OREnumHeaderRight{ margin:1px 0 0 0;}}/* hack:OP */
+
+.OREnumMenuHeader { background:#ffffff; }
+
+.OREnumControl,.OREnumInline {
+   cursor:pointer; _cursor:hand; padding-left:15px; padding-right:4px; padding-top:2px; padding-bottom:2px;
+   border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; overflow:hidden;}
+   
+.OREnumInline { display:inline-block; vertical-align:bottom; }
+.OREnumHeader { cursor:pointer; _cursor:hand;padding-left:15px; padding-right:4px; padding-top:2px; padding-bottom:2px;} 
+
+/*  Custom scrollbars  */
+.ORCustScroll1RightHidden { background:url(VScroll.gif) left -108px; height:18px; overflow:hidden; }
+.ORCustScroll1Right { padding-right:18px; background:url(VScroll.gif) right 0; }
+.ORCustScroll1RightHover { padding-right:18px; background:url(VScroll.gif) right -18px; }
+.ORCustScroll1Left { padding-left:18px;  background:url(VScroll.gif) left 0; }
+.ORCustScroll1LeftHover { padding-left:18px;  background:url(VScroll.gif) left -18px; }
+.ORCustScroll1SliderRight { padding-right:3px; background:url(VScroll.gif) right -36px; }
+.ORCustScroll1SliderLeft { padding-left:3px; background:url(VScroll.gif) left -36px; }
+.ORCustScroll1SliderHIn { height:18px; overflow:hidden; background:url(VScroll.gif) center -54px; }
+.ORCustScroll1SliderRightHover { padding-right:3px; background:url(VScroll.gif) right -72px; }
+.ORCustScroll1SliderLeftHover { padding-left:3px; background:url(VScroll.gif) left -72px; }
+.ORCustScroll1SliderHInHover { height:18px; overflow:hidden; background:url(VScroll.gif) center -90px; }
+.ORCustScroll2RightHidden { background:url(VScroll.gif) left -108px; height:18px; overflow:hidden; }
+.ORCustScroll2Right { padding-right:18px; background:url(VScroll.gif) right 0; }
+.ORCustScroll2RightHover { padding-right:18px; background:url(VScroll.gif) right -18px; }
+.ORCustScroll2Left { padding-left:18px;  background:url(VScroll.gif) left 0; }
+.ORCustScroll2LeftHover { padding-left:18px;  background:url(VScroll.gif) left -18px; }
+.ORCustScroll2SliderRight { padding-right:3px; background:url(VScroll.gif) right -36px; }
+.ORCustScroll2SliderLeft { padding-left:3px; background:url(VScroll.gif) left -36px; }
+.ORCustScroll2SliderHIn { height:18px; overflow:hidden; background:url(VScroll.gif) center -54px; }
+.ORCustScroll2SliderRightHover { padding-right:3px; background:url(VScroll.gif) right -72px; }
+.ORCustScroll2SliderLeftHover { padding-left:3px; background:url(VScroll.gif) left -72px; }
+.ORCustScroll2SliderHInHover { height:18px; overflow:hidden; background:url(VScroll.gif) center -90px; }
+
+.ORCustScroll3Right,.ORCustScroll3RightHidden { background:white; height:9px; overflow:hidden; }
+.ORCustScroll3SliderRight,.ORCustScroll3SliderRightHover { padding-right:3px; height:9px; background:url(VScroll.gif) right -126px; }
+.ORCustScroll3SliderLeft,.ORCustScroll3SliderLeftHover { height:9px; background:url(VScroll.gif) left -126px; }
+.ORCustScroll3SliderRightHover { background-position:right -135px; }
+.ORCustScroll3SliderLeftHover { background-position:left -135px; }
+.ORCustScroll4Right,.ORCustScroll4RightHidden,.ORCustScroll4SliderRight,.ORCustScroll4SliderRightHover { height:1px; overflow:hidden; }
+
+.ORCustScroll1DownHidden { background:url(HScroll.png) -108px top; width:18px; overflow:hidden; }
+.ORCustScroll1Down { padding-bottom:18px; background:url(HScroll.png) 0px bottom; cursor:default; width:18px; overflow:hidden; }
+.ORCustScroll1DownHover { padding-bottom:18px; background:url(HScroll.png) -18px bottom; width:18px; overflow:hidden; }
+.ORCustScroll1Up { padding-top:18px; background:url(HScroll.png) 0px top; width:18px; overflow:hidden; }
+.ORCustScroll1UpHover { padding-top:18px;  background:url(HScroll.png) -18px top; width:18px; overflow:hidden; }
+.ORCustScroll1SliderDown { padding-bottom:3px; background:url(HScroll.png) -36px bottom; width:18px; overflow:hidden; }
+.ORCustScroll1SliderUp { padding-top:3px; background:url(HScroll.png) -36px top; width:18px; overflow:hidden; }
+.ORCustScroll1SliderVIn { background:url(HScroll.png) -54px center; width:18px; overflow:hidden; }
+.ORCustScroll1SliderDownHover { padding-bottom:3px; background:url(HScroll.png) -72px bottom; width:18px; overflow:hidden; }
+.ORCustScroll1SliderUpHover { padding-top:3px; background:url(HScroll.png) -72px top; width:18px; overflow:hidden; }
+.ORCustScroll1SliderVInHover { background:url(HScroll.png) -90px center; width:18px; overflow:hidden; }
+
+.ORCustScroll2DownHidden { background:url(HScroll.png) -108px top; width:18px; overflow:hidden; }
+.ORCustScroll2Down { padding-bottom:18px; background:url(HScroll.png) 0px bottom; cursor:default; width:18px; overflow:hidden; }
+.ORCustScroll2DownHover { padding-bottom:18px; background:url(HScroll.png) -18px bottom; width:18px; overflow:hidden; }
+.ORCustScroll2Up { padding-top:18px; background:url(HScroll.png) 0px top; width:18px; overflow:hidden; }
+.ORCustScroll2UpHover { padding-top:18px;  background:url(HScroll.png) -18px top; width:18px; overflow:hidden; }
+.ORCustScroll2SliderDown { padding-bottom:3px; background:url(HScroll.png) -36px bottom; width:18px; overflow:hidden; }
+.ORCustScroll2SliderUp { padding-top:3px; background:url(HScroll.png) -36px top; width:18px; overflow:hidden; }
+.ORCustScroll2SliderVIn { background:url(HScroll.png) -54px center; width:18px; overflow:hidden; }
+.ORCustScroll2SliderDownHover { padding-bottom:3px; background:url(HScroll.png) -72px bottom; width:18px; overflow:hidden; }
+.ORCustScroll2SliderUpHover { padding-top:3px; background:url(HScroll.png) -72px top; width:18px; overflow:hidden; }
+.ORCustScroll2SliderVInHover { background:url(HScroll.png) -90px center; width:18px; overflow:hidden; }
+
+.ORCustScroll3Down,.ORCustScroll3DownHidden { background:white; width:9px; overflow:hidden; cursor:default; }
+.ORCustScroll3SliderDown,.ORCustScroll3SliderDownHover { padding-bottom:3px; width:9px; background:url(HScroll.png) -126px bottom; }
+.ORCustScroll3SliderUp,.ORCustScroll3SliderUpHover { width:9px; background:url(HScroll.png) -126px top; cursor:default; }
+.ORCustScroll3SliderDownHover { background-position:-135px bottom; }
+.ORCustScroll3SliderUpHover { background-position:-135px top; cursor:default; }
+
+.ORCustScroll4Down,.ORCustScroll4DownHidden,.ORCustScroll4SliderDown,.ORCustScroll4SliderDownHover { width:1px; overflow:hidden; }
+
+/* Other messages, TGLib */
+.ORHintMain {position:absolute; margin-left:-1px; margin-top:-1px; left:0px; top:0px; z-index:260; background:#ffffff; cursor:default; }
+.ORHintOuter {overflow:hidden; border:1px solid #000000; background:#ffffff !important; color:black; text-align:left; }
+.ORHintHeaderOuter {background-color:#39aefb !important; color:#ffffff; border: 1px solid #ffffff; }
+.ORHintShadow {position:absolute; z-index:259;background:#888; opacity:0.3; filter:alpha(opacity=30);margin-left:2px; margin-top:2px;}
+.ORTipMain {position:absolute; left:0px; top:0px; z-index:262; visibility:hidden; }
+.ORTipOuter  {overflow:hidden; cursor:default; font:12px Arial;padding-left:3px; padding-right:3px; background:#E4E5F0; border:1px solid #777;}
+.ORTipBody {background:#E4E5F0; white-space:nowrap; }
+.ORTipShadow {position:absolute;z-index:261;background:#888; opacity:0.3; filter:alpha(opacity=30);visibility:hidden; margin-left:3px; margin-top:3px}
+.ORMouseOrig { background:yellow !important; opacity:0.5; filter:alpha(opacity=50); }
+.ORMouseDragObject { position:absolute; z-index:260; background:#888; opacity:0.5; filter:alpha(opacity=50); }
+.ORFocus { border:1px solid #AAF; border-top:1px solid #00F; border-left:1px solid #00F; background-color:#EEE; } 
+.GridDisabled { position:absolute; z-index:256; background:white; opacity:0.5; filter:alpha(opacity=50); } 
+
+/* Do not change, marks the style loaded */
+.ORLoaded { border:1px solid #000000 !important;}
+
+/*sum*/
+.ORSumCell{background:#fffeef; color:#FF060C;}/*//text-align: right;font-weight:bold;*/
+
+.ORSubSumCell{background: #FCF0E7; border-top:1px solid #F7BBA1; border-bottom:1px solid #F7BBA1; color:#DA5615}
+.ORCumulateCell{background: #FCF0E7; border-bottom:1px solid #F7BBA1; color:#BE3600}
+
+
+/* FindDialog */
+.ORH1Pop,.ORPPop{margin:0; padding:0}
+.ORPaddingl10{padding-left:10px}
+.ORPaddingT10{padding-top:10px}
+.ORPPop{ padding:0 0 10px 0; text-align:center }
+.ORPop{width:410px; overflow:hidden; border:1px solid #D7602F; padding:0; font-size:12px;background:#F7F7F7; font-family:dotum, Arial, Helvetica, sans-serif}
+.ORPopTitle{width:100%; border-bottom:1px solid #D7602F; font-size:12px; font-weight:bold; display:block; line-height:28px; color:#fff;
+background: #ff8533; /* Old browsers */
+background: -moz-linear-gradient(top,  #ff8533 1%, #e3591d 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#ff8533), color-stop(100%,#e3591d)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ff8533 1%,#e3591d 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ff8533 1%,#e3591d 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ff8533 1%,#e3591d 100%); /* IE10+ */
+background: linear-gradient(top,  #ff8533 1%,#e3591d 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8533', endColorstr='#e3591d',GradientType=0 ); /* IE6-9 */
+}
+.ORPopSearch{margin:10px; overflow:hidden; }
+.ORPopContent{border:1px solid #DBDCDD; background-color:#fff}
+.ORPopUl{list-style:none; margin:0; padding:10px;}
+.ORPopDiv{overflow:hidden; width:100%}
+.ORPopDiv2{overflow:hidden; width:100%}
+.ORPopLeft,.ORPopLeft2{width:220px; float:left; }
+.ORPopRight,.ORPopRight2{width:166px; float:right}
+.ORPopUl input {margin:-2px 2px 0px 0px;padding:0 ; width:13px; height:13px; vertical-align:middle;}
+.ORPopUl li{ padding-top:4px;padding-bottom:3px ; padding-left:5px}
+.ORBtn{margin-top:10px; text-align:center }
+.ORPopLeft, .ORPopRight{ height:120px}
+.ORPopLeft2, .ORPopRight2{ height:80px}
+.ORPopLabel{line-height:12px; margin:0 0 0 2px}
+.ORPopSubtitle{font-weight:bold; color:#000; border-bottom:1px solid  #E0E0E0; background-color:#E7E7E7;padding-left:4px;}
+.ORPopBtnBlue {text-align: center;text-decoration: none;color:#fff;position: relative;border:1px solid #D7602F; font-size:12px;width:50px !important;height:22px !important;
+background: #ff8533; /* Old browsers */
+background: -moz-linear-gradient(top,  #ff8533 1%, #e3591d 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#ff8533), color-stop(100%,#e3591d)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ff8533 1%,#e3591d 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ff8533 1%,#e3591d 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ff8533 1%,#e3591d 100%); /* IE10+ */
+background: linear-gradient(top,  #ff8533 1%,#e3591d 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8533', endColorstr='#e3591d',GradientType=0 ); /* IE6-9 */
+}
+.ORPopBtnBlue:hover {
+background: #e3591d; /* Old browsers */
+background: -moz-linear-gradient(top,  #e3591d 0%, #ff8533 99%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e3591d), color-stop(99%,#ff8533)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #e3591d 0%,#ff8533 99%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #e3591d 0%,#ff8533 99%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #e3591d 0%,#ff8533 99%); /* IE10+ */
+background: linear-gradient(top,  #e3591d 0%,#ff8533 99%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3591d', endColorstr='#ff8533',GradientType=0 ); /* IE6-9 */
+}		

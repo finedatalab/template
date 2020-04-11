@@ -1,0 +1,723 @@
+/* -----------------------------------------------------------------------*/
+/* ----------------- "Main" IBSheet style definition ---------------------*/
+/* -----------------------------------------------------------------------*/
+
+/* Base tags */
+.GM3Image {padding-bottom:256px;}
+.GM3None {display:none;}
+.GM3Section,.GM3SectionFF3 {table-layout:fixed; width:0;}
+.GM3SectionFF3 {border-collapse:collapse; }
+
+/* Sections */
+.GM3MainTable {border:1px solid #99BCE8; border-collapse:separate; text-align:left; background:#ffffff; font:12px Dotum,Helvetica,AppleGothic,Sans-serif;}
+.GM3FootLeft,.GM3FootMid,.GM3FootRight {border-top:1px solid #99BCE8;}
+.GM3HeadLeft,.GM3BodyLeft,.GM3FootLeft,.GM3HScrollLeft {border-right:1px solid #c0c0ff;}	
+.GM3HeadRight,.GM3BodyRight,.GM3FootRight,.GM3HScrollRight {border-left:1px solid #c0c0ff;}	
+.GM3VScroll {padding-top:1px; padding-bottom:1px;}
+.GM3HScrollLeft,.GM3HScrollMid,.GM3HScrollLeftResizeTouch,.GM3HScrollRightResizeTouch {padding-left:1px; padding-right:1px; cursor:default;}
+.GM3HScrollLeftResizeTouch {border-right:2px solid #000000; padding-right:18px; background:#F4F4F4;}
+.GM3HScrollRightResizeTouch {border-left:2px solid #000000; padding-left:18px; background:#F4F4F4;}
+.GM3HScrollMidLeftResizeTouch {border-left:1px solid #000000; padding-left:19px; background:#F4F4F4;}
+.GM3HScrollMidRightResizeTouch {border-right:1px solid #000000; padding-right:19px; background:#F4F4F4;}
+.GM3HScrollWide {padding-right:1px;}
+.GM3HScrollHidden {overflow:visible !important; background:#F4F4F4; cursor:default; }
+.GM3XScroll {background:#F4F4F4;}
+.GM3Page {border-top:0px solid #E0E0E0;}
+
+/* Rows */
+.GM3SpaceRowHeight{height:21px; }
+.GM3RowHeight 	 {height:18px; }
+.GM3RowHeightTouch{height:22px; }
+.GM3SpaceMargin   {margin:0; }
+.GM3SpaceMarginTouch{margin:0; }
+.GM3SpaceRow {background:#ffffff; white-space:nowrap; overflow:hidden; padding-top:2px; padding-bottom:2px; border-bottom:1px solid #e0e0ff;}
+.GM3GroupRow,.GM3SearchRow,.GM3PagerRow 
+{background-color:#C9E1F5; white-space:nowrap; padding-top:5px; padding-bottom:5px; overflow:hidden; border-bottom:1px solid #99BCE8;} 
+.GM3GroupRow,.GM3PagerRow {background-position:0 -1801px; }
+.GM3FillRow {background:#ffffff; }
+.GM3RowAbove,.GM3RowBelow {border-left:1px solid #9cb6c8; border-right:1px solid #9cb6c8;}
+.GM3RowAbove { margin-top:3px; overflow:hidden;}
+.GM3RowBelow {margin-bottom:3px; overflow:hidden;}
+.GM3CountRowTop {background-color:#C9E1F5; white-space:nowrap;padding-top:5px; padding-bottom:5px; overflow:hidden; border-bottom:1px solid #99BCE8;}
+.GM3CountRowBottom {background-color:#C9E1F5; white-space:nowrap; padding-top:5px; padding-bottom:5px; overflow:hidden; border-top:1px solid #99BCE8;}
+.GM3NoDataRow {padding-top:0px; padding-bottom:0px; background-color:#ffffff; color:#000000;}
+
+/* Cell */
+.GM3Cell,.GM3CellPanel,.GM3CellFilter,.GM3HeaderDrag,.GM3HeaderGroup 
+ {border-bottom:1px solid #e0e0ff; border-right:1px solid #e0e0ff; border-left:0; border-top:0;vertical-align:top; overflow:hidden; height:auto; font-size:/*IBFS*/12px; font-family:/*IBFN*/"Dotum", "Helvetica", "AppleGothic", sans-serif;}
+
+.GM3CellHeader,.GM3CellHeaderEmpty
+ {vertical-align:middle; overflow:hidden;height:auto;  padding-top:1px; border-right:1px solid #99BCE8; border-bottom:1px solid #99BCE8;
+ 	
+background: #ebf1f6; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ViZjFmNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2FiZDNlZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iIzg5YzNlYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkNWViZmIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  #ebf1f6 0%, #abd3ee 50%, #89c3eb 51%, #d5ebfb 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebf1f6), color-stop(50%,#abd3ee), color-stop(51%,#89c3eb), color-stop(100%,#d5ebfb)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ebf1f6 0%,#abd3ee 50%,#89c3eb 51%,#d5ebfb 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ebf1f6 0%,#abd3ee 50%,#89c3eb 51%,#d5ebfb 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ebf1f6 0%,#abd3ee 50%,#89c3eb 51%,#d5ebfb 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #ebf1f6 0%,#abd3ee 50%,#89c3eb 51%,#d5ebfb 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf1f6', endColorstr='#d5ebfb',GradientType=0 ); /* IE6-8 */
+
+ 	
+ 	
+ 	} 
+.GM3CellBorderFF3 {border-left:0;border-top:0;} 
+.GM3CellSpace {vertical-align:top; padding-top:5px !important; }
+.GM3CellSpacePanel,.GM3CellSpaceBool {vertical-align:top; }
+.GM3CellSpaceRadio { padding-top:3px !important;}
+.GM3CellSpaceEditButton { vertical-align:top; padding-top:4px !important; border:1px solid #000000 !important; background-color:#ffffff !important; }
+.GM3CellSpaceButtonButton { vertical-align:top; }
+.GM3CellSpaceButton { vertical-align:top; padding-top:5px !important; white-space:nowrap; }
+.GM3CellSpaceAbove { border-top:1px solid #9cb6c8; }
+.GM3CellSpaceBelow { border-bottom:1px solid #9cb6c8; }
+.GM3CellPanel,.GM3CellHeaderPanel{ white-space:nowrap; } 
+.GM3CellHidden { background:transparent!important; border-top:none!important; border-bottom:none!important; }
+.GM3HeaderButton { padding:0; }
+.GM3HeaderGroup {background: #7FA9E6; color:#ffffff; padding-left:3px; }
+.GM3HeaderGroupFocus {background-color: #C0C0A0; }
+.GM3HeaderGroupDelete {background-color: #F0F0E0; color: #F0F0E0; }
+.GM3HeaderGroupCustom {color:#BBB; padding-left:5px; cursor:default; white-space:nowrap;}
+.GM3HeaderDrag {background: #9FB9E9; cursor:default; overflow:hidden; }
+.GM3HeaderFocus {background: #9FB9E9;}
+.GM3Panel {padding-left:80px;}
+.GM3NoTreeLines1 {text-align:right;}
+.GM3NoTreeLines2 {text-align:right; vertical-align:middle; padding-top:0;}
+.GM3Tree {padding-top:0; white-space:nowrap;}
+.GM3SpannedTree {vertical-align:top;}
+.GM3CellClassInner {padding-top:0; padding-bottom:0;}
+
+/* Inside cell */
+.GM3Status,.GM3Seq,.GM3Popup,.GM3PopupEdit,.GM3Html,.GM3Text,.GM3Lines,.GM3Pass,.GM3Int,.GM3Float,.GM3Date,
+.GM3Link,.GM3Img,.GM3Radio,.GM3RadioText,.GM3List,.GM3Enum,.GM3DropCols,.GM3Abs,.GM3PagerEdit,.GM3User 
+ {white-space:nowrap;vertical-align: middle;padding:2px 3px;} 
+.GM3Int,.GM3Float { text-align:right; }
+.GM3Lines,.GM3Radio,.GM3Html,.GM3List { white-space:normal; }	
+.GM3Img,.GM3Html {padding:0; } 
+.GM3Pass { padding:0 0 0 3px; }
+.GM3Radio,.GM3RadioText { padding:0; font-weight:normal !important; }
+.GM3Bool { text-align:center; }
+.GM3Icon { background-repeat:no-repeat; }
+.GM3HiddenSpace { display:none; }
+.GM3DropCols { padding-top:2px !important; }
+
+.GM3HeaderText {color: #15498B; vertical-align:middle; font-size:/*IBFS*/12px; font-family:/*IBFN*/"Dotum", "Helvetica", "AppleGothic", sans-serif;}
+.GM3Abs { padding:0; }
+.GM3User { padding:0; }
+.GM3PagerEdit { text-align:center; padding-top:3px; }
+.GM3MergedCellH {padding:0 0 5px 0}
+.GM3MergedCellV {padding:0 0 1px 0}
+
+.GM3Wrap0 { white-space:nowrap; }
+.GM3Wrap1 { white-space:normal; }
+.GM3Ellipsis { white-space:nowrap; text-overflow:ellipsis;}
+
+.GM3AlignLeft { text-align:left; }
+.GM3AlignCenter { text-align:center; }
+.GM3AlignJustify { text-align:center; }
+.GM3AlignRight { text-align:right;}
+
+/* Tree Img with lines */
+.GM3000,.GM3010,.GM3001,.GM3011,.GM3100,.GM3110,.GM3101,.GM3111, 
+.GM3000T,.GM3010T,.GM3001T,.GM3011T,.GM3100T,.GM3110T,.GM3101T,.GM3111T,
+.GM300,.GM301,.GM310,.GM311,.GM300T,.GM301T,.GM310T,.GM311T,
+.GM30T,.GM31T,.GM30TL,.GM31TL,.GM30C,.GM31C,.GM30CL,.GM31CL,.GM30E,.GM31E,.GM30EL,.GM31EL,
+.GM30,.GM31,.GM3T,.GM3TL,.GM3C,.GM3CL,.GM3E,.GM3EL,.GM3D0,.GM3D1,.GM3D2,.GM3D3,.GM3D4,.GM3D0L,.GM3D1L,.GM3D2L,.GM3D3L,.GM3D4L 
+{background-image:url(Tree.gif); vertical-align:top;}
+
+u.GM3000,u.GM3010,u.GM3001,u.GM3011,u.GM3100,u.GM3110,u.GM3101,u.GM3111 { padding-left:39px; }
+u.GM3000T,u.GM3010T,u.GM3001T,u.GM3011T,u.GM3100T,u.GM3110T,u.GM3101T,u.GM3111T { padding-left:60px; }
+u.GM300,u.GM301,u.GM310,u.GM311 { padding-left:26px; }   
+u.GM300T,u.GM301T,u.GM310T,u.GM311T { padding-left:47px; }   
+u.GM30T,u.GM31T,u.GM30TL,u.GM31TL,u.GM30C,u.GM31C,u.GM30CL,u.GM31CL,u.GM30E,u.GM31E,u.GM30EL,u.GM31EL { padding-left:34px; }   
+u.GM30,u.GM31 { padding-left:13px; }
+u.GM3T,u.GM3TL,u.GM3C,u.GM3CL,u.GM3E,u.GM3EL,u.GM3D0,u.GM3D1,u.GM3D2,u.GM3D3,u.GM3D4,u.GM3D0L,u.GM3D1L,u.GM3D2L,u.GM3D3L,u.GM3D4L { padding-left:21px; }   
+
+.GM3000,.GM3000T{ background-position:-24px 0px; }
+.GM3010,.GM3010T{ background-position:-136px 0; }
+.GM3001,.GM3001T{ background-position:-272px 0; }
+.GM3011,.GM3011T{ background-position:-392px 0; }
+.GM3100,.GM3100T{ background-position:-512px 0; }
+.GM3110,.GM3110T{ background-position:-640px 0; }
+.GM3101,.GM3101T{ background-position:-768px 0; }
+.GM3111,.GM3111T{ background-position:-896px 0; }
+.GM300,.GM300T  { background-position:-37px 0;  }
+.GM310,.GM310T  { background-position:-149px 0; }
+.GM301,.GM301T  { background-position:-285px 0; }
+.GM311,.GM311T  { background-position:-405px 0; }
+.GM30,.GM30T 	  { background-position:-50px 0;  }
+.GM31,.GM31T 	  { background-position:-298px 0; }
+.GM3T 		  { background-position:-63px 0;  }
+.GM30TL 		  { background-position:-1032px 0; }
+.GM31TL 		  { background-position:-1088px 0; }
+.GM30C 	      { background-position:-1160px 0; }
+.GM31C 		  { background-position:-1216px 0; }
+.GM30CL 		  { background-position:-1288px 0; }
+.GM31CL 		  { background-position:-1344px 0; }
+.GM30E 		  { background-position:-1416px 0; }
+.GM31E 		  { background-position:-1472px 0; }
+.GM30EL 		  { background-position:-1544px 0; }
+.GM31EL 		  { background-position:-1600px 0; }
+.GM3TL 		  { background-position:-1045px 0; }
+.GM3C 		  { background-position:-1173px 0; }
+.GM3CL 		  { background-position:-1301px 0; }
+.GM3E 		  { background-position:-1429px 0; }
+.GM3EL 		  { background-position:-1557px 0; }
+.GM3D0 		  { background-position:-1664px 0; }
+.GM3D1 		  { background-position:-1696px 0; }
+.GM3D2 		  { background-position:-1728px 0; }
+.GM3D3 		  { background-position:-1760px 0; }
+.GM3D0L 		  { background-position:-1792px 0; }
+.GM3D1L 		  { background-position:-1824px 0; }
+.GM3D2L 		  { background-position:-1856px 0; }
+.GM3D3L 		  { background-position:-1888px 0; }
+.GM3D4 		  { background-position:-1920px 0; }
+.GM3D4L 		  { background-position:-1952px 0; }
+
+/* Tree Img without lines  */
+.GM3ND0,.GM3ND1,.GM3ND2,.GM3ND3,.GM3ND4,.GM3NC,.GM3NE,.GM3NCR,.GM3NER {background-image:url(TreeN.gif); background-repeat:no-repeat; vertical-align:top; }
+u.GM3ND0,u.GM3ND1,u.GM3ND2,u.GM3ND3,u.GM3ND4,u.GM3NC,u.GM3NE,u.GM3NCR,u.GM3NER { padding-left:20px; }
+.GM3ND0 { background-position: -6px 0; }
+.GM3ND1 { background-position: -56px 0; }
+.GM3ND2 { background-position: -106px 0; }
+.GM3ND3 { background-position: -156px 0; }
+.GM3ND4 { background-position: -206px 0; }
+.GM3NC { background-position:right -50px;}
+.GM3NE { background-position:right -2000px;}
+.GM3NCR { background-position:-255px -50px;}
+.GM3NER { background-position:-255px -2000px;}
+u.GM3NL { padding-left:21px; }
+
+/* Cell images */
+.GM3IconLink { text-decoration:none; width:1000px; display:inline-block; }
+.GM3IconLeft,.GM3IconRight,.GM3IconCenter {  background-repeat:no-repeat; }
+.GM3IconLeft { background-position:left 0; padding-left:20px !important; }
+.GM3IconRight { background-position:right 0; padding-right:20px !important; }
+.GM3IconCenter { background-position:center 0; }
+.GM3PopupRight { background:url(popup.gif) no-repeat 5px center; }
+.GM3ExpandLeft,.GM3CollapseLeft,.GM3ExpandHeaderLeft,.GM3CollapseHeaderLeft { padding-left:20px!important; }
+.GM3DateRight{ padding-right:20px!important;}
+u.GM3DateRight,u.GM3PopupRight { padding-right:0!important; padding-left:17px; }
+.GM3DateRight {background:url(calendar.gif) no-repeat 2px center}
+.GM3EnumRight { background:url(combo.gif) no-repeat right center; }
+u.GM3EnumRight {padding-right:0; padding-left:17px}
+.GM3ExpandLeft { background:url(ic_plus.gif) no-repeat 3px center; padding:2px 0 0  18px; _padding:0 0 0 18px }
+.GM3CollapseLeft { background:url(ic_minus.gif) no-repeat 3px center ; padding:2px 0 0  18px; _padding:0 0 0 18px }
+.GM3Radio0Right,.GM3Radio1Right,.GM3Radio2Right,.GM3Radio3Right {line-height:17px; padding-right:17px; padding-left:3px; }
+u.GM3Filter0,u.GM3Filter1 { padding-left:16px; }
+.GM3Bool0,.GM3Bool0RO,.GM3Bool1,.GM3Bool1RO,.GM3Bool2,.GM3Bool2RO,.GM3Bool3,.GM3Bool3RO {background-position:center center; background-repeat:no-repeat;}
+
+.GM3Bool0   { background-image:url(chk0.gif);  }
+.GM3Bool0RO { background-image:url(chk0R.gif); }
+
+.GM3Bool1   { background-image:url(chk1.gif);  }
+.GM3Bool1RO { background-image:url(chk1R.gif); }
+
+.GM3Bool2   { background-image:url(chk2.gif);  }
+.GM3Bool2RO { background-image:url(chk2R.gif); }
+
+.GM3Bool3   { background-image:url(chk3.gif);  }
+.GM3Bool3RO { background-image:url(chk3R.gif); }
+
+/* Filter images  */
+.GM3Filter0Left,.GM3Filter1Left,.GM3Filter2Left,.GM3Filter3Left,.GM3Filter4Left,.GM3Filter5Left,.GM3Filter6Left,.GM3Filter7Left,
+.GM3Filter8Left,.GM3Filter9Left,.GM3Filter10Left,.GM3Filter11Left,.GM3Filter12Left {padding-left:18px;}
+
+.GM3Filter0Left,.GM3Filter0Menu 	{ width:18px; height:18px; background:url(filter0.gif) no-repeat left center; }   
+.GM3Filter1Left,.GM3Filter1Menu 	{ width:18px; height:18px; background:url(filter1.gif) no-repeat left center; }
+.GM3Filter2Left,.GM3Filter2Menu 	{ width:18px; height:18px; background:url(filter2.gif) no-repeat left center; }
+.GM3Filter3Left,.GM3Filter3Menu 	{ width:18px; height:18px; background:url(filter3.gif) no-repeat left center; }
+.GM3Filter4Left,.GM3Filter4Menu 	{ width:18px; height:18px; background:url(filter4.gif) no-repeat left center; }
+.GM3Filter5Left,.GM3Filter5Menu 	{ width:18px; height:18px; background:url(filter5.gif) no-repeat left center; }   
+.GM3Filter6Left,.GM3Filter6Menu 	{ width:18px; height:18px; background:url(filter6.gif) no-repeat left center; }
+.GM3Filter7Left,.GM3Filter7Menu 	{ width:18px; height:18px; background:url(filter7.gif) no-repeat left center; }
+.GM3Filter8Left,.GM3Filter8Menu 	{ width:18px; height:18px; background:url(filter8.gif) no-repeat left center; }
+.GM3Filter9Left,.GM3Filter9Menu 	{ width:18px; height:18px; background:url(filter9.gif) no-repeat left center; }
+.GM3Filter10Left,.GM3Filter10Menu { width:18px; height:18px; background:url(filter10.gif) no-repeat left center; }
+.GM3Filter11Left,.GM3Filter11Menu { width:18px; height:18px; background:url(filter11.gif) no-repeat left center; }
+.GM3Filter12Left,.GM3Filter12Menu { width:18px; height:18px; background:url(filter12.gif) no-repeat left center; }
+
+.GM3Filter0Menu,.GM3Filter1Menu,.GM3Filter2Menu,.GM3Filter3Menu,.GM3Filter4Menu,.GM3Filter5Menu,.GM3Filter6Menu,.GM3Filter7Menu,.GM3Filter8Menu,.GM3Filter9Menu,
+.GM3Filter10Menu,.GM3Filter11Menu,.GM3Filter12Menu {overflow:hidden; margin: -2px 0 0 -1px;}
+.GM3FilterMenuHeader { padding-left:2px; border-bottom:0 !important; } 
+
+/*  Keyfield Image */
+.GM3Keyfield {background-image:url(keyfield.gif); display:inline-block; vertical-align:middle; background-repeat: no-repeat; background-position:center 1px; padding: 0 2px 0 4px; }
+
+/* GMKeyfield : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .GM3Keyfield{  background-position: center 3px;padding: 0 2px 0 4px; }}
+
+/* CheckBox Header Image */
+.GM3CheckHeader0 {background-image:url(chk0.gif); display:inline-block; vertical-align:middle; background-repeat:no-repeat; background-position:5px 1px; padding:2px 7px 0 6px; margin:0 2px 0 0;}
+
+/* GMCheckHeader0 : hack CR,SF*/
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{.GM3CheckHeader0{ background-position:6px 1px ; padding: 2px 8px 0 6px; }}
+
+/* GMCheckHeader0 : hack FF*/
+.GM3CheckHeader0, x:-moz-any-link, x:default { background-position:6px 1px ; padding: 2px 8px 0 6px; }
+
+/* GMCheckHeader0 : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .GM3CheckHeader0{ background-position:7px center ; padding:1px  17px 0 0; }}
+
+.GM3CheckHeader1 {background-image:url(chk1.gif); display:inline-block; vertical-align:middle; background-repeat:no-repeat; background-position:4px 1px ; padding:2px 6px 0 6px; margin:0 2px 0 0}
+
+/* GMCheckHeader1 : hack CR,SF*/
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{.GM3CheckHeader1{ background-position:6px 1px ; padding: 2px 8px 0 6px; }}
+
+/* GMCheckHeader1 : hack FF*/
+.GM3CheckHeader1, x:-moz-any-link, x:default { background-position:6px 1px ; padding: 2px 8px 0 6px; }
+
+/* GMCheckHeader1 : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .GM3CheckHeader1 { background-position:7px center ; padding:1px  17px 0 0;  }}
+
+/* Sort images */
+.GM3Sort {display:block; float:right; margin:2px 2px 0;width:7px}
+
+/* State classes */
+/* The colors must be set by numbers not by names */
+.GM3ColorDefault  { background-color:#FFFFFF;}
+.GM3ColorNoFocus  { background-color:#E8F4FF;}
+.GM3ColorReadOnly { background-color:#F4F4F4;}
+.GM3ColorPreview  { background-color:#FFFFFF;}
+.GM3ColorAlternate{ background-color:#EBFFFF;}
+.GM3ColorSelected { background-color:/*#FFFF80*/#aadbff; }
+
+.GM3ColorFilter {background-color:#FFFFFF;}
+
+/*//.GM3ClassSelected { }*/
+.GM3ColorError   { background-color:#FF6969; }
+.GM3ColorDeleted { background-color:#FFCDCD; }
+.GM3ClassDeleted { font-style:italic; }
+.GM3ColorAdded   { background-color:#CDFFCD; }
+.GM3ClassAdded   { font-weight:bold; }
+.GM3ColorMoved1  { background-color:#FFFFFF; }
+.GM3ColorMoved2  { background-color:#D7EBEB; }
+.GM3ColorChanged { background-color:#EBEBFF; }
+.GM3ColorChangedCell { background-color:#E1E1FF; }
+.GM3ClassChangedCell { font-weight:bold; }
+.GM3ColorMaxChildren { background-color:#FFFFF0; }
+.GM3ColorDetail { background-color:#FFF0FF; }
+.GM3ColorDetailSelected { background-color:#FFF0E0; }
+.GM3ColorDragged{ background-color:#E0E0C0; }
+.GM3ColorFound1 { background-color:#FF87FF; }
+.GM3ColorFound2 { background-color:#FFC387; }
+.GM3ColorFound3 { background-color:#87FF87; }
+.GM3ColorHovered 			{ background-color:#F0F0FF; }
+.GM3ColorHoveredCell 		{ background-color:#C0C0FF; }
+.GM3ColorHoveredCellReadOnly { background-color:#F0F0F0; }
+.GM3ColorHoveredCellNoFocus 	{ background-color:#F8F8F8; }
+
+.GM3ClassHoveredCellHeader 	{ background-position:0px -250px; }
+.GM3ClassHoveredCellPanel 	{ background-position:0px -1801px; background-repeat:repeat-x; }
+
+.GM3ColorHoveredCellSpace 	{ background-color:#FFFFFF; }
+.GM3ColorHoveredCellSpaceEdit{ background-color:#C0C0FF; }
+.GM3ColorHoveredCellSpaceBool{ background-color:#FFFFFF; }
+.GM3ColorHoveredCellButton 	{ background-color:#FFFFFE; }
+.GM3ClassHoveredCellButton 	{ color:green; }
+.GM3ColorHoveredCellButton1 	{ background-color:#FFFFFE; }
+.GM3ClassHoveredCellButton1 	{ color:red; }
+.GM3ColorHoveredCellTab 		{ background-color:#FFFFFE; }
+.GM3ClassHoveredCellTab 		{ background-position:0px -1801px; color:green; }
+.GM3ColorHoveredCellTab1 	{ background-color:#99bbcc; }
+.GM3ClassHoveredCellTab1 	{ background-image:none; }
+
+.GM3ColorFocused 			{ background-color:#E6E6E6; }
+.GM3ColorFocusedCell 		{ background-color:#FFFFFE; }
+.GM3ColorFocusedCellSafari 	{ background-color:#A0A0FF; }
+.GM3ColorFocusedCellSpace 	{ background-color:#E6E6E6; }
+.GM3ColorFocusedCellButton 	{ background-color:#BCD; }
+.GM3ColorFocusedCellHeader 	{ background-color:#FFFFFE; }
+.GM3ColorFocusedCellPanel 	{ background-color:#FFFFFE; }
+.GM3ColorEditedCell 			{ background-color:#FFFFFF; }
+.GM3ColorViewedCell 			{ background-color:#FFFFFF; }
+
+/*
+PRINT STYLESHEET
+*/
+@media print {
+	* { filter:none !important; -ms-filter: none !important; } 
+}
+
+/* Hover, focus, edit cursors */
+.GM3HoverRowBackground 	{ opacity:0.1; filter:alpha(opacity=10); background:#00F; }
+.GM3HoverRowBorder 		{ z-index:0; border-top:1px solid #BBF; border-bottom:1px solid #BBF; cursor:default; }
+.GM3HoverCellBorder 		{ z-index:0; padding:1px; border:1px solid #A0A0F0; background:white; }
+.GM3FocusRowBackground 	{ background:/*IBSB*/#b6d102;ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)"; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20); filter:alpha(opacity=20); opacity:.1; } /* <-- Sheet : Selected Row Background */
+.GM3FocusRowBorder 		{ z-index:0; border:1px solid /*IBSB*/#D6E581; } /* <-- Sheet : Selected Row Border */
+.GM3FocusCellBorder		{ z-index:0; border:2px solid /*IBSB*/#CCE24C; } /* <-- Sheet : Selected Cell Border */
+.GM3FocusCellSpaceBorder,.GM3EditCellSpaceBorder { z-index:4; }
+.GM3EditCellBorder 		{ z-index:0; border:2px solid #FF6666;}    /*<-- Sheet : CellEdit Border */
+.GM3EditCellInput 		{ position:relative; border:0 solid #39aefb; overflow:hidden; z-index:2; } 
+
+.GM3CursorBackground, .GM3CursorBorderLeft ,.GM3CursorBorderRight,.GM3CursorBorderTop,.GM3CursorBorderBottom 
+ {position:relative;overflow:hidden;}
+
+.GM3CursorBackground  {border:none; padding:0;}
+.GM3CursorBorderLeft  {padding-right:0; padding-top:0; padding-bottom:0; border-right:none; border-top:none; border-bottom:none;  width:0; height:0;}
+.GM3CursorBorderRight {padding-left:0; padding-top:0; padding-bottom:0; border-left:none; border-top:none; border-bottom:none;  width:0; height:0;}
+.GM3CursorBorderTop 	 {padding-bottom:0; padding-left:0; padding-right:0; border-bottom:none; border-left:none; border-right:none;  width:0; height:0;}
+.GM3CursorBorderBottom{padding-top:0; padding-left:0; padding-right:0; border-top:none; border-left:none; border-right:none; width:0; height:0;}
+
+/* Cell edges */
+.GM3NoLeft { border-left:0; }
+.GM3NoRight { border-right:0; }
+
+/* Dragging */
+.GM3MouseObject { opacity:0.5; filter:alpha(opacity=50); z-index:300; overflow:hidden;}
+.GM3DragObject {z-index:300; margin-left:10px; margin-top:10px; padding-left:3px; padding-right:3px;background:#E4E5F0 ; border:1px solid #777;}
+.GM3DragColInsideTop,.GM3DragColInsideBottom,.GM3DragColOutsideTop,.GM3DragColOutsideBottom{position:absolute;width:10px; height:11px; overflow:hidden; z-index:258;}
+.GM3DragColInsideTop 	{background:url(in_top.gif) no-repeat;} 	
+.GM3DragColInsideBottom  {background:url(in_bottom.gif) no-repeat;}	
+.GM3DragColOutsideTop  	{background:url(out_top.gif) no-repeat;}	
+.GM3DragColOutsideBottom {background:url(out_bottom.gif) no-repeat;}	 
+
+/* Messages */
+.GM3Disabled{position:absolute; z-index:264; background:#ffffff; opacity:0.5; filter:alpha(opacity=50); } 
+.GM3Process {position: absolute; left:0; top:0; background:#E2F0FF; border:1px solid #777; white-space:nowrap; text-align:center; visibility:hidden; z-index:266;}
+.GM3Message {background:#E2F0FF; border:1px solid #000000; padding:10px; white-space:nowrap; text-align:center;
+			 position: absolute; left:0; top:0; visibility:hidden; z-index:266;}
+.GM3MessageShadow 
+{position:absolute; margin-left:3px; margin-top:3px; z-index:265;background:#888; opacity:0.5; filter:alpha(opacity=50); left:0; top:0; visibility:hidden;}
+      
+/* Other */
+/* !!! No .GM3 style prefix here !!! */
+.GridTmpTag { position:absolute; left:5px; top:5px; visibility:hidden; }
+
+/* Popup menus */
+.GM3MenuMain  {position:absolute;left:0;top:0; z-index:258;}
+.GM3MenuOuter {overflow:hidden; border:1px solid #000000; background:#fff; padding:1px; margin:1px;}
+.GM3MenuHeader{overflow:hidden; position:absolute; z-index:258;border:1px solid #b0b0c0; background:#fff; cursor:pointer; _cursor:hand;}
+.GM3MenuHead {color:#15498B; cursor:pointer; text-align:left; font-weight:bold; padding-top:5px; padding-bottom:4px;
+	background: #c9e1f5; /* Old browsers */
+	background: -moz-linear-gradient(top,  #c9e1f5 0%, #99bce8 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c9e1f5), color-stop(100%,#99bce8)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #c9e1f5 0%,#99bce8 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #c9e1f5 0%,#99bce8 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #c9e1f5 0%,#99bce8 100%); /* IE10+ */
+	background: linear-gradient(top,  #c9e1f5 0%,#99bce8 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9e1f5', endColorstr='#99bce8',GradientType=0 ); /* IE6-9 */
+}
+.GM3MenuClose {float:right; width:14px; cursor:pointer; _cursor:hand; display:none;}
+.GM3MenuBody {cursor:default; background-color:#fff; padding-top:1px; padding-bottom:1px;}
+.GM3MenuShadow {position:absolute;margin:3px 0 0 3px;z-index:257;background-color:#888; opacity:0.5; filter:alpha(opacity=50);}
+.GM3MenuCheckedIconRight {padding-right:17px; background:url(chk1.gif) no-repeat 96% center; }
+.GM3MenuUncheckedIconRight { padding-right:17px;background:url(chk0.gif) no-repeat 96% center ; }
+
+.GM3MenuCursorIcon {background-image:url(d_gray_right.gif); background-repeat:no-repeat; background-position: 3px center;_background-color:#fff}
+.GM3MenuHoverIcon {background-image:url(d_right.gif); background-repeat:no-repeat; background-position: 3px center; _background-color:#ffeeaa }   
+
+.GM3MenuNextIcon { padding-right:10px; }
+.GM3MenuNextIconRtl { padding-left:10px; }
+
+.GM3MenuItemText,.GM3MenuItemIcon,.GM3MenuEnum,.GM3MenuEnumHeader,.GM3MenuEdit 
+{white-space:nowrap; overflow:hidden; vertical-align: middle; padding:1px 0 0 0}
+.GM3MenuItemDisabled {opacity:0.50; filter:alpha(opacity=30); overflow:hidden; }
+.GM3MenuLevel {color:blue;text-align:center; }  
+.GM3MenuEnumParent,.GM3MenuEditParent {padding-left:5px; padding-right:2px}
+.GM3MenuItemIcon {background-repeat:no-repeat;}
+.GM3MenuEnum {border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; padding-left:15px; overflow:hidden;}
+.GM3MenuEnumHeader  {padding:1px 0 2px 16px; cursor:default; } 
+.GM3MenuEdit{border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; background:white; overflow:hidden;white-space:nowrap;
+  padding-left:2px; padding-right:2px;}
+.GM3MenuEditInput,.GM3MenuEditTextarea {margin:0;padding:0;border:0; background:#FDD;_margin:-1px; _padding-right:1px; _padding_left:1px; }   
+.GM3MenuEditTextarea { line-height:13px;  }   
+.GM3MenuEditInt,.GM3MenuEditFloat,.GM3MenuEditDate { text-align:right; } 
+.GM3MenuEditMulti { white-space:normal; }
+.GM3MenuItem {background-color:#ffffff;padding:2px;}  
+.GM3MenuItemHover {background-color:#ffeeaa; border:1px solid #aaaadd;margin:0 1px; padding:1px 0;}
+.GM3MenuFocusHover {margin:1px; background-color:#CAE1F3; border:1px solid #000000;}
+.GM3MenuFocus 	  {margin:1px; background-color:#CAE1F3; border:1px solid #aaaadd;}
+.GM3MenuSeparator {margin:1px 3px 0 3px; height:1px; border-top:1px solid #aaaadd; overflow:hidden;}
+.GM3MenuCaption {padding:2px; background:#ffffff; color:blue; text-align:center;}
+.GM3MenuVSeparator { border-right:1px solid #DDD; }
+.GM3MenuFoot { border-top:none; text-align:center; white-space:nowrap; }
+.GM3MenuButton {font-size:11px;background:#dcecf8; text-align:center; border:1px solid #8a8fb5;margin:5px 2px 4px 2px;padding:0;white-space:nowrap;width:48px;} 
+.GM3MenuButtonHover { background:#ffeeaa; border:1px solid #aaaadd; }
+
+.GM3EnumMenuItem {background-color:#ffffff;padding:2px;padding-top:0px;padding-bottom:0px;}  
+.GM3EnumMenuFocus      {margin:1px; background-color:#CAE1F3; border:1px solid #aaaadd;}
+.GM3EnumMenuFocusHover {margin:1px; background-color:#CAE1F3; border:1px solid #000000;}
+.GM3EnumMenuItemHover {background-color:#ffeeaa; border:0px solid #aaaadd;margin:0 1px; padding:1px;padding-top:0px;padding-bottom:0px;}
+.GM3EnumMenuColBorderColor {border-color:#e0e0ff;}
+
+.GM3SuggestMenuItem {background-color:#ffffff;padding:2px;padding-top:0px;padding-bottom:0px;}  
+.GM3SuggestMenuFocus       {margin:1px; background-color:#CAE1F3; border:1px solid #aaaadd;}
+.GM3SuggestMenuFocusHover {margin:1px; background-color:#CAE1F3; border:1px solid #000000;}
+.GM3SuggestMenuItemHover {background-color:#ffeeaa; border:0px solid #aaaadd;margin:0 1px; padding:1px;padding-top:0px;padding-bottom:0px;}
+.GM3SuggestMenuColBorderColor {border-color:#e0e0ff;}
+
+/* Grid configuration menus */
+.GM3CfgMenuOuter,.GM3ColumnsMenuOuter { border:1px solid #000000; }
+.GM3CfgMenuHead,.GM3ColumnsMenuHead { padding-left:3px; }
+.GM3CfgMenuBody,.GM3ColumnsMenuBody { padding-left:4px; padding-right:4px;}
+.GM3CfgMenuFoot,.GM3ColumnsMenuFoot { padding-right:3px; padding-left:3px;}
+.GM3CfgMenuButton { width:70px; } 
+.GM3CfgMenuItemText,.GM3ColumnsMenuItemText { padding-left:3px; }
+.GM3ColumnsMenuItemText { white-space:nowrap; }
+.GM3CfgMenuItem,.GM3ColumnsMenuItem { padding-top:3px; padding-bottom:3px;}
+.GM3CfgMenuItemHover,.GM3CfgMenuFocus,.GM3CfgMenuFocusHover,
+.GM3ColumnsMenuItemHover,.GM3ColumnsMenuFocus,.GM3ColumnsMenuFocusHover { padding-top:2px; padding-bottom:2px;}
+
+/* Popup grid dialog */
+.GM3PopupGridOuter { border:0; overflow:visible; }
+.GM3PopupGridHead { padding:0; }
+.GM3PopupGridBody { padding:0; }
+.GM3PopupGridFoot { padding:0; }
+.GM3PopupGridButton { width:50px;margin-top:-2px; margin-bottom:3px;} 
+
+/* Calendar */
+.GM3PickMain  {position:absolute; left:0; top:0; z-index:258; }
+.GM3PickOuter {overflow:hidden; background:white; padding:1px; border:1px solid #426b8c; }
+.GM3PickHeader{overflow:hidden; position:absolute; z-index:258; border:1px solid black; background:#ffffff; cursor:pointer; _cursor:hand;}
+.GM3PickHeaderBottom{border-bottom:0; padding-bottom:1px;}
+.GM3PickHeaderTop{border-top:0; padding-bottom:1px; }
+.GM3PickHead {background:#5c8397; font:10px Dotum,Verdana,Arial; color:white; cursor:default; padding-left:5px; padding-top:1px; padding-bottom:1px;border-bottom:1px solid white;}
+.GM3PickClose{float:right; width:14px; cursor:pointer; _cursor:hand; display:none;}
+.GM3PickBody {cursor:default; padding:0; }
+.GM3PickShadow{position:absolute; background:#888; z-index:257; margin:3px 0 0 3px;opacity:0.5; filter:alpha(opacity=50);} 
+.GM3PickFooter,.GM3Pick2Footer{text-align:center; padding:2px; cursor:default; background:#EFF0F1; border-top:1px solid #E3E4E6}
+ 
+.GM3PickMY{background-color:#C9E1F5;border-bottom:1px solid #99BCE8;color:#15498B; cursor:default;text-align:center;padding:2px 0 4px 0;}/* <-- Calender : Header Background */
+   
+.GM3PickMYDown{padding-right:13px; background:url(d_down.gif) no-repeat right; cursor:pointer; _cursor:hand;}
+.GM3PickMYUp {padding-right:13px; background:url(d_up.gif) no-repeat right center; cursor:pointer; _cursor:hand;}
+
+.GM3PickMYRtl{padding-right:0; padding-left:13px; }
+.GM3PickBL,.GM3PickBR{padding-top:3px; cursor:pointer; _cursor:hand; width:16px; height:14px; overflow:hidden;}
+
+.GM3PickBL {float:left; background:url(d_left.gif) no-repeat 50%; }
+.GM3PickBR {float:right; background:url(d_right.gif) no-repeat 50%; }
+
+.GM3PickTable{width:160px !important;}
+.GM3PickRow  {background:#ffffff;}
+.GM3PickRowW {background:#DAEAF8;}
+.GM3PickCell {width:22px;}
+.GM3PickWDN {background:transparent; color:#333333;text-align:center; cursor:default; margin:2px 3px;padding:1px;}
+
+.GM3PickHover,.GM3PickSelHover,.GM3PickWD,.GM3PickSa,.GM3PickSu,.GM3PickSel,.GM3PickNow,.GM3PickWDNE,.GM3PickSaNE,.GM3PickSuNE,
+.GM3PickSelNE,.GM3PickNowNE,.GM3PickOM,.GM3PickOMNE {text-align:center; border:1px solid #ffffff; cursor:pointer; _cursor:hand;margin:2px 3px;}
+.GM3PickWN,.GM3PickWNE {text-align:center; cursor:pointer; _cursor:hand;padding:3px 4px; border-right:1px solid #8CA9E1; background:#EFF0F1; white-space:nowrap;}
+
+.GM3PickWDNE,.GM3PickSaNE,.GM3PickSuNE,.GM3PickSelNE,.GM3PickNowNE,.GM3PickWNE {cursor:default;}
+.GM3PickWD{background-color:#ffffff;}
+.GM3PickSa{background-color:#ffffff; color:blue;}
+.GM3PickSu{background-color:#ffffff; color:red;}
+.GM3PickSel{background-color:#fbea54; border:1px solid #dad1d1;}
+.GM3PickSelNE{background-color:#fbea54; border:1px solid #dad1d1;}
+.GM3PickNow {background-color:#c0f3ff; border:1px solid #dad1d1;}
+.GM3PickNowNE{background-color:#c0f3ff; border:1px solid #dad1d1;}
+.GM3PickHover{background-color:#ddd; border:1px solid #ddd;}
+.GM3PickSelHover{background-color:#eeeeaa; border:1px solid #ddd;}
+.GM3PickOM{background-color:white; color:#aaaaaa;}
+.GM3PickOMNE{color:#aaaaaa;}
+
+.GM3PickEmpty{background:url(d_blank.gif) no-repeat 50%; cursor:pointer; _cursor:hand;padding:3px 0; }
+
+.GM3PickTimeCell 
+{text-align:right; padding-bottom:4px; padding-top:6px; padding-right:5px; border-top:1px solid #8CA9E1; background:#EFF0F1;}
+
+.GM3PickTime 
+{border:0px none; white-space:nowrap; text-align:right; background:#EFF0F1;}
+
+.GM3PickButton{background:#dcecf8; text-align:center; border:1px solid #8a8fb5; width:45px; height:16px}
+    
+.GM3PickButtonHover{background:#ffeeaa; border:1px solid #aaaadd; }
+.GM3Pick2Table{width:158px !important; vertical-align:middle}
+.GM3Pick2CellM{height:20px; width:55px; }
+.GM3Pick2CellY{height:20px; width:35px; vertical-align:middle }
+.GM3Pick2CellSep{height:20px; width:5px; }
+.GM3Pick2Cell{vertical-align:middle}
+.GM3Pick2M,.GM3Pick2Y,.GM3Pick2MSel,.GM3Pick2YSel,.GM3Pick2MHover,.GM3Pick2YHover,.GM3Pick2MSelHover,.GM3Pick2YSelHover
+{cursor:pointer; _cursor:hand; text-align:center; margin-left:1px; margin-right:1px; padding-left:4px; padding-right:4px; overflow:hidden; }
+   
+.GM3Pick2MSel,.GM3Pick2YSel {background:#c0f3ff; border:1px solid #dad1d1; margin-left:0; margin-right:0;}
+.GM3Pick2MHover,.GM3Pick2YHover {background:#DDD; border:1px solid #ffffff; margin-left:0; margin-right:0;}
+.GM3Pick2MSelHover,.GM3Pick2YSelHover {background:#80e0f0; border:1px solid #ffffff;margin-left:0; margin-right:0;}   
+.GM3Pick2SepH {width:1px; height:1px; overflow:hidden; }
+.GM3Pick2Sep {width:1px; background:#E3E4E6; overflow:hidden; margin-left:2px; margin-right:2px; height:20px;}
+.GM3Pick2BL,.GM3Pick2BR {width:35px; cursor:pointer; _cursor:hand; }
+
+
+.GM3Pick2BL {background:url(d_left2.gif) no-repeat center center}
+.GM3Pick2BR {background:url(d_right2.gif) no-repeat center center}
+
+
+/* Edit controls */
+.GM3Edit,.GM3EditInline {padding:2px 4px;border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666;background:#ffffff; white-space:nowrap; overflow:hidden;}
+  
+.GM3EditInline { display:inline-block; vertical-align:bottom; }
+.GM3EditInput,.GM3EditTextarea {border:0 solid transparent !important; margin:0; padding:0;vertical-align: middle} 
+
+.GM3EditTextarea { line-height:13px; }
+.GM3EditSpaceInput { vertical-align:middle; }
+.GM3EditNormalInput,.GM3EditNormalTextarea,.GM3EditSpaceTextarea { background-color:#FFFFFF; /*#FFDCFF;*/; }
+.GM3EditInt,.GM3EditFloat { text-align:right; }
+
+.GM3EditMulti { white-space:normal; }
+.GM3EditReadOnly { background-color:#FFEEFF; }   
+.GM3EditParent { position:absolute; z-index:258; overflow:hidden; }
+
+.GM3EnumHeaderLeft,.GM3EnumHeaderRight,.GM3EnumHeaderNone 
+{background:white; cursor:pointer; _cursor:hand; vertical-align:middle; text-align:left; padding:2px 0 2px 2px;}
+
+.GM3EnumHeaderRight {background: url(combo.gif) no-repeat right center;margin:1px 1px 0 0;}
+ @media screen and (-webkit-min-device-pixel-ratio:0) {.GM3EnumHeaderRight{margin:1px 0 0 0;}}/* hack:CR,SF */
+.GM3EnumHeaderRight, x:-moz-any-link, x:default {margin:1px 0 0 0;} /* hack:FF */
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {.GM3EnumHeaderRight{ margin:1px 0 0 0;}}/* hack:OP */
+
+.GM3EnumMenuHeader { background:#ffffff; }
+
+.GM3EnumControl,.GM3EnumInline {
+   cursor:pointer; _cursor:hand; padding-left:15px; padding-right:4px; padding-top:2px; padding-bottom:2px;
+   border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; overflow:hidden;}
+   
+.GM3EnumInline { display:inline-block; vertical-align:bottom; }
+.GM3EnumHeader { cursor:pointer; _cursor:hand;padding-left:15px; padding-right:4px; padding-top:2px; padding-bottom:2px;} 
+
+/*  Custom scrollbars  */
+.GM3CustScroll1RightHidden { background:url(VScroll.gif) left -108px; height:18px; overflow:hidden; }
+.GM3CustScroll1Right { padding-right:18px; background:url(VScroll.gif) right 0; }
+.GM3CustScroll1RightHover { padding-right:18px; background:url(VScroll.gif) right -18px; }
+.GM3CustScroll1Left { padding-left:18px;  background:url(VScroll.gif) left 0; }
+.GM3CustScroll1LeftHover { padding-left:18px;  background:url(VScroll.gif) left -18px; }
+.GM3CustScroll1SliderRight { padding-right:3px; background:url(VScroll.gif) right -36px; }
+.GM3CustScroll1SliderLeft { padding-left:3px; background:url(VScroll.gif) left -36px; }
+.GM3CustScroll1SliderHIn { height:18px; overflow:hidden; background:url(VScroll.gif) center -54px; }
+.GM3CustScroll1SliderRightHover { padding-right:3px; background:url(VScroll.gif) right -72px; }
+.GM3CustScroll1SliderLeftHover { padding-left:3px; background:url(VScroll.gif) left -72px; }
+.GM3CustScroll1SliderHInHover { height:18px; overflow:hidden; background:url(VScroll.gif) center -90px; }
+
+.GM3CustScroll2RightHidden { background:url(VScroll.gif) left -460px; height:10px; overflow:hidden; }
+.GM3CustScroll2Right { padding-right:10px; background:url(VScroll.gif) right -400px; }
+.GM3CustScroll2RightHover { padding-right:10px; background:url(VScroll.gif) right -410px; }
+.GM3CustScroll2Left { padding-left:10px;  background:url(VScroll.gif) left -400px; }
+.GM3CustScroll2LeftHover { padding-left:10px;  background:url(VScroll.gif) left -410px; }
+.GM3CustScroll2SliderRight { padding-right:6px; background:url(VScroll.gif) right -420px; }
+.GM3CustScroll2SliderLeft { padding-left:6px; background:url(VScroll.gif) left -420px; }
+.GM3CustScroll2SliderHIn { height:10px; overflow:hidden; background:url(VScroll.gif) center -430px; }
+.GM3CustScroll2SliderRightHover { padding-right:6px; background:url(VScroll.gif) right -440px; }
+.GM3CustScroll2SliderLeftHover { padding-left:6px; background:url(VScroll.gif) left -440px; }
+.GM3CustScroll2SliderHInHover { height:10px; overflow:hidden; background:url(VScroll.gif) center -450px; }
+
+.GM3CustScroll3Right,.GM3CustScroll3RightHidden { background:white; height:9px; overflow:hidden; }
+.GM3CustScroll3SliderRight,.GM3CustScroll3SliderRightHover { padding-right:3px; height:9px; background:url(VScroll.gif) right -126px; }
+.GM3CustScroll3SliderLeft,.GM3CustScroll3SliderLeftHover { height:9px; background:url(VScroll.gif) left -126px; }
+.GM3CustScroll3SliderRightHover { background-position:right -135px; }
+.GM3CustScroll3SliderLeftHover { background-position:left -135px; }
+
+.GM3CustScroll4Right,.GM3CustScroll4RightHidden,.GM3CustScroll4SliderRight,.GM3CustScroll4SliderRightHover { height:1px; overflow:hidden; }
+
+.GM3CustScroll1DownHidden { background:url(HScroll.gif) -108px top; width:18px; overflow:hidden; }
+.GM3CustScroll1Down { padding-bottom:18px; background:url(HScroll.gif) 0px bottom; cursor:default; width:18px; overflow:hidden; }
+.GM3CustScroll1DownHover { padding-bottom:18px; background:url(HScroll.gif) -18px bottom; width:18px; overflow:hidden; }
+.GM3CustScroll1Up { padding-top:18px; background:url(HScroll.gif) 0px top; width:18px; overflow:hidden; }
+.GM3CustScroll1UpHover { padding-top:18px;  background:url(HScroll.gif) -18px top; width:18px; overflow:hidden; }
+.GM3CustScroll1SliderDown { padding-bottom:3px; background:url(HScroll.gif) -36px bottom; width:18px; overflow:hidden; }
+.GM3CustScroll1SliderUp { padding-top:3px; background:url(HScroll.gif) -36px top; width:18px; overflow:hidden; }
+.GM3CustScroll1SliderVIn { background:url(HScroll.gif) -54px center; width:18px; overflow:hidden; }
+.GM3CustScroll1SliderDownHover { padding-bottom:3px; background:url(HScroll.gif) -72px bottom; width:18px; overflow:hidden; }
+.GM3CustScroll1SliderUpHover { padding-top:3px; background:url(HScroll.gif) -72px top; width:18px; overflow:hidden; }
+.GM3CustScroll1SliderVInHover { background:url(HScroll.gif) -90px center; width:18px; overflow:hidden; }
+
+.GM3CustScroll2DownHidden { background:url(HScroll.gif) -460px top; width:10px; overflow:hidden; }
+.GM3CustScroll2Down { padding-bottom:10px; background:url(HScroll.gif) -400px bottom; cursor:default; width:10px; overflow:hidden; }
+.GM3CustScroll2DownHover { padding-bottom:10px; background:url(HScroll.gif) -410px bottom; width:10px; overflow:hidden; }
+.GM3CustScroll2Up { padding-top:10px; background:url(HScroll.gif) -400px top; width:10px; overflow:hidden; }
+.GM3CustScroll2UpHover { padding-top:10px;  background:url(HScroll.gif) -410px top; width:10px; overflow:hidden; }
+.GM3CustScroll2SliderDown { padding-bottom:6px; background:url(HScroll.gif) -420px bottom; width:10px; overflow:hidden; }
+.GM3CustScroll2SliderUp { padding-top:6px; background:url(HScroll.gif) -420px top; width:10px; overflow:hidden; }
+.GM3CustScroll2SliderVIn { background:url(HScroll.gif) -430px center; width:10px; overflow:hidden; }
+.GM3CustScroll2SliderDownHover { padding-bottom:6px; background:url(HScroll.gif) -440px bottom; width:10px; overflow:hidden; }
+.GM3CustScroll2SliderUpHover { padding-top:6px; background:url(HScroll.gif) -440px top; width:10px; overflow:hidden; }
+.GM3CustScroll2SliderVInHover { background:url(HScroll.gif) -450px center; width:10px; overflow:hidden; }
+
+.GM3CustScroll3Down,.GM3CustScroll3DownHidden { background:white; width:9px; overflow:hidden; cursor:default; }
+.GM3CustScroll3SliderDown,.GM3CustScroll3SliderDownHover { padding-bottom:3px; width:9px; background:url(HScroll.gif) -126px bottom; }
+.GM3CustScroll3SliderUp,.GM3CustScroll3SliderUpHover { width:9px; background:url(HScroll.gif) -126px top; cursor:default; }
+.GM3CustScroll3SliderDownHover { background-position:-135px bottom; }
+.GM3CustScroll3SliderUpHover { background-position:-135px top; cursor:default; }
+
+.GM3CustScroll4Down,.GM3CustScroll4DownHidden,.GM3CustScroll4SliderDown,.GM3CustScroll4SliderDownHover { width:1px; overflow:hidden; }
+
+/* Other messages */
+.GM3HintMain {position:absolute; margin-left:-1px; margin-top:-1px; left:0px; top:0px; z-index:260; background:#ffffff; cursor:default; }
+.GM3HintOuter {overflow:hidden; border:1px solid #000000; background:#ffffff !important; color:black; text-align:left; }
+.GM3HintHeaderOuter {background-color:#39aefb !important; color:#ffffff; border: 1px solid #ffffff; }
+.GM3HintShadow {position:absolute; z-index:259;background:#888; opacity:0.3; filter:alpha(opacity=30);margin-left:2px; margin-top:2px;}
+.GM3TipMain {position:absolute; left:0px; top:0px; z-index:262; visibility:hidden; }
+.GM3TipOuter  {overflow:hidden; cursor:default; font:12px Arial;padding-left:3px; padding-right:3px; background:#E4E5F0; border:1px solid #777;}
+.GM3TipBody {background:#E4E5F0; white-space:nowrap; }
+.GM3TipShadow {position:absolute;z-index:261;background:#888; opacity:0.3; filter:alpha(opacity=30);visibility:hidden; margin-left:3px; margin-top:3px}
+.GM3MouseOrig { background:yellow !important; opacity:0.5; filter:alpha(opacity=50); }
+.GM3MouseDragObject { position:absolute; z-index:260; background:#888; opacity:0.5; filter:alpha(opacity=50); }
+.GM3Focus { border:1px solid #AAF; border-top:1px solid #00F; border-left:1px solid #00F; background-color:#EEE; } 
+.GridDisabled { position:absolute; z-index:256; background:white; opacity:0.5; filter:alpha(opacity=50); } 
+
+/* Do not change, marks the style loaded */
+.GM3Loaded { border:1px solid #000000 !important;}
+
+/*sum*/
+.GM3SumCell{background:#EAF1FB; color:#F30;}/*//text-align: right;font-weight:bold;*/
+.GM3SubSumCell{background: #FFFFEF; border-bottom:1px solid #F5D9CD; color:#FF6600}
+.GM3CumulateCell{background: #FFFFEF; border-bottom:1px solid #F5D9CD; color:#AE4600}
+
+/* FindDialog */
+.GM3H1Pop,.GM3PPop{margin:0; padding:0}
+.GM3Paddingl10{padding-left:10px}
+.GM3PaddingT10{padding-top:10px}
+.GM3PPop{ padding:0 0 10px 0; text-align:center }
+.GM3Pop{width:410px; overflow:hidden; border:1px solid #426B8C; padding:0; font-size:12px;background:#EBF2F5; font-family:dotum, Arial, Helvetica, sans-serif}
+.GM3PopTitle{width:100%; border-bottom:1px solid #99BCE8; font-size:12px; font-weight:bold; display:block; line-height:28px; color:#15498B;
+background: #c9e1f5; /* Old browsers */
+background: -moz-linear-gradient(top,  #c9e1f5 0%, #99bce8 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c9e1f5), color-stop(100%,#99bce8)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #c9e1f5 0%,#99bce8 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #c9e1f5 0%,#99bce8 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #c9e1f5 0%,#99bce8 100%); /* IE10+ */
+background: linear-gradient(top,  #c9e1f5 0%,#99bce8 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9e1f5', endColorstr='#99bce8',GradientType=0 ); /* IE6-9 */
+}
+.GM3PopSearch{margin:10px; overflow:hidden; }
+.GM3PopContent{border:1px solid #D0DBE8; background-color:#fff}
+.GM3PopUl{list-style:none; margin:0; padding:10px;}
+.GM3PopDiv{overflow:hidden; width:100%}
+.GM3PopDiv2{overflow:hidden; width:100%}
+.GM3PopLeft,.GM3PopLeft2{width:220px; float:left; }
+.GM3PopRight,.GM3PopRight2{width:166px; float:right}
+.GM3PopUl input {margin:-2px 2px 0px 0px;padding:0 ; width:13px; height:13px; vertical-align:middle;}
+.GM3PopUl li{ padding-top:4px;padding-bottom:3px ; padding-left:5px}
+.GM3Btn{margin-top:10px; text-align:center }
+.GM3PopLeft, .GM3PopRight{ height:120px}
+.GM3PopLeft2, .GM3PopRight2{ height:80px}
+.GM3PopLabel{line-height:12px; margin:0 0 0 2px}
+.GM3PopSubtitle{font-weight:bold; color:#000; border-bottom:1px solid  #E0E0E0; background-color:#E7E7E7;padding-left:4px;}
+.GM3PopBtn {text-align: center;text-decoration: none;color:#fff;position: relative;border:1px solid #316290;
+		  font-size:12px;width:50px !important;height:22px !important; cursor:pointer;}
+.GM3PopBtn:hover {color:#fff;}
+.GM3PopBtnBlue {
+	background: #5689b9; /* Old browsers */
+	background: -moz-linear-gradient(top,  #5689b9 0%, #3a6ea0 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5689b9), color-stop(100%,#3a6ea0)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #5689b9 0%,#3a6ea0 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #5689b9 0%,#3a6ea0 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #5689b9 0%,#3a6ea0 100%); /* IE10+ */
+	background: linear-gradient(top,  #5689b9 0%,#3a6ea0 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5689b9', endColorstr='#3a6ea0',GradientType=0 ); /* IE6-9 */
+}
+.GM3PopBtnBlue:hover {
+	background: #3a6ea0; /* Old browsers */
+	background: -moz-linear-gradient(top,  #3a6ea0 0%, #5689b9 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3a6ea0), color-stop(100%,#5689b9)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #3a6ea0 0%,#5689b9 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #3a6ea0 0%,#5689b9 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #3a6ea0 0%,#5689b9 100%); /* IE10+ */
+	background: linear-gradient(top,  #3a6ea0 0%,#5689b9 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a6ea0', endColorstr='#5689b9',GradientType=0 ); /* IE6-9 */
+}		

@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<title> {{document_title}} </title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+			
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- Basic Styles -->
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+
+		<!-- SmartAdmin Styles : Caution! DO NOT change the order -->
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/smartadmin-production-plugins.min.css') }}">
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/smartadmin-production.min.css') }}">
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/smartadmin-skins.min.css') }}">
+
+		<!-- SmartAdmin RTL Support  -->
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/smartadmin-rtl.min.css') }}">
+
+		<!-- We recommend you use "your_style.css" to override SmartAdmin
+		     specific styles this will also ensure you retrain your customization with each SmartAdmin update.
+		<link rel="stylesheet" type="text/css" media="screen" href="css/your_style.css"> -->
+
+		<!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/demo.min.css') }}">
+
+		<!-- FAVICONS -->
+		<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon/favicon.ico') }}" type="image/x-icon">
+		<link rel="icon" href="{{ url_for('static', filename='img/favicon/favicon.ico') }}" type="image/x-icon">
+
+		<!-- GOOGLE FONT -->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+
+		<!-- Specifying a Webpage Icon for Web Clip 
+			 Ref: https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html -->
+		<link rel="apple-touch-icon" href="{{ url_for('static', filename='img/splash/sptouch-icon-iphone.png') }}">
+		<link rel="apple-touch-icon" sizes="76x76" href="{{ url_for('static', filename='img/splash/touch-icon-ipad.png') }}">
+		<link rel="apple-touch-icon" sizes="120x120" href="{{ url_for('static', filename='img/splash/touch-icon-iphone-retina.png') }}">
+		<link rel="apple-touch-icon" sizes="152x152" href="{{ url_for('static', filename='img/splash/touch-icon-ipad-retina.png') }}">
+		
+		<!-- iOS web-app metas : hides Safari UI Components and Changes Status Bar Appearance -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		
+		<!-- Startup image for web apps -->
+		<link rel="apple-touch-startup-image" href="{{ url_for('static', filename='img/splash/ipad-landscape.png') }}" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
+		<link rel="apple-touch-startup-image" href="{{ url_for('static', filename='img/splash/ipad-portrait.png') }}" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
+		<link rel="apple-touch-startup-image" href="{{ url_for('static', filename='img/splash/iphone.png') }}" media="screen and (max-device-width: 320px)">
+
+	</head>
+
+	<!--
+
+	TABLE OF CONTENTS.
+	
+	Use search to find needed section.
+	
+	===================================================================
+	
+	|  01. #CSS Links                |  all CSS links and file paths  |
+	|  02. #FAVICONS                 |  Favicon links and file paths  |
+	|  03. #GOOGLE FONT              |  Google font link              |
+	|  04. #APP SCREEN / ICONS       |  app icons, screen backdrops   |
+	|  05. #BODY                     |  body tag                      |
+	|  06. #HEADER                   |  header tag                    |
+	|  07. #PROJECTS                 |  project lists                 |
+	|  08. #TOGGLE LAYOUT BUTTONS    |  layout buttons and actions    |
+	|  09. #MOBILE                   |  mobile view dropdown          |
+	|  10. #SEARCH                   |  search field                  |
+	|  11. #NAVIGATION               |  left panel & navigation       |
+	|  12. #MAIN PANEL               |  main panel                    |
+	|  13. #MAIN CONTENT             |  content holder                |
+	|  14. #PAGE FOOTER              |  page footer                   |
+	|  15. #SHORTCUT AREA            |  dropdown shortcuts area       |
+	|  16. #PLUGINS                  |  all scripts and plugins       |
+	
+	===================================================================
+	
+	-->
+	
+	<!-- #BODY -->
+	<!-- Possible Classes
+
+		* 'smart-style-{SKIN#}'
+		* 'smart-rtl'         - Switch theme mode to RTL
+		* 'menu-on-top'       - Switch to top navigation (no DOM change required)
+		* 'no-menu'			  - Hides the menu completely
+		* 'hidden-menu'       - Hides the main menu but still accessable by hovering over left edge
+		* 'fixed-header'      - Fixes the header
+		* 'fixed-navigation'  - Fixes the main menu
+		* 'fixed-ribbon'      - Fixes breadcrumb
+		* 'fixed-page-footer' - Fixes footer
+		* 'container'         - boxed layout mode (non-responsive: will not work with fixed-navigation & fixed-ribbon)
+	-->
+	<body class="">
+
+		<!-- #HEADER -->
+		{% include "inc/header.html" ignore missing %}
+		<!-- END HEADER -->
+
+		<!-- #NAVIGATION -->
+		<!-- Left panel : Navigation area -->
+		<!-- Note: This width of the aside area can be adjusted through LESS variables -->
+		{% include "inc/leftpanel.html" ignore missing %}
+		<!-- END NAVIGATION -->
+
+		<!-- MAIN PANEL -->
+		<div id="main" role="main">
+
+			<!-- RIBBON -->
+			<div id="ribbon">
+
+				<span class="ribbon-button-alignment"> 
+					<span id="refresh" class="btn btn-ribbon" data-action="resetWidgets" data-title="refresh"  rel="tooltip" data-placement="bottom" data-original-title="<i class='text-warning fa fa-warning'></i> Warning! This will reset all your widget settings." data-html="true">
+						<i class="fa fa-refresh"></i>
+					</span> 
+				</span>
+
+				<!-- breadcrumb -->
+				<ol class="breadcrumb">
+					<li>Home</li><li>E-commerce</li><li>Product Detail</li>
+				</ol>
+				<!-- end breadcrumb -->
+
+				<!-- You can also add more buttons to the
+				ribbon for further usability
+
+				Example below:
+
+				<span class="ribbon-button-alignment pull-right">
+				<span id="search" class="btn btn-ribbon hidden-xs" data-title="search"><i class="fa-grid"></i> Change Grid</span>
+				<span id="add" class="btn btn-ribbon hidden-xs" data-title="add"><i class="fa-plus"></i> Add</span>
+				<span id="search" class="btn btn-ribbon" data-title="search"><i class="fa-search"></i> <span class="hidden-mobile">Search</span></span>
+				</span> -->
+
+			</div>
+			<!-- END RIBBON -->
+			
+			
+
+			<!-- MAIN CONTENT -->
+			<div id="content">
+
+				<!-- row -->
+				<div class="row">
+					
+					<!-- col -->
+					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+						<h1 class="page-title txt-color-blueDark">
+							
+							<!-- PAGE HEADER -->
+							<i class="fa-fw fa fa-home"></i> 
+								E-commerce
+							<span>>  
+								Products View
+							</span>
+						</h1>
+					</div>
+					<!-- end col -->
+					
+					<!-- right side of the page with the sparkline graphs -->
+					<!-- col -->
+					<div class="col-xs-12 col-sm-5 col-md-5 col-lg-8 text-right">
+						
+						<a href="javascript:void(0);" class="btn btn-default shop-btn">
+							<i class="fa fa-3x fa-shopping-cart"></i>
+							<span class="air air-top-right label-danger txt-color-white padding-5">10</span>
+						</a>
+						<a href="javascript:void(0);" class="btn btn-default">
+							<i class="fa fa-3x fa-print"></i>
+						</a>
+						
+					</div>
+					<!-- end col -->
+					
+				</div>
+				<!-- end row -->
+
+				<!--
+					The ID "widget-grid" will start to initialize all widgets below 
+					You do not need to use widgets if you dont want to. Simply remove 
+					the <section></section> and you can use wells or panels instead 
+					-->
+
+				<!-- widget grid -->
+				<section id="widget-grid" class="">
+
+					<!-- row -->
+
+					<div class="row">
+
+						<div class="col-sm-12 col-md-12 col-lg-12">
+							<!-- product -->
+							<div class="product-content product-wrap clearfix product-deatil">
+								<div class="row">
+										<div class="col-md-5 col-sm-12 col-xs-12 ">
+											<div class="product-image"> 
+												<div id="myCarousel-2" class="carousel slide">
+												<ol class="carousel-indicators">
+													<li data-target="#myCarousel-2" data-slide-to="0" class=""></li>
+													<li data-target="#myCarousel-2" data-slide-to="1" class="active"></li>
+													<li data-target="#myCarousel-2" data-slide-to="2" class=""></li>
+												</ol>
+												<div class="carousel-inner">
+													<!-- Slide 1 -->
+													<div class="item active">
+														<img src="{{ url_for('static', filename='img/demo/e-comm/detail-1.png') }}" alt="">
+													</div>
+													<!-- Slide 2 -->
+													<div class="item">
+														<img src="{{ url_for('static', filename='img/demo/e-comm/detail-2.png') }}" alt="">
+													</div>
+													<!-- Slide 3 -->
+													<div class="item">
+														<img src="{{ url_for('static', filename='img/demo/e-comm/detail-3.png') }}" alt="">
+													</div>
+												</div>
+												<a class="left carousel-control" href="#myCarousel-2" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a>
+												<a class="right carousel-control" href="#myCarousel-2" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> </a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-7 col-sm-12 col-xs-12">
+									
+										<h2 class="name">
+											Product Name Title Here 
+											<small>Product by <a href="javascript:void(0);">Adeline</a></small>
+											<i class="fa fa-star fa-2x text-primary"></i>
+											<i class="fa fa-star fa-2x text-primary"></i>
+											<i class="fa fa-star fa-2x text-primary"></i>
+											<i class="fa fa-star fa-2x text-primary"></i>
+											<i class="fa fa-star fa-2x text-muted"></i>
+											<span class="fa fa-2x"><h5>(109) Votes</h5></span>	
+											
+											<a href="javascript:void(0);">109 customer reviews</a>
+				 
+										</h2>
+										<hr>
+										<h3 class="price-container">
+											$129.54
+											<small>*includes tax</small>
+										</h3>
+									
+										<div class="certified">
+											<ul>
+												<li><a href="javascript:void(0);">Delivery time<span>7 Working Days</span></a></li>
+												<li><a href="javascript:void(0);">Certified<span>Quality Assured</span></a></li>
+											</ul>
+										</div>
+										<hr>
+										<div class="description description-tabs">
+
+
+											<ul id="myTab" class="nav nav-pills">
+												<li class="active"><a href="#more-information" data-toggle="tab" class="no-margin">Product Description </a></li>
+												<li class=""><a href="#specifications" data-toggle="tab">Specifications</a></li>
+												<li class=""><a href="#reviews" data-toggle="tab">Reviews</a></li>
+											</ul>
+											<div id="myTabContent" class="tab-content">
+												<div class="tab-pane fade active in" id="more-information">
+													<br>
+													<strong>Description Title</strong>
+													<p>Integer egestas, orci id condimentum eleifend, nibh nisi pulvinar eros, vitae ornare massa neque ut orci. Nam aliquet lectus sed odio eleifend, at iaculis dolor egestas. Nunc elementum pellentesque augue sodales porta. Etiam aliquet rutrum turpis, feugiat sodales ipsum consectetur nec. </p>
+												</div>
+												<div class="tab-pane fade" id="specifications">
+													<br>
+													<dl class="">
+															<dt>Gravina</dt>
+					                                        <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+					                                        <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+					                                        <dd>Eget lacinia odio sem nec elit.</dd>
+					                                        <br>
+
+					                                        <dt>Test lists</dt>
+					                                        <dd>A description list is perfect for defining terms.</dd>
+					                                        <br>	
+
+					                                        <dt>Altra porta</dt>
+					                                        <dd>Vestibulum id ligula porta felis euismod semper</dd>
+					                                    </dl>
+												</div>
+												<div class="tab-pane fade" id="reviews">
+													<br>
+													<form method="post" class="well padding-bottom-10" onsubmit="return false;">
+														<textarea rows="2" class="form-control" placeholder="Write a review"></textarea>
+														<div class="margin-top-10">
+															<button type="submit" class="btn btn-sm btn-primary pull-right">
+																Submit Review
+															</button>
+															<a href="javascript:void(0);" class="btn btn-link profile-link-btn" rel="tooltip" data-placement="bottom" title="" data-original-title="Add Location"><i class="fa fa-location-arrow"></i></a>
+															<a href="javascript:void(0);" class="btn btn-link profile-link-btn" rel="tooltip" data-placement="bottom" title="" data-original-title="Add Voice"><i class="fa fa-microphone"></i></a>
+															<a href="javascript:void(0);" class="btn btn-link profile-link-btn" rel="tooltip" data-placement="bottom" title="" data-original-title="Add Photo"><i class="fa fa-camera"></i></a>
+															<a href="javascript:void(0);" class="btn btn-link profile-link-btn" rel="tooltip" data-placement="bottom" title="" data-original-title="Add File"><i class="fa fa-file"></i></a>
+														</div>
+													</form>
+
+													<div class="chat-body no-padding profile-message">
+														<ul>
+															<li class="message">
+																<img src="{{ url_for('static', filename='img/avatars/1.png') }}" class="online">
+																<span class="message-text"> 
+																	<a href="javascript:void(0);" class="username">
+																		Alisha Molly 
+																		<span class="badge">Purchase Verified</span> 
+																		<span class="pull-right">
+																			<i class="fa fa-star fa-2x text-primary"></i>
+																			<i class="fa fa-star fa-2x text-primary"></i>
+																			<i class="fa fa-star fa-2x text-primary"></i>
+																			<i class="fa fa-star fa-2x text-primary"></i>
+																			<i class="fa fa-star fa-2x text-muted"></i>
+																		</span>
+																	</a> 
+																	
+																	
+																	Can't divide were divide fish forth fish to. Was can't form the, living life grass darkness very image let unto fowl isn't in blessed fill life yielding above all moved 
+																</span>
+																<ul class="list-inline font-xs">
+																	<li>
+																		<a href="javascript:void(0);" class="text-info"><i class="fa fa-thumbs-up"></i> This was helpful (22)</a>
+																	</li>
+																	<li class="pull-right">
+																		<small class="text-muted pull-right ultra-light"> Posted 1 year ago </small>
+																	</li>
+																</ul>
+															</li>
+															<li class="message">
+																<img src="{{ url_for('static', filename='img/avatars/2.png') }}" class="online">
+																<span class="message-text"> 
+																	<a href="javascript:void(0);" class="username">
+																		Aragon Zarko 
+																		<span class="badge">Purchase Verified</span> 
+																		<span class="pull-right">
+																			<i class="fa fa-star fa-2x text-primary"></i>
+																			<i class="fa fa-star fa-2x text-primary"></i>
+																			<i class="fa fa-star fa-2x text-primary"></i>
+																			<i class="fa fa-star fa-2x text-primary"></i>
+																			<i class="fa fa-star fa-2x text-primary"></i>
+																		</span>
+																	</a> 
+																	
+																	
+																	Excellent product, love it!
+																</span>
+																<ul class="list-inline font-xs">
+																	<li>
+																		<a href="javascript:void(0);" class="text-info"><i class="fa fa-thumbs-up"></i> This was helpful (22)</a>
+																	</li>
+																	<li class="pull-right">
+																		<small class="text-muted pull-right ultra-light"> Posted 1 year ago </small>
+																	</li>
+																</ul>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+									
+
+										</div>
+										<hr>
+										<div class="row">
+											<div class="col-sm-12 col-md-6 col-lg-6">
+												
+													<a href="javascript:void(0);" class="btn btn-success btn-lg">Add to cart ($129.54)</a>
+												
+											</div>
+											<div class="col-sm-12 col-md-6 col-lg-6">
+												<div class="btn-group pull-right">
+						                            <button class="btn btn-white btn-default"><i class="fa fa-star"></i> Add to wishlist </button>
+						                            <button class="btn btn-white btn-default"><i class="fa fa-envelope"></i> Contact Seller</button>
+						                        </div>
+											</div>
+										</div>
+										
+									</div>
+								</div>
+							</div>
+							<!-- end product -->
+						</div>	
+
+						<div class="col-sm-12 col-md-12 col-lg-12">
+							<!-- product -->
+							<div class="product-content product-wrap clearfix product-deatil">
+								<div class="row">
+										<div class="col-md-5 col-sm-12 col-xs-12 ">
+											<div class="product-image"> 
+												<div id="myCarousel-3" class="carousel fade">
+												<ol class="carousel-indicators">
+													<li data-target="#myCarousel-3" data-slide-to="0" class=""></li>
+													<li data-target="#myCarousel-3" data-slide-to="1" class="active"></li>
+													<li data-target="#myCarousel-3" data-slide-to="2" class=""></li>
+												</ol>
+												<div class="carousel-inner">
+													<!-- Slide 1 -->
+													<div class="item active">
+														<img src="{{ url_for('static', filename='img/demo/e-comm/detail-1.png') }}" alt="">
+													</div>
+													<!-- Slide 2 -->
+													<div class="item">
+														<img src="{{ url_for('static', filename='img/demo/e-comm/detail-2.png') }}" alt="">
+													</div>
+													<!-- Slide 3 -->
+													<div class="item">
+														<img src="{{ url_for('static', filename='img/demo/e-comm/detail-3.png') }}" alt="">
+													</div>
+												</div>
+												<a class="left carousel-control" href="#myCarousel-3" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a>
+												<a class="right carousel-control" href="#myCarousel-3" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> </a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-7 col-sm-12 col-xs-12">
+									
+										<h2 class="name">
+											Product Name Title Here 
+											<small>Product by <a href="javascript:void(0);">Adeline</a></small>
+											<i class="fa fa-star fa-2x text-primary"></i>
+											<i class="fa fa-star fa-2x text-primary"></i>
+											<i class="fa fa-star fa-2x text-primary"></i>
+											<i class="fa fa-star fa-2x text-primary"></i>
+											<i class="fa fa-star fa-2x text-muted"></i>
+											<span class="fa fa-2x"><h5>(109) Votes</h5></span>	
+											
+											<a href="javascript:void(0);">109 customer reviews</a>
+				 
+										</h2>
+										<hr>
+										<div class="row">
+											
+											<div class="col-sm-6">
+											<h3 class="price-container">
+												$129.54
+												<small>*includes tax</small>
+											</h3>
+											</div>
+											<div class="col-sm-6 text-right">
+												<a href="javascript:void(0);" class="btn btn-primary">Add to cart ($129.54)</a>
+											</div>
+										</div>
+										
+										
+									
+										
+
+										<hr>
+										<div class="description description-tabs">
+
+
+											<ul id="myTab2" class="nav nav-tabs">
+												<li class="active"><a href="#more-information2" data-toggle="tab" class="no-margin">Product Description </a></li>
+												<li class=""><a href="#specifications2" data-toggle="tab">Specifications</a></li>
+												<li class=""><a href="#reviews2" data-toggle="tab">Reviews</a></li>
+											</ul>
+											<div id="myTabContent2" class="tab-content">
+												<div class="tab-pane fade active in" id="more-information2">
+													<br>
+													<strong>Description Title</strong>
+													<p>Integer egestas, orci id condimentum eleifend, nibh nisi pulvinar eros, vitae ornare massa neque ut orci. Nam aliquet lectus sed odio eleifend, at iaculis dolor egestas. Nunc elementum pellentesque augue sodales porta. Etiam aliquet rutrum turpis, feugiat sodales ipsum consectetur nec. </p>
+												</div>
+												<div class="tab-pane fade" id="specifications2">
+													<br>
+													<dl class="">
+															<dt>Gravina</dt>
+					                                        <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+					                                        <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+					                                        <dd>Eget lacinia odio sem nec elit.</dd>
+					                                        <br>
+
+					                                        <dt>Test lists</dt>
+					                                        <dd>A description list is perfect for defining terms.</dd>
+					                                        <br>	
+
+					                                        <dt>Altra porta</dt>
+					                                        <dd>Vestibulum id ligula porta felis euismod semper</dd>
+					                                    </dl>
+												</div>
+												<div class="tab-pane fade" id="reviews2">
+													<br>
+													<form method="post" class="well padding-bottom-10" onsubmit="return false;">
+														<textarea rows="2" class="form-control" placeholder="Write a review"></textarea>
+														<div class="margin-top-10">
+															<button type="submit" class="btn btn-sm btn-primary pull-right">
+																Submit Review
+															</button>
+															<a href="javascript:void(0);" class="btn btn-link profile-link-btn" rel="tooltip" data-placement="bottom" title="" data-original-title="Add Location"><i class="fa fa-location-arrow"></i></a>
+															<a href="javascript:void(0);" class="btn btn-link profile-link-btn" rel="tooltip" data-placement="bottom" title="" data-original-title="Add Voice"><i class="fa fa-microphone"></i></a>
+															<a href="javascript:void(0);" class="btn btn-link profile-link-btn" rel="tooltip" data-placement="bottom" title="" data-original-title="Add Photo"><i class="fa fa-camera"></i></a>
+															<a href="javascript:void(0);" class="btn btn-link profile-link-btn" rel="tooltip" data-placement="bottom" title="" data-original-title="Add File"><i class="fa fa-file"></i></a>
+														</div>
+													</form>
+
+													<div class="chat-body no-padding profile-message">
+														<ul>
+															<li class="message">
+																<img src="{{ url_for('static', filename='img/avatars/1.png') }}" class="online">
+																<span class="message-text"> <a href="javascript:void(0);" class="username">John Doe <small class="text-muted pull-right ultra-light"> 2 Minutes ago </small></a> Can't divide were divide fish forth fish to. Was can't form the, living life grass darkness very image let unto fowl isn't in blessed fill life yielding above all moved </span>
+																<ul class="list-inline font-xs">
+																	<li>
+																		<a href="javascript:void(0);" class="text-info"><i class="fa fa-reply"></i> Reply</a>
+																	</li>
+																	<li>
+																		<a href="javascript:void(0);" class="text-danger"><i class="fa fa-thumbs-up"></i> Like</a>
+																	</li>
+																	<li>
+																		<a href="javascript:void(0);" class="text-muted">Show All Comments (14)</a>
+																	</li>
+																	<li>
+																		<a href="javascript:void(0);" class="text-primary">Hide</a>
+																	</li>
+																</ul>
+															</li>
+															<li class="message message-reply">
+																<img src="{{ url_for('static', filename='img/avatars/3.png') }}" class="online">
+																<span class="message-text"> <a href="javascript:void(0);" class="username">Serman Syla</a> eget lacinia odio sem nec eliteget lacinia odio sem nec elit. <i class="fa fa-smile-o txt-color-orange"></i> </span>
+
+																<ul class="list-inline font-xs">
+																	<li>
+																		<a href="javascript:void(0);" class="text-muted">1 minute ago </a>
+																	</li>
+																	<li>
+																		<a href="javascript:void(0);" class="text-danger"><i class="fa fa-thumbs-up"></i> Like</a>
+																	</li>
+																</ul>
+
+															</li>
+															<li class="message message-reply">
+																<img src="{{ url_for('static', filename='img/avatars/4.png') }}" class="online">
+																<span class="message-text"> <a href="javascript:void(0);" class="username">Sadi Orlaf </a> Eet lacinia odio sem nec elit. <i class="fa fa-smile-o txt-color-orange"></i> </span>
+
+																<ul class="list-inline font-xs">
+																	<li>
+																		<a href="javascript:void(0);" class="text-muted">a moment ago </a>
+																	</li>
+																	<li>
+																		<a href="javascript:void(0);" class="text-danger"><i class="fa fa-thumbs-up"></i> Like</a>
+																	</li>
+																</ul>
+
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+									
+
+										</div>
+										<hr>
+										<div class="row">
+											<div class="col-sm-12 col-md-12 col-lg-12">
+												<div class="btn-group">
+						                            <button class="btn btn-white btn-default"><i class="fa fa-star"></i> Add to wishlist </button>
+						                            <button class="btn btn-white btn-default"><i class="fa fa-envelope"></i> Contact Seller</button>
+						                        </div>
+											</div>
+										</div>
+										
+									</div>
+								</div>
+							</div>
+							<!-- end product -->
+						</div>	
+
+					</div>
+
+					<!-- end row -->
+
+				</section>
+				<!-- end widget grid -->
+
+			</div>
+			<!-- END MAIN CONTENT -->
+
+		</div>
+		<!-- END MAIN PANEL -->
+
+		<!-- PAGE FOOTER -->
+		{% include "inc/footer.html" ignore missing %}
+		<!-- END PAGE FOOTER -->
+
+		<!-- SHORTCUT AREA : With large tiles (activated via clicking user name tag)
+		Note: These tiles are completely responsive,
+		you can add as many as you like
+		-->
+		{% include "inc/shortcutarea.html" ignore missing %}
+		<!-- END SHORTCUT AREA -->
+
+		<!--================================================== -->
+
+		<!-- PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)-->
+		<script data-pace-options='{ "restartOnRequestAfter": true }' src="/static/js/plugin/pace/pace.min.js"></script>
+
+		<!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script>
+			if (!window.jQuery) {
+				document.write('<script src="/static/js/libs/jquery-2.1.1.min.js"><\/script>');
+			}
+		</script>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+		<script>
+			if (!window.jQuery.ui) {
+				document.write('<script src="/static/js/libs/jquery-ui-1.10.3.min.js"><\/script>');
+			}
+		</script>
+
+		<!-- IMPORTANT: APP CONFIG -->
+		<script src="/static/js/app.config.js"></script>
+
+		<!-- JS TOUCH : include this plugin for mobile drag / drop touch events-->
+		<script src="/static/js/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script> 
+
+		<!-- BOOTSTRAP JS -->
+		<script src="/static/js/bootstrap/bootstrap.min.js"></script>
+
+		<!-- CUSTOM NOTIFICATION -->
+		<script src="/static/js/notification/SmartNotification.min.js"></script>
+
+		<!-- JARVIS WIDGETS -->
+		<script src="/static/js/smartwidgets/jarvis.widget.min.js"></script>
+
+		<!-- EASY PIE CHARTS -->
+		<script src="/static/js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+
+		<!-- SPARKLINES -->
+		<script src="/static/js/plugin/sparkline/jquery.sparkline.min.js"></script>
+
+		<!-- JQUERY VALIDATE -->
+		<script src="/static/js/plugin/jquery-validate/jquery.validate.min.js"></script>
+
+		<!-- JQUERY MASKED INPUT -->
+		<script src="/static/js/plugin/masked-input/jquery.maskedinput.min.js"></script>
+
+		<!-- JQUERY SELECT2 INPUT -->
+		<script src="/static/js/plugin/select2/select2.min.js"></script>
+
+		<!-- JQUERY UI + Bootstrap Slider -->
+		<script src="/static/js/plugin/bootstrap-slider/bootstrap-slider.min.js"></script>
+
+		<!-- browser msie issue fix -->
+		<script src="/static/js/plugin/msie-fix/jquery.mb.browser.min.js"></script>
+
+		<!-- FastClick: For mobile devices -->
+		<script src="/static/js/plugin/fastclick/fastclick.min.js"></script>
+
+		<!--[if IE 8]>
+
+		<h1>Your browser is out of date, please update your browser by going to www.microsoft.com/download</h1>
+
+		<![endif]-->
+
+		<!-- Demo purpose only -->
+		<script src="/static/js/demo.min.js"></script>
+
+		<!-- MAIN APP JS FILE -->
+		<script src="/static/js/app.min.js"></script>
+
+		<!-- ENHANCEMENT PLUGINS : NOT A REQUIREMENT -->
+		<!-- Voice command : plugin -->
+		<script src="/static/js/speech/voicecommand.min.js"></script>
+
+		<!-- SmartChat UI : plugin -->
+		<script src="/static/js/smart-chat-ui/smart.chat.ui.min.js"></script>
+		<script src="/static/js/smart-chat-ui/smart.chat.manager.min.js"></script>
+
+		<!-- PAGE RELATED PLUGIN(S) 
+		<script src="..."></script>-->
+
+		<script type="text/javascript">
+
+			$(document).ready(function() {
+			 	
+				/* DO NOT REMOVE : GLOBAL FUNCTIONS!
+				 *
+				 * pageSetUp(); WILL CALL THE FOLLOWING FUNCTIONS
+				 *
+				 * // activate tooltips
+				 * $("[rel=tooltip]").tooltip();
+				 *
+				 * // activate popovers
+				 * $("[rel=popover]").popover();
+				 *
+				 * // activate popovers with hover states
+				 * $("[rel=popover-hover]").popover({ trigger: "hover" });
+				 *
+				 * // activate inline charts
+				 * runAllCharts();
+				 *
+				 * // setup widgets
+				 * setup_widgets_desktop();
+				 *
+				 * // run form elements
+				 * runAllForms();
+				 *
+				 ********************************
+				 *
+				 * pageSetUp() is needed whenever you load a page.
+				 * It initializes and checks for all basic elements of the page
+				 * and makes rendering easier.
+				 *
+				 */
+				
+				 pageSetUp();
+				 
+				/*
+				 * ALL PAGE RELATED SCRIPTS CAN GO BELOW HERE
+				 * eg alert("my home function");
+				 * 
+				 * var pagefunction = function() {
+				 *   ...
+				 * }
+				 * loadScript("js/plugin/_PLUGIN_NAME_.js", pagefunction);
+				 * 
+				 * TO LOAD A SCRIPT:
+				 * var pagefunction = function (){ 
+				 *  loadScript(".../plugin.js", run_after_loaded);	
+				 * }
+				 * 
+				 * OR
+				 * 
+				 * loadScript(".../plugin.js", run_after_loaded);
+				 */
+				
+			})
+		
+		</script>
+
+		<!-- Your GOOGLE ANALYTICS CODE Below -->
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+				_gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
+				_gaq.push(['_trackPageview']);
+			
+			(function() {
+				var ga = document.createElement('script');
+				ga.type = 'text/javascript';
+				ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(ga, s);
+			})();
+
+		</script>
+
+	</body>
+
+</html>

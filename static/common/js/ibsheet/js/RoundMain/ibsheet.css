@@ -1,0 +1,683 @@
+/* -----------------------------------------------------------------------*/
+/* ----------------- "Main" IBSheet style definition ---------------------*/
+/* -----------------------------------------------------------------------*/
+
+/* Base tags */
+.RMImage {padding-bottom:256px;}
+.RMNone {display:none;}
+.RMSection,.RMSectionFF3 {table-layout:fixed; width:0;}
+.RMSectionFF3 {border-collapse:collapse; }
+
+/* Sections */
+.RMMainTable {border:0px solid #dddddd;
+	 border-collapse:separate;
+	  text-align:left;
+	   background:#ffffff;
+	    font:12px Dotum,Helvetica,AppleGothic,Sans-serif;
+
+	    
+}
+ .RMHeadLeft{border-top-left-radius:1em;}
+ .RMHeadMid{border-top-left-radius:1em;}
+.RMFootLeft,.RMFootMid {border-top:1px solid #6aaa4a;}
+.RMHeadLeft,.RMBodyLeft,.RMFootLeft,.RMHScrollLeft {border-right:1px solid #6aaa4a;}	
+.RMVScroll {padding-top:1px; padding-bottom:1px;}
+.RMHScrollLeft,.RMHScrollMid,.RMHScrollLeftResizeTouch,.RMHScrollRightResizeTouch {padding-left:1px; padding-right:1px; cursor:default;}
+.RMHScrollLeftResizeTouch {border-right:2px solid #000000; padding-right:18px; background:#F4F4F4;}
+.RMHScrollRightResizeTouch {border-left:2px solid #000000; padding-left:18px; background:#F4F4F4;}
+.RMHScrollMidLeftResizeTouch {border-left:1px solid #000000; padding-left:19px; background:#F4F4F4;}
+.RMHScrollMidRightResizeTouch {border-right:1px solid #000000; padding-right:19px; background:#F4F4F4;}
+.RMHScrollWide {padding-right:1px;}
+.RMHScrollHidden {overflow:visible !important; background:#F4F4F4; cursor:default; }
+.RMXScroll {background:#F4F4F4;}
+.RMPage {border-top:0px solid #E0E0E0;}
+.RMBodyMid{border-left:1px solid #40841F;border-right:1px solid #dddddd}
+/* Rows */
+.RMSpaceRowHeight{height:21px; }
+.RMRowHeight 	 {height:18px; }
+.RMRowHeightTouch{height:22px; }
+.RMSpaceMargin   {margin:0; }
+.RMSpaceMarginTouch{margin:5px; }
+.RMSpaceRow {background:#ffffff; white-space:nowrap; overflow:hidden; padding-top:2px; padding-bottom:2px; border-bottom:1px solid #e0e0ff;}
+.RMGroupRow,.RMSearchRow,.RMPagerRow 
+{background-color:#45951d; white-space:nowrap; padding-top:5px; padding-bottom:5px; overflow:hidden; border-bottom:1px solid #40841F;} 
+.RMGroupRow,.RMPagerRow {background-position:0 -1801px; }
+.RMFillRow {background:#ffffff; border-left:1px solid #dddddd; border-right:1px solid #dddddd}
+.RMRowAbove,.RMRowBelow {border-left:1px solid #9cb6c8; border-right:1px solid #9cb6c8;}
+.RMRowAbove { margin-top:3px; overflow:hidden;}
+.RMRowBelow {margin-bottom:3px; overflow:hidden;}
+.RMNoDataRow {border-top:1px solid #000000;padding-left:5px; padding-top:5px; padding-bottom:5px;color:gray; font-style:italic;} 
+.RMCountRowTop {color: #ffffff; background-color:#45951d; white-space:nowrap;padding-top:5px; padding-bottom:5px; overflow:hidden; border-bottom:1px solid #40841F;}
+.RMCountRowBottom {color: #ffffff; background-color:#45951d; white-space:nowrap; padding-top:5px; padding-bottom:5px; overflow:hidden; border-top:1px solid #40841F;border-bottom-left-radius:1em;border-bottom-right-radius:1em;}
+
+/* Cell */
+.RMCell,.RMCellPanel,.RMCellFilter,.RMHeaderDrag,.RMHeaderGroup 
+ {color:#3d4b25; border-bottom:1px solid #F3F3F3; border-right:1px solid #cfd498; border-left:0; border-top:0;vertical-align:top; overflow:hidden; height:auto; font-size:/*IBFS*/12px; font-family:/*IBFN*/"Dotum", "Helvetica", "AppleGothic", sans-serif;}
+
+.RMCellHeader,.RMCellHeaderEmpty
+ {vertical-align:middle; overflow:hidden;height:auto; background-color:#84a20c; padding-top:1px; border-right:1px solid #FFFFFF; border-bottom:1px solid #FFFFFF;} 
+.RMCellBorderFF3 {border-left:0;border-top:0;} 
+.RMCellSpace {vertical-align:top; padding-top:5px !important; }
+.RMCellSpacePanel,.RMCellSpaceBool {vertical-align:top; }
+.RMCellSpaceRadio { padding-top:3px !important;}
+.RMCellSpaceEditButton { vertical-align:top; padding-top:4px !important; border:1px solid #000000 !important; background-color:#ffffff !important; }
+.RMCellSpaceButtonButton { vertical-align:top; }
+.RMCellSpaceButton { vertical-align:top; padding-top:5px !important; whiSte-space:nowrap; }
+.RMCellSpaceAbove { border-top:1px solid #9cb6c8; }
+.RMCellSpaceBelow { border-bottom:1px solid #9cb6c8; }
+.RMCellPanel,.RMCellHeaderPanel{ white-space:nowrap; } 
+.RMCellHidden { background:transparent!important; border-top:none!important; border-bottom:none!important; }
+.RMHeaderButton { padding:0; }
+.RMHeaderGroup {background: #358110; color:#ffffff; padding-left:3px; }
+.RMHeaderGroupFocus {background-color: #C0C0A0; }
+.RMHeaderGroupDelete {background-color: #F0F0E0; color: #F0F0E0; }
+.RMHeaderGroupCustom {color:#BBB; padding-left:5px; cursor:default; white-space:nowrap;}
+.RMHeaderDrag {background: #9FB9E9; cursor:default; overflow:hidden; }
+.RMHeaderFocus {background: #9FB9E9;}
+.RMPanel {padding-left:80px;}
+.RMNoTreeLines1 {text-align:right;}
+.RMNoTreeLines2 {text-align:right; vertical-align:middle; padding-top:0;}
+.RMTree {padding-top:0; white-space:nowrap;}
+.RMSpannedTree {vertical-align:top;}
+.RMCellClassInner {padding-top:0; padding-bottom:0;}
+
+/* Inside cell */
+.RMStatus,.RMSeq,.RMPopup,.RMPopupEdit,.RMHtml,.RMText,.RMLines,.RMPass,.RMInt,.RMFloat,.RMDate,
+.RMLink,.RMImg,.RMRadio,.RMRadioText,.RMList,.RMEnum,.RMDropCols,.RMAbs,.RMPagerEdit,.RMUser 
+ {white-space:nowrap;vertical-align: middle;padding:2px 3px;} 
+.RMInt,.RMFloat { text-align:right; }
+.RMLines,.RMRadio,.RMHtml,.RMList { white-space:normal; }	
+.RMImg,.RMHtml {padding:0; } 
+.RMPass { padding:0 0 0 3px; }
+.RMRadio,.RMRadioText { padding:0; font-weight:normal !important; }
+.RMBool { text-align:center; }
+.RMIcon { background-repeat:no-repeat; }
+.RMHiddenSpace { display:none; }
+.RMDropCols { padding-top:2px !important; }
+
+.RMHeaderText {color:#ffffff; vertical-align:middle; font-size:/*IBFS*/12px; font-family:/*IBFN*/"Dotum", "Helvetica", "AppleGothic", sans-serif;}
+.RMAbs { padding:0; }
+.RMUser { padding:0; }
+.RMPagerEdit { text-align:center; padding-top:3px; }
+.RMMergedCellH {padding:0 0 5px 0}
+.RMMergedCellV {padding:0 0 1px 0}
+
+.RMWrap0 { white-space:nowrap; }
+.RMWrap1 { white-space:normal; }
+.RMEllipsis { white-space:nowrap; text-overflow:ellipsis;}
+
+.RMAlignLeft { text-align:left; }
+.RMAlignCenter { text-align:center; }
+.RMAlignJustify { text-align:center; }
+.RMAlignRight { text-align:right;}
+
+/* Tree Img with lines */
+.RM000,.RM010,.RM001,.RM011,.RM100,.RM110,.RM101,.RM111, 
+.RM000T,.RM010T,.RM001T,.RM011T,.RM100T,.RM110T,.RM101T,.RM111T,
+.RM00,.RM01,.RM10,.RM11,.RM00T,.RM01T,.RM10T,.RM11T,
+.RM0T,.RM1T,.RM0TL,.RM1TL,.RM0C,.RM1C,.RM0CL,.RM1CL,.RM0E,.RM1E,.RM0EL,.RM1EL,
+.RM0,.RM1,.RMT,.RMTL,.RMC,.RMCL,.RME,.RMEL,.RMD0,.RMD1,.RMD2,.RMD3,.RMD4,.RMD0L,.RMD1L,.RMD2L,.RMD3L,.RMD4L 
+{background-image:url(Tree.gif); vertical-align:top;}
+
+u.RM000,u.RM010,u.RM001,u.RM011,u.RM100,u.RM110,u.RM101,u.RM111 { padding-left:63px; }
+u.RM000T,u.RM010T,u.RM001T,u.RM011T,u.RM100T,u.RM110T,u.RM101T,u.RM111T { padding-left:89px; }
+u.RM00,u.RM01,u.RM10,u.RM11 { padding-left:42px; }   
+u.RM00T,u.RM01T,u.RM10T,u.RM11T { padding-left:68px; }   
+u.RM0T,u.RM1T,u.RM0TL,u.RM1TL,u.RM0C,u.RM1C,u.RM0CL,u.RM1CL,u.RM0E,u.RM1E,u.RM0EL,u.RM1EL { padding-left:47px; }   
+u.RM0,u.RM1 { padding-left:21px; }
+u.RMT,u.RMTL,u.RMC,u.RMCL,u.RME,u.RMEL,u.RMD0,u.RMD1,u.RMD2,u.RMD3,u.RMD4,u.RMD0L,u.RMD1L,u.RMD2L,u.RMD3L,u.RMD4L { padding-left:26px; }   
+
+.RM000,.RM000T{ background-position:0px 0px; }
+.RM010,.RM010T{ background-position:-128px 0; }
+.RM001,.RM001T{ background-position:-256px 0; }
+.RM011,.RM011T{ background-position:-384px 0; }
+.RM100,.RM100T{ background-position:-512px 0; }
+.RM110,.RM110T{ background-position:-640px 0; }
+.RM101,.RM101T{ background-position:-768px 0; }
+.RM111,.RM111T{ background-position:-896px 0; }
+.RM00,.RM00T  { background-position:-21px 0;  }
+.RM10,.RM10T  { background-position:-149px 0; }
+.RM01,.RM01T  { background-position:-277px 0; }
+.RM11,.RM11T  { background-position:-405px 0; }
+.RM0,.RM0T 	  { background-position:-42px 0;  }
+.RM1,.RM1T 	  { background-position:-298px 0; }
+.RMT 		  { background-position:-63px 0;  }
+.RM0TL 		  { background-position:-1024px 0; }
+.RM1TL 		  { background-position:-1088px 0; }
+.RM0C 	      { background-position:-1152px 0; }
+.RM1C 		  { background-position:-1216px 0; }
+.RM0CL 		  { background-position:-1280px 0; }
+.RM1CL 		  { background-position:-1344px 0; }
+.RM0E 		  { background-position:-1408px 0; }
+.RM1E 		  { background-position:-1472px 0; }
+.RM0EL 		  { background-position:-1536px 0; }
+.RM1EL 		  { background-position:-1600px 0; }
+.RMTL 		  { background-position:-1045px 0; }
+.RMC 		  { background-position:-1173px 0; }
+.RMCL 		  { background-position:-1301px 0; }
+.RME 		  { background-position:-1429px 0; }
+.RMEL 		  { background-position:-1557px 0; }
+.RMD0 		  { background-position:-1664px 0; }
+.RMD1 		  { background-position:-1696px 0; }
+.RMD2 		  { background-position:-1728px 0; }
+.RMD3 		  { background-position:-1760px 0; }
+.RMD0L 		  { background-position:-1792px 0; }
+.RMD1L 		  { background-position:-1824px 0; }
+.RMD2L 		  { background-position:-1856px 0; }
+.RMD3L 		  { background-position:-1888px 0; }
+.RMD4 		  { background-position:-1920px 0; }
+.RMD4L 		  { background-position:-1952px 0; }
+
+/* Tree Img without lines  */
+.RMND0,.RMND1,.RMND2,.RMND3,.RMND4,.RMNC,.RMNE,.RMNCR,.RMNER {background-image:url(TreeN.gif); background-repeat:no-repeat; vertical-align:top; }
+u.RMND0,u.RMND1,u.RMND2,u.RMND3,u.RMND4,u.RMNC,u.RMNE,u.RMNCR,u.RMNER { padding-left:20px; }
+.RMND0 { background-position: -6px 0; }
+.RMND1 { background-position: -56px 0; }
+.RMND2 { background-position: -106px 0; }
+.RMND3 { background-position: -156px 0; }
+.RMND4 { background-position: -206px 0; }
+.RMNC { background-position:right -50px;}
+.RMNE { background-position:right -2000px;}
+.RMNCR { background-position:-255px -50px;}
+.RMNER { background-position:-255px -2000px;}
+u.RMNL { padding-left:21px; }
+
+/* Cell images */
+.RMIconLink { text-decoration:none; width:1000px; display:inline-block; }
+.RMIconLeft,.RMIconRight,.RMIconCenter {  background-repeat:no-repeat; }
+.RMIconLeft { background-position:left 0; padding-left:20px !important; }
+.RMIconRight { background-position:right 0; padding-right:20px !important; }
+.RMIconCenter { background-position:center 0; }
+.RMPopupRight { background:url(popup.gif) no-repeat 5px center; }
+.RMExpandLeft,.RMCollapseLeft,.RMExpandHeaderLeft,.RMCollapseHeaderLeft { padding-left:20px!important; }
+.RMDateRight{ padding-right:20px!important;}
+u.RMDateRight,.RMPopupRight { padding-right:0!important; padding-left:17px; }
+.RMDateRight {background:url(calendar.gif) no-repeat 2px center}
+.RMEnumRight { background:url(combo.gif) no-repeat right center; }
+u.RMEnumRight {padding-right:0; padding-left:17px}
+.RMExpandLeft { background:url(ic_plus.gif) no-repeat 3px center; padding:2px 0 0  18px; _padding:0 0 0 18px }
+.RMCollapseLeft { background:url(ic_minus.gif) no-repeat 3px center ; padding:2px 0 0  18px; _padding:0 0 0 18px }
+.RMRadio0Right,.RMRadio1Right,.RMRadio2Right,.RMRadio3Right {line-height:17px; padding-right:17px; padding-left:3px; }
+u.RMFilter0,u.RMFilter1 { padding-left:16px; }
+.RMBool0,.RMBool0RO,.RMBool1,.RMBool1RO,.RMBool2,.RMBool2RO,.RMBool3,.RMBool3RO {background-position:center center; background-repeat:no-repeat;}
+
+.RMBool0   { background-image:url(chk0.gif);  }
+.RMBool0RO { background-image:url(chk0R.gif); }
+
+.RMBool1   { background-image:url(chk1.gif);  }
+.RMBool1RO { background-image:url(chk1R.gif); }
+
+.RMBool2   { background-image:url(chk2.gif);  }
+.RMBool2RO { background-image:url(chk2R.gif); }
+
+.RMBool3   { background-image:url(chk3.gif);  }
+.RMBool3RO { background-image:url(chk3R.gif); }
+
+/* Filter images  */
+.RMFilter0Left,.RMFilter1Left,.RMFilter2Left,.RMFilter3Left,.RMFilter4Left,.RMFilter5Left,.RMFilter6Left,.RMFilter7Left,
+.RMFilter8Left,.RMFilter9Left,.RMFilter10Left,.RMFilter11Left,.RMFilter12Left {padding-left:18px;}
+
+.RMFilter0Left,.RMFilter0Menu 	{ width:18px; height:18px; background:url(filter0.gif) no-repeat left center; }   
+.RMFilter1Left,.RMFilter1Menu 	{ width:18px; height:18px; background:url(filter1.gif) no-repeat left center; }
+.RMFilter2Left,.RMFilter2Menu 	{ width:18px; height:18px; background:url(filter2.gif) no-repeat left center; }
+.RMFilter3Left,.RMFilter3Menu 	{ width:18px; height:18px; background:url(filter3.gif) no-repeat left center; }
+.RMFilter4Left,.RMFilter4Menu 	{ width:18px; height:18px; background:url(filter4.gif) no-repeat left center; }
+.RMFilter5Left,.RMFilter5Menu 	{ width:18px; height:18px; background:url(filter5.gif) no-repeat left center; }   
+.RMFilter6Left,.RMFilter6Menu 	{ width:18px; height:18px; background:url(filter6.gif) no-repeat left center; }
+.RMFilter7Left,.RMFilter7Menu 	{ width:18px; height:18px; background:url(filter7.gif) no-repeat left center; }
+.RMFilter8Left,.RMFilter8Menu 	{ width:18px; height:18px; background:url(filter8.gif) no-repeat left center; }
+.RMFilter9Left,.RMFilter9Menu 	{ width:18px; height:18px; background:url(filter9.gif) no-repeat left center; }
+.RMFilter10Left,.RMFilter10Menu { width:18px; height:18px; background:url(filter10.gif) no-repeat left center; }
+.RMFilter11Left,.RMFilter11Menu { width:18px; height:18px; background:url(filter11.gif) no-repeat left center; }
+.RMFilter12Left,.RMFilter12Menu { width:18px; height:18px; background:url(filter12.gif) no-repeat left center; }
+
+.RMFilter0Menu,.RMFilter1Menu,.RMFilter2Menu,.RMFilter3Menu,.RMFilter4Menu,.RMFilter5Menu,.RMFilter6Menu,.RMFilter7Menu,.RMFilter8Menu,.RMFilter9Menu,
+.RMFilter10Menu,.RMFilter11Menu,.RMFilter12Menu {overflow:hidden; margin: -2px 0 0 -1px;}
+.RMFilterMenuHeader { padding-left:2px; border-bottom:0 !important; } 
+
+/*  Keyfield Image */
+.RMKeyfield {background-image:url(keyfield.gif); display:inline-block; vertical-align:middle; background-repeat: no-repeat; background-position:center 1px; padding: 0 2px 0 4px; }
+
+/* GMKeyfield : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .RMKeyfield{  background-position: center 3px;padding: 0 2px 0 4px; }}
+
+/* CheckBox Header Image */
+.RMCheckHeader0 {background-image:url(chk0.gif); display:inline-block; vertical-align:middle; background-repeat:no-repeat; background-position:5px 1px; padding:2px 7px 0 6px; margin:0 2px 0 0;}
+
+/* GMCheckHeader0 : hack CR,SF*/
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{.RMCheckHeader0{ background-position:6px 1px ; padding: 2px 8px 0 6px; }}
+
+/* GMCheckHeader0 : hack FF*/
+.RMCheckHeader0, x:-moz-any-link, x:default { background-position:6px 1px ; padding: 2px 8px 0 6px; }
+
+/* GMCheckHeader0 : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .RMCheckHeader0{ background-position:7px center ; padding:1px  17px 0 0; }}
+
+.RMCheckHeader1 {background-image:url(chk1.gif); display:inline-block; vertical-align:middle; background-repeat:no-repeat; background-position:4px 1px ; padding:2px 6px 0 6px; margin:0 2px 0 0}
+
+/* GMCheckHeader1 : hack CR,SF*/
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{.RMCheckHeader1{ background-position:6px 1px ; padding: 2px 8px 0 6px; }}
+
+/* GMCheckHeader1 : hack FF*/
+.RMCheckHeader1, x:-moz-any-link, x:default { background-position:6px 1px ; padding: 2px 8px 0 6px; }
+
+/* GMCheckHeader1 : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .RMCheckHeader1 { background-position:7px center ; padding:1px  17px 0 0;  }}
+
+/* Sort images */
+.RMSort {display:block; float:right; margin:2px 2px 0;width:7px}
+
+/* State classes */
+/* The colors must be set by numbers not by names */
+.RMColorDefault  { background-color:#f0f1dc;}
+.RMColorNoFocus  { background-color:#E8F4FF;}
+.RMColorReadOnly { background-color:#FFFFFF;}
+.RMColorPreview  { background-color:#FFFFFF;}
+.RMColorAlternate{ background-color:#e9efbf;}
+.RMColorSelected { background-color:/*#FFFF80*/#aadbff; }
+
+.RMColorFilter {background-color:#FFFFFF;}
+
+/*//.RMClassSelected { }*/
+.RMColorError   { background-color:#FF6969; }
+.RMColorDeleted { background-color:#FFCDCD; }
+.RMClassDeleted { font-style:italic; }
+.RMColorAdded   { background-color:#CDFFCD; }
+.RMClassAdded   { font-weight:bold; }
+.RMColorMoved1  { background-color:#FFFFFF; }
+.RMColorMoved2  { background-color:#D7EBEB; }
+.RMColorChanged { background-color:#EBEBFF; }
+.RMColorChangedCell { background-color:#E1E1FF; }
+.RMClassChangedCell { font-weight:bold; }
+.RMColorMaxChildren { background-color:#FFFFF0; }
+.RMColorDetail { background-color:#FFF0FF; }
+.RMColorDetailSelected { background-color:#FFF0E0; }
+.RMColorDragged{ background-color:#E0E0C0; }
+.RMColorFound1 { background-color:#FF87FF; }
+.RMColorFound2 { background-color:#FFC387; }
+.RMColorFound3 { background-color:#87FF87; }
+.RMColorHovered 			{ background-color:#F0F0FF; }
+.RMColorHoveredCell 		{ background-color:#C0C0FF; }
+.RMColorHoveredCellReadOnly { background-color:#F0F0F0; }
+.RMColorHoveredCellNoFocus 	{ background-color:#F8F8F8; }
+
+.RMClassHoveredCellHeader 	{ background-position:0px -250px; }
+.RMClassHoveredCellPanel 	{ background-position:0px -1801px; background-repeat:repeat-x; }
+
+.RMColorHoveredCellSpace 	{ background-color:#FFFFFF; }
+.RMColorHoveredCellSpaceEdit{ background-color:#C0C0FF; }
+.RMColorHoveredCellSpaceBool{ background-color:#FFFFFF; }
+.RMColorHoveredCellButton 	{ background-color:#FFFFFE; }
+.RMClassHoveredCellButton 	{ color:green; }
+.RMColorHoveredCellButton1 	{ background-color:#FFFFFE; }
+.RMClassHoveredCellButton1 	{ color:red; }
+.RMColorHoveredCellTab 		{ background-color:#FFFFFE; }
+.RMClassHoveredCellTab 		{ background-position:0px -1801px; color:green; }
+.RMColorHoveredCellTab1 	{ background-color:#99bbcc; }
+.RMClassHoveredCellTab1 	{ background-image:none; }
+
+.RMColorFocused 			{ background-color:#E6E6E6; }
+.RMColorFocusedCell 		{ background-color:#FFFFFE; }
+.RMColorFocusedCellSafari 	{ background-color:#A0A0FF; }
+.RMColorFocusedCellSpace 	{ background-color:#E6E6E6; }
+.RMColorFocusedCellButton 	{ background-color:#BCD; }
+.RMColorFocusedCellHeader 	{ background-color:#FFFFFE; }
+.RMColorFocusedCellPanel 	{ background-color:#FFFFFE; }
+.RMColorEditedCell 			{ background-color:#FFFFFF; }
+.RMColorViewedCell 			{ background-color:#FFFFFF; }
+
+/* Hover, focus, edit cursors */
+.RMHoverRowBackground 	{ opacity:0.1; filter:alpha(opacity=10); background:#00F; }
+.RMHoverRowBorder 		{ z-index:0; border-top:1px solid #BBF; border-bottom:1px solid #BBF; cursor:default; }
+.RMHoverCellBorder 		{ z-index:0; padding:1px; border:1px solid #A0A0F0; background:white; }
+.RMFocusRowBackground 	{ opacity:0.1; filter:alpha(opacity=50); background:/*IBSB*/#F1FF8F; } /* <-- Sheet : Selected Row Background */
+.RMFocusRowBorder 		{ z-index:0; border:1px solid /*IBSB*/#ABD504; } /* <-- Sheet : Selected Row Border */
+.RMFocusCellBorder		{ z-index:0; border:2px solid /*IBSB*/#ABD504; } /* <-- Sheet : Selected Cell Border */
+.RMFocusCellSpaceBorder,.RMEditCellSpaceBorder { z-index:4; }
+.RMEditCellBorder 		{ z-index:0; border:2px solid #FF6666;}    /*<-- Sheet : CellEdit Border */
+.RMEditCellInput 		{ position:relative; border:0 solid #39aefb; overflow:hidden; z-index:2; } 
+
+.RMCursorBackground, .RMCursorBorderLeft ,.RMCursorBorderRight,.RMCursorBorderTop,.RMCursorBorderBottom 
+ {position:relative;overflow:hidden;}
+
+.RMCursorBackground  {border:none; padding:0;}
+.RMCursorBorderLeft  {padding-right:0; padding-top:0; padding-bottom:0; border-right:none; border-top:none; border-bottom:none;  width:0; height:0;}
+.RMCursorBorderRight {padding-left:0; padding-top:0; padding-bottom:0; border-left:none; border-top:none; border-bottom:none;  width:0; height:0;}
+.RMCursorBorderTop 	 {padding-bottom:0; padding-left:0; padding-right:0; border-bottom:none; border-left:none; border-right:none;  width:0; height:0;}
+.RMCursorBorderBottom{padding-top:0; padding-left:0; padding-right:0; border-top:none; border-left:none; border-right:none; width:0; height:0;}
+
+/* Cell edges */
+.RMNoLeft { border-left:0; }
+.RMNoRight { border-right:0; }
+
+/* Dragging */
+.RMMouseObject { opacity:0.5; filter:alpha(opacity=50); z-index:300; overflow:hidden;}
+.RMDragObject {z-index:300; margin-left:10px; margin-top:10px; padding-left:3px; padding-right:3px;background:#E4E5F0 ; border:1px solid #777;}
+.RMDragColInsideTop,.RMDragColInsideBottom,.RMDragColOutsideTop,.RMDragColOutsideBottom{position:absolute;width:10px; height:11px; overflow:hidden; z-index:258;}
+.RMDragColInsideTop 	{background:url(in_top.gif) no-repeat;} 	
+.RMDragColInsideBottom  {background:url(in_bottom.gif) no-repeat;}	
+.RMDragColOutsideTop  	{background:url(out_top.gif) no-repeat;}	
+.RMDragColOutsideBottom {background:url(out_bottom.gif) no-repeat;}	 
+
+/* Messages */
+.RMDisabled{position:absolute; z-index:264; background:#ffffff; opacity:0.5; filter:alpha(opacity=50); } 
+.RMProcess {position: absolute; left:0; top:0; background:#E2F0FF; border:1px solid #777; white-space:nowrap; text-align:center; visibility:hidden; z-index:266;}
+.RMMessage {background:#E2F0FF; border:1px solid #000000; padding:10px; white-space:nowrap; text-align:center;
+			 position: absolute; left:0; top:0; visibility:hidden; z-index:266;}
+.RMMessageShadow 
+{position:absolute; margin-left:3px; margin-top:3px; z-index:265;background:#888; opacity:0.5; filter:alpha(opacity=50); left:0; top:0; visibility:hidden;}
+      
+/* Other */
+/* !!! No .RM style prefix here !!! */
+.GridTmpTag { position:absolute; left:5px; top:5px; visibility:hidden; }
+
+/* Popup menus, TGLib */
+.RMMenuMain  {position:absolute;left:0;top:0; z-index:258;}
+.RMMenuOuter {overflow:hidden; border:1px solid #000000; background:#fff; padding:1px; margin:1px;}
+.RMMenuHeader{overflow:hidden; position:absolute; z-index:258;border:1px solid #b0b0c0; background:#fff; cursor:pointer; _cursor:hand;}
+.RMMenuHead {background:#183873; color:white; cursor:default;text-align:center; padding-top:5px; padding-bottom:4px;}
+.RMMenuClose {float:right; width:14px; cursor:pointer; _cursor:hand; display:none;}
+.RMMenuBody {cursor:default; background-color:#fff; padding-top:1px; padding-bottom:1px;}
+.RMMenuShadow {position:absolute;margin:3px 0 0 3px;z-index:257;background-color:#888; opacity:0.5; filter:alpha(opacity=50);}
+.RMMenuCheckedIconRight {padding-right:17px; background:url(chk1.gif) no-repeat 96% center; }
+.RMMenuUncheckedIconRight { padding-right:17px;background:url(chk0.gif) no-repeat 96% center ; }
+
+.RMMenuCursorIcon {background-image:url(d_gray_right.gif); background-repeat:no-repeat; background-position: 3px center;_background-color:#fff}
+.RMMenuHoverIcon {background-image:url(d_right.gif); background-repeat:no-repeat; background-position: 3px center; _background-color:#ffeeaa }   
+
+.RMMenuNextIcon { padding-right:10px; }
+.RMMenuNextIconRtl { padding-left:10px; }
+
+.RMMenuItemText,.RMMenuItemIcon,.RMMenuEnum,.RMMenuEnumHeader,.RMMenuEdit 
+{white-space:nowrap; overflow:hidden; vertical-align: middle; padding:1px 0 0 0}
+.RMMenuItemDisabled {opacity:0.50; filter:alpha(opacity=30); overflow:hidden; }
+.RMMenuLevel {color:blue;text-align:center; }  
+.RMMenuEnumParent,.RMMenuEditParent {padding-left:5px; padding-right:2px}
+.RMMenuItemIcon {background-repeat:no-repeat;}
+.RMMenuEnum {border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; padding-left:15px; overflow:hidden;}
+.RMMenuEnumHeader  {padding:1px 0 2px 16px; cursor:default; } 
+.RMMenuEdit{border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; background:white; overflow:hidden;white-space:nowrap;
+  padding-left:2px; padding-right:2px;}
+.RMMenuEditInput,.RMMenuEditTextarea {margin:0;padding:0;border:0; background:#FDD;_margin:-1px; _padding-right:1px; _padding_left:1px; }   
+.RMMenuEditTextarea { line-height:13px;  }   
+.RMMenuEditInt,.RMMenuEditFloat,.RMMenuEditDate { text-align:right; } 
+.RMMenuEditMulti { white-space:normal; }
+.RMMenuItem {background-color:#ffffff;padding:2px;}  
+.RMMenuItemHover {background-color:#CFEBAB; border:1px solid #4C9925;margin:0 1px; padding:1px 0;}
+.RMMenuFocusHover {margin:1px; background-color:#F0FFDB; border:1px solid #000000;}
+.RMMenuFocus 	  {margin:1px; background-color:#F0FFDB; border:1px solid #A7D58F;}
+.RMMenuSeparator {margin:1px 3px 0 3px; height:1px; border-top:1px solid #aaaadd; overflow:hidden;}
+.RMMenuCaption {padding:2px; background:#ffffff; color:blue; text-align:center;}
+.RMMenuVSeparator { border-right:1px solid #DDD; }
+.RMMenuFoot { border-top:none; text-align:center; white-space:nowrap; }
+.RMMenuButton {font-size:11px;background:#E8F8D3; text-align:center; border:1px solid #B0D67E;margin:5px 2px 4px 2px;padding:0;white-space:nowrap;width:48px;} 
+.RMMenuButtonHover { background:#CFEBAB; border:1px solid #4C9925; }
+
+/* Grid configuration menus */
+.RMCfgMenuOuter,.RMColumnsMenuOuter { border:1px solid #000000; }
+.RMCfgMenuHead,.RMColumnsMenuHead { padding-left:3px; }
+.RMCfgMenuBody,.RMColumnsMenuBody { padding-left:4px; padding-right:4px;}
+.RMCfgMenuFoot,.RMColumnsMenuFoot { padding-right:3px; padding-left:3px;}
+.RMCfgMenuButton { width:70px; } 
+.RMCfgMenuItemText,.RMColumnsMenuItemText { padding-left:3px; }
+.RMColumnsMenuItemText { white-space:nowrap; }
+.RMCfgMenuItem,.RMColumnsMenuItem { padding-top:3px; padding-bottom:3px;}
+.RMCfgMenuItemHover,.RMCfgMenuFocus,.RMCfgMenuFocusHover,
+.RMColumnsMenuItemHover,.RMColumnsMenuFocus,.RMColumnsMenuFocusHover { padding-top:2px; padding-bottom:2px;}
+
+/* Popup grid dialog */
+.RMPopupGridOuter { border:0; overflow:visible; }
+.RMPopupGridHead { padding:0; }
+.RMPopupGridBody { padding:0; }
+.RMPopupGridFoot { padding:0; }
+.RMPopupGridButton { width:50px;margin-top:-2px; margin-bottom:3px;} 
+
+/* Calendar, TGLib */
+.RMPickMain  {position:absolute; left:0; top:0; z-index:258; }
+.RMPickOuter {overflow:hidden; background:white; padding:1px; border:1px solid #707275; }
+.RMPickHeader{overflow:hidden; position:absolute; z-index:258; border:1px solid black; background:#ffffff; cursor:pointer; _cursor:hand;}
+.RMPickHeaderBottom{border-bottom:0; padding-bottom:1px;}
+.RMPickHeaderTop{border-top:0; padding-bottom:1px; }
+.RMPickHead {background:#5c8397; font:10px Dotum,Verdana,Arial; color:white; cursor:default; padding-left:5px; padding-top:1px; padding-bottom:1px;border-bottom:1px solid white;}
+.RMPickClose{float:right; width:14px; cursor:pointer; _cursor:hand; display:none;}
+.RMPickBody {cursor:default; padding:0; }
+.RMPickShadow{position:absolute; background:#888; z-index:257; margin:3px 0 0 3px;opacity:0.5; filter:alpha(opacity=50);} 
+.RMPickFooter,.RMPick2Footer{text-align:center; padding:2px; cursor:default; background:#EFF0F1; border-top:1px solid #E3E4E6}
+ 
+.RMPickMY{background-color:#CFEBAB;border-bottom:1px solid #B0D67E;color:#306E11; cursor:default;text-align:center;padding:2px 0 4px 0;}/* <-- Calender : Header Background */
+   
+.RMPickMYDown{padding-right:13px; background:url(d_down.gif) no-repeat right; cursor:pointer; _cursor:hand;}
+.RMPickMYUp {padding-right:13px; background:url(d_up.gif) no-repeat right center; cursor:pointer; _cursor:hand;}
+
+.RMPickMYRtl{padding-right:0; padding-left:13px; }
+.RMPickBL,.RMPickBR{padding-top:3px; cursor:pointer; _cursor:hand; width:16px; height:14px; overflow:hidden;}
+
+.RMPickBL {float:left; background:url(d_left.gif) no-repeat 50%; }
+.RMPickBR {float:right; background:url(d_right.gif) no-repeat 50%; }
+
+.RMPickTable{}
+.RMPickRow  {background:#ffffff;}
+.RMPickRowW {background:#E8F8D3;}
+.RMPickCell {width:22px;}
+.RMPickWDN {background:transparent; color:#333333;text-align:center; cursor:default; margin:2px 3px;padding:1px;}
+  
+.RMPickHover,.RMPickSelHover,.RMPickWD,.RMPickSa,.RMPickSu,.RMPickSel,.RMPickNow,.RMPickWDNE,.RMPickSaNE,.RMPickSuNE,
+.RMPickSelNE,.RMPickNowNE,.RMPickOM,.RMPickOMNE {text-align:center; border:1px solid #ffffff; cursor:pointer; _cursor:hand;margin:2px 3px;}
+.RMPickWN,.RMPickWNE {text-align:center; cursor:pointer; _cursor:hand;padding:3px 4px; border-right:1px solid #B0D67E; background:#EFF0F1;}
+   
+.RMPickWDNE,.RMPickSaNE,.RMPickSuNE,.RMPickSelNE,.RMPickNowNE,.RMPickWNE {cursor:default;}
+.RMPickWD{background-color:#ffffff;}
+.RMPickSa{background-color:#ffffff;}
+.RMPickSu{background-color:#ffffff;}
+.RMPickSel{background-color:#DBFF4D ; border:1px solid #cccccc;}
+.RMPickSelNE{background-color:#fbea54; border:1px solid #dad1d1;}
+.RMPickNow {background-color:#c0f3ff; border:1px solid #dad1d1;}
+.RMPickNowNE{background-color:#c0f3ff; border:1px solid #dad1d1;}
+.RMPickHover{background-color:#ddd; border:1px solid #ddd;}
+.RMPickSelHover{background-color:#dddddd; border:1px solid #dddddd;}
+.RMPickOM{background-color:white; color:#aaaaaa;}
+.RMPickOMNE{color:#aaaaaa;}
+
+.RMPickEmpty{background:url(d_blank.gif) no-repeat 50%; cursor:pointer; _cursor:hand;padding:3px 0; }
+
+.RMPickTimeCell 
+{text-align:right; padding-bottom:4px; padding-top:6px; padding-right:5px; border-top:1px solid #B0D67E; background:#EFF0F1;}
+
+.RMPickTime 
+{border:0px none; white-space:nowrap; text-align:right; background:#EFF0F1;}
+
+.RMPickButton{background:#E8F8D3; text-align:center; border:1px solid #B0D67E; width:45px; height:16px}
+    
+.RMPickButtonHover{background:#CFEBAB; border:1px solid #4C9925; }
+.RMPick2Table{width:auto; vertical-align:middle}
+.RMPick2CellM{height:20px; width:55px; }
+.RMPick2CellY{height:20px; width:35px; vertical-align:middle }
+.RMPick2CellSep{height:20px; width:5px; }
+.RMPick2Cell{vertical-align:middle}
+.RMPick2M,.RMPick2Y,.RMPick2MSel,.RMPick2YSel,.RMPick2MHover,.RMPick2YHover,.RMPick2MSelHover,.RMPick2YSelHover
+{cursor:pointer; _cursor:hand; text-align:center; margin-left:1px; margin-right:1px; padding-left:4px; padding-right:4px; overflow:hidden; }
+   
+.RMPick2MSel,.RMPick2YSel {background:#DBFF4D; border:1px solid #cccccc; margin-left:0; margin-right:0;}
+.RMPick2MHover,.RMPick2YHover {background:#DDD; border:1px solid #ffffff; margin-left:0; margin-right:0;}
+.RMPick2MSelHover,.RMPick2YSelHover {background:##CCFF00; border:1px solid #FFFFFF;margin-left:0; margin-right:0;}   
+.RMPick2SepH {width:1px; height:1px; overflow:hidden; }
+.RMPick2Sep {width:1px; background:#E3E4E6; overflow:hidden; margin-left:2px; margin-right:2px; height:20px;}
+.RMPick2BL,.RMPick2BR {width:35px; cursor:pointer; _cursor:hand; }
+
+
+.RMPick2BL {background:url(d_left2.gif) no-repeat center center}
+.RMPick2BR {background:url(d_right2.gif) no-repeat center center}
+
+
+/* Edit controls, TGLib */
+.RMEdit,.RMEditInline {padding:2px 4px;border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666;background:#ffffff; white-space:nowrap; overflow:hidden;}
+  
+.RMEditInline { display:inline-block; vertical-align:bottom; }
+.RMEditInput,.RMEditTextarea {border:0 solid transparent; margin:0; padding:0;vertical-align: middle} 
+
+.RMEditTextarea { line-height:13px; }
+.RMEditSpaceInput { vertical-align:middle; }
+.RMEditNormalInput,.RMEditNormalTextarea,.RMEditSpaceTextarea { background-color:#FFFFFF; /*#FFDCFF;*/; }
+.RMEditInt,.RMEditFloat { text-align:right; }
+
+.RMEditMulti { white-space:normal; }
+.RMEditReadOnly { background-color:#FFEEFF; }   
+.RMEditParent { position:absolute; z-index:258; overflow:hidden; }
+
+.RMEnumHeaderLeft,.RMEnumHeaderRight,.RMEnumHeaderNone 
+{background:white; cursor:pointer; _cursor:hand; vertical-align:middle; text-align:left; padding:2px 0 2px 2px;}
+
+.RMEnumHeaderRight {background: url(combo.gif) no-repeat right center;margin:1px 1px 0 0;}
+ @media screen and (-webkit-min-device-pixel-ratio:0) {.RMEnumHeaderRight{margin:1px 0 0 0;}}/* hack:CR,SF */
+.RMEnumHeaderRight, x:-moz-any-link, x:default {margin:1px 0 0 0;} /* hack:FF */
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {.RMEnumHeaderRight{ margin:1px 0 0 0;}}/* hack:OP */
+
+.RMEnumMenuHeader { background:#ffffff; }
+
+.RMEnumControl,.RMEnumInline {
+   cursor:pointer; _cursor:hand; padding-left:15px; padding-right:4px; padding-top:2px; padding-bottom:2px;
+   border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; overflow:hidden;}
+   
+.RMEnumInline { display:inline-block; vertical-align:bottom; }
+.RMEnumHeader { cursor:pointer; _cursor:hand;padding-left:15px; padding-right:4px; padding-top:2px; padding-bottom:2px;} 
+
+/*  Custom scrollbars  */
+.RMCustScroll1RightHidden { background:url(VScroll.gif) left -108px; height:18px; overflow:hidden; }
+.RMCustScroll1Right { padding-right:18px; background:url(VScroll.gif) right 0; }
+.RMCustScroll1RightHover { padding-right:18px; background:url(VScroll.gif) right -18px; }
+.RMCustScroll1Left { padding-left:18px;  background:url(VScroll.gif) left 0; }
+.RMCustScroll1LeftHover { padding-left:18px;  background:url(VScroll.gif) left -18px; }
+.RMCustScroll1SliderRight { padding-right:3px; background:url(VScroll.gif) right -36px; }
+.RMCustScroll1SliderLeft { padding-left:3px; background:url(VScroll.gif) left -36px; }
+.RMCustScroll1SliderHIn { height:18px; overflow:hidden; background:url(VScroll.gif) center -54px; }
+.RMCustScroll1SliderRightHover { padding-right:3px; background:url(VScroll.gif) right -72px; }
+.RMCustScroll1SliderLeftHover { padding-left:3px; background:url(VScroll.gif) left -72px; }
+.RMCustScroll1SliderHInHover { height:18px; overflow:hidden; background:url(VScroll.gif) center -90px; }
+.RMCustScroll2RightHidden { background:url(VScroll.gif) left -108px; height:18px; overflow:hidden; }
+.RMCustScroll2Right { padding-right:18px; background:url(VScroll.gif) right 0; }
+.RMCustScroll2RightHover { padding-right:18px; background:url(VScroll.gif) right -18px; }
+.RMCustScroll2Left { padding-left:18px;  background:url(VScroll.gif) left 0; }
+.RMCustScroll2LeftHover { padding-left:18px;  background:url(VScroll.gif) left -18px; }
+.RMCustScroll2SliderRight { padding-right:3px; background:url(VScroll.gif) right -36px; }
+.RMCustScroll2SliderLeft { padding-left:3px; background:url(VScroll.gif) left -36px; }
+.RMCustScroll2SliderHIn { height:18px; overflow:hidden; background:url(VScroll.gif) center -54px; }
+.RMCustScroll2SliderRightHover { padding-right:3px; background:url(VScroll.gif) right -72px; }
+.RMCustScroll2SliderLeftHover { padding-left:3px; background:url(VScroll.gif) left -72px; }
+.RMCustScroll2SliderHInHover { height:18px; overflow:hidden; background:url(VScroll.gif) center -90px; }
+
+.RMCustScroll3Right,.RMCustScroll3RightHidden { background:white; height:9px; overflow:hidden; }
+.RMCustScroll3SliderRight,.RMCustScroll3SliderRightHover { padding-right:3px; height:9px; background:url(VScroll.gif) right -126px; }
+.RMCustScroll3SliderLeft,.RMCustScroll3SliderLeftHover { height:9px; background:url(VScroll.gif) left -126px; }
+.RMCustScroll3SliderRightHover { background-position:right -135px; }
+.RMCustScroll3SliderLeftHover { background-position:left -135px; }
+.RMCustScroll4Right,.RMCustScroll4RightHidden,.RMCustScroll4SliderRight,.RMCustScroll4SliderRightHover { height:1px; overflow:hidden; }
+
+.RMCustScroll1DownHidden { background:url(HScroll.png) -108px top; width:18px; overflow:hidden; }
+.RMCustScroll1Down { padding-bottom:18px; background:url(HScroll.png) 0px bottom; cursor:default; width:18px; overflow:hidden; }
+.RMCustScroll1DownHover { padding-bottom:18px; background:url(HScroll.png) -18px bottom; width:18px; overflow:hidden; }
+.RMCustScroll1Up { padding-top:18px; background:url(HScroll.png) 0px top; width:18px; overflow:hidden; }
+.RMCustScroll1UpHover { padding-top:18px;  background:url(HScroll.png) -18px top; width:18px; overflow:hidden; }
+.RMCustScroll1SliderDown { padding-bottom:3px; background:url(HScroll.png) -36px bottom; width:18px; overflow:hidden; }
+.RMCustScroll1SliderUp { padding-top:3px; background:url(HScroll.png) -36px top; width:18px; overflow:hidden; }
+.RMCustScroll1SliderVIn { background:url(HScroll.png) -54px center; width:18px; overflow:hidden; }
+.RMCustScroll1SliderDownHover { padding-bottom:3px; background:url(HScroll.png) -72px bottom; width:18px; overflow:hidden; }
+.RMCustScroll1SliderUpHover { padding-top:3px; background:url(HScroll.png) -72px top; width:18px; overflow:hidden; }
+.RMCustScroll1SliderVInHover { background:url(HScroll.png) -90px center; width:18px; overflow:hidden; }
+
+.RMCustScroll2DownHidden { background:url(HScroll.png) -108px top; width:18px; overflow:hidden; }
+.RMCustScroll2Down { padding-bottom:18px; background:url(HScroll.png) 0px bottom; cursor:default; width:18px; overflow:hidden; }
+.RMCustScroll2DownHover { padding-bottom:18px; background:url(HScroll.png) -18px bottom; width:18px; overflow:hidden; }
+.RMCustScroll2Up { padding-top:18px; background:url(HScroll.png) 0px top; width:18px; overflow:hidden; }
+.RMCustScroll2UpHover { padding-top:18px;  background:url(HScroll.png) -18px top; width:18px; overflow:hidden; }
+.RMCustScroll2SliderDown { padding-bottom:3px; background:url(HScroll.png) -36px bottom; width:18px; overflow:hidden; }
+.RMCustScroll2SliderUp { padding-top:3px; background:url(HScroll.png) -36px top; width:18px; overflow:hidden; }
+.RMCustScroll2SliderVIn { background:url(HScroll.png) -54px center; width:18px; overflow:hidden; }
+.RMCustScroll2SliderDownHover { padding-bottom:3px; background:url(HScroll.png) -72px bottom; width:18px; overflow:hidden; }
+.RMCustScroll2SliderUpHover { padding-top:3px; background:url(HScroll.png) -72px top; width:18px; overflow:hidden; }
+.RMCustScroll2SliderVInHover { background:url(HScroll.png) -90px center; width:18px; overflow:hidden; }
+
+.RMCustScroll3Down,.RMCustScroll3DownHidden { background:white; width:9px; overflow:hidden; cursor:default; }
+.RMCustScroll3SliderDown,.RMCustScroll3SliderDownHover { padding-bottom:3px; width:9px; background:url(HScroll.png) -126px bottom; }
+.RMCustScroll3SliderUp,.RMCustScroll3SliderUpHover { width:9px; background:url(HScroll.png) -126px top; cursor:default; }
+.RMCustScroll3SliderDownHover { background-position:-135px bottom; }
+.RMCustScroll3SliderUpHover { background-position:-135px top; cursor:default; }
+
+.RMCustScroll4Down,.RMCustScroll4DownHidden,.RMCustScroll4SliderDown,.RMCustScroll4SliderDownHover { width:1px; overflow:hidden; }
+
+/* Other messages, TGLib */
+.RMHintMain {position:absolute; margin-left:-1px; margin-top:-1px; left:0px; top:0px; z-index:260; background:#ffffff; cursor:default; }
+.RMHintOuter {overflow:hidden; border:1px solid #000000; background:#ffffff !important; color:black; text-align:left; }
+.RMHintHeaderOuter {background-color:#39aefb !important; color:#ffffff; border: 1px solid #ffffff; }
+.RMHintShadow {position:absolute; z-index:259;background:#888; opacity:0.3; filter:alpha(opacity=30);margin-left:2px; margin-top:2px;}
+.RMTipMain {position:absolute; left:0px; top:0px; z-index:262; visibility:hidden; }
+.RMTipOuter  {overflow:hidden; cursor:default; font:12px Arial;padding-left:3px; padding-right:3px; background:#E4E5F0; border:1px solid #777;}
+.RMTipBody {background:#E4E5F0; white-space:nowrap; }
+.RMTipShadow {position:absolute;z-index:261;background:#888; opacity:0.3; filter:alpha(opacity=30);visibility:hidden; margin-left:3px; margin-top:3px}
+.RMMouseOrig { background:yellow !important; opacity:0.5; filter:alpha(opacity=50); }
+.RMMouseDragObject { position:absolute; z-index:260; background:#888; opacity:0.5; filter:alpha(opacity=50); }
+.RMFocus { border:1px solid #AAF; border-top:1px solid #00F; border-left:1px solid #00F; background-color:#EEE; } 
+.GridDisabled { position:absolute; z-index:256; background:white; opacity:0.5; filter:alpha(opacity=50); } 
+
+/* Do not change, marks the style loaded */
+.RMLoaded { border:1px solid #000000 !important;}
+
+/*sum*/
+.RMSumCell{background:#f7ffe7; color:#FF060C;}/*//text-align: right;font-weight:bold;*/
+.RMSubSumCell{background: #FCF0E7; border-top:1px solid #F7BBA1; border-bottom:1px solid #F7BBA1; color:#DA5615}
+.RMCumulateCell{background: #FCF0E7; border-bottom:1px solid #F7BBA1; color:#BE3600}
+
+/* FindDialog */
+.RMH1Pop,.RMPPop{margin:0; padding:0}
+.RMPaddingl10{padding-left:10px}
+.RMPaddingT10{padding-top:10px}
+.RMPPop{ padding:0 0 10px 0; text-align:center }
+.RMPop{width:410px; overflow:hidden; border:1px solid #438124; padding:0; font-size:12px;background:#F3F3F3; font-family:dotum, Arial, Helvetica, sans-serif}
+.RMPopTitle{width:100%;color:#fff;border-bottom:1px solid #438124; font-size:12px; font-weight:bold; display:block; line-height:28px;
+background: #6aaa4a; /* Old browsers */
+background: -moz-linear-gradient(top,  #6aaa4a 1%, #489720 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#6aaa4a), color-stop(100%,#489720)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #6aaa4a 1%,#489720 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #6aaa4a 1%,#489720 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #6aaa4a 1%,#489720 100%); /* IE10+ */
+background: linear-gradient(top,  #6aaa4a 1%,#489720 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6aaa4a', endColorstr='#489720',GradientType=0 ); /* IE6-9 */
+}
+.RMPopSearch{margin:10px; overflow:hidden; }
+.RMPopContent{border:1px solid #DBDCDD; background-color:#fff}
+.RMPopUl{list-style:none; margin:0; padding:10px;}
+.RMPopDiv{overflow:hidden; width:100%}
+.RMPopDiv2{overflow:hidden; width:100%}
+.RMPopLeft,.RMPopLeft2{width:220px; float:left; }
+.RMPopRight,.RMPopRight2{width:166px; float:right}
+.RMPopUl input {margin:-2px 2px 0px 0px;padding:0 ; width:13px; height:13px; vertical-align:middle;}
+.RMPopUl li{ padding-top:4px;padding-bottom:3px ; padding-left:5px}
+.RMBtn{margin-top:10px; text-align:center }
+.RMPopLeft, .RMPopRight{ height:120px}
+.RMPopLeft2, .RMPopRight2{ height:80px}
+.RMPopLabel{line-height:12px; margin:0 0 0 2px}
+.RMPopSubtitle{font-weight:bold; color:#000; border-bottom:1px solid  #E0E0E0; background-color:#E7E7E7;padding-left:4px;}
+.RMPopBtnBlue {text-align: center;text-decoration: none;color:#fff;position: relative;border:1px solid #438124; font-size:12px;width:50px !important;height:22px !important;
+background: #6aaa4a; /* Old browsers */
+background: -moz-linear-gradient(top,  #6aaa4a 1%, #489720 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#6aaa4a), color-stop(100%,#489720)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #6aaa4a 1%,#489720 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #6aaa4a 1%,#489720 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #6aaa4a 1%,#489720 100%); /* IE10+ */
+background: linear-gradient(top,  #6aaa4a 1%,#489720 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6aaa4a', endColorstr='#489720',GradientType=0 ); /* IE6-9 */
+}
+.RMPopBtnBlue:hover {
+background: #489720; /* Old browsers */
+background: -moz-linear-gradient(top,  #489720 0%, #6aaa4a 99%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#489720), color-stop(99%,#6aaa4a)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #489720 0%,#6aaa4a 99%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #489720 0%,#6aaa4a 99%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #489720 0%,#6aaa4a 99%); /* IE10+ */
+background: linear-gradient(top,  #489720 0%,#6aaa4a 99%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#489720', endColorstr='#6aaa4a',GradientType=0 ); /* IE6-9 */
+}		

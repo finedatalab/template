@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('../css/bootstrap.min.css');
+@import url('../css/font-awesome.min.css');
+@import url('../css/smartadmin-production-plugins.min.css');
+@import url('../css/smartadmin-production.min.css');
+@import url('../css/smartadmin-skins.min.css');
+@import url('../css/smartadmin-rtl.min.css');
+@import url('../css/demo.min.css');

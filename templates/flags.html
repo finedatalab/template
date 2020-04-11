@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<title> {{document_title}} </title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+			
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- Basic Styles -->
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+
+		<!-- SmartAdmin Styles : Caution! DO NOT change the order -->
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/smartadmin-production-plugins.min.css') }}">
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/smartadmin-production.min.css') }}">
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/smartadmin-skins.min.css') }}">
+
+		<!-- SmartAdmin RTL Support  -->
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/smartadmin-rtl.min.css') }}">
+
+		<!-- We recommend you use "your_style.css" to override SmartAdmin
+		     specific styles this will also ensure you retrain your customization with each SmartAdmin update.
+		<link rel="stylesheet" type="text/css" media="screen" href="css/your_style.css"> -->
+
+		<!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/demo.min.css') }}">
+
+		<!-- FAVICONS -->
+		<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon/favicon.ico') }}" type="image/x-icon">
+		<link rel="icon" href="{{ url_for('static', filename='img/favicon/favicon.ico') }}" type="image/x-icon">
+
+		<!-- GOOGLE FONT -->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+
+		<!-- Specifying a Webpage Icon for Web Clip 
+			 Ref: https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html -->
+		<link rel="apple-touch-icon" href="{{ url_for('static', filename='img/splash/sptouch-icon-iphone.png') }}">
+		<link rel="apple-touch-icon" sizes="76x76" href="{{ url_for('static', filename='img/splash/touch-icon-ipad.png') }}">
+		<link rel="apple-touch-icon" sizes="120x120" href="{{ url_for('static', filename='img/splash/touch-icon-iphone-retina.png') }}">
+		<link rel="apple-touch-icon" sizes="152x152" href="{{ url_for('static', filename='img/splash/touch-icon-ipad-retina.png') }}">
+		
+		<!-- iOS web-app metas : hides Safari UI Components and Changes Status Bar Appearance -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		
+		<!-- Startup image for web apps -->
+		<link rel="apple-touch-startup-image" href="{{ url_for('static', filename='img/splash/ipad-landscape.png') }}" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
+		<link rel="apple-touch-startup-image" href="{{ url_for('static', filename='img/splash/ipad-portrait.png') }}" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
+		<link rel="apple-touch-startup-image" href="{{ url_for('static', filename='img/splash/iphone.png') }}" media="screen and (max-device-width: 320px)">
+
+	</head>
+	
+	<!--
+
+	TABLE OF CONTENTS.
+	
+	Use search to find needed section.
+	
+	===================================================================
+	
+	|  01. #CSS Links                |  all CSS links and file paths  |
+	|  02. #FAVICONS                 |  Favicon links and file paths  |
+	|  03. #GOOGLE FONT              |  Google font link              |
+	|  04. #APP SCREEN / ICONS       |  app icons, screen backdrops   |
+	|  05. #BODY                     |  body tag                      |
+	|  06. #HEADER                   |  header tag                    |
+	|  07. #PROJECTS                 |  project lists                 |
+	|  08. #TOGGLE LAYOUT BUTTONS    |  layout buttons and actions    |
+	|  09. #MOBILE                   |  mobile view dropdown          |
+	|  10. #SEARCH                   |  search field                  |
+	|  11. #NAVIGATION               |  left panel & navigation       |
+	|  12. #RIGHT PANEL              |  right panel userlist          |
+	|  13. #MAIN PANEL               |  main panel                    |
+	|  14. #MAIN CONTENT             |  content holder                |
+	|  15. #PAGE FOOTER              |  page footer                   |
+	|  16. #SHORTCUT AREA            |  dropdown shortcuts area       |
+	|  17. #PLUGINS                  |  all scripts and plugins       |
+	
+	===================================================================
+	
+	-->
+	
+	<!-- #BODY -->
+	<!-- Possible Classes
+
+		* 'smart-style-{SKIN#}'
+		* 'smart-rtl'         - Switch theme mode to RTL
+		* 'menu-on-top'       - Switch to top navigation (no DOM change required)
+		* 'no-menu'			  - Hides the menu completely
+		* 'hidden-menu'       - Hides the main menu but still accessable by hovering over left edge
+		* 'fixed-header'      - Fixes the header
+		* 'fixed-navigation'  - Fixes the main menu
+		* 'fixed-ribbon'      - Fixes breadcrumb
+		* 'fixed-page-footer' - Fixes footer
+		* 'container'         - boxed layout mode (non-responsive: will not work with fixed-navigation & fixed-ribbon)
+	-->
+	<body class="">
+
+		<!-- HEADER -->
+		{% include "inc/header.html" ignore missing %}
+		<!-- END HEADER -->
+
+		<!-- Left panel : Navigation area -->
+		<!-- Note: This width of the aside area can be adjusted through LESS variables -->
+		{% include "inc/leftpanel.html" ignore missing %}
+		<!-- END NAVIGATION -->
+
+		<!-- MAIN PANEL -->
+		<div id="main" role="main">
+
+			<!-- RIBBON -->
+			<div id="ribbon">
+
+				<span class="ribbon-button-alignment"> 
+					<span id="refresh" class="btn btn-ribbon" data-action="resetWidgets" data-title="refresh"  rel="tooltip" data-placement="bottom" data-original-title="<i class='text-warning fa fa-warning'></i> Warning! This will reset all your widget settings." data-html="true">
+						<i class="fa fa-refresh"></i>
+					</span> 
+				</span>
+
+				<!-- breadcrumb -->
+				<ol class="breadcrumb">
+					<li>Home</li><li>UI Elements</li><li>Icons</li><li>Flags</li>
+				</ol>
+				<!-- end breadcrumb -->
+
+				<!-- You can also add more buttons to the
+				ribbon for further usability
+
+				Example below:
+
+				<span class="ribbon-button-alignment pull-right">
+				<span id="search" class="btn btn-ribbon hidden-xs" data-title="search"><i class="fa-grid"></i> Change Grid</span>
+				<span id="add" class="btn btn-ribbon hidden-xs" data-title="add"><i class="fa-plus"></i> Add</span>
+				<span id="search" class="btn btn-ribbon" data-title="search"><i class="fa-search"></i> <span class="hidden-mobile">Search</span></span>
+				</span> -->
+
+			</div>
+			<!-- END RIBBON -->
+			
+			
+
+			<!-- MAIN CONTENT -->
+			<div id="content">
+				<!-- row -->
+				<div class="row">
+					
+					<!-- col -->
+					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+						<h1 class="page-title txt-color-blueDark"><i class="fa fa-desktop fa-fw "></i> 
+							UI Elements 
+							<span>&gt;
+							 Icons &gt; Flags
+							</span>
+						</h1>
+					</div>
+					<!-- end col -->
+					
+					<!-- right side of the page with the sparkline graphs -->
+					<!-- col -->
+					<div class="col-xs-12 col-sm-5 col-md-5 col-lg-8">
+						<!-- sparks -->
+						<ul id="sparks">
+							<li class="sparks-info">
+								<h5> My Income <span class="txt-color-blue">$47,171</span></h5>
+								<div class="sparkline txt-color-blue hidden-mobile hidden-md hidden-sm">
+									1300, 1877, 2500, 2577, 2000, 2100, 3000, 2700, 3631, 2471, 2700, 3631, 2471
+								</div>
+							</li>
+							<li class="sparks-info">
+								<h5> Site Traffic <span class="txt-color-purple"><i class="fa fa-arrow-circle-up" data-rel="bootstrap-tooltip" title="Increased"></i>&nbsp;45%</span></h5>
+								<div class="sparkline txt-color-purple hidden-mobile hidden-md hidden-sm">
+									110,150,300,130,400,240,220,310,220,300, 270, 210
+								</div>
+							</li>
+							<li class="sparks-info">
+								<h5> Site Orders <span class="txt-color-greenDark"><i class="fa fa-shopping-cart"></i>&nbsp;2447</span></h5>
+								<div class="sparkline txt-color-greenDark hidden-mobile hidden-md hidden-sm">
+									110,150,300,130,400,240,220,310,220,300, 270, 210
+								</div>
+							</li>
+						</ul>
+						<!-- end sparks -->
+					</div>
+					<!-- end col -->
+					
+				</div>
+				<!-- end row -->
+
+				<!--
+					The ID "widget-grid" will start to initialize all widgets below 
+					You do not need to use widgets if you dont want to. Simply remove 
+					the <section></section> and you can use wells or panels instead 
+					-->
+
+				<!-- widget grid -->
+				<section id="widget-grid" class="">
+
+					<!-- row -->
+					<div class="row">
+						
+						<!-- NEW WIDGET START -->
+						<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							
+							<!-- Widget ID (each widget will need unique ID)-->
+							<div class="jarviswidget" id="wid-id-0">
+								<!-- widget options:
+									usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+									
+									data-widget-colorbutton="false"	
+									data-widget-editbutton="false"
+									data-widget-togglebutton="false"
+									data-widget-deletebutton="false"
+									data-widget-fullscreenbutton="false"
+									data-widget-custombutton="false"
+									data-widget-collapsed="true" 
+									data-widget-sortable="false"
+									
+								-->
+								<header>
+									<span class="widget-icon"> <i class="fa fa-comments"></i> </span>
+									<h2>World Flag </h2>				
+									
+								</header>
+
+								<!-- widget div-->
+								<div>
+									
+									<!-- widget edit box -->
+									<div class="jarviswidget-editbox">
+										<!-- This area used as dropdown edit box -->
+										<input class="form-control" type="text">	
+									</div>
+									<!-- end widget edit box -->
+									
+									<!-- widget content -->
+									<div class="widget-body">
+										<div class="alert alert-info">
+												<i class="fa fa-exclamation"></i> Please note: flag images has a base class for image <code>
+													flag flag-*</code>. A full example of this in use will be as follows: <code> img class="flag flag-us" src="img/blank.gif"</code>
+											</div>
+								<h2>Africa</h2>
+								<div class="row">
+									
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-dz" src="{{ url_for('static', filename='img/blank.gif') }}" alt="Algeria"> Algeria
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ao" src="{{ url_for('static', filename='img/blank.gif') }}" alt="Angola"> Angola
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-bj" src="{{ url_for('static', filename='img/blank.gif') }}" alt="Benin"> Benin
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-bw" src="{{ url_for('static', filename='img/blank.gif') }}" alt="Botswana"> Botswana
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-bf" src="{{ url_for('static', filename='img/blank.gif') }}" alt="Burkina Faso"> Burkina Faso
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-bi" src="{{ url_for('static', filename='img/blank.gif') }}" alt="Burundi"> Burundi
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-cm" src="{{ url_for('static', filename='img/blank.gif') }}" alt="Cameroon"> Cameroon
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-cv" src="{{ url_for('static', filename='img/blank.gif') }}" alt="Cape Verde"> Cape Verde
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-cf" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Central African Republic"> Central African Republic
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-td" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Chad"> Chad
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-km" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Comoros"> Comoros
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-cg" src="{{ url_for('static', filename='img/blank.gif') }}" alt="Congo"> Congo
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-cd" src="{{ url_for('static', filename='img/blank.gif') }}" alt="Congo, The Democratic Republic of the"> Congo, The Democratic Republic of the
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ci" src="{{ url_for('static', filename='img/blank.gif') }}" alt="Côte d'Ivoire"> Côte d'Ivoire
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-dj" src="{{ url_for('static', filename='img/blank.gif') }}" alt="Djibouti"> Djibouti
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-eg" src="{{ url_for('static', filename='img/blank.gif') }}" alt="Egypt"> Egypt
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-gq" src="{{ url_for('static', filename='img/blank.gif') }}" alt="Equatorial Guinea"> Equatorial Guinea
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-er" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Eritrea"> Eritrea
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-et" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Ethiopia"> Ethiopia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ga" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Gabon"> Gabon
+									</div>			
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-gm" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Gambia"> Gambia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-gh" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Ghana"> Ghana
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-gn" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Guinea"> Guinea
+									</div>			
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-gw" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Guinea-Bissau"> Guinea-Bissau
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ke" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Kenya"> Kenya
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ls" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Lesotho"> Lesotho
+									</div>			
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-lr" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Liberia"> Liberia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ly" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Libya"> Libya
+									</div>				
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-mg" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Madagascar"> Madagascar
+									</div>			
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-mw" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Malawi"> Malawi
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ml" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Mali"> Mali
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-mr" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Mauritania"> Mauritania
+									</div>			
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-mu" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Mauritius"> Mauritius
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-yt" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Mayotte"> Mayotte
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ma" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Morocco"> Morocco
+									</div>			
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-mz" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Mozambique"> Mozambique
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-na" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Namibia"> Namibia
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ne" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Niger"> Niger
+									</div>			
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ng" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Nigeria"> Nigeria
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-rw" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Rwanda"> Rwanda
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-re" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Réunion"> Réunion
+									</div>			
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-sh" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Saint Helena"> Saint Helena
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-st" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Sao Tome and Principe"> Sao Tome and Principe
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-sn" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Senegal"> Senegal
+									</div>			
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-sc" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Seychelles"> Seychelles
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-sl" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Sierra Leone"> Sierra Leone
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-so" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Somalia"> Somalia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-za" src="{{ url_for('static', filename='img/blank.gif') }}"alt="South Africa"> South Africa
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ss" src="{{ url_for('static', filename='img/blank.gif') }}"alt="South Sudan"> South Sudan
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-sd" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Sudan"> Sudan
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-sz" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Swaziland"> Swaziland
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-tz" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Tanzania"> Tanzania
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-tg" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Togo"> Togo
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-tn" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Tunisia"> Tunisia
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ug" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Uganda"> Uganda
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-eh" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Western Sahara"> Western Sahara
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-zm" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Zambia"> Zambia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-zw" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Zimbabwe"> Zimbabwe
+									</div>	
+								</div>
+								
+								<h2>America</h2>		
+								<div class="row">
+									
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ai" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Anguilla"> Anguilla
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ag" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Antigua and Barbuda"> Antigua and Barbuda
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ar" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Argentina"> Argentina
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-aw" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Aruba"> Aruba
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-bs" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Bahamas"> Bahamas
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-bb" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Barbados"> Barbados
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-bz" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Belize"> Belize
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-bm" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Bermuda"> Bermuda
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-bo" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Bolivia, Plurinational State of"> Bolivia, Plurinational State of
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-br" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Brazil"> Brazil
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ca" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Canada"> Canada
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ky" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Cayman Islands"> Cayman Islands
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-cl" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Chile"> Chile
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-co" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Colombia"> Colombia
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-cr" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Costa Rica"> Costa Rica
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-cu" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Cuba"> Cuba
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-cw" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Curaçao"> Curaçao
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-dm" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Dominica"> Dominica
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-do" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Dominican Republic"> Dominican Republic
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ec" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Ecuador"> Ecuador
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-sv" src="{{ url_for('static', filename='img/blank.gif') }}"alt="El Salvador"> El Salvador
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-fk" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Falkland Islands (Malvinas)"> Falkland Islands (Malvinas)
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-gf" src="{{ url_for('static', filename='img/blank.gif') }}"alt="French Guiana"> French Guiana
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-gl" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Greenland"> Greenland
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-gd" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Grenada"> Grenada
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-gp" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Guadeloupe"> Guadeloupe
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-gt" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Guatemala"> Guatemala
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-gy" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Guyana"> Guyana
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ht" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Haiti"> Haiti
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-hn" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Honduras"> Honduras
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-jm" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Jamaica"> Jamaica
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-mq" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Martinique"> Martinique
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-mx" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Mexico"> Mexico
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ms" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Montserrat"> Montserrat
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-an" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Netherlands Antilles"> Netherlands Antilles
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ni" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Nicaragua"> Nicaragua
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-pa" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Panama"> Panama
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-py" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Paraguay"> Paraguay
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-pe" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Peru"> Peru
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-pr" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Puerto Rico"> Puerto Rico
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-kn" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Saint Kitts and Nevis"> Saint Kitts and Nevis
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-lc" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Saint Lucia"> Saint Lucia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-pm" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Saint Pierre and Miquelon"> Saint Pierre and Miquelon
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-vc" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Saint Vincent and the Grenadines"> Saint Vincent and the Grenadines
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-sx" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Sint Maarten"> Sint Maarten
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-sr" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Suriname"> Suriname
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-tt" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Trinidad and Tobago"> Trinidad and Tobago
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-tc" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Turks and Caicos Islands"> Turks and Caicos Islands
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-us" src="{{ url_for('static', filename='img/blank.gif') }}"alt="United States"> United States
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-uy" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Uruguay"> Uruguay
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ve" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Venezuela, Bolivarian Republic of"> Venezuela, Bolivarian Republic of
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-vg" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Virgin Islands, British"> Virgin Islands, British
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-vi" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Virgin Islands, U.S."> Virgin Islands, U.S.
+									</div>
+								</div>
+
+
+
+
+								<h2>Asia</h2>
+								<div class="row">
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-af" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Afghanistan"> Afghanistan
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-am" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Armenia"> Armenia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-az" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Azerbaijan"> Azerbaijan
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-bh" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Bahrain"> Bahrain
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-bd" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Bangladesh"> Bangladesh
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-bt" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Bhutan"> Bhutan
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-bn" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Brunei Darussalam"> Brunei Darussalam
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-kh" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Cambodia"> Cambodia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-cn" src="{{ url_for('static', filename='img/blank.gif') }}"alt="China"> China
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-cy" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Cyprus"> Cyprus
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ge" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Georgia"> Georgia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-hk" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Hong Kong"> Hong Kong
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-in" src="{{ url_for('static', filename='img/blank.gif') }}"alt="India"> India
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-id" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Indonesia"> Indonesia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ir" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Iran, Islamic Republic of"> Iran, Islamic Republic of
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-iq" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Iraq"> Iraq
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-il" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Israel"> Israel
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-jp" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Japan"> Japan
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-jo" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Jordan"> Jordan
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-kz" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Kazakhstan"> Kazakhstan
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-kp" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Korea, Democratic People's Republic of"> Korea, Democratic People's Republic of
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-kr" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Korea, Republic of"> Korea, Republic of
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-kw" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Kuwait"> Kuwait
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-kg" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Kyrgyzstan"> Kyrgyzstan
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-la" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Lao People's Democratic Republic"> Lao People's Democratic Republic
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-lb" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Lebanon"> Lebanon
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-mo" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Macao"> Macao
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-my" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Malaysia"> Malaysia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-mv" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Maldives"> Maldives
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-mn" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Mongolia"> Mongolia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-mm" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Myanmar"> Myanmar
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-np" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Nepal"> Nepal
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-om" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Oman"> Oman
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-pk" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Pakistan"> Pakistan
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ps" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Palestinian Territory, Occupied"> Palestinian Territory, Occupied
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ph" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Philippines"> Philippines
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-qa" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Qatar"> Qatar
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-sa" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Saudi Arabia"> Saudi Arabia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-sg" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Singapore"> Singapore
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-lk" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Sri Lanka"> Sri Lanka
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-sy" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Syrian Arab Republic"> Syrian Arab Republic
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-tw" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Taiwan, Province of China"> Taiwan, Province of China
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-tj" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Tajikistan"> Tajikistan
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-th" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Thailand"> Thailand
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-tl" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Timor-Leste"> Timor-Leste
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-tr" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Turkey"> Turkey
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-tm" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Turkmenistan"> Turkmenistan
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ae" src="{{ url_for('static', filename='img/blank.gif') }}"alt="United Arab Emirates"> United Arab Emirates
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-uz" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Uzbekistan"> Uzbekistan
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-vn" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Viet Nam"> Viet Nam
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ye" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Yemen"> Yemen
+									</div>
+								</div>
+								
+								<h2>Australia and Oceania</h2>
+								<div class="row">
+									
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-as" src="{{ url_for('static', filename='img/blank.gif') }}"alt="American Samoa"> American Samoa
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-au" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Australia"> Australia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ck" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Cook Islands"> Cook Islands
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-fj" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Fiji"> Fiji
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-pf" src="{{ url_for('static', filename='img/blank.gif') }}"alt="French Polynesia"> French Polynesia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-gu" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Guam"> Guam
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ki" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Kiribati"> Kiribati
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-mh" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Marshall Islands"> Marshall Islands
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-fm" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Micronesia, Federated States of"> Micronesia, Federated States of
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-nr" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Nauru"> Nauru
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-nc" src="{{ url_for('static', filename='img/blank.gif') }}"alt="New Caledonia"> New Caledonia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-nz" src="{{ url_for('static', filename='img/blank.gif') }}"alt="New Zealand"> New Zealand
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-nu" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Niue"> Niue
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-nf" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Norfolk Island"> Norfolk Island
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-mp" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Northern Mariana Islands"> Northern Mariana Islands
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-pw" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Palau"> Palau
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-pg" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Papua New Guinea"> Papua New Guinea
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-pn" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Pitcairn"> Pitcairn
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ws" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Samoa"> Samoa
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-sb" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Solomon Islands"> Solomon Islands
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-tk" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Tokelau"> Tokelau
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-to" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Tonga"> Tonga
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-tv" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Tuvalu"> Tuvalu
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-vu" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Vanuatu"> Vanuatu
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-wf" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Wallis and Futuna"> Wallis and Futuna
+									</div>
+									
+								</div>
+
+								<h2>Europe</h2>
+								
+								<div class="row">
+									
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-al" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Albania"> Albania
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ad" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Andorra"> Andorra
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-at" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Austria"> Austria
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-by" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Belarus"> Belarus
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-be" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Belgium"> Belgium
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ba" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Bosnia and Herzegovina"> Bosnia and Herzegovina
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-bg" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Bulgaria"> Bulgaria
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-hr" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Croatia"> Croatia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-cz" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Czech Republic"> Czech Republic
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-dk" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Denmark"> Denmark
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ee" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Estonia"> Estonia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-fo" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Faroe Islands"> Faroe Islands
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-fi" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Finland"> Finland
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-fr" src="{{ url_for('static', filename='img/blank.gif') }}"alt="France"> France
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-de" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Germany"> Germany
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-gi" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Gibraltar"> Gibraltar
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-gr" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Greece"> Greece
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-va" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Holy See (Vatican City State)"> Holy See (Vatican City State)
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-hu" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Hungary"> Hungary
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-is" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Iceland"> Iceland
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ie" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Ireland"> Ireland
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-it" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Italy"> Italy
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-lv" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Latvia"> Latvia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-li" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Liechtenstein"> Liechtenstein
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-lt" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Lithuania"> Lithuania
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-lu" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Luxembourg"> Luxembourg
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-mk" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Macedonia, The Former Yugoslav Republic of"> Macedonia, The Former Yugoslav Republic of
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-mt" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Malta"> Malta
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-md" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Moldova, Republic of"> Moldova, Republic of
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-mc" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Monaco"> Monaco
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-me" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Montenegro"> Montenegro
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-nl" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Netherlands"> Netherlands
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-no" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Norway"> Norway
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-pl" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Poland"> Poland
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-pt" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Portugal"> Portugal
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ro" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Romania"> Romania
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ru" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Russian Federation"> Russian Federation
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-sm" src="{{ url_for('static', filename='img/blank.gif') }}"alt="San Marino"> San Marino
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-rs" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Serbia"> Serbia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-sk" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Slovakia"> Slovakia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-si" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Slovenia"> Slovenia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-es" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Spain"> Spain
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-se" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Sweden"> Sweden
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ch" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Switzerland"> Switzerland
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ua" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Ukraine"> Ukraine
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-gb" src="{{ url_for('static', filename='img/blank.gif') }}"alt="United Kingdom"> United Kingdom
+									</div>
+								</div>
+
+								<h2>Other areas</h2>
+								<div class="row">
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-bv" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Bouvet Island"> Bouvet Island
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-io" src="{{ url_for('static', filename='img/blank.gif') }}"alt="British Indian Ocean Territory"> British Indian Ocean Territory
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-ic" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Canary Islands"> Canary Islands
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-catalonia" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Catalonia"> Catalonia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-england" src="{{ url_for('static', filename='img/blank.gif') }}"alt="England"> England
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-eu" src="{{ url_for('static', filename='img/blank.gif') }}"alt="European Union"> European Union
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-tf" src="{{ url_for('static', filename='img/blank.gif') }}"alt="French Southern Territories"> French Southern Territories
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-gg" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Guernsey"> Guernsey
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-hm" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Heard Island and McDonald Islands"> Heard Island and McDonald Islands
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-im" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Isle of Man"> Isle of Man
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-je" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Jersey"> Jersey
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-kurdistan" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Kurdistan"> Kurdistan
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-scotland" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Scotland"> Scotland
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-somaliland" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Somaliland"> Somaliland
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-gs" src="{{ url_for('static', filename='img/blank.gif') }}"alt="South Georgia and the South Sandwich Islands"> South Georgia and the South Sandwich Islands
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-um" src="{{ url_for('static', filename='img/blank.gif') }}"alt="United States Minor Outlying Islands"> United States Minor Outlying Islands
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-wales" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Wales"> Wales
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+										<img class="flag flag-zanzibar" src="{{ url_for('static', filename='img/blank.gif') }}"alt="Zanzibar"> Zanzibar 
+									</div>
+									
+								</div>
+
+
+
+
+
+
+									</div>
+									<!-- end widget content -->
+									
+								</div>
+								<!-- end widget div -->
+								
+							</div>
+							<!-- end widget -->
+
+						</article>
+						<!-- WIDGET END -->
+						
+					</div>
+
+					<!-- end row -->
+
+					<!-- row -->
+
+					<div class="row">
+
+						<!-- a blank row to get started -->
+						<div class="col-sm-12">
+							<!-- your contents here -->
+						</div>
+							
+					</div>
+
+					<!-- end row -->
+
+				</section>
+				<!-- end widget grid -->
+
+			</div>
+			<!-- END MAIN CONTENT -->
+
+		</div>
+		<!-- END MAIN PANEL -->
+
+		<!-- PAGE FOOTER -->
+		{% include "inc/footer.html" ignore missing %}
+		<!-- END PAGE FOOTER -->
+
+		<!-- SHORTCUT AREA : With large tiles (activated via clicking user name tag)
+		Note: These tiles are completely responsive,
+		you can add as many as you like
+		-->
+		{% include "inc/shortcutarea.html" ignore missing %}
+		<!-- END SHORTCUT AREA -->
+
+		<!--================================================== -->
+
+		<!-- PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)-->
+		<script data-pace-options='{ "restartOnRequestAfter": true }' src="/static/js/plugin/pace/pace.min.js"></script>
+
+		<!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script>
+			if (!window.jQuery) {
+				document.write('<script src="/static/js/libs/jquery-2.1.1.min.js"><\/script>');
+			}
+		</script>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+		<script>
+			if (!window.jQuery.ui) {
+				document.write('<script src="/static/js/libs/jquery-ui-1.10.3.min.js"><\/script>');
+			}
+		</script>
+
+		<!-- IMPORTANT: APP CONFIG -->
+		<script src="/static/js/app.config.js"></script>
+
+		<!-- JS TOUCH : include this plugin for mobile drag / drop touch events-->
+		<script src="/static/js/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script> 
+
+		<!-- BOOTSTRAP JS -->
+		<script src="/static/js/bootstrap/bootstrap.min.js"></script>
+
+		<!-- CUSTOM NOTIFICATION -->
+		<script src="/static/js/notification/SmartNotification.min.js"></script>
+
+		<!-- JARVIS WIDGETS -->
+		<script src="/static/js/smartwidgets/jarvis.widget.min.js"></script>
+
+		<!-- EASY PIE CHARTS -->
+		<script src="/static/js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+
+		<!-- SPARKLINES -->
+		<script src="/static/js/plugin/sparkline/jquery.sparkline.min.js"></script>
+
+		<!-- JQUERY VALIDATE -->
+		<script src="/static/js/plugin/jquery-validate/jquery.validate.min.js"></script>
+
+		<!-- JQUERY MASKED INPUT -->
+		<script src="/static/js/plugin/masked-input/jquery.maskedinput.min.js"></script>
+
+		<!-- JQUERY SELECT2 INPUT -->
+		<script src="/static/js/plugin/select2/select2.min.js"></script>
+
+		<!-- JQUERY UI + Bootstrap Slider -->
+		<script src="/static/js/plugin/bootstrap-slider/bootstrap-slider.min.js"></script>
+
+		<!-- browser msie issue fix -->
+		<script src="/static/js/plugin/msie-fix/jquery.mb.browser.min.js"></script>
+
+		<!-- FastClick: For mobile devices -->
+		<script src="/static/js/plugin/fastclick/fastclick.min.js"></script>
+
+		<!--[if IE 8]>
+
+		<h1>Your browser is out of date, please update your browser by going to www.microsoft.com/download</h1>
+
+		<![endif]-->
+
+		<!-- Demo purpose only -->
+		<script src="/static/js/demo.min.js"></script>
+
+		<!-- MAIN APP JS FILE -->
+		<script src="/static/js/app.min.js"></script>
+
+		<!-- ENHANCEMENT PLUGINS : NOT A REQUIREMENT -->
+		<!-- Voice command : plugin -->
+		<script src="/static/js/speech/voicecommand.min.js"></script>
+
+		<!-- SmartChat UI : plugin -->
+		<script src="/static/js/smart-chat-ui/smart.chat.ui.min.js"></script>
+		<script src="/static/js/smart-chat-ui/smart.chat.manager.min.js"></script>
+
+		<!-- PAGE RELATED PLUGIN(S) 
+		<script src="..."></script>-->
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				pageSetUp();
+			});
+			
+		</script>

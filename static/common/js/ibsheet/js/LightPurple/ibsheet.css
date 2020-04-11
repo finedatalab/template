@@ -1,0 +1,674 @@
+/* -----------------------------------------------------------------------*/
+/* ----------------- "Main" IBSheet style definition ---------------------*/
+/* -----------------------------------------------------------------------*/
+
+/* Base tags */
+.LPPImage {padding-bottom:256px;}
+.LPPNone {display:none;}
+.LPPSection,.LPPSectionFF3 {table-layout:fixed; width:0;}
+.LPPSectionFF3 {border-collapse:collapse; }
+
+/* Sections */
+.LPPMainTable {border:1px solid #cbcbcb; border-collapse:separate; text-align:left; background:#ffffff; font:12px Dotum,Helvetica,AppleGothic,Sans-serif;}
+.LPPFootLeft,.LPPFootMid {border-top:1px solid #C9C9F5;}
+.LPPHeadLeft,.LPPBodyLeft,.LPPFootLeft,.LPPHScrollLeft {border-right:1px solid #C9C9F5;}	
+.LPPVScroll {padding-top:1px; padding-bottom:1px;}
+.LPPHScrollLeft,.LPPHScrollMid,.LPPHScrollLeftResizeTouch,.LPPHScrollRightResizeTouch {padding-left:1px; padding-right:1px; cursor:default;}
+.LPPHScrollLeftResizeTouch {border-right:2px solid #000000; padding-right:18px; background:#F4F4F4;}
+.LPPHScrollRightResizeTouch {border-left:2px solid #000000; padding-left:18px; background:#F4F4F4;}
+.LPPHScrollMidLeftResizeTouch {border-left:1px solid #000000; padding-left:19px; background:#F4F4F4;}
+.LPPHScrollMidRightResizeTouch {border-right:1px solid #000000; padding-right:19px; background:#F4F4F4;}
+.LPPHScrollWide {padding-right:1px;}
+.LPPHScrollHidden {overflow:visible !important; background:#F4F4F4; cursor:default; }
+.LPPXScroll {background:#F4F4F4;}
+.LPPPage {border-top:0px solid #E0E0E0;}
+
+/* Rows */
+.LPPSpaceRowHeight{height:21px; }
+.LPPRowHeight 	 {height:18px; }
+.LPPRowHeightTouch{height:22px; }
+.LPPSpaceMargin   {margin:0; }
+.LPPSpaceMarginTouch{margin:5px; }
+.LPPSpaceRow {background:#ffffff; white-space:nowrap; overflow:hidden; padding-top:2px; padding-bottom:2px; border-bottom:1px solid #e0e0ff;}
+.LPPGroupRow,.LPPSearchRow,.LPPPagerRow 
+{background-color:#DDDDFF; white-space:nowrap; padding-top:5px; padding-bottom:5px; overflow:hidden; border-bottom:1px solid #C9C9F5;} 
+.LPPGroupRow,.LPPPagerRow {background-position:0 -1801px; }
+.LPPFillRow {background:#ffffff; }
+.LPPRowAbove,.LPPRowBelow {border-left:1px solid #9cb6c8; border-right:1px solid #9cb6c8;}
+.LPPRowAbove { margin-top:3px; overflow:hidden;}
+.LPPRowBelow {margin-bottom:3px; overflow:hidden;}
+.LPPNoDataRow {border-top:1px solid #000000;padding-left:5px; padding-top:5px; padding-bottom:5px;color:gray; font-style:italic;} 
+.LPPCountRowTop {color:#535353; background-color:#DDDDFF; white-space:nowrap;padding-top:5px; padding-bottom:5px; overflow:hidden; border-bottom:1px solid #C9C9F5;}
+.LPPCountRowBottom {color:#535353; background-color:#DDDDFF; white-space:nowrap; padding-top:5px; padding-bottom:5px; overflow:hidden; border-top:1px solid #C9C9F5;}
+
+/* Cell */
+.LPPCell,.LPPCellPanel,.LPPCellFilter,.LPPHeaderDrag,.LPPHeaderGroup 
+ {color:#444444; border-bottom:1px solid #F8F8FF; border-right:1px solid #cbcbcb; border-left:0; border-top:0;vertical-align:top; overflow:hidden; height:auto; font-size:/*IBFS*/12px; font-family:/*IBFN*/"Dotum", "Helvetica", "AppleGothic", sans-serif;}
+
+.LPPCellHeader,.LPPCellHeaderEmpty
+ {vertical-align:middle; overflow:hidden;height:auto; background-color:#DDDDFF; padding-top:1px; border-right:1px solid #C9C9F5; border-bottom:1px solid #C9C9F5;} 
+.LPPCellBorderFF3 {border-left:0;border-top:0;} 
+.LPPCellSpace {vertical-align:top; padding-top:5px !important; }
+.LPPCellSpacePanel,.LPPCellSpaceBool {vertical-align:top; }
+.LPPCellSpaceRadio { padding-top:3px !important;}
+.LPPCellSpaceEditButton { vertical-align:top; padding-top:4px !important; border:1px solid #000000 !important; background-color:#ffffff !important; }
+.LPPCellSpaceButtonButton { vertical-align:top; }
+.LPPCellSpaceButton { vertical-align:top; padding-top:5px !important; white-space:nowrap; }
+.LPPCellSpaceAbove { border-top:1px solid #9cb6c8; }
+.LPPCellSpaceBelow { border-bottom:1px solid #9cb6c8; }
+.LPPCellPanel,.LPPCellHeaderPanel{ white-space:nowrap; } 
+.LPPCellHidden { background:transparent!important; border-top:none!important; border-bottom:none!important; }
+.LPPHeaderButton { padding:0; }
+.LPPHeaderGroup {background: #C5C5F6; color:#ffffff; padding-left:3px; }
+.LPPHeaderGroupFocus {background-color: #C0C0A0; }
+.LPPHeaderGroupDelete {background-color: #F0F0E0; color: #F0F0E0; }
+.LPPHeaderGroupCustom {color:#BBB; padding-left:5px; cursor:default; white-space:nowrap;}
+.LPPHeaderDrag {background: #9FB9E9; cursor:default; overflow:hidden; }
+.LPPHeaderFocus {background: #9FB9E9;}
+.LPPPanel {padding-left:80px;}
+.LPPNoTreeLines1 {text-align:right;}
+.LPPNoTreeLines2 {text-align:right; vertical-align:middle; padding-top:0;}
+.LPPTree {padding-top:0; white-space:nowrap;}
+.LPPSpannedTree {vertical-align:top;}
+.LPPCellClassInner {padding-top:0; padding-bottom:0;}
+
+/* Inside cell */
+.LPPStatus,.LPPSeq,.LPPPopup,.LPPPopupEdit,.LPPHtml,.LPPText,.LPPLines,.LPPPass,.LPPInt,.LPPFloat,.LPPDate,
+.LPPLink,.LPPImg,.LPPRadio,.LPPRadioText,.LPPList,.LPPEnum,.LPPDropCols,.LPPAbs,.LPPPagerEdit,.LPPUser 
+ {white-space:nowrap;vertical-align: middle;padding:2px 3px;} 
+.LPPInt,.LPPFloat { text-align:right; }
+.LPPLines,.LPPRadio,.LPPHtml,.LPPList { white-space:normal; }	
+.LPPImg,.LPPHtml {padding:0; } 
+.LPPPass { padding:0 0 0 3px; }
+.LPPRadio,.LPPRadioText { padding:0; font-weight:normal !important; }
+.LPPBool { text-align:center; }
+.LPPIcon { background-repeat:no-repeat; }
+.LPPHiddenSpace { display:none; }
+.LPPDropCols { padding-top:2px !important; }
+
+.LPPHeaderText {color:#535353; vertical-align:middle; font-size:/*IBFS*/12px; font-family:/*IBFN*/"Dotum", "Helvetica", "AppleGothic", sans-serif;}
+.LPPAbs { padding:0; }
+.LPPUser { padding:0; }
+.LPPPagerEdit { text-align:center; padding-top:3px; }
+.LPPMergedCellH {padding:0 0 5px 0}
+.LPPMergedCellV {padding:0 0 1px 0}
+
+.LPPWrap0 { white-space:nowrap; }
+.LPPWrap1 { white-space:normal; }
+.LPPEllipsis { white-space:nowrap; text-overflow:ellipsis;}
+
+.LPPAlignLeft { text-align:left; }
+.LPPAlignCenter { text-align:center; }
+.LPPAlignJustify { text-align:center; }
+.LPPAlignRight { text-align:right;}
+
+/* Tree Img with lines */
+.LPP000,.LPP010,.LPP001,.LPP011,.LPP100,.LPP110,.LPP101,.LPP111, 
+.LPP000T,.LPP010T,.LPP001T,.LPP011T,.LPP100T,.LPP110T,.LPP101T,.LPP111T,
+.LPP00,.LPP01,.LPP10,.LPP11,.LPP00T,.LPP01T,.LPP10T,.LPP11T,
+.LPP0T,.LPP1T,.LPP0TL,.LPP1TL,.LPP0C,.LPP1C,.LPP0CL,.LPP1CL,.LPP0E,.LPP1E,.LPP0EL,.LPP1EL,
+.LPP0,.LPP1,.LPPT,.LPPTL,.LPPC,.LPPCL,.LPPE,.LPPEL,.LPPD0,.LPPD1,.LPPD2,.LPPD3,.LPPD4,.LPPD0L,.LPPD1L,.LPPD2L,.LPPD3L,.LPPD4L 
+{background-image:url(Tree.gif); vertical-align:top;}
+
+u.LPP000,u.LPP010,u.LPP001,u.LPP011,u.LPP100,u.LPP110,u.LPP101,u.LPP111 { padding-left:63px; }
+u.LPP000T,u.LPP010T,u.LPP001T,u.LPP011T,u.LPP100T,u.LPP110T,u.LPP101T,u.LPP111T { padding-left:89px; }
+u.LPP00,u.LPP01,u.LPP10,u.LPP11 { padding-left:42px; }   
+u.LPP00T,u.LPP01T,u.LPP10T,u.LPP11T { padding-left:68px; }   
+u.LPP0T,u.LPP1T,u.LPP0TL,u.LPP1TL,u.LPP0C,u.LPP1C,u.LPP0CL,u.LPP1CL,u.LPP0E,u.LPP1E,u.LPP0EL,u.LPP1EL { padding-left:47px; }   
+u.LPP0,u.LPP1 { padding-left:21px; }
+u.LPPT,u.LPPTL,u.LPPC,u.LPPCL,u.LPPE,u.LPPEL,u.LPPD0,u.LPPD1,u.LPPD2,u.LPPD3,u.LPPD4,u.LPPD0L,u.LPPD1L,u.LPPD2L,u.LPPD3L,u.LPPD4L { padding-left:26px; }   
+
+.LPP000,.LPP000T{ background-position:0px 0px; }
+.LPP010,.LPP010T{ background-position:-128px 0; }
+.LPP001,.LPP001T{ background-position:-256px 0; }
+.LPP011,.LPP011T{ background-position:-384px 0; }
+.LPP100,.LPP100T{ background-position:-512px 0; }
+.LPP110,.LPP110T{ background-position:-640px 0; }
+.LPP101,.LPP101T{ background-position:-768px 0; }
+.LPP111,.LPP111T{ background-position:-896px 0; }
+.LPP00,.LPP00T  { background-position:-21px 0;  }
+.LPP10,.LPP10T  { background-position:-149px 0; }
+.LPP01,.LPP01T  { background-position:-277px 0; }
+.LPP11,.LPP11T  { background-position:-405px 0; }
+.LPP0,.LPP0T 	  { background-position:-42px 0;  }
+.LPP1,.LPP1T 	  { background-position:-298px 0; }
+.LPPT 		  { background-position:-63px 0;  }
+.LPP0TL 		  { background-position:-1024px 0; }
+.LPP1TL 		  { background-position:-1088px 0; }
+.LPP0C 	      { background-position:-1152px 0; }
+.LPP1C 		  { background-position:-1216px 0; }
+.LPP0CL 		  { background-position:-1280px 0; }
+.LPP1CL 		  { background-position:-1344px 0; }
+.LPP0E 		  { background-position:-1408px 0; }
+.LPP1E 		  { background-position:-1472px 0; }
+.LPP0EL 		  { background-position:-1536px 0; }
+.LPP1EL 		  { background-position:-1600px 0; }
+.LPPTL 		  { background-position:-1045px 0; }
+.LPPC 		  { background-position:-1173px 0; }
+.LPPCL 		  { background-position:-1301px 0; }
+.LPPE 		  { background-position:-1429px 0; }
+.LPPEL 		  { background-position:-1557px 0; }
+.LPPD0 		  { background-position:-1664px 0; }
+.LPPD1 		  { background-position:-1696px 0; }
+.LPPD2 		  { background-position:-1728px 0; }
+.LPPD3 		  { background-position:-1760px 0; }
+.LPPD0L 		  { background-position:-1792px 0; }
+.LPPD1L 		  { background-position:-1824px 0; }
+.LPPD2L 		  { background-position:-1856px 0; }
+.LPPD3L 		  { background-position:-1888px 0; }
+.LPPD4 		  { background-position:-1920px 0; }
+.LPPD4L 		  { background-position:-1952px 0; }
+
+/* Tree Img without lines  */
+.LPPND0,.LPPND1,.LPPND2,.LPPND3,.LPPND4,.LPPNC,.LPPNE,.LPPNCR,.LPPNER {background-image:url(TreeN.gif); background-repeat:no-repeat; vertical-align:top; }
+u.LPPND0,u.LPPND1,u.LPPND2,u.LPPND3,u.LPPND4,u.LPPNC,u.LPPNE,u.LPPNCR,u.LPPNER { padding-left:20px; }
+.LPPND0 { background-position: -6px 0; }
+.LPPND1 { background-position: -56px 0; }
+.LPPND2 { background-position: -106px 0; }
+.LPPND3 { background-position: -156px 0; }
+.LPPND4 { background-position: -206px 0; }
+.LPPNC { background-position:right -50px;}
+.LPPNE { background-position:right -2000px;}
+.LPPNCR { background-position:-255px -50px;}
+.LPPNER { background-position:-255px -2000px;}
+u.LPPNL { padding-left:21px; }
+
+/* Cell images */
+.LPPIconLink { text-decoration:none; width:1000px; display:inline-block; }
+.LPPIconLeft,.LPPIconRight,.LPPIconCenter {  background-repeat:no-repeat; }
+.LPPIconLeft { background-position:left 0; padding-left:20px !important; }
+.LPPIconRight { background-position:right 0; padding-right:20px !important; }
+.LPPIconCenter { background-position:center 0; }
+.LPPPopupRight { background:url(popup.gif) no-repeat 5px center; }
+.LPPExpandLeft,.LPPCollapseLeft,.LPPExpandHeaderLeft,.LPPCollapseHeaderLeft { padding-left:20px!important; }
+.LPPDateRight{ padding-right:20px!important;}
+u.LPPDateRight,.LPPPopupRight { padding-right:0!important; padding-left:17px; }
+.LPPDateRight {background:url(calendar.gif) no-repeat 2px center}
+.LPPEnumRight { background:url(combo.gif) no-repeat right center; }
+u.LPPEnumRight {padding-right:0; padding-left:17px}
+.LPPExpandLeft { background:url(ic_plus.gif) no-repeat 3px center; padding:2px 0 0  18px; _padding:0 0 0 18px }
+.LPPCollapseLeft { background:url(ic_minus.gif) no-repeat 3px center ; padding:2px 0 0  18px; _padding:0 0 0 18px }
+.LPPRadio0Right,.LPPRadio1Right,.LPPRadio2Right,.LPPRadio3Right {line-height:17px; padding-right:17px; padding-left:3px; }
+u.LPPFilter0,u.LPPFilter1 { padding-left:16px; }
+.LPPBool0,.LPPBool0RO,.LPPBool1,.LPPBool1RO,.LPPBool2,.LPPBool2RO,.LPPBool3,.LPPBool3RO {background-position:center center; background-repeat:no-repeat;}
+
+.LPPBool0   { background-image:url(chk0.gif);  }
+.LPPBool0RO { background-image:url(chk0R.gif); }
+
+.LPPBool1   { background-image:url(chk1.gif);  }
+.LPPBool1RO { background-image:url(chk1R.gif); }
+
+.LPPBool2   { background-image:url(chk2.gif);  }
+.LPPBool2RO { background-image:url(chk2R.gif); }
+
+.LPPBool3   { background-image:url(chk3.gif);  }
+.LPPBool3RO { background-image:url(chk3R.gif); }
+
+/* Filter images  */
+.LPPFilter0Left,.LPPFilter1Left,.LPPFilter2Left,.LPPFilter3Left,.LPPFilter4Left,.LPPFilter5Left,.LPPFilter6Left,.LPPFilter7Left,
+.LPPFilter8Left,.LPPFilter9Left,.LPPFilter10Left,.LPPFilter11Left,.LPPFilter12Left {padding-left:18px;}
+
+.LPPFilter0Left,.LPPFilter0Menu 	{ width:18px; height:18px; background:url(filter0.gif) no-repeat left center; }   
+.LPPFilter1Left,.LPPFilter1Menu 	{ width:18px; height:18px; background:url(filter1.gif) no-repeat left center; }
+.LPPFilter2Left,.LPPFilter2Menu 	{ width:18px; height:18px; background:url(filter2.gif) no-repeat left center; }
+.LPPFilter3Left,.LPPFilter3Menu 	{ width:18px; height:18px; background:url(filter3.gif) no-repeat left center; }
+.LPPFilter4Left,.LPPFilter4Menu 	{ width:18px; height:18px; background:url(filter4.gif) no-repeat left center; }
+.LPPFilter5Left,.LPPFilter5Menu 	{ width:18px; height:18px; background:url(filter5.gif) no-repeat left center; }   
+.LPPFilter6Left,.LPPFilter6Menu 	{ width:18px; height:18px; background:url(filter6.gif) no-repeat left center; }
+.LPPFilter7Left,.LPPFilter7Menu 	{ width:18px; height:18px; background:url(filter7.gif) no-repeat left center; }
+.LPPFilter8Left,.LPPFilter8Menu 	{ width:18px; height:18px; background:url(filter8.gif) no-repeat left center; }
+.LPPFilter9Left,.LPPFilter9Menu 	{ width:18px; height:18px; background:url(filter9.gif) no-repeat left center; }
+.LPPFilter10Left,.LPPFilter10Menu { width:18px; height:18px; background:url(filter10.gif) no-repeat left center; }
+.LPPFilter11Left,.LPPFilter11Menu { width:18px; height:18px; background:url(filter11.gif) no-repeat left center; }
+.LPPFilter12Left,.LPPFilter12Menu { width:18px; height:18px; background:url(filter12.gif) no-repeat left center; }
+
+.LPPFilter0Menu,.LPPFilter1Menu,.LPPFilter2Menu,.LPPFilter3Menu,.LPPFilter4Menu,.LPPFilter5Menu,.LPPFilter6Menu,.LPPFilter7Menu,.LPPFilter8Menu,.LPPFilter9Menu,
+.LPPFilter10Menu,.LPPFilter11Menu,.LPPFilter12Menu {overflow:hidden; margin: -2px 0 0 -1px;}
+.LPPFilterMenuHeader { padding-left:2px; border-bottom:0 !important; } 
+
+/*  Keyfield Image */
+.LPPKeyfield {background-image:url(keyfield.gif); display:inline-block; vertical-align:middle; background-repeat: no-repeat; background-position:center 1px; padding: 0 2px 0 4px; }
+
+/* GMKeyfield : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .LPPKeyfield{  background-position: center 3px;padding: 0 2px 0 4px; }}
+
+/* CheckBox Header Image */
+.LPPCheckHeader0 {background-image:url(chk0.gif); display:inline-block; vertical-align:middle; background-repeat:no-repeat; background-position:5px 1px; padding:2px 7px 0 6px; margin:0 2px 0 0;}
+
+/* GMCheckHeader0 : hack CR,SF*/
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{.LPPCheckHeader0{ background-position:6px 1px ; padding: 2px 8px 0 6px; }}
+
+/* GMCheckHeader0 : hack FF*/
+.LPPCheckHeader0, x:-moz-any-link, x:default { background-position:6px 1px ; padding: 2px 8px 0 6px; }
+
+/* GMCheckHeader0 : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .LPPCheckHeader0{ background-position:7px center ; padding:1px  17px 0 0; }}
+
+.LPPCheckHeader1 {background-image:url(chk1.gif); display:inline-block; vertical-align:middle; background-repeat:no-repeat; background-position:4px 1px ; padding:2px 6px 0 6px; margin:0 2px 0 0}
+
+/* GMCheckHeader1 : hack CR,SF*/
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{.LPPCheckHeader1{ background-position:6px 1px ; padding: 2px 8px 0 6px; }}
+
+/* GMCheckHeader1 : hack FF*/
+.LPPCheckHeader1, x:-moz-any-link, x:default { background-position:6px 1px ; padding: 2px 8px 0 6px; }
+
+/* GMCheckHeader1 : hack OP*/
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) 
+ { .LPPCheckHeader1 { background-position:7px center ; padding:1px  17px 0 0;  }}
+
+/* Sort images */
+.LPPSort {display:block; float:right; margin:2px 2px 0;width:7px}
+
+/* State classes */
+/* The colors must be set by numbers not by names */
+.LPPColorDefault  { background-color:#FFFFFF;}
+.LPPColorNoFocus  { background-color:#E8F4FF;}
+.LPPColorReadOnly { background-color:#F2F2FF;}
+.LPPColorPreview  { background-color:#FFFFFF;}
+.LPPColorAlternate{ background-color:#f8f8ff;}
+.LPPColorSelected { background-color:/*#FFFF80*/#aadbff; }
+
+.LPPColorFilter {background-color:#FFFFFF;}
+
+/*//.LPPClassSelected { }*/
+.LPPColorError   { background-color:#FF6969; }
+.LPPColorDeleted { background-color:#FFCDCD; }
+.LPPClassDeleted { font-style:italic; }
+.LPPColorAdded   { background-color:#CDFFCD; }
+.LPPClassAdded   { font-weight:bold; }
+.LPPColorMoved1  { background-color:#FFFFFF; }
+.LPPColorMoved2  { background-color:#D7EBEB; }
+.LPPColorChanged { background-color:#EBEBFF; }
+.LPPColorChangedCell { background-color:#E1E1FF; }
+.LPPClassChangedCell { font-weight:bold; }
+.LPPColorMaxChildren { background-color:#FFFFF0; }
+.LPPColorDetail { background-color:#FFF0FF; }
+.LPPColorDetailSelected { background-color:#FFF0E0; }
+.LPPColorDragged{ background-color:#E0E0C0; }
+.LPPColorFound1 { background-color:#FF87FF; }
+.LPPColorFound2 { background-color:#FFC387; }
+.LPPColorFound3 { background-color:#87FF87; }
+.LPPColorHovered 			{ background-color:#F0F0FF; }
+.LPPColorHoveredCell 		{ background-color:#C0C0FF; }
+.LPPColorHoveredCellReadOnly { background-color:#F0F0F0; }
+.LPPColorHoveredCellNoFocus 	{ background-color:#F8F8F8; }
+
+.LPPClassHoveredCellHeader 	{ background-position:0px -250px; }
+.LPPClassHoveredCellPanel 	{ background-position:0px -1801px; background-repeat:repeat-x; }
+
+.LPPColorHoveredCellSpace 	{ background-color:#FFFFFF; }
+.LPPColorHoveredCellSpaceEdit{ background-color:#C0C0FF; }
+.LPPColorHoveredCellSpaceBool{ background-color:#FFFFFF; }
+.LPPColorHoveredCellButton 	{ background-color:#FFFFFE; }
+.LPPClassHoveredCellButton 	{ color:green; }
+.LPPColorHoveredCellButton1 	{ background-color:#FFFFFE; }
+.LPPClassHoveredCellButton1 	{ color:red; }
+.LPPColorHoveredCellTab 		{ background-color:#FFFFFE; }
+.LPPClassHoveredCellTab 		{ background-position:0px -1801px; color:green; }
+.LPPColorHoveredCellTab1 	{ background-color:#99bbcc; }
+.LPPClassHoveredCellTab1 	{ background-image:none; }
+
+.LPPColorFocused 			{ background-color:#E6E6E6; }
+.LPPColorFocusedCell 		{ background-color:#FFFFFE; }
+.LPPColorFocusedCellSafari 	{ background-color:#A0A0FF; }
+.LPPColorFocusedCellSpace 	{ background-color:#E6E6E6; }
+.LPPColorFocusedCellButton 	{ background-color:#BCD; }
+.LPPColorFocusedCellHeader 	{ background-color:#FFFFFE; }
+.LPPColorFocusedCellPanel 	{ background-color:#FFFFFE; }
+.LPPColorEditedCell 			{ background-color:#FFFFFF; }
+.LPPColorViewedCell 			{ background-color:#FFFFFF; }
+
+/* Hover, focus, edit cursors */
+.LPPHoverRowBackground 	{ opacity:0.1; filter:alpha(opacity=10); background:#00F; }
+.LPPHoverRowBorder 		{ z-index:0; border-top:1px solid #BBF; border-bottom:1px solid #BBF; cursor:default; }
+.LPPHoverCellBorder 		{ z-index:0; padding:1px; border:1px solid #A0A0F0; background:white; }
+.LPPFocusRowBackground 	{ opacity:0.1; filter:alpha(opacity=50); background:/*IBSB*/#FFFF9F; } /* <-- Sheet : Selected Row Background */
+.LPPFocusRowBorder 		{ z-index:0; border:1px solid /*IBSB*/#FAC800; } /* <-- Sheet : Selected Row Border */
+.LPPFocusCellBorder		{ z-index:0; border:2px solid /*IBSB*/#FAC800; } /* <-- Sheet : Selected Cell Border */
+.LPPFocusCellSpaceBorder,.LPPEditCellSpaceBorder { z-index:4; }
+.LPPEditCellBorder 		{ z-index:0; border:2px solid #FF6666;}    /*<-- Sheet : CellEdit Border */
+.LPPEditCellInput 		{ position:relative; border:0 solid #39aefb; overflow:hidden; z-index:2; } 
+
+.LPPCursorBackground, .LPPCursorBorderLeft ,.LPPCursorBorderRight,.LPPCursorBorderTop,.LPPCursorBorderBottom 
+ {position:relative;overflow:hidden;}
+
+.LPPCursorBackground  {border:none; padding:0;}
+.LPPCursorBorderLeft  {padding-right:0; padding-top:0; padding-bottom:0; border-right:none; border-top:none; border-bottom:none;  width:0; height:0;}
+.LPPCursorBorderRight {padding-left:0; padding-top:0; padding-bottom:0; border-left:none; border-top:none; border-bottom:none;  width:0; height:0;}
+.LPPCursorBorderTop 	 {padding-bottom:0; padding-left:0; padding-right:0; border-bottom:none; border-left:none; border-right:none;  width:0; height:0;}
+.LPPCursorBorderBottom{padding-top:0; padding-left:0; padding-right:0; border-top:none; border-left:none; border-right:none; width:0; height:0;}
+
+/* Cell edges */
+.LPPNoLeft { border-left:0; }
+.LPPNoRight { border-right:0; }
+
+/* Dragging */
+.LPPMouseObject { opacity:0.5; filter:alpha(opacity=50); z-index:300; overflow:hidden;}
+.LPPDragObject {z-index:300; margin-left:10px; margin-top:10px; padding-left:3px; padding-right:3px;background:#E4E5F0 ; border:1px solid #777;}
+.LPPDragColInsideTop,.LPPDragColInsideBottom,.LPPDragColOutsideTop,.LPPDragColOutsideBottom{position:absolute;width:10px; height:11px; overflow:hidden; z-index:258;}
+.LPPDragColInsideTop 	{background:url(in_top.gif) no-repeat;} 	
+.LPPDragColInsideBottom  {background:url(in_bottom.gif) no-repeat;}	
+.LPPDragColOutsideTop  	{background:url(out_top.gif) no-repeat;}	
+.LPPDragColOutsideBottom {background:url(out_bottom.gif) no-repeat;}	 
+
+/* Messages */
+.LPPDisabled{position:absolute; z-index:264; background:#ffffff; opacity:0.5; filter:alpha(opacity=50); } 
+.LPPProcess {position: absolute; left:0; top:0; background:#E2F0FF; border:1px solid #777; white-space:nowrap; text-align:center; visibility:hidden; z-index:266;}
+.LPPMessage {background:#E2F0FF; border:1px solid #000000; padding:10px; white-space:nowrap; text-align:center;
+			 position: absolute; left:0; top:0; visibility:hidden; z-index:266;}
+.LPPMessageShadow 
+{position:absolute; margin-left:3px; margin-top:3px; z-index:265;background:#888; opacity:0.5; filter:alpha(opacity=50); left:0; top:0; visibility:hidden;}
+      
+/* Other */
+/* !!! No .LPP style prefix here !!! */
+.GridTmpTag { position:absolute; left:5px; top:5px; visibility:hidden; }
+
+/* Popup menus, TGLib */
+.LPPMenuMain  {position:absolute;left:0;top:0; z-index:258;}
+.LPPMenuOuter {overflow:hidden; border:1px solid #000000; background:#fff; padding:1px; margin:1px;}
+.LPPMenuHeader{overflow:hidden; position:absolute; z-index:258;border:1px solid #b0b0c0; background:#fff; cursor:pointer; _cursor:hand;}
+.LPPMenuHead {background:#183873; color:white; cursor:default;text-align:center; padding-top:5px; padding-bottom:4px;}
+.LPPMenuClose {float:right; width:14px; cursor:pointer; _cursor:hand; display:none;}
+.LPPMenuBody {cursor:default; background-color:#fff; padding-top:1px; padding-bottom:1px;}
+.LPPMenuShadow {position:absolute;margin:3px 0 0 3px;z-index:257;background-color:#888; opacity:0.5; filter:alpha(opacity=50);}
+.LPPMenuCheckedIconRight {padding-right:17px; background:url(chk1.gif) no-repeat 96% center; }
+.LPPMenuUncheckedIconRight { padding-right:17px;background:url(chk0.gif) no-repeat 96% center ; }
+
+.LPPMenuCursorIcon {background-image:url(d_gray_right.gif); background-repeat:no-repeat; background-position: 3px center;_background-color:#fff}
+.LPPMenuHoverIcon {background-image:url(d_right.gif); background-repeat:no-repeat; background-position: 3px center; _background-color:#ffeeaa }   
+
+.LPPMenuNextIcon { padding-right:10px; }
+.LPPMenuNextIconRtl { padding-left:10px; }
+
+.LPPMenuItemText,.LPPMenuItemIcon,.LPPMenuEnum,.LPPMenuEnumHeader,.LPPMenuEdit 
+{white-space:nowrap; overflow:hidden; vertical-align: middle; padding:1px 0 0 0}
+.LPPMenuItemDisabled {opacity:0.50; filter:alpha(opacity=30); overflow:hidden; }
+.LPPMenuLevel {color:blue;text-align:center; }  
+.LPPMenuEnumParent,.LPPMenuEditParent {padding-left:5px; padding-right:2px}
+.LPPMenuItemIcon {background-repeat:no-repeat;}
+.LPPMenuEnum {border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; padding-left:15px; overflow:hidden;}
+.LPPMenuEnumHeader  {padding:1px 0 2px 16px; cursor:default; } 
+.LPPMenuEdit{border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; background:white; overflow:hidden;white-space:nowrap;
+  padding-left:2px; padding-right:2px;}
+.LPPMenuEditInput,.LPPMenuEditTextarea {margin:0;padding:0;border:0; background:#FDD;_margin:-1px; _padding-right:1px; _padding_left:1px; }   
+.LPPMenuEditTextarea { line-height:13px;  }   
+.LPPMenuEditInt,.LPPMenuEditFloat,.LPPMenuEditDate { text-align:right; } 
+.LPPMenuEditMulti { white-space:normal; }
+.LPPMenuItem {background-color:#ffffff;padding:2px;}  
+.LPPMenuItemHover {background-color:#BBBBFF; border:1px solid #ACACE8;margin:0 1px; padding:1px 0;}
+.LPPMenuFocusHover {margin:1px; background-color:#dedeff; border:1px solid #000000;}
+.LPPMenuFocus 	  {margin:1px; background-color:#dedeff; border:1px solid #B2B2E0;}
+.LPPMenuSeparator {margin:1px 3px 0 3px; height:1px; border-top:1px solid #aaaadd; overflow:hidden;}
+.LPPMenuCaption {padding:2px; background:#ffffff; color:blue; text-align:center;}
+.LPPMenuVSeparator { border-right:1px solid #DDD; }
+.LPPMenuFoot { border-top:none; text-align:center; white-space:nowrap; }
+.LPPMenuButton {font-size:11px;background:#E1E1FF; text-align:center; border:1px solid #ACACE8;margin:5px 2px 4px 2px;padding:0;white-space:nowrap;width:48px;} 
+.LPPMenuButtonHover { background:#BBBBFF; border:1px solid #ACACE8; }
+
+/* Grid configuration menus */
+.LPPCfgMenuOuter,.LPPColumnsMenuOuter { border:1px solid #000000; }
+.LPPCfgMenuHead,.LPPColumnsMenuHead { padding-left:3px; }
+.LPPCfgMenuBody,.LPPColumnsMenuBody { padding-left:4px; padding-right:4px;}
+.LPPCfgMenuFoot,.LPPColumnsMenuFoot { padding-right:3px; padding-left:3px;}
+.LPPCfgMenuButton { width:70px; } 
+.LPPCfgMenuItemText,.LPPColumnsMenuItemText { padding-left:3px; }
+.LPPColumnsMenuItemText { white-space:nowrap; }
+.LPPCfgMenuItem,.LPPColumnsMenuItem { padding-top:3px; padding-bottom:3px;}
+.LPPCfgMenuItemHover,.LPPCfgMenuFocus,.LPPCfgMenuFocusHover,
+.LPPColumnsMenuItemHover,.LPPColumnsMenuFocus,.LPPColumnsMenuFocusHover { padding-top:2px; padding-bottom:2px;}
+
+/* Popup grid dialog */
+.LPPPopupGridOuter { border:0; overflow:visible; }
+.LPPPopupGridHead { padding:0; }
+.LPPPopupGridBody { padding:0; }
+.LPPPopupGridFoot { padding:0; }
+.LPPPopupGridButton { width:50px;margin-top:-2px; margin-bottom:3px;} 
+
+/* Calendar, TGLib */
+.LPPPickMain  {position:absolute; left:0; top:0; z-index:258; }
+.LPPPickOuter {overflow:hidden; background:white; padding:1px; border:1px solid #6D6DB9; }
+.LPPPickHeader{overflow:hidden; position:absolute; z-index:258; border:1px solid black; background:#ffffff; cursor:pointer; _cursor:hand;}
+.LPPPickHeaderBottom{border-bottom:0; padding-bottom:1px;}
+.LPPPickHeaderTop{border-top:0; padding-bottom:1px; }
+.LPPPickHead {background:#5c8397; font:10px Dotum,Verdana,Arial; color:white; cursor:default; padding-left:5px; padding-top:1px; padding-bottom:1px;border-bottom:1px solid white;}
+.LPPPickClose{float:right; width:14px; cursor:pointer; _cursor:hand; display:none;}
+.LPPPickBody {cursor:default; padding:0; }
+.LPPPickShadow{position:absolute; background:#888; z-index:257; margin:3px 0 0 3px;opacity:0.5; filter:alpha(opacity=50);} 
+.LPPPickFooter,.LPPPick2Footer{text-align:center; padding:2px; cursor:default; background:#EFF0F1; border-top:1px solid #E3E4E6}
+ 
+.LPPPickMY{background-color:#E0E0FF;border-bottom:1px solid #C9C9F5;color:#474778; cursor:default;text-align:center;padding:2px 0 4px 0;}/* <-- Calender : Header Background */
+   
+.LPPPickMYDown{padding-right:13px; background:url(d_down.gif) no-repeat right; cursor:pointer; _cursor:hand;}
+.LPPPickMYUp {padding-right:13px; background:url(d_up.gif) no-repeat right center; cursor:pointer; _cursor:hand;}
+
+.LPPPickMYRtl{padding-right:0; padding-left:13px; }
+.LPPPickBL,.LPPPickBR{padding-top:3px; cursor:pointer; _cursor:hand; width:16px; height:14px; overflow:hidden;}
+
+.LPPPickBL {float:left; background:url(d_left.gif) no-repeat 50%; }
+.LPPPickBR {float:right; background:url(d_right.gif) no-repeat 50%; }
+
+.LPPPickTable{}
+.LPPPickRow  {background:#ffffff;}
+.LPPPickRowW {background:#EBEBFF;}
+.LPPPickCell {width:22px;}
+.LPPPickWDN {background:transparent; color:#333333;text-align:center; cursor:default; margin:2px 3px;padding:1px;}
+  
+.LPPPickHover,.LPPPickSelHover,.LPPPickWD,.LPPPickSa,.LPPPickSu,.LPPPickSel,.LPPPickNow,.LPPPickWDNE,.LPPPickSaNE,.LPPPickSuNE,
+.LPPPickSelNE,.LPPPickNowNE,.LPPPickOM,.LPPPickOMNE {text-align:center; border:1px solid #ffffff; cursor:pointer; _cursor:hand;margin:2px 3px;}
+.LPPPickWN,.LPPPickWNE {text-align:center; cursor:pointer; _cursor:hand;padding:3px 4px; border-right:1px solid #C9C9F5; background:#EFF0F1;}
+   
+.LPPPickWDNE,.LPPPickSaNE,.LPPPickSuNE,.LPPPickSelNE,.LPPPickNowNE,.LPPPickWNE {cursor:default;}
+.LPPPickWD{background-color:#ffffff;}
+.LPPPickSa{background-color:#ffffff;}
+.LPPPickSu{background-color:#ffffff;}
+.LPPPickSel{background-color:#FAEC00; border:1px solid #DAD1D1;}
+.LPPPickSelNE{background-color:#fbea54; border:1px solid #dad1d1;}
+.LPPPickNow {background-color:#c0f3ff; border:1px solid #dad1d1;}
+.LPPPickNowNE{background-color:#c0f3ff; border:1px solid #dad1d1;}
+.LPPPickHover{background-color:#ddd; border:1px solid #ddd;}
+.LPPPickSelHover{background-color:#dddddd; border:1px solid #dddddd;}
+.LPPPickOM{background-color:white; color:#aaaaaa;}
+.LPPPickOMNE{color:#aaaaaa;}
+
+.LPPPickEmpty{background:url(d_blank.gif) no-repeat 50%; cursor:pointer; _cursor:hand;padding:3px 0; }
+
+.LPPPickTimeCell 
+{text-align:right; padding-bottom:4px; padding-top:6px; padding-right:5px; border-top:1px solid #C9C9F5; background:#EFF0F1;}
+
+.LPPPickTime 
+{border:0px none; white-space:nowrap; text-align:right; background:#EFF0F1;}
+
+.LPPPickButton{background:#E1E1FF; text-align:center; border:1px solid #ACACE8; width:45px; height:16px}
+    
+.LPPPickButtonHover{background:#BBBBFF; border:1px solid #ACACE8; }
+.LPPPick2Table{width:auto; vertical-align:middle}
+.LPPPick2CellM{height:20px; width:55px; }
+.LPPPick2CellY{height:20px; width:35px; vertical-align:middle }
+.LPPPick2CellSep{height:20px; width:5px; }
+.LPPPick2Cell{vertical-align:middle}
+.LPPPick2M,.LPPPick2Y,.LPPPick2MSel,.LPPPick2YSel,.LPPPick2MHover,.LPPPick2YHover,.LPPPick2MSelHover,.LPPPick2YSelHover
+{cursor:pointer; _cursor:hand; text-align:center; margin-left:1px; margin-right:1px; padding-left:4px; padding-right:4px; overflow:hidden; }
+   
+.LPPPick2MSel,.LPPPick2YSel {background:#FAEC00; border:1px solid #cccccc; margin-left:0; margin-right:0;}
+.LPPPick2MHover,.LPPPick2YHover {background:#DDD; border:1px solid #ffffff; margin-left:0; margin-right:0;}
+.LPPPick2MSelHover,.LPPPick2YSelHover {background:#C9C9F5; border:1px solid #ffffff;margin-left:0; margin-right:0;}   
+.LPPPick2SepH {width:1px; height:1px; overflow:hidden; }
+.LPPPick2Sep {width:1px; background:#E3E4E6; overflow:hidden; margin-left:2px; margin-right:2px; height:20px;}
+.LPPPick2BL,.LPPPick2BR {width:35px; cursor:pointer; _cursor:hand; }
+
+
+.LPPPick2BL {background:url(d_left2.gif) no-repeat center center}
+.LPPPick2BR {background:url(d_right2.gif) no-repeat center center}
+
+
+/* Edit controls, TGLib */
+.LPPEdit,.LPPEditInline {padding:2px 4px;border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666;background:#ffffff; white-space:nowrap; overflow:hidden;}
+  
+.LPPEditInline { display:inline-block; vertical-align:bottom; }
+.LPPEditInput,.LPPEditTextarea {border:0 solid transparent; margin:0; padding:0;vertical-align: middle} 
+
+.LPPEditTextarea { line-height:13px; }
+.LPPEditSpaceInput { vertical-align:middle; }
+.LPPEditNormalInput,.LPPEditNormalTextarea,.LPPEditSpaceTextarea { background-color:#FFFFFF; /*#FFDCFF;*/; }
+.LPPEditInt,.LPPEditFloat { text-align:right; }
+
+.LPPEditMulti { white-space:normal; }
+.LPPEditReadOnly { background-color:#FFEEFF; }   
+.LPPEditParent { position:absolute; z-index:258; overflow:hidden; }
+
+.LPPEnumHeaderLeft,.LPPEnumHeaderRight,.LPPEnumHeaderNone 
+{background:white; cursor:pointer; _cursor:hand; vertical-align:middle; text-align:left; padding:2px 0 2px 2px;}
+
+.LPPEnumHeaderRight {background: url(combo.gif) no-repeat right center;margin:1px 1px 0 0;}
+ @media screen and (-webkit-min-device-pixel-ratio:0) {.LPPEnumHeaderRight{margin:1px 0 0 0;}}/* hack:CR,SF */
+.LPPEnumHeaderRight, x:-moz-any-link, x:default {margin:1px 0 0 0;} /* hack:FF */
+ @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {.LPPEnumHeaderRight{ margin:1px 0 0 0;}}/* hack:OP */
+
+.LPPEnumMenuHeader { background:#ffffff; }
+
+.LPPEnumControl,.LPPEnumInline {
+   cursor:pointer; _cursor:hand; padding-left:15px; padding-right:4px; padding-top:2px; padding-bottom:2px;
+   border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666; overflow:hidden;}
+   
+.LPPEnumInline { display:inline-block; vertical-align:bottom; }
+.LPPEnumHeader { cursor:pointer; _cursor:hand;padding-left:15px; padding-right:4px; padding-top:2px; padding-bottom:2px;} 
+
+/*  Custom scrollbars  */
+.LPPCustScroll1RightHidden { background:url(VScroll.gif) left -108px; height:18px; overflow:hidden; }
+.LPPCustScroll1Right { padding-right:18px; background:url(VScroll.gif) right 0; }
+.LPPCustScroll1RightHover { padding-right:18px; background:url(VScroll.gif) right -18px; }
+.LPPCustScroll1Left { padding-left:18px;  background:url(VScroll.gif) left 0; }
+.LPPCustScroll1LeftHover { padding-left:18px;  background:url(VScroll.gif) left -18px; }
+.LPPCustScroll1SliderRight { padding-right:3px; background:url(VScroll.gif) right -36px; }
+.LPPCustScroll1SliderLeft { padding-left:3px; background:url(VScroll.gif) left -36px; }
+.LPPCustScroll1SliderHIn { height:18px; overflow:hidden; background:url(VScroll.gif) center -54px; }
+.LPPCustScroll1SliderRightHover { padding-right:3px; background:url(VScroll.gif) right -72px; }
+.LPPCustScroll1SliderLeftHover { padding-left:3px; background:url(VScroll.gif) left -72px; }
+.LPPCustScroll1SliderHInHover { height:18px; overflow:hidden; background:url(VScroll.gif) center -90px; }
+.LPPCustScroll2RightHidden { background:url(VScroll.gif) left -108px; height:18px; overflow:hidden; }
+.LPPCustScroll2Right { padding-right:18px; background:url(VScroll.gif) right 0; }
+.LPPCustScroll2RightHover { padding-right:18px; background:url(VScroll.gif) right -18px; }
+.LPPCustScroll2Left { padding-left:18px;  background:url(VScroll.gif) left 0; }
+.LPPCustScroll2LeftHover { padding-left:18px;  background:url(VScroll.gif) left -18px; }
+.LPPCustScroll2SliderRight { padding-right:3px; background:url(VScroll.gif) right -36px; }
+.LPPCustScroll2SliderLeft { padding-left:3px; background:url(VScroll.gif) left -36px; }
+.LPPCustScroll2SliderHIn { height:18px; overflow:hidden; background:url(VScroll.gif) center -54px; }
+.LPPCustScroll2SliderRightHover { padding-right:3px; background:url(VScroll.gif) right -72px; }
+.LPPCustScroll2SliderLeftHover { padding-left:3px; background:url(VScroll.gif) left -72px; }
+.LPPCustScroll2SliderHInHover { height:18px; overflow:hidden; background:url(VScroll.gif) center -90px; }
+
+.LPPCustScroll3Right,.LPPCustScroll3RightHidden { background:white; height:9px; overflow:hidden; }
+.LPPCustScroll3SliderRight,.LPPCustScroll3SliderRightHover { padding-right:3px; height:9px; background:url(VScroll.gif) right -126px; }
+.LPPCustScroll3SliderLeft,.LPPCustScroll3SliderLeftHover { height:9px; background:url(VScroll.gif) left -126px; }
+.LPPCustScroll3SliderRightHover { background-position:right -135px; }
+.LPPCustScroll3SliderLeftHover { background-position:left -135px; }
+.LPPCustScroll4Right,.LPPCustScroll4RightHidden,.LPPCustScroll4SliderRight,.LPPCustScroll4SliderRightHover { height:1px; overflow:hidden; }
+
+.LPPCustScroll1DownHidden { background:url(HScroll.png) -108px top; width:18px; overflow:hidden; }
+.LPPCustScroll1Down { padding-bottom:18px; background:url(HScroll.png) 0px bottom; cursor:default; width:18px; overflow:hidden; }
+.LPPCustScroll1DownHover { padding-bottom:18px; background:url(HScroll.png) -18px bottom; width:18px; overflow:hidden; }
+.LPPCustScroll1Up { padding-top:18px; background:url(HScroll.png) 0px top; width:18px; overflow:hidden; }
+.LPPCustScroll1UpHover { padding-top:18px;  background:url(HScroll.png) -18px top; width:18px; overflow:hidden; }
+.LPPCustScroll1SliderDown { padding-bottom:3px; background:url(HScroll.png) -36px bottom; width:18px; overflow:hidden; }
+.LPPCustScroll1SliderUp { padding-top:3px; background:url(HScroll.png) -36px top; width:18px; overflow:hidden; }
+.LPPCustScroll1SliderVIn { background:url(HScroll.png) -54px center; width:18px; overflow:hidden; }
+.LPPCustScroll1SliderDownHover { padding-bottom:3px; background:url(HScroll.png) -72px bottom; width:18px; overflow:hidden; }
+.LPPCustScroll1SliderUpHover { padding-top:3px; background:url(HScroll.png) -72px top; width:18px; overflow:hidden; }
+.LPPCustScroll1SliderVInHover { background:url(HScroll.png) -90px center; width:18px; overflow:hidden; }
+
+.LPPCustScroll2DownHidden { background:url(HScroll.png) -108px top; width:18px; overflow:hidden; }
+.LPPCustScroll2Down { padding-bottom:18px; background:url(HScroll.png) 0px bottom; cursor:default; width:18px; overflow:hidden; }
+.LPPCustScroll2DownHover { padding-bottom:18px; background:url(HScroll.png) -18px bottom; width:18px; overflow:hidden; }
+.LPPCustScroll2Up { padding-top:18px; background:url(HScroll.png) 0px top; width:18px; overflow:hidden; }
+.LPPCustScroll2UpHover { padding-top:18px;  background:url(HScroll.png) -18px top; width:18px; overflow:hidden; }
+.LPPCustScroll2SliderDown { padding-bottom:3px; background:url(HScroll.png) -36px bottom; width:18px; overflow:hidden; }
+.LPPCustScroll2SliderUp { padding-top:3px; background:url(HScroll.png) -36px top; width:18px; overflow:hidden; }
+.LPPCustScroll2SliderVIn { background:url(HScroll.png) -54px center; width:18px; overflow:hidden; }
+.LPPCustScroll2SliderDownHover { padding-bottom:3px; background:url(HScroll.png) -72px bottom; width:18px; overflow:hidden; }
+.LPPCustScroll2SliderUpHover { padding-top:3px; background:url(HScroll.png) -72px top; width:18px; overflow:hidden; }
+.LPPCustScroll2SliderVInHover { background:url(HScroll.png) -90px center; width:18px; overflow:hidden; }
+
+.LPPCustScroll3Down,.LPPCustScroll3DownHidden { background:white; width:9px; overflow:hidden; cursor:default; }
+.LPPCustScroll3SliderDown,.LPPCustScroll3SliderDownHover { padding-bottom:3px; width:9px; background:url(HScroll.png) -126px bottom; }
+.LPPCustScroll3SliderUp,.LPPCustScroll3SliderUpHover { width:9px; background:url(HScroll.png) -126px top; cursor:default; }
+.LPPCustScroll3SliderDownHover { background-position:-135px bottom; }
+.LPPCustScroll3SliderUpHover { background-position:-135px top; cursor:default; }
+
+.LPPCustScroll4Down,.LPPCustScroll4DownHidden,.LPPCustScroll4SliderDown,.LPPCustScroll4SliderDownHover { width:1px; overflow:hidden; }
+
+/* Other messages, TGLib */
+.LPPHintMain {position:absolute; margin-left:-1px; margin-top:-1px; left:0px; top:0px; z-index:260; background:#ffffff; cursor:default; }
+.LPPHintOuter {overflow:hidden; border:1px solid #000000; background:#ffffff !important; color:black; text-align:left; }
+.LPPHintHeaderOuter {background-color:#39aefb !important; color:#ffffff; border: 1px solid #ffffff; }
+.LPPHintShadow {position:absolute; z-index:259;background:#888; opacity:0.3; filter:alpha(opacity=30);margin-left:2px; margin-top:2px;}
+.LPPTipMain {position:absolute; left:0px; top:0px; z-index:262; visibility:hidden; }
+.LPPTipOuter  {overflow:hidden; cursor:default; font:12px Arial;padding-left:3px; padding-right:3px; background:#E4E5F0; border:1px solid #777;}
+.LPPTipBody {background:#E4E5F0; white-space:nowrap; }
+.LPPTipShadow {position:absolute;z-index:261;background:#888; opacity:0.3; filter:alpha(opacity=30);visibility:hidden; margin-left:3px; margin-top:3px}
+.LPPMouseOrig { background:yellow !important; opacity:0.5; filter:alpha(opacity=50); }
+.LPPMouseDragObject { position:absolute; z-index:260; background:#888; opacity:0.5; filter:alpha(opacity=50); }
+.LPPFocus { border:1px solid #AAF; border-top:1px solid #00F; border-left:1px solid #00F; background-color:#EEE; } 
+.GridDisabled { position:absolute; z-index:256; background:white; opacity:0.5; filter:alpha(opacity=50); } 
+
+/* Do not change, marks the style loaded */
+.LPPLoaded { border:1px solid #000000 !important;}
+
+/*sum*/
+.LPPSumCell{background:#ebebff; color:#FF060C;}/*//text-align: right;font-weight:bold;*/
+.LPPSubSumCell{background: #F2F9FA; border-top:1px solid #D1E7F4; border-bottom:1px solid #D1E7F4; color:#7A7AE2}
+.LPPCumulateCell{background: #F2F9FA; border-bottom:1px solid #D1E7F4; color:#6445BE}
+
+/* FindDialog */
+.LPPH1Pop,.LPPPPop{margin:0; padding:0}
+.LPPPaddingl10{padding-left:10px}
+.LPPPaddingT10{padding-top:10px}
+.LPPPPop{ padding:0 0 10px 0; text-align:center }
+.LPPPop{width:410px; overflow:hidden; border:1px solid #BFBFE1; padding:0; font-size:12px;background:#F3F3FA; font-family:dotum, Arial, Helvetica, sans-serif}
+.LPPPopTitle{width:100%;color:#474778;border-bottom:1px solid #BFBFE1; font-size:12px; font-weight:bold; display:block; line-height:28px;
+background: #ebebff; /* Old browsers */
+background: -moz-linear-gradient(top,  #ebebff 0%, #e0e0ff 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebebff), color-stop(100%,#e0e0ff)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ebebff 0%,#e0e0ff 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ebebff 0%,#e0e0ff 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ebebff 0%,#e0e0ff 100%); /* IE10+ */
+background: linear-gradient(top,  #ebebff 0%,#e0e0ff 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebebff', endColorstr='#e0e0ff',GradientType=0 ); /* IE6-9 */
+}
+.LPPPopSearch{margin:10px; overflow:hidden; }
+.LPPPopContent{border:1px solid #DBDCDD; background-color:#fff}
+.LPPPopUl{list-style:none; margin:0; padding:10px;}
+.LPPPopDiv{overflow:hidden; width:100%}
+.LPPPopDiv2{overflow:hidden; width:100%}
+.LPPPopLeft,.LPPPopLeft2{width:220px; float:left; }
+.LPPPopRight,.LPPPopRight2{width:166px; float:right}
+.LPPPopUl input {margin:-2px 2px 0px 0px;padding:0 ; width:13px; height:13px; vertical-align:middle;}
+.LPPPopUl li{ padding-top:4px;padding-bottom:3px ; padding-left:5px}
+.LPPBtn{margin-top:10px; text-align:center }
+.LPPPopLeft, .LPPPopRight{ height:120px}
+.LPPPopLeft2, .LPPPopRight2{ height:80px}
+.LPPPopLabel{line-height:12px; margin:0 0 0 2px}
+.LPPPopSubtitle{font-weight:bold; color:#000; border-bottom:1px solid  #E0E0E0; background-color:#E7E7E7;padding-left:4px;}
+.LPPPopBtnBlue {text-align: center;text-decoration: none;color:#474778;position: relative;border:1px solid #9A9ACF; font-size:12px;width:50px !important;height:22px !important;
+background: #ebebff; /* Old browsers */
+background: -moz-linear-gradient(top,  #ebebff 0%, #e0e0ff 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebebff), color-stop(100%,#e0e0ff)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ebebff 0%,#e0e0ff 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ebebff 0%,#e0e0ff 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ebebff 0%,#e0e0ff 100%); /* IE10+ */
+background: linear-gradient(top,  #ebebff 0%,#e0e0ff 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebebff', endColorstr='#e0e0ff',GradientType=0 ); /* IE6-9 */
+}
+.LPPPopBtnBlue:hover {
+background: #e0e0ff; /* Old browsers */
+background: -moz-linear-gradient(top,  #e0e0ff 0%, #ebebff 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e0e0ff), color-stop(100%,#ebebff)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #e0e0ff 0%,#ebebff 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #e0e0ff 0%,#ebebff 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #e0e0ff 0%,#ebebff 100%); /* IE10+ */
+background: linear-gradient(top,  #e0e0ff 0%,#ebebff 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e0ff', endColorstr='#ebebff',GradientType=0 ); /* IE6-9 */
+}		

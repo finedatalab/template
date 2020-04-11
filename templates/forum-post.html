@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+
+		<title> {{document_title}} </title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+			
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- Basic Styles -->
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+
+		<!-- SmartAdmin Styles : Caution! DO NOT change the order -->
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/smartadmin-production-plugins.min.css') }}">
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/smartadmin-production.min.css') }}">
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/smartadmin-skins.min.css') }}">
+
+		<!-- SmartAdmin RTL Support  -->
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/smartadmin-rtl.min.css') }}">
+
+		<!-- We recommend you use "your_style.css" to override SmartAdmin
+		     specific styles this will also ensure you retrain your customization with each SmartAdmin update.
+		<link rel="stylesheet" type="text/css" media="screen" href="css/your_style.css"> -->
+
+		<!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/demo.min.css') }}">
+
+		<!-- FAVICONS -->
+		<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon/favicon.ico') }}" type="image/x-icon">
+		<link rel="icon" href="{{ url_for('static', filename='img/favicon/favicon.ico') }}" type="image/x-icon">
+
+		<!-- GOOGLE FONT -->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+
+		<!-- Specifying a Webpage Icon for Web Clip 
+			 Ref: https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html -->
+		<link rel="apple-touch-icon" href="{{ url_for('static', filename='img/splash/sptouch-icon-iphone.png') }}">
+		<link rel="apple-touch-icon" sizes="76x76" href="{{ url_for('static', filename='img/splash/touch-icon-ipad.png') }}">
+		<link rel="apple-touch-icon" sizes="120x120" href="{{ url_for('static', filename='img/splash/touch-icon-iphone-retina.png') }}">
+		<link rel="apple-touch-icon" sizes="152x152" href="{{ url_for('static', filename='img/splash/touch-icon-ipad-retina.png') }}">
+		
+		<!-- iOS web-app metas : hides Safari UI Components and Changes Status Bar Appearance -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		
+		<!-- Startup image for web apps -->
+		<link rel="apple-touch-startup-image" href="{{ url_for('static', filename='img/splash/ipad-landscape.png') }}" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
+		<link rel="apple-touch-startup-image" href="{{ url_for('static', filename='img/splash/ipad-portrait.png') }}" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
+		<link rel="apple-touch-startup-image" href="{{ url_for('static', filename='img/splash/iphone.png') }}" media="screen and (max-device-width: 320px)">
+
+	</head>
+	
+	<!--
+
+	TABLE OF CONTENTS.
+	
+	Use search to find needed section.
+	
+	===================================================================
+	
+	|  01. #CSS Links                |  all CSS links and file paths  |
+	|  02. #FAVICONS                 |  Favicon links and file paths  |
+	|  03. #GOOGLE FONT              |  Google font link              |
+	|  04. #APP SCREEN / ICONS       |  app icons, screen backdrops   |
+	|  05. #BODY                     |  body tag                      |
+	|  06. #HEADER                   |  header tag                    |
+	|  07. #PROJECTS                 |  project lists                 |
+	|  08. #TOGGLE LAYOUT BUTTONS    |  layout buttons and actions    |
+	|  09. #MOBILE                   |  mobile view dropdown          |
+	|  10. #SEARCH                   |  search field                  |
+	|  11. #NAVIGATION               |  left panel & navigation       |
+	|  12. #RIGHT PANEL              |  right panel userlist          |
+	|  13. #MAIN PANEL               |  main panel                    |
+	|  14. #MAIN CONTENT             |  content holder                |
+	|  15. #PAGE FOOTER              |  page footer                   |
+	|  16. #SHORTCUT AREA            |  dropdown shortcuts area       |
+	|  17. #PLUGINS                  |  all scripts and plugins       |
+	
+	===================================================================
+	
+	-->
+	
+	<!-- #BODY -->
+	<!-- Possible Classes
+
+		* 'smart-style-{SKIN#}'
+		* 'smart-rtl'         - Switch theme mode to RTL
+		* 'menu-on-top'       - Switch to top navigation (no DOM change required)
+		* 'no-menu'			  - Hides the menu completely
+		* 'hidden-menu'       - Hides the main menu but still accessable by hovering over left edge
+		* 'fixed-header'      - Fixes the header
+		* 'fixed-navigation'  - Fixes the main menu
+		* 'fixed-ribbon'      - Fixes breadcrumb
+		* 'fixed-page-footer' - Fixes footer
+		* 'container'         - boxed layout mode (non-responsive: will not work with fixed-navigation & fixed-ribbon)
+	-->
+	<body class="">
+
+		<!-- HEADER -->
+		{% include "inc/header.html" ignore missing %}
+		<!-- END HEADER -->
+
+		<!-- Left panel : Navigation area -->
+		<!-- Note: This width of the aside area can be adjusted through LESS variables -->
+		{% include "inc/leftpanel.html" ignore missing %}
+		<!-- END NAVIGATION -->
+
+		<!-- MAIN PANEL -->
+		<div id="main" role="main">
+
+			<!-- RIBBON -->
+			<div id="ribbon">
+
+				<span class="ribbon-button-alignment"> 
+					<span id="refresh" class="btn btn-ribbon" data-action="resetWidgets" data-title="refresh"  rel="tooltip" data-placement="bottom" data-original-title="<i class='text-warning fa fa-warning'></i> Warning! This will reset all your widget settings." data-html="true">
+						<i class="fa fa-refresh"></i>
+					</span> 
+				</span>
+
+				<!-- breadcrumb -->
+				<ol class="breadcrumb">
+					<li>Home</li><li>App Views</li><li>Forum Layout</li><li>Post View</li>
+				</ol>
+				<!-- end breadcrumb -->
+
+				<!-- You can also add more buttons to the
+				ribbon for further usability
+
+				Example below:
+
+				<span class="ribbon-button-alignment pull-right">
+				<span id="search" class="btn btn-ribbon hidden-xs" data-title="search"><i class="fa-grid"></i> Change Grid</span>
+				<span id="add" class="btn btn-ribbon hidden-xs" data-title="add"><i class="fa-plus"></i> Add</span>
+				<span id="search" class="btn btn-ribbon" data-title="search"><i class="fa-search"></i> <span class="hidden-mobile">Search</span></span>
+				</span> -->
+
+			</div>
+			<!-- END RIBBON -->
+
+			<!-- MAIN CONTENT -->
+			<div id="content">
+
+				<!-- Bread crumb is created dynamically -->
+				<!-- row -->
+				<div class="row">
+
+					<!-- col -->
+					<div class="col-xs-12 col-sm-3 col-md-4 col-lg-4">
+						<h1 class="page-title txt-color-blueDark"><!-- PAGE HEADER --><i class="fa-fw fa fa-puzzle-piece"></i> App Views <span>>
+							Forum Layout > Post View </span></h1>
+					</div>
+					<!-- end col -->
+
+					<!-- right side of the page with the sparkline graphs -->
+					<!-- col -->
+					<div class="col-xs-12 col-sm-9 col-md-8 col-lg-8">
+						<!-- sparks -->
+						<ul id="sparks">
+							<li class="sparks-info">
+								<h5> My Income <span class="txt-color-blue">$47,171</span></h5>
+								<div class="sparkline txt-color-blue hidden-mobile">
+									1300, 1877, 2500, 2577, 2000, 2100, 3000, 2700, 3631, 2471, 2700, 3631, 2471
+								</div>
+							</li>
+							<li class="sparks-info">
+								<h5> Site Traffic <span class="txt-color-purple"><i class="fa fa-arrow-circle-up" title="Increased"></i>&nbsp;45%</span></h5>
+								<div class="sparkline txt-color-purple hidden-mobile">
+									110,150,300,130,400,240,220,310,220,300, 270, 210
+								</div>
+							</li>
+							<li class="sparks-info">
+								<h5> Site Orders <span class="txt-color-greenDark"><i class="fa fa-shopping-cart"></i>&nbsp;2447</span></h5>
+								<div class="sparkline txt-color-greenDark hidden-mobile">
+									110,150,300,130,400,240,220,310,220,300, 270, 210
+								</div>
+							</li>
+						</ul>
+						<!-- end sparks -->
+					</div>
+					<!-- end col -->
+
+				</div>
+				<!-- end row -->
+
+				<!-- row -->
+				<div class="row">
+
+					<div class="col-sm-12">
+
+						<div class="well">
+
+							<table class="table table-striped table-forum">
+								<thead>
+									<tr>
+										<th colspan="2"><a href="/forum"> Projects </a> > <a href="/forum-topic">Business Requirement Docs </a> > Nam quam nunc blandit vel </th>
+									</tr>
+								</thead>
+								<tbody>
+									<!-- Post -->
+									<tr>
+										<td class="text-center"><a href="/profile"><img alt="" src="{{ url_for('static', filename='img/flags/us.png') }}"> &nbsp; <strong>John Doe</strong></a></td>
+										<td>on <em>Jan 1, 2014 - 12:00am</em></td>
+									</tr>
+									<tr>
+										<td class="text-center" style="width: 12%;">
+										<div class="push-bit">
+											<a href="/profile"> <img src="{{ url_for('static', filename='img/avatars/sunny.png') }}" width="50" alt="avatar" class="online"> </a>
+										</div><small>473 Posts</small></td>
+										<td>
+										<p>
+
+											Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
+										</p><h5>Forecast Pie</h5><span class="sparkline display-inline margin-bottom-10" data-sparkline-type="pie" data-sparkline-offset="90" data-sparkline-piesize="150px"> 33,20,10 </span>
+										<p>
+											Fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viv.
+										</p><em>- John Doe
+										<br>
+										CEO, SmartAdmin</em></td>
+									</tr>
+									<!-- end Post -->
+
+									<!-- Post -->
+									<tr>
+										<td class="text-center"><a href="/profile"><img alt="" src="{{ url_for('static', filename='img/flags/es.png') }}"> &nbsp; <strong>Sadi Orlaf</strong></a></td>
+										<td>on <em>Jan 1, 2014 - 12:00am</em></td>
+									</tr>
+									<tr>
+										<td class="text-center" style="width: 12%;">
+										<div class="push-bit">
+											<a href="/profile"> <img src="{{ url_for('static', filename='img/avatars/5.png') }}" width="50" alt="avatar" class="offline"> </a>
+										</div><small>473 Posts</small></td>
+										<td>
+										<p>
+
+											Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
+										</p><em>- Sadi Orlaf
+										<br>
+										Executive, SmartAdmin</em>
+										<div class="forum-attachment">
+											2 attachment(s) — <a href="javascript:void(0);"> Download all attachments</a>
+											<ul class="list-inline margin-top-10">
+												<li class="well well-sm padding-5">
+													<strong>rocketlaunch.jpg</strong>
+													<br>
+													400 kb
+													<br>
+													<a href="javascript:void(0);"> Download</a> | <a href="javascript:void(0);"> View</a>
+												</li>
+												<li class="well well-sm padding-5">
+													<strong>budget.xsl</strong>
+													<br>
+													400 kb
+													<br>
+													<a href="javascript:void(0);"> Download</a> | <a href="javascript:void(0);"> Share</a>
+												</li>
+											</ul>
+										</div></td>
+									</tr>
+									<!-- end Post -->
+
+									<!-- Post -->
+									<tr>
+										<td class="text-center"><a href="/profile"><img alt="" src="{{ url_for('static', filename='img/flags/us.png') }}"> &nbsp; <strong>Me</strong></a></td>
+										<td><em>Today</em></td>
+									</tr>
+									<tr>
+										<td class="text-center" style="width: 12%;">
+										<div class="push-bit">
+											<a href="/profile"> <img src="{{ url_for('static', filename='img/avatars/sunny.png') }}" width="50" alt="avatar" class="online"> </a>
+										</div><small>473 Posts</small></td>
+										<td><div id="forumPost"></div>
+											
+										<button class="btn btn-primary margin-top-10">
+											Post
+										</button>
+										<button class="btn btn-success margin-top-10">
+											Save for later
+										</button></td>
+									</tr>
+									<!-- end Post -->
+
+								</tbody>
+							</table>
+
+							<div class="text-center">
+								<ul class="pagination pagination-sm">
+									<li class="disabled">
+										<a href="javascript:void(0);">Prev</a>
+									</li>
+									<li class="active">
+										<a href="javascript:void(0);">1</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">2</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">3</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">...</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">99</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">Next</a>
+									</li>
+								</ul>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+
+				<!-- end row -->
+
+			</div>
+			<!-- END MAIN CONTENT -->
+
+		</div>
+		<!-- END MAIN PANEL -->
+
+		<!-- PAGE FOOTER -->
+		{% include "inc/footer.html" ignore missing %}
+		<!-- END PAGE FOOTER -->
+
+		<!-- SHORTCUT AREA : With large tiles (activated via clicking user name tag)
+		Note: These tiles are completely responsive,
+		you can add as many as you like
+		-->
+		{% include "inc/shortcutarea.html" ignore missing %}
+		<!-- END SHORTCUT AREA -->
+
+		<!--================================================== -->
+
+		<!-- PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)-->
+		<script data-pace-options='{ "restartOnRequestAfter": true }' src="/static/js/plugin/pace/pace.min.js"></script>
+
+		<!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script>
+			if (!window.jQuery) {
+				document.write('<script src="/static/js/libs/jquery-2.1.1.min.js"><\/script>');
+			}
+		</script>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+		<script>
+			if (!window.jQuery.ui) {
+				document.write('<script src="/static/js/libs/jquery-ui-1.10.3.min.js"><\/script>');
+			}
+		</script>
+
+		<!-- IMPORTANT: APP CONFIG -->
+		<script src="/static/js/app.config.js"></script>
+
+		<!-- JS TOUCH : include this plugin for mobile drag / drop touch events-->
+		<script src="/static/js/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script> 
+
+		<!-- BOOTSTRAP JS -->
+		<script src="/static/js/bootstrap/bootstrap.min.js"></script>
+
+		<!-- CUSTOM NOTIFICATION -->
+		<script src="/static/js/notification/SmartNotification.min.js"></script>
+
+		<!-- JARVIS WIDGETS -->
+		<script src="/static/js/smartwidgets/jarvis.widget.min.js"></script>
+
+		<!-- EASY PIE CHARTS -->
+		<script src="/static/js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+
+		<!-- SPARKLINES -->
+		<script src="/static/js/plugin/sparkline/jquery.sparkline.min.js"></script>
+
+		<!-- JQUERY VALIDATE -->
+		<script src="/static/js/plugin/jquery-validate/jquery.validate.min.js"></script>
+
+		<!-- JQUERY MASKED INPUT -->
+		<script src="/static/js/plugin/masked-input/jquery.maskedinput.min.js"></script>
+
+		<!-- JQUERY SELECT2 INPUT -->
+		<script src="/static/js/plugin/select2/select2.min.js"></script>
+
+		<!-- JQUERY UI + Bootstrap Slider -->
+		<script src="/static/js/plugin/bootstrap-slider/bootstrap-slider.min.js"></script>
+
+		<!-- browser msie issue fix -->
+		<script src="/static/js/plugin/msie-fix/jquery.mb.browser.min.js"></script>
+
+		<!-- FastClick: For mobile devices -->
+		<script src="/static/js/plugin/fastclick/fastclick.min.js"></script>
+
+		<!--[if IE 8]>
+
+		<h1>Your browser is out of date, please update your browser by going to www.microsoft.com/download</h1>
+
+		<![endif]-->
+
+		<!-- Demo purpose only -->
+		<script src="/static/js/demo.min.js"></script>
+
+		<!-- MAIN APP JS FILE -->
+		<script src="/static/js/app.min.js"></script>
+
+		<!-- ENHANCEMENT PLUGINS : NOT A REQUIREMENT -->
+		<!-- Voice command : plugin -->
+		<script src="/static/js/speech/voicecommand.min.js"></script>
+
+		<!-- SmartChat UI : plugin -->
+		<script src="/static/js/smart-chat-ui/smart.chat.ui.min.js"></script>
+		<script src="/static/js/smart-chat-ui/smart.chat.manager.min.js"></script>
+
+		<!-- PAGE RELATED PLUGIN(S)-->
+		<script src="/static/js/plugin/summernote/summernote.min.js"></script>
+
+		<script type="text/javascript">
+			// DO NOT REMOVE : GLOBAL FUNCTIONS!
+
+			$(document).ready(function() {
+
+				pageSetUp();
+
+				$('#forumPost').summernote({
+					height : 180,
+					focus : false,
+					tabsize : 2
+				});
+				
+			})
+
+		</script>
+
+		<!-- Your GOOGLE ANALYTICS CODE Below -->
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script');
+				ga.type = 'text/javascript';
+				ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(ga, s);
+			})();
+
+		</script>
+
+	</body>
+
+</html>
