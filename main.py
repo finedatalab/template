@@ -2,6 +2,12 @@ from flask import Flask, g, request, Response, make_response, session
 from flask import render_template, Markup
 from datetime import datetime, date, timedelta
 
+try:
+  import googleclouddebugger
+  googleclouddebugger.enable()
+except ImportError:
+  pass
+
 app = Flask(__name__)
 app.debug = True
 
