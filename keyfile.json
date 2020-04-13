@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "finedatalab-demo1",
+  "private_key_id": "3dfc25bbc4bf482ad7ac627263e02fb76c203044",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDOdrufSqByK/6N\nyWAN4KAs/op3OaaKEoRNvczbI139VKpBcQxn1DYo97goF8cB94galU1bYsk0sbLQ\noOna0Iuqjw1BqK4IuB9PRL7eXIfnerJu4egdB2NRvGGi2sOXpeceIW9qlRfGODyc\nW+Fhxn0TP+2nw6IXgoW2v4CpuIQ4F+lr3I9Rs83W4jAYN+SuH7OmJZbn1owwasqU\nI5d200Bv1uXB/kz5L1bedl8m6jOvWQrN+1lxqhGqnM++c90G0uFE65hR1u/6ospM\nDRY6oPX4YgqC6zOoUAkZBm89vku7cLKk+nhySxT8J5O5L3YGgiXjcNKWMVFZx6I/\nF6xudsqXAgMBAAECggEAC1AYMb8+EWN1vEEngTsoq6562dOP24ruMvBOdEd40/O6\nrIFMQ7guC4qfTZsX7XSpwYMizPoZukhuWt4mUjYRIRRbjph2iMXF+Wrz5m09iSKA\n+nBobobEG2tuEiVYiEuv4UfFuhpXRiY4s/yY2emtWsuq8wFWNWGSgBP4MdSJciVL\n/JysSTpXXGeinRGsIBPRioOoTwrcGdBZ7nf3J0esWkuuXoDS2YvfArZYLHacqLf1\nLhimG2qB6+JKb3R2RrizM5BbDLO51Wp+CFKc13MUhEnaMnQiRB1mFhsMgrKuFBOX\nxB9zLa2dQHDZ+QsjS8ISXxCaklRTTqwE1zsEl+zrYQKBgQD6aGCeTWgv0ZJWo5pq\n7LzUGkQlaNbA5EixcW8xafh29TJRA85COJ9BDAQqY89yBLYf0MzUztvpbWCNloyd\nxrySdh2XjUhocY/clvNOC95XSp4RG2bro9C2BAqnbNsNFKy1+poQ3SN5CjYAvqEo\niLFXfpmt15ku6ahX8HGxmPWeBwKBgQDTEx7qiVkMiY3MbkAAXhWNLvn6v9xIJfYP\nPTtOFFo1DpDbl2R8XGvUnzwtSlsM/u1+aVb+9r2F0G7HoKy82VxkCIJkf1nO9Q3V\nxHQFxa9yBn6TOZUyZjAJVTSgIDgYUKvnA4tMoEpnQiME+lWIPcWIhUdg/R9TMzfG\n+Xe5wDlK8QKBgHU3YvL3XSv1OEFiOCiRRRssaHXyi4Sj1/toFBrXdj2JLdKKq4SI\nKNQ0IccODc9bsT1Xamq7omm0j5v3uz8oBqGwtM16j0iE0Ej8SExideP6w99SKm1n\ns41gevRAmpGW+fn9oxz9x1sjkn/qvFnTEuDYHGwqHkS9j9YKcc4mweMFAoGBAKw1\nFGsrpcBp1Yutg4AJQrIOWpsuv20Js6gZP/Ji/nn9KUhPSwd/a+ZsB++3k3OV5XPW\nQ8j+y/+J32f1ehkViaB/pMqTcFU+b4wxnKs87vgrvkclmskkwBpNLwNZZgrIfoea\nx6K7wBhgyCt+hhwCsc/BVUwXF+CMj/xBemHNJ7ExAoGAdRCzZxVC4m+RXdyes1H4\n9sYXELcCQgreqaAFuIaEvkyLWWdeMVkQ0sDtc3Hm/fXbCJBYho4yk8igYWkBZl+S\ncYSHvTI31ln/OJ6PS6cMO2UAi3KHXAiukvlQhD7RuE5Tac6JnJbCHDNd/ks1hbIJ\nUJDyUKMti2d0xp2p5Su/km8=\n-----END PRIVATE KEY-----\n",
+  "client_email": "bigquery@finedatalab-demo1.iam.gserviceaccount.com",
+  "client_id": "107573480861314981066",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/bigquery%40finedatalab-demo1.iam.gserviceaccount.com"
+}
